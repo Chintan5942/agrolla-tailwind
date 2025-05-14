@@ -1,0 +1,71 @@
+*{
+    @import "tailwindcss";
+}
+.cloud {
+  animation: float 4s linear;
+}
+.bird {
+  animation: fadeIn 4s ease-in forwards;
+}
+.wing {
+  animation: spin 3s linear infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(-200px);
+  }
+  100% {
+    transform: translatey(0.1vw);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.groundNut {
+  opacity: 0;
+  transform-origin: bottom;
+  transform: scaleY(0);
+  animation: growUp 8s ease-out forwards;
+}
+
+.groundNut:nth-of-type(1) {
+  animation-delay: 1s;
+}
+.groundNut:nth-of-type(2) {
+  animation-delay: 1.3s;
+}
+.groundNut:nth-of-type(3) {
+  animation-delay: 1.6s;
+}
+.groundNut:nth-of-type(4) {
+  animation-delay: 2s;
+}
+.groundNut:nth-of-type(5) {
+  animation-delay: 2.2s;
+}
+
+@keyframes growUp {
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
