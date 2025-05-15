@@ -80,3 +80,11 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media(max-width:1440px){
+  .tractor{
+    display: none;
+  }
+}
+@media screen {
+  
+}

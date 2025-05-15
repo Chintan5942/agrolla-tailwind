@@ -1,46 +1,112 @@
 "use client";
-import '@/app/HomePage/Homepage.css'
-import { useEffect } from 'react';
+import { useEffect, useState } from "react";
+import "@/app/HomePage/Homepage.css";
 
 export default function HeroSection() {
+  const [count, setCount] = useState(5);
 
   useEffect(() => {
-    const groundNuts = document.querySelectorAll('.groundNut');
+    const updateCount = () => {
+      const width = window.innerWidth;
+      if (width >= 1024) {
+        setCount(5);
+      } else {
+        setCount(3);
+      }
+    };
+    updateCount();
+    window.addEventListener("resize", updateCount);
+    return () => window.removeEventListener("resize", updateCount);
+  }, []);
+
+  const positions = [110, 128, 146, 164, 182];
+
+  useEffect(() => {
+    const groundNuts = document.querySelectorAll(".groundNut");
     groundNuts.forEach((img, i) => {
-      img.style.animation = 'growUp 1s ease-out forwards';
+      img.style.animation = "growUp 1s ease-out forwards";
       img.style.animationDelay = `${i * 0.3}s`;
     });
-  }, []); 
+  }, [count]);
+
   return (
-    <>
-    <div className="h-210 w-[1920px(fixed)] z-20:">
-        <img src="/cloud.svg" alt="" className="absolute top-[41px] left-1/6 cloud" />
-        <img src="/cloud.svg" alt="" className="absolute top-[2px] left-[45%] cloud" />
-        <img src="/cloud.svg" alt="" className="absolute top-[65px] left-3/4 cloud" />
-        <img src="/birds.svg" alt="" className="absolute top-[180px] left-1/10 bird" />
-        <img src="/birds.svg" alt="" className="absolute top-[100px] left-[68%] bird" />
-        <img src="/sidewing.svg" alt="" className="w-[115px] absolute top-[370px] left-[11.2%] " />
-        <img src="/wings.svg" alt="" className="h-[185px] absolute top-[290px] left-[3.5%] wing" />
-        <img src="/Wingstand.svg" alt="" className="h-[420px] absolute top-103 left-[5%]" />
-        <img src="/factory.svg" alt="" className="h-[700px] absolute left-296.5 top-56"/>
-        <img src="/tractor.svg" alt="" className="h-[100px] absolute left-266 top-188"/>
-        <img src="/farmer.svg" alt="" className="h-[277px] absolute left-70 top-141"/>
-        <img src="/ground-nut.png" alt="" className="h-[150px] absolute left-110 top-179 z-30 groundNut"/>
-        <img src="/ground-nut.png" alt="" className="h-[150px] absolute left-128 top-179 z-30 groundNut"/>
-        <img src="/ground-nut.png" alt="" className="h-[150px] absolute left-146 top-179 z-30 groundNut"/>
-        <img src="/ground-nut.png" alt="" className="h-[150px] absolute left-164 top-179 z-30 groundNut"/>
-        <img src="/ground-nut.png" alt="" className="h-[150px] absolute left-182 top-179 z-30 groundNut"/>
-        <img src="/land.svg" alt="" className="h-[88.5px]  absolute top-[823px]" />
-        <div className="h-[376px] w-[604px]  absolute left-[650px] top-[211px]">
-            <p className="text-6xl text-[#111827] font-semibold tracking-[5px] text-center">Revolutionizing</p> <br />
-            <p className="text-6xl text-[#2E7D32] font-semibold tracking-[5px] text-center">Agriculture</p>
-            <p className=" w-[515px] text-lg text-center  relative top-6 left-10">Agrolla delivers cutting-edge agricultural solutions that maximize yield, minimize environmental impact, and transform farming practices for a sustainable future.</p>
-            <div className="flex justify-center  relative top-16">
-                <button className='h-[52px] w-[193px] text-stone-50 font-xl rounded-lg bg-[#2E7D32] text-lg'>Explore Services</button>
-                <button className='h-[52px] w-[193px] text-[#2e7d32] border-2 border-[#2e7d32]-200 font-xl rounded-lg bg-[#FFFFFF] relative left-[16px] text-lg'>Contact Us</button>
-            </div>
+    <div className="relative w-full max-w-[1920px] h-[800px] md:h-[700px] lg:h-[838px] sm:h-[800px] overflow-hidden border-2 border-blue-700 hero">
+
+      {/* Cloud - always visible */}
+      <img src="/cloud.svg" alt="cloud" className="absolute top-[20px] left-[10%] w-[80px] sm:w-[100px] md:w-[150px] lg:w-[300px] cloud" />
+
+      {/* Bird - always visible */}
+      <img src="/birds.svg" alt="bird" className="absolute top-[80px] left-[70%] w-[60px] sm:w-[80px] md:w-[90px] bird" />
+
+      {/* Extra clouds and birds - lg only */}
+      <img src="/cloud.svg" alt="" className="hidden lg:block absolute top-[-50px] left-[45%] w-[300px]" />
+      <img src="/cloud.svg" alt="" className="hidden lg:block absolute top-[-20px] left-3/4 w-[300px]" />
+      <img src="/birds.svg" alt="" className="hidden lg:block absolute top-[180px] left-[10%]" />
+
+      {/* Farmer */}
+      <img
+        src="/farmer.svg"
+        alt="farmer"
+        className="absolute h-[140px] left-[10%] top-[90%] sm:top-[5%] sm:h-[150px] md:top-[64%] md:left-[125px] md:h-[225px] lg:top-[60%] lg:left-[13%] lg:h-[300px]"
+      />
+
+      {/* Windmill base */}
+      <img
+        src="/Wingstand.svg"
+        alt="windmill base"
+        className="absolute top-[42%] left-[3%] h-[200px] sm:h-[250px] md:top-[53%] md:left-[4%] md:h-[290px] lg:h-[435px]"
+      />
+      <img
+        src="/sidewing.svg"
+        alt="sidewing"
+        className="absolute top-[325px] left-[9%] w-[60px] sm:w-[80px] md:left-[14%] md:top-[50%] md:w-[70px] lg:w-[110px] lg:left-[10%] lg:top-[48%]"
+      />
+      <img
+        src="/wings.svg"
+        alt="wings"
+        className="absolute top-[250px] left-[1.8%] h-[100px] sm:h-[140px] md:h-[125px] md:top-[41.5%] lg:h-[175px] lg:top-[39%] lg:left-[2.8%] wing"
+      />
+
+      {/* Groundnuts */}
+      {positions.slice(0, count).map((left, i) => (
+        <img
+          key={i}
+          src="/ground-nut.png"
+          alt="groundnut"
+          style={{ left: `${left * 4}px` }}
+          className="groundNut absolute z-30 w-[80px] h-[70px] sm:h-[90px] md:h-[120px] md:top-[82%] lg:h-[150px]"
+        />
+      ))}
+
+      {/* Factory - only md+ */}
+      <img
+        src="/factory.svg"
+        alt="factory"
+        className="hidden md:block absolute top-[45%] right-0 h-[400px] lg:h-[700px] lg:top-[20%]"
+      />
+
+      {/* Tractor - visible only on lg */}
+      <img
+        src="/tractor.svg"
+        alt="tractor"
+        className="hidden lg:block absolute top-[700px] right-[33%] h-[100px] tractor"
+      />
+
+      {/* Land */}
+      <img src="/land.svg" alt="land" className="absolute bottom-[-25px] w-full h-[80px] sm:h-[90px]" />
+
+      {/* Text and Buttons */}
+      <div className="absolute top-[80px] sm:top-[150px] left-1/2 transform -translate-x-1/2 w-[90%] sm:w-[604px] text-center">
+        <p className="text-2xl sm:text-5xl lg:text-6xl text-[#111827] font-semibold tracking-wide">Revolutionizing</p>
+        <p className="text-2xl sm:text-5xl lg:text-6xl text-[#2E7D32] font-semibold tracking-wide mt-2">Agriculture</p>
+        <p className="text-xs sm:text-base lg:text-lg text-[#374151] mt-4 mx-auto max-w-[515px]">
+          Agrolla delivers cutting-edge agricultural solutions that maximize yield, minimize environmental impact, and transform farming practices for a sustainable future.
+        </p>
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6">
+          <button className="h-[44px] w-full sm:w-[193px] bg-[#2E7D32] text-white text-sm rounded-lg">Explore Services</button>
+          <button className="h-[44px] w-full sm:w-[193px] border border-[#2e7d32] text-[#2e7d32] bg-white text-sm rounded-lg">Contact Us</button>
         </div>
+      </div>
     </div>
-    </>
   );
 }
