@@ -1,13 +1,12 @@
 "use-client";
 
-import HeroSection from "./HomePage/HeroSection";
-import Navbar from "./HomePage/Navbar";
+import Page from "./HomePage/Page";
+
 
 export default function page() {
   return (
     <>
-      <Navbar />
-      <HeroSection/>
+    <Page/>
     </>
   );
 }
