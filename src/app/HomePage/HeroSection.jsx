@@ -1,5 +1,5 @@
 "use client";
-import '@/app/HomePage/HeroSection.css'
+import '@/app/HomePage/Homepage.css'
 import { useEffect } from 'react';
 
 export default function HeroSection() {

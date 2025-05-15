@@ -1,6 +1,9 @@
 *{
     @import "tailwindcss";
 }
+
+/* Hero-section */
+
 .cloud {
   animation: float 4s linear;
 }
@@ -68,4 +71,12 @@
     opacity: 1;
     transform: scaleY(1);
   }
+}
+
+ /* Section1  */
+.section1{
+  background-image: url('/section1-BG.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
