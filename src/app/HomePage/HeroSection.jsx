@@ -34,7 +34,7 @@ export default function HeroSection() {
   }, [count]);
 
   return (
-    <div className="relative w-full max-w-[1920px] lg:h-216 md:h-[880px] overflow-hidden hero ">
+    <div className="relative w-[1920px(fixed)] lg:h-218 md:h-[880px] overflow-hidden hero ">
       {/* Cloud - always visible */}
       <img
         src="/cloud.svg"
@@ -53,12 +53,12 @@ export default function HeroSection() {
       <img
         src="/cloud.svg"
         alt=""
-        className="hidden lg:block absolute top-[-50px] left-[45%] w-[200px]  cloud"
+        className="hidden lg:block absolute top-[-50px] left-[45%] w-[300px]  cloud"
       />
       <img
         src="/cloud.svg"
         alt=""
-        className="hidden lg:block absolute top-[-20px] left-3/4 w-[200px] cloud"
+        className="hidden lg:block absolute top-[-20px] left-3/4 w-[300px] cloud"
       />
       <img
         src="/birds.svg"
@@ -82,7 +82,7 @@ export default function HeroSection() {
       <img
         src="/sidewing.svg"
         alt="sidewing"
-        className="absolute top-85 left-1/11 w-[110px] sideWing"
+        className="absolute top-85 left-1/12 w-[110px] sideWing"
       />
       <img
         src="/wings.svg"
@@ -119,7 +119,7 @@ export default function HeroSection() {
       <img
         src="/land.svg"
         alt="land"
-        className="absolute w-full bottom-[-25px] md:bottom-[0px] sm:bottom-0 "
+        className="absolute w-full bottom-[-20px] md:bottom-[0px] sm:bottom-0 "
       />
 
       {/* Text + Buttons */}
@@ -131,7 +131,7 @@ export default function HeroSection() {
           Agriculture
         </p>{" "}
         <br />
-        <p className="text-lg text-center xsm:text-base mmd:text-lg text-[#374151] w-100 relative left-1/7 para">
+        <p className="text-lg text-center xsm:text-base mmd:text-lg text-[#374151] w-[550px]  relative left-1/6 para">
           Agrolla delivers cutting-edge agricultural solutions that maximize
           yield, minimize environmental impact, and transform farming practices
           for a sustainable future.
