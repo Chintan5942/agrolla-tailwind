@@ -32,31 +32,31 @@ export default function HeroSection() {
   }, [count]);
 
   return (
-    <div className="relative w-full max-w-[1920px] h-[840px] xsm:h-[750px] mmd:h-[800px] mlg: overflow-hidden hero ">
+    <div className="relative w-full max-w-[1920px] lg:h-216 md:h-[880px] overflow-hidden hero ">
       {/* Cloud - always visible */}
       <img
         src="/cloud.svg"
         alt="cloud"
-        className="absolute left-[5%] w-[60px] xsm:w-[80px] mmd:w-[120px] lg:w-[300px] cloud"
+        className="absolute left-[5%] w-[300px]  cloud"
       />
 
       {/* Bird - always visible */}
       <img
         src="/birds.svg"
         alt="bird"
-        className="absolute top-[60px] left-[65%]  xsm:w-[60px] mmd:w-[80px] bird"
+        className="absolute top-[60px] left-[65%]   bird"
       />
 
       {/* Extra clouds and birds - lg+ */}
       <img
         src="/cloud.svg"
         alt=""
-        className="hidden lg:block mlg:border-2 mlg:border-red-500 absolute top-[-50px] left-[45%] w-[200px] lg:w-[300px] cloud"
+        className="hidden lg:block absolute top-[-50px] left-[45%] w-[200px]  cloud"
       />
       <img
         src="/cloud.svg"
         alt=""
-        className="hidden lg:block absolute top-[-20px] left-3/4 w-[200px] lg:w-[300px] cloud"
+        className="hidden lg:block absolute top-[-20px] left-3/4 w-[200px] cloud"
       />
       <img
         src="/birds.svg"
@@ -68,24 +68,24 @@ export default function HeroSection() {
       <img
         src="/farmer.svg"
         alt="farmer"
-        className="absolute left-[10%] top-[90%] h-[120px] xsm:top-[10%] xsm:h-[140px] mmd:top-[65%] mmd:left-[8%] mmd:h-[190px] lg:top-[60%] lg:left-[13%] lg:h-[300px] farmer"
+        className="absolute left-[10%] top-[59%] h-[300px] farmer"
       />
 
       {/* Windmill */}
       <img
         src="/Wingstand.svg"
         alt="windmill base"
-        className="absolute top-100 left-[3%] h-[140px] xsm:h-[180px] mmd:h-[260px] lg:h-[435px]"
+        className="absolute top-100 left-[3%] h-[435px] windmill"
       />
       <img
         src="/sidewing.svg"
         alt="sidewing"
-        className="absolute top-85 left-1/11 w-[40px] xsm:w-[55px] mmd:w-[75px] lg:w-[110px] sideWing"
+        className="absolute top-85 left-1/11 w-[110px] sideWing"
       />
       <img
         src="/wings.svg"
         alt="wings"
-        className="absolute top-68 left-1/56 h-[80px] xsm:h-[100px] mmd:h-[140px] lg:h-[175px] wing"
+        className="absolute top-68 left-1/56 h-[175px]  wing"
       />
 
       {/* Groundnuts */}
@@ -95,7 +95,7 @@ export default function HeroSection() {
           src="/ground-nut.png"
           alt="groundnut"
           style={{ left: `${left * 4}px` }}
-          className="groundNut absolute top-172 z-30 w-20 h-[50px] xsm:h-[70px] mmd:h-[100px] mmd:top-[83%] lg:h-[150px]"
+          className="groundNut absolute top-172 z-30 w-22 h-[150px]"
         />
       ))}
 
@@ -117,7 +117,7 @@ export default function HeroSection() {
       <img
         src="/land.svg"
         alt="land"
-        className="absolute bottom-[-25px] w-full  xsm:h-[80px] mmd:h-[90px]"
+        className="absolute w-full bottom-[-25px] md:bottom-[0px] sm:bottom-0 "
       />
 
       {/* Text + Buttons */}
@@ -129,7 +129,7 @@ export default function HeroSection() {
           Agriculture
         </p>{" "}
         <br />
-        <p className="text-lg text-center xsm:text-base mmd:text-lg text-[#374151]  max-w-[515px] ">
+        <p className="text-lg text-center xsm:text-base mmd:text-lg text-[#374151] w-100 relative left-1/7 para">
           Agrolla delivers cutting-edge agricultural solutions that maximize
           yield, minimize environmental impact, and transform farming practices
           for a sustainable future.

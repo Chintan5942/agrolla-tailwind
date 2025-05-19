@@ -134,20 +134,89 @@
   .tractor {
     display: none;
   }
-  .farmer{
+  .farmer {
     margin-top: 35px;
   }
-  .factory{
+  .factory {
     height: 400px;
     margin-top: 15px;
   }
-  .groundNut{
-    margin-left:-105px;
+  .groundNut {
+    margin-left: -105px;
   }
-  .cloud{
+  .cloud {
     width: 200px;
   }
-  .bird{
+  .bird {
     width: 100px;
   }
+}
+@media (max-width: 768px) {
+  .factory {
+    width: 350px;
+    margin-top: 58px;
+  }
+  .farmer {
+    height: 225px;
+    margin-top: 120px;
+    margin-left: 50px;
+  }
+  .groundNut {
+    height: 90px;
+    width: 80px;
+    margin-left: -200px;
+    margin-top: 100px;
+  }
+  .wing {
+    height: 135px;
+    position: absolute;
+    top: 415px;
+  }
+  .windmill {
+    height: 335px;
+    position: absolute;
+    top: 515px;
+    left: 30px;
+  }
+}
+
+@media (max-width: 425px) {
+  .hero{
+    height: 650px;
+  }
+  .factory {
+    height: 150px;
+    position: absolute;
+    left: 125px;
+    top: 470px;
+  }
+  .para {
+    width: 300px;
+    font-size: 10px;
+    margin-left: -100px;
+  }
+  .wing {
+    height: 80px;
+    position: absolute;
+    top: 400px;
+  }
+  .windmill {
+    height: 200px;
+    position: absolute;
+    top: 450px;
+    left: 18px;
+  }
+  .farmer{
+    height: 100px;
+    position: absolute;
+    top: 435px;
+  }
+  .groundNut{
+    position: absolute;
+    top: 500px;
+    height: 60px;
+    width: 60px;
+    left: 355px !important;
+  }
+
 }
