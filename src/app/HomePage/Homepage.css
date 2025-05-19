@@ -1,14 +1,14 @@
-*{
-    @import "tailwindcss";
+* {
+  @import "tailwindcss";
 }
 
 /* Hero-section */
 
 .cloud {
-  animation: float 4s linear;
+  animation: float 3s linear;
 }
 .bird {
-  animation: fadeIn 4s ease-in forwards;
+  animation: fadeIn 3s ease-in forwards;
 }
 .wing {
   animation: spin 3s linear infinite;
@@ -73,18 +73,81 @@
   }
 }
 
- /* Section1  */
-.section1{
-  background-image: url('/section1-BG.png');
+/* Section1  */
+.section1 {
+  background-image: url("/section1-BG.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-@media(max-width:1440px){
-  .tractor{
+
+@media (max-width: 1750px) {
+  .sideWing {
     display: none;
   }
 }
-@media screen {
-  
+@media (max-width: 1600px) {
+  .factory {
+    height: 500px;
+    position: absolute;
+    top: 365px;
+  }
+  .tractor {
+    position: absolute;
+    right: 445px;
+    top: 725px;
+  }
+}
+@media (max-width: 1500px) {
+  .factory {
+    height: 400px;
+    position: absolute;
+    top: 450px;
+  }
+  .tractor {
+    position: absolute;
+    right: 350px;
+    top: 725px;
+  }
+}
+@media (max-width: 1400px) {
+  .factory {
+    height: 400px;
+    position: absolute;
+    top: 460px;
+  }
+  .tractor {
+    height: 80px;
+    position: absolute;
+    right: 350px;
+    top: 745px;
+  }
+  .groundNut {
+    margin-left: -50px;
+    margin-top: 25px;
+  }
+  .farmer {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 1024px) {
+  .tractor {
+    display: none;
+  }
+  .farmer{
+    margin-top: 35px;
+  }
+  .factory{
+    height: 400px;
+    margin-top: 15px;
+  }
+  .groundNut{
+    margin-left:-105px;
+  }
+  .cloud{
+    width: 200px;
+  }
+  .bird{
+    width: 100px;
+  }
 }
