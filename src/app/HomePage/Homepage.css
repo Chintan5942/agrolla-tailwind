@@ -73,13 +73,6 @@
   }
 }
 
-/* Section1  */
-.section1 {
-  background-image: url("/section1-BG.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 @media (max-width: 1750px) {
   .sideWing {
@@ -213,7 +206,7 @@
   }
   .groundNut{
     position: absolute;
-    top: 450px;
+    top: 40px;
     height: 60px;
     width: 60px;
     left: 355px !important;
