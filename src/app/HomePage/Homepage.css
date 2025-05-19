@@ -182,13 +182,13 @@
 
 @media (max-width: 425px) {
   .hero{
-    height: 650px;
+    height: 600px;
   }
   .factory {
     height: 150px;
     position: absolute;
     left: 125px;
-    top: 470px;
+    top: 410px;
   }
   .para {
     width: 300px;
@@ -198,22 +198,22 @@
   .wing {
     height: 80px;
     position: absolute;
-    top: 400px;
+    top: 340px;
   }
   .windmill {
     height: 200px;
     position: absolute;
-    top: 450px;
+    top: 400px;
     left: 18px;
   }
   .farmer{
     height: 100px;
     position: absolute;
-    top: 435px;
+    top: 385px;
   }
   .groundNut{
     position: absolute;
-    top: 500px;
+    top: 450px;
     height: 60px;
     width: 60px;
     left: 355px !important;

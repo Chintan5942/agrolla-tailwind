@@ -12,6 +12,8 @@ export default function HeroSection() {
         setCount(5);
       } else if (width >= 1024) {
         setCount(4);
+      } else if (width <= 425) {
+        setCount(1);
       } else {
         setCount(3);
       }
