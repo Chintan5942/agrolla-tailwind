@@ -190,7 +190,7 @@ export default function Categories() {
             manufacturer and exporter of peanuts, oilseeds, grains, and pulses.
           </p>
         </div>
-        <div className="flex flex-col lg:flex-row gap-6 mt-16 catagory-container">
+        <div className="flex flex-col lg:flex-row gap-6 mt-16 catagory-container h-[1000px]">
 
           {/* Categories - Mobile/Tablet Dropdown */}
           <div className="lg:hidden w-full px-4">
@@ -268,7 +268,7 @@ export default function Categories() {
           </aside>
 
           {/* Product Grid */}
-          <section className="w-full lg:w-[80%] grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 p-2 catagory-section h-[1000px]">
+          <section className="w-full lg:w-[80%] grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 p-2 catagory-section h-[980px]">
             {filteredProducts.map((product) => {
               const fullStars = Math.floor(product.rating);
               const hasHalfStar = product.rating % 1 >= 0.5;
