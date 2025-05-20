@@ -11,9 +11,9 @@ export default function HeroSection() {
       if (width >= 1250) {
         setCount(5);
       } else if (width >= 1024) {
-        setCount(4);
-      } else if (width <= 425) {
-        setCount(1);
+        setCount(4); 
+      } else if (width <= 524) {
+        setCount(1); 
       } else {
         setCount(3);
       }
@@ -28,7 +28,7 @@ export default function HeroSection() {
   useEffect(() => {
     const groundNuts = document.querySelectorAll(".groundNut");
     groundNuts.forEach((img, i) => {
-      img.style.animation = "growUp 1s ease-out forwards";
+      img.style.animation = "growUp 2s ease-in-out forwards";
       img.style.animationDelay = `${i * 0.3}s`;
     });
   }, [count]);
@@ -119,7 +119,7 @@ export default function HeroSection() {
       <img
         src="/land.svg"
         alt="land"
-        className="absolute w-full bottom-[-20px] md:bottom-[0px] sm:bottom-0 "
+        className="absolute w-full bottom-[-20px] md:bottom-[0px] land "
       />
 
       {/* Text + Buttons */}

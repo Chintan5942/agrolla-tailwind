@@ -171,6 +171,9 @@
     top: 515px;
     left: 30px;
   }
+  .para{
+    margin-left: -175px;
+  }
 }
 
 @media (max-width: 425px) {
@@ -202,14 +205,20 @@
   .farmer{
     height: 100px;
     position: absolute;
-    top: 385px;
+    top: 370px;
   }
   .groundNut{
     position: absolute;
-    top: 40px;
+    top: 450px;
     height: 60px;
     width: 60px;
     left: 355px !important;
   }
-
+  .land{
+    height: 20px;
+    position: absolute;
+    top: 585px;
+    object-fit: cover;
+    width: 100%;
+  }
 }
