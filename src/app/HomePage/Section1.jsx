@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Section1() {
   return (
     <> 
-      <section className="w-full h-[1300px] lg:h-[850px] bg-white bg-[url('/section1-BG.png')] bg-cover bg-center overflow-hidden bg-no-repeat md:h-255">
+      <section className="w-full h-[1450px] lg:h-[850px] bg-white bg-[url('/section1-BG.png')] bg-cover bg-center overflow-hidden bg-no-repeat md:h-255">
         {/* Header Text */}
         <div className="relative text-center top-20">
           <div className="flex items-center justify-center ">

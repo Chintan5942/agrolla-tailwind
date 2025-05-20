@@ -1,5 +1,6 @@
 "use-client";
 
+import Categories from "./Categories";
 import HeroSection from "./HeroSection";
 import Navbar from "./Navbar";
 import Section1 from "./Section1";
@@ -10,6 +11,7 @@ export default function Page() {
     <Navbar/>
     <HeroSection/>
     <Section1/>
+    <Categories/>
     </>
   )
 }
