@@ -295,7 +295,7 @@ export default function Categories() {
                       <FaRegStar key={`empty-${i}`} className="text-gray-300" />
                     ))}
                     <span className="text-[#6B7280] text-lg font-semibold">
-                      ({product.rating * 4})
+                      {product.rating * 4}
                     </span>
                   </div>
                   <h3 className="text-2xl font-bold text-gray-800 mt-4">
