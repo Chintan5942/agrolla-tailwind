@@ -4,7 +4,7 @@ export default function Section5() {
   return (
     <>
       <br /><br />
-      <div className="w-full lg:relative lg:top-25 overflow-hidden">
+      <div className="w-full lg:relative lg:top-25 overflow-hidden h-[500px]">
         <div className="flex flex-col items-center space-y-6 px-4">
           {/* Section Title */}
           <div className="flex items-center justify-center gap-2">
