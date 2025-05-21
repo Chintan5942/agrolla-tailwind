@@ -69,7 +69,7 @@ export default function Section4() {
       <div className="lg:w-[680px] lg:h-[536px] w-full flex flex-col gap-4 sm:w-[700px]">
         {" "}
         <br />
-        <div className="flex items-center justify-start space-x-3">
+        <div className="flex items-center justify-center space-x-3">
           <hr className="w-10 border border-[#2E7D32]" />
           <p className="text-xs sm:text-sm text-[#2E7D32] font-bold uppercase tracking-wider">
             &nbsp;Featured Products&nbsp;
