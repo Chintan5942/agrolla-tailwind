@@ -95,13 +95,13 @@ export default function Slider() {
               }}
               autoplay={{ delay: 900, disableOnInteraction: false }}
               modules={[Pagination, Autoplay]}
-              className="pb-12"
+              className=" h-[350px]"
             >
               {testimonials.concat(testimonials).map((item, index) => (
                 <SwiperSlide key={index}>
-                  <div className="bg-white rounded-xl shadow-2xl p-6 transition-all duration-300 hover:shadow-xl h-[275px] w-[450px] flex flex-col  ">
+                  <div className="bg-white rounded-xl shadow-xl p-6 transition-all duration-300 hover:shadow-2xl h-[275px] w-[450px] flex flex-col lg:relative lg:top-10">
                     <br />
-                    <div className="flex space-x-1  w-80 relative left-[25px]">
+                    <div className="flex space-x-1 w-80 relative left-[25px]">
                       {[...Array(5)].map((_, i) => (
                         <svg
                           key={i}
@@ -118,7 +118,7 @@ export default function Slider() {
                       "{item.text}"
                     </p>
                     <br />
-                    <div className="flex items-center justify-items-start  w-80 relative left-[25px]">
+                    <div className="flex items-center justify-items-start gap-4  w-80 relative left-[25px]">
                       <div className="w-12 h-12 rounded-full bg-gray-200">
                         <img
                           src={item.image}
