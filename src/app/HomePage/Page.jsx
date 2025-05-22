@@ -10,6 +10,7 @@ import Certificate from "./Certificate";
 import ImageGallery from "./ImageGallery";
 import Slider from "./Slider";
 import Contact from "./Contact";
+import Footer from "./Footer";
 
 export default function Page() {
   return (
@@ -24,6 +25,7 @@ export default function Page() {
     <ImageGallery/>
     <Slider/>
     <Contact/>
-    </>
+    <Footer/>
+     </>
   )
 }
