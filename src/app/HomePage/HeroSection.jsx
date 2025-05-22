@@ -82,7 +82,7 @@ export default function HeroSection() {
       <img
         src="/sidewing.svg"
         alt="sidewing"
-        className="absolute top-85 left-1/12 w-[110px] sideWing"
+        className="absolute top-86 left-1/11 w-[110px] sideWing"
       />
       <img
         src="/wings.svg"
@@ -105,14 +105,14 @@ export default function HeroSection() {
       <img
         src="/factory.svg"
         alt="factory"
-        className="absolute right-0 top-57 h-160 factory"
+        className="absolute right-0 top-60 h-160 factory"
       />
 
       {/* Tractor - lg only */}
       <img
         src="/tractor.svg"
         alt="tractor"
-        className="hidden lg:block absolute top-177 right-[35%] h-[100px] tractor"
+        className="hidden lg:block absolute top-179 right-[35%] h-[100px] tractor"
       />
 
       {/* Land */}

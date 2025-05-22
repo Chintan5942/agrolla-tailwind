@@ -9,6 +9,7 @@ import Section4 from "./Section4";
 import Certificate from "./Certificate";
 import ImageGallery from "./ImageGallery";
 import Slider from "./Slider";
+import Contact from "./Contact";
 
 export default function Page() {
   return (
@@ -22,6 +23,7 @@ export default function Page() {
     <Certificate/>
     <ImageGallery/>
     <Slider/>
+    <Contact/>
     </>
   )
 }
