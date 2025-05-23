@@ -136,7 +136,7 @@ export default function Page() {
 
               <button
                 type="submit"
-                className="bg-green-700 text-white rounded-md hover:bg-green-800"
+                className="bg-green-700 text-white rounded-md hover:bg-green-800 w-50 text-lg"
                 style={{ height: '48px', padding: '0 24px' }}
               >
                 Send Message
