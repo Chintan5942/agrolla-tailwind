@@ -2,7 +2,7 @@
 export default function ImageGallery() {
   return (
     <>
-      <div className="w-full px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Title Section */}
         <div className="flex flex-col items-center text-center">
           <div className="flex gap-2 items-center w-full max-w-[350px]">

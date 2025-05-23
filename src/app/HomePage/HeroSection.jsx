@@ -97,7 +97,7 @@ export default function HeroSection() {
           src="/ground-nut.png"
           alt="groundnut"
           style={{ left: `${left * 4}px` }}
-          className="groundNut absolute top-172 z-30 w-22 h-[150px]"
+          className="groundNut absolute top-175 z-30 w-22 h-[150px]"
         />
       ))}
 
