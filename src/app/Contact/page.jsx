@@ -11,8 +11,10 @@ export default function Page() {
     $(".accordion-title").on("click", function () {
       const $item = $(this).closest(".accordion-item");
       const $content = $item.find(".accordion-content");
+      const $chevron = $item.find(".chevron");
       $item.toggleClass("active");
       $content.slideToggle(300);
+      $chevron.toggleClass("transform rotate-180");
     });
 
     return () => {
@@ -284,8 +286,16 @@ export default function Page() {
               className="accordion-item border border-gray-300 rounded-lg shadow-lg"
             >
               <div style={{ height: '24px' }}></div>
-              <button className="accordion-title text-left text-lg font-semibold text-gray-800 w-[90%] left-8 relative hover:cursor-pointer">
+              <button className="accordion-title text-left text-lg font-semibold text-gray-800 w-[90%] left-8 relative hover:cursor-pointer flex justify-between items-center">
                 {faq.title}
+                <svg 
+                  className="chevron w-5 h-5 text-gray-500 transition-transform duration-300" 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  viewBox="0 0 20 20" 
+                  fill="currentColor"
+                >
+                  <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
               </button>
               <div style={{ height: '24px' }}></div>
               <p className="accordion-content text-sm text-gray-700 font-semibold w-[90%] left-8 relative">
