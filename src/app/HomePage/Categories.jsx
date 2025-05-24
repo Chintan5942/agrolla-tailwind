@@ -204,19 +204,30 @@ export default function Categories() {
                 <span className="text-xl font-semibold text-gray-800 ml-3">
                   Select Category
                 </span>
-              </div> <br />
-              <select
-                id="categorySelect"
-                value={selectedCategory}
-                onChange={(e) => handleCategoryClick(e.target.value)}
-                className="w-full h-[45px] appearance-none bg-white p-3 rounded-lg border border-gray-300 shadow-inner text-gray-800x transition duration-200 text-center text-xl font-semibold"
-              >
-                {Object.keys(categoryImages).map((cat) => (
-                  <option key={cat} value={cat} className="text-center text-lg font-regular">
-                    {cat}
-                  </option>
-                ))}
-              </select>
+              </div>
+              <div className="relative">
+                <select
+                  id="categorySelect"
+                  value={selectedCategory}
+                  onChange={(e) => handleCategoryClick(e.target.value)}
+                  className="w-full h-[45px] appearance-none bg-white p-3 rounded-lg border border-gray-300 shadow-inner text-gray-800 transition duration-200 text-center text-xl font-semibold"
+                >
+                  {Object.keys(categoryImages).map((cat) => (
+                    <option key={cat} value={cat} className="text-center text-lg font-regular">
+                      {cat}
+                    </option>
+                  ))}
+                </select>
+                <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                  <svg 
+                    className="fill-current h-6 w-6" 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+                  </svg>
+                </div>
+              </div>
             </div>
           </div>
 
