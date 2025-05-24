@@ -3,9 +3,8 @@
 export default function Footer() {
   return (
     <footer className="relative bg-[url('/footer.png')] bg-cover bg-center bg-no-repeat overflow-hidden">
-      <br /><br /><br />
-      <div className="relative flex flex-col gap-10 w-full max-w-screen-2xl h-full lg:relative lg:left-50">
-        <div className="grid gap-5 sm:grid-cols-6 lg:grid-cols-4 w-full">
+      <div className="space-y-10 w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 w-full pt-12">
 
           {/* Company Info */}
           <div className="flex flex-col gap-6">
@@ -44,7 +43,7 @@ export default function Footer() {
           </div>
 
           {/* Our Services */}
-          <div className="flex flex-col gap-6 ">
+          <div className="flex flex-col gap-6">
             <h3 className="text-xl font-bold text-gray-300 lg:text-2xl">Our Services</h3>
             <ul className="flex flex-col gap-3">
               {['Precision Farming', 'Irrigation Solutions', 'Organic Farming', 'Crop Protection', 'Farm Management'].map((service) => (
@@ -90,7 +89,7 @@ export default function Footer() {
         </div>
 
         {/* Footer Bottom */} 
-        <div className="border-t border-gray-600"> <br />
+        <div className="border-t border-gray-600 pt-6 pb-6">
           <div className="flex flex-col gap-4 text-sm text-gray-300 md:flex-row md:justify-between">
             <p className="text-center md:text-left">© 2025 Agrolla. All rights reserved.</p>
             <div className="flex flex-wrap justify-center gap-4 md:justify-end">
@@ -101,7 +100,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <br />
     </footer>
   );
 }

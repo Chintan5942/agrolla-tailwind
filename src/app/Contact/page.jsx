@@ -37,7 +37,7 @@ export default function Page() {
       </div>
 
       {/* Contact Form and Info Section */}
-      <div className="flex flex-col lg:flex-row justify-center gap-20 bg-[aliceblue]" style={{ minHeight: '1003px' }}>
+      <div className="flex flex-col lg:flex-row justify-center gap-20" style={{ minHeight: '1003px' }}>
         <div className="shadow-xl rounded-lg bg-white w-full max-w-[992px] lg:relative lg:top-20" style={{ height: '859px' }}>
           <div className="text-2xl font-semibold text-gray-900 w-[95%] lg:left-5 relative">
             <div style={{ height: '24px' }}></div>
