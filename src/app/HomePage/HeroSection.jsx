@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import "@/app/HomePage/Homepage.css";
 
 export default function HeroSection() {
   const [count, setCount] = useState(5);
@@ -11,11 +10,11 @@ export default function HeroSection() {
       if (width >= 1250) {
         setCount(5);
       } else if (width >= 1024) {
-        setCount(4); 
-      } else if (width <= 524) {
-        setCount(1); 
-      } else {
+        setCount(4);
+      } else if (width >= 768) {
         setCount(3);
+      } else {
+        setCount(2);
       }
     };
     updateCount();
@@ -34,35 +33,33 @@ export default function HeroSection() {
   }, [count]);
 
   return (
-    <div className="relative w-[1920px(fixed)] lg:h-218 md:h-[880px] overflow-hidden hero ">
-      {/* Cloud - always visible */}
+    <div className="relative w-full max-w-[1920px] mx-auto min-h-screen overflow-hidden">
+      {/* Clouds */}
       <img
         src="/cloud.svg"
         alt="cloud"
-        className="absolute left-[5%] w-[300px]  cloud"
+        className="absolute left-[5%] w-[300px] sm:w-[180px] cloud"
+      />
+      <img
+        src="/cloud.svg"
+        alt="cloud"
+        className="hidden lg:block absolute top-[-50px] left-[45%] w-[300px] cloud"
+      />
+      <img
+        src="/cloud.svg"
+        alt="cloud"
+        className="hidden lg:block absolute top-[-20px] left-3/4 w-[300px] cloud"
       />
 
-      {/* Bird - always visible */}
+      {/* Birds */}
       <img
         src="/birds.svg"
         alt="bird"
-        className="absolute top-[60px] left-[65%]   bird"
-      />
-
-      {/* Extra clouds and birds - lg+ */}
-      <img
-        src="/cloud.svg"
-        alt=""
-        className="hidden lg:block absolute top-[-50px] left-[45%] w-[300px]  cloud"
-      />
-      <img
-        src="/cloud.svg"
-        alt=""
-        className="hidden lg:block absolute top-[-20px] left-3/4 w-[300px] cloud"
+        className="absolute top-[60px] left-[65%] sm:top-[40px] sm:left-[55%] w-[120px] sm:w-[80px] bird"
       />
       <img
         src="/birds.svg"
-        alt=""
+        alt="bird"
         className="hidden lg:block absolute top-[60px] left-[25%] bird"
       />
 
@@ -70,24 +67,24 @@ export default function HeroSection() {
       <img
         src="/farmer.svg"
         alt="farmer"
-        className="absolute left-[10%] top-[59%] h-[300px] farmer"
+        className="absolute left-[10%] top-[60%] h-[300px] md:h-[250px] sm:h-[200px] farmer"
       />
 
       {/* Windmill */}
       <img
         src="/Wingstand.svg"
         alt="windmill base"
-        className="absolute top-100 left-[3%] h-[435px] windmill"
+        className="absolute top-[400px] left-[3%] h-[435px] md:h-[370px] sm:h-[300px] windmill"
       />
       <img
         src="/sidewing.svg"
         alt="sidewing"
-        className="absolute top-86 left-1/11 w-[110px] sideWing"
+        className="absolute top-[340px] left-[7%] w-[110px] md:w-[90px] sm:w-[70px] sideWing"
       />
       <img
         src="/wings.svg"
         alt="wings"
-        className="absolute top-68 left-1/56 h-[175px]  wing"
+        className="absolute top-[270px] left-[5%] h-[175px] md:h-[140px] sm:h-[100px] wing"
       />
 
       {/* Groundnuts */}
@@ -97,7 +94,7 @@ export default function HeroSection() {
           src="/ground-nut.png"
           alt="groundnut"
           style={{ left: `${left * 4}px` }}
-          className="groundNut absolute top-175 z-30 w-22 h-[150px]"
+          className="groundNut absolute top-[740px] z-30 w-[88px] h-[150px] md:w-[72px] md:h-[120px] sm:w-[60px] sm:h-[100px]"
         />
       ))}
 
@@ -105,43 +102,43 @@ export default function HeroSection() {
       <img
         src="/factory.svg"
         alt="factory"
-        className="absolute right-0 top-60 h-160 factory"
+        className="absolute right-0 top-[270px] h-[640px] md:h-[500px] sm:h-[400px] factory"
       />
 
-      {/* Tractor - lg only */}
+      {/* Tractor */}
       <img
         src="/tractor.svg"
         alt="tractor"
-        className="hidden lg:block absolute top-179 right-[35%] h-[100px] tractor"
+        className="hidden lg:block absolute top-[755px] right-[35%] h-[100px] tractor"
       />
 
       {/* Land */}
       <img
         src="/land.svg"
         alt="land"
-        className="absolute w-full bottom-[-20px] md:bottom-[0px] land "
+        className="absolute w-full bottom-[-20px] md:bottom-[0px] land"
       />
 
-      {/* Text + Buttons */}
-      <div className="absolute top-1/5 xsm:top-[150px]  left-1/2 transform -translate-x-1/2 w-[40%] mmd:w-[604px] text-center">
-        <p className="text-lg xsm:text-2xl mmd:text-4xl lg:text-6xl text-[#111827] font-semibold tracking-wide">
+      {/* Text and Buttons */}
+      <div className="absolute top-[20%] sm:top-[150px] left-1/2 transform -translate-x-1/2 w-[40%] sm:w-[85%] text-center">
+        <p className="text-lg sm:text-2xl md:text-4xl lg:text-6xl text-[#111827] font-semibold tracking-wide">
           Revolutionizing
         </p>
-        <p className="text-lg xsm:text-2xl mmd:text-4xl lg:text-6xl text-[#2E7D32] font-semibold tracking-wide">
+        <p className="text-lg sm:text-2xl md:text-4xl lg:text-6xl text-[#2E7D32] font-semibold tracking-wide">
           Agriculture
-        </p>{" "}
+        </p>
         <br />
-        <p className="text-lg text-center xsm:text-base mmd:text-lg text-[#374151] w-[550px]  relative left-1/6 para">
-          Agrolla delivers cutting-edge agricultural solutions that maximize
-          yield, minimize environmental impact, and transform farming practices
-          for a sustainable future.
-        </p>{" "}
+        <p className="text-sm sm:text-base md:text-lg text-[#374151] text-center w-full sm:w-[90%] mx-auto">
+          Agrolla delivers cutting-edge agricultural solutions that maximize yield,
+          minimize environmental impact, and transform farming practices for a
+          sustainable future.
+        </p>
         <br />
-        <div className="flex items-center justify-center gap-4 xsm:flex-row">
-          <button className="h-[44px] w-50 xsm:w-[193px] bg-[#2E7D32] text-white text-sm rounded-lg">
+        <div className="flex justify-center gap-4 flex-wrap">
+          <button className="h-[44px] w-[193px] bg-[#2E7D32] text-white text-sm rounded-lg">
             Explore Services
           </button>
-          <button className="h-[44px] w-50 xsm:w-[193px] border border-[#2e7d32] text-[#2e7d32] bg-white text-sm rounded-lg">
+          <button className="h-[44px] w-[193px] border border-[#2e7d32] text-[#2e7d32] bg-white text-sm rounded-lg">
             Contact Us
           </button>
         </div>
