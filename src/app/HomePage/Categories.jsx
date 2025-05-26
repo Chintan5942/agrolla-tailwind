@@ -288,7 +288,7 @@ export default function Categories() {
               return (
                 <div
                   key={product.id}
-                  className="bg-white rounded-2xl h-[450px] card"
+                  className="bg-white rounded-2xl h-[450px] card cursor-pointer"
                 >
                   <img
                     src={product.image}

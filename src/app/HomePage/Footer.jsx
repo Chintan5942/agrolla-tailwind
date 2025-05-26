@@ -1,5 +1,7 @@
 "use client";
 
+import Link from 'next/link';
+
 export default function Footer() {
   return (
     <footer className="relative bg-[url('/footer.png')] bg-cover bg-center bg-no-repeat overflow-hidden">
@@ -9,7 +11,9 @@ export default function Footer() {
 
           {/* Company Info */}
           <div className="flex flex-col gap-6">
-            <img src="/footer-logo.png" alt="Agrolla Logo" className="w-36 h-auto" />
+            <Link href="/">
+              <img src="/footer-logo.png" alt="Agrolla Logo" className="w-36 h-auto" />
+            </Link>
             <p className="text-gray-300 leading-6">
               Transforming agriculture through innovation and sustainable solutions for a better tomorrow.
             </p>
@@ -21,11 +25,11 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-3">
                 <img src="/call.svg" alt="Phone" className="h-10 w-10" />
-                <span className="text-gray-300">+91 98765 43210</span>
+                <a href="tel:+919876543210" className="text-gray-300 hover:text-white transition-colors">+91 98765 43210</a>
               </div>
               <div className="flex items-center gap-3">
                 <img src="/mail.svg" alt="Email" className="h-10 w-10" />
-                <span className="text-gray-300">info@agrolla.in</span>
+                <a href="mailto:info@agrolla.in" className="text-gray-300 hover:text-white transition-colors">info@agrolla.in</a>
               </div>
             </div>
           </div>
@@ -34,10 +38,18 @@ export default function Footer() {
           <div className="flex flex-col gap-6">
             <h3 className="text-xl font-bold text-gray-300 lg:text-2xl">Quick Links</h3>
             <ul className="flex flex-col gap-3">
-              {['Home', 'About Us', 'Services', 'Products', 'Contact'].map((item) => (
-                <li key={item} className="group flex items-start gap-2">
+              {[
+                { name: 'Home', path: '/' },
+                { name: 'About Us', path: '/About' },
+                { name: 'Services', path: '#' },
+                { name: 'Products', path: '/Product' },
+                { name: 'Contact', path: '/Contact' }
+              ].map((item) => (
+                <li key={item.name} className="group flex items-start gap-2">
                   <span className="font-bold transition-transform group-hover:translate-x-1 text-white">›</span>
-                  <a href="#" className="text-gray-300 hover:text-white transition-colors">{item}</a>
+                  <Link href={item.path} className="text-gray-300 hover:text-white transition-colors">
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -47,10 +59,18 @@ export default function Footer() {
           <div className="flex flex-col gap-6">
             <h3 className="text-xl font-bold text-gray-300 lg:text-2xl">Our Services</h3>
             <ul className="flex flex-col gap-3">
-              {['Precision Farming', 'Irrigation Solutions', 'Organic Farming', 'Crop Protection', 'Farm Management'].map((service) => (
-                <li key={service} className="group flex items-start gap-2">
+              {[
+                { name: 'Precision Farming', path: '/services#precision-farming' },
+                { name: 'Irrigation Solutions', path: '/services#irrigation' },
+                { name: 'Organic Farming', path: '/services#organic' },
+                { name: 'Crop Protection', path: '/services#crop-protection' },
+                { name: 'Farm Management', path: '/services#farm-management' }
+              ].map((service) => (
+                <li key={service.name} className="group flex items-start gap-2">
                   <span className="font-bold text-white">✔</span>
-                  <span className="text-gray-300 group-hover:text-white transition-colors">{service}</span>
+                  <Link href={service.path} className="text-gray-300 hover:text-white transition-colors">
+                    {service.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -79,9 +99,20 @@ export default function Footer() {
             <div className="flex flex-col gap-6">
               <h3 className="text-xl font-bold text-gray-300 lg:text-2xl">Follow Us</h3>
               <div className="flex gap-4">
-                {['facebook', 'x', 'instagram', 'linkedin'].map((platform) => (
-                  <a key={platform} href="#" className="h-8 w-8 transition-transform hover:scale-105 hover:opacity-80">
-                    <img src={`/${platform}.png`} alt={platform} className="h-full w-full" />
+                {[
+                  { platform: 'facebook', url: 'https://facebook.com/agrolla' },
+                  { platform: 'x', url: 'https://twitter.com/agrolla' },
+                  { platform: 'instagram', url: 'https://instagram.com/agrolla' },
+                  { platform: 'linkedin', url: 'https://linkedin.com/company/agrolla' }
+                ].map((social) => (
+                  <a 
+                    key={social.platform} 
+                    href={social.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="h-8 w-8 transition-transform hover:scale-105 hover:opacity-80"
+                  >
+                    <img src={`/${social.platform}.png`} alt={social.platform} className="h-full w-full" />
                   </a>
                 ))}
               </div>
@@ -95,9 +126,15 @@ export default function Footer() {
           <div className="flex flex-col gap-4 text-sm text-gray-300 md:flex-row md:justify-between">
             <p className="text-center md:text-left">© 2025 Agrolla. All rights reserved.</p>
             <div className="flex flex-wrap justify-center gap-4 md:justify-end">
-              <a href="#" className="hover:text-white hover:underline transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-white hover:underline transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-white hover:underline transition-colors">Sitemap</a>
+              <Link href="/privacy-policy" className="hover:text-white hover:underline transition-colors">
+                Privacy Policy
+              </Link>
+              <Link href="/terms-of-service" className="hover:text-white hover:underline transition-colors">
+                Terms of Service
+              </Link>
+              <Link href="/sitemap" className="hover:text-white hover:underline transition-colors">
+                Sitemap
+              </Link>
             </div>
           </div>
         </div>
@@ -105,4 +142,4 @@ export default function Footer() {
       <br /><br /><br /><br /><br />
     </footer>
   );
-} 
+}
