@@ -1,5 +1,6 @@
 "use client";
 
+import Footer from "../HomePage/Footer";
 import Navbar from "../HomePage/Navbar";
 
 export default function About() {
@@ -8,264 +9,628 @@ export default function About() {
       <div className="font-poppins">
         {/* Navbar */}
         <Navbar />
-        
+
         {/* Hero Section */}
-        <div className="w-full h-[1000px] bg-[url('/abouthero.png')] bg-cover bg-center flex items-center justify-baseline">
-          <div className="flex flex-col items-center justify-start w-full max-w-[600px] gap-4 absolute top-[50%] left-[5%]">
-            <h1 className="text-[48px] font-bold text-white leading-tight">Nurturing Quality, Cultivating Trust</h1>
-            <p className="text-[18px] font-normal text-[#d3d3d3] text-start">Discover the story behind Agrolla Impex, a distinguished One Star Export House and leading manufacturer of premium agricultural products.</p>
+        <div className="w-full h-[1000px] bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('/abouthero.png')] bg-cover bg-bottom flex items-center">
+          <div className="flex flex-col items-center justify-start w-full max-w-[600px] gap-4 absolute top-[450px] left-[5%]">
+            <h1 className="text-[48px] font-bold text-white leading-tight">
+              Nurturing Quality, Cultivating Trust
+            </h1>
+            <p className="text-[18px] font-normal text-[#d3d3d3] text-start">
+              Discover the story behind Agrolla Impex, a distinguished One Star
+              Export House and leading manufacturer of premium agricultural
+              products.
+            </p>
             <div className="flex flex-row gap-4 w-full justify-start">
-              <button className="h-[50px] w-[123px] bg-[#2E7D32] text-white text-[16px] font-semibold rounded-[8px]">Our Story</button>
-              <button className="h-[50px] w-[123px] bg-white text-[#1f2937] text-[16px] font-semibold rounded-[8px]">Contact Us</button>
+              <button className="h-[50px] w-[123px] bg-[#2E7D32] text-white text-[16px] font-semibold rounded-[8px]">
+                Our Story
+              </button>
+              <button className="h-[50px] w-[123px] bg-white text-[#1f2937] text-[16px] font-semibold rounded-[8px]">
+                Contact Us
+              </button>
             </div>
           </div>
         </div>
-
         {/* Main Content Container */}
         <div className="w-full flex flex-col items-center gap-16 md:gap-12 sm:gap-8 px-4">
-          
           {/* Section 1 */}
-          <section className="w-full max-w-[1536px] flex flex-col items-center gap-8"> <br /><br /><br />
+          <section className="w-full max-w-[1536px] flex flex-col items-center gap-8">
+            {" "}
+            <br />
+            <br />
+            <br />
             <h2 className="text-[30px] font-bold text-center">Who We Are</h2>
-            <p className="w-full max-w-xl text-[18px] text-[#4b5563] text-center">Agrolla Impex is a distinguished One Star Export House and a leading manufacturer and exporter of peanuts, oilseeds, grains, and pulses.</p>
-            
+            <p className="w-full max-w-xl text-[18px] text-[#4b5563] text-center">
+              Agrolla Impex is a distinguished One Star Export House and a
+              leading manufacturer and exporter of peanuts, oilseeds, grains,
+              and pulses.
+            </p>
             <div className="w-full flex flex-col lg:flex-row items-center justify-center gap-8">
               <div className="flex flex-col justify-center gap-6 max-w-[728px] w-full">
-                <p className="text-[16px] font-semibold text-[#374151] leading-[24px]">Headquartered in Gujarat, India, we take immense pride in our fully integrated operations, ensuring uncompromised quality, consistency, and reliability in every shipment.</p>
-                <p className="text-[16px] font-semibold text-[#374151] leading-[24px]">Our strategic location allows us to stay directly connected with farmers, enabling real-time communication and strict quality oversight right from the cultivation phase. This hands-on approach ensures that our products meet stringent global food safety and quality standards, making us a preferred supplier across international markets.</p>
-                
+                <p className="text-[16px] font-semibold text-[#374151] leading-[24px]">
+                  Headquartered in Gujarat, India, we take immense pride in our
+                  fully integrated operations, ensuring uncompromised quality,
+                  consistency, and reliability in every shipment.
+                </p>
+                <p className="text-[16px] font-semibold text-[#374151] leading-[24px]">
+                  Our strategic location allows us to stay directly connected
+                  with farmers, enabling real-time communication and strict
+                  quality oversight right from the cultivation phase. This
+                  hands-on approach ensures that our products meet stringent
+                  global food safety and quality standards, making us a
+                  preferred supplier across international markets.
+                </p>
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                   {/* Quality Items */}
                   {[
-                    { icon: "/state.svg", title: "State-of-the-Art Processing", desc: "Equipped with cutting-edge technology to maintain purity, freshness, and nutritional value." },
-                    { icon: "/quality.svg", title: "Quality Control", desc: "Every batch undergoes rigorous testing to meet the highest international benchmarks." },
-                    { icon: "/sustain.svg", title: "Sustainable Sourcing", desc: "Partnering with trusted farmers to maintain transparency and environmental responsibility." },
-                    { icon: "/global.svg", title: "Global Distribution", desc: "Serving bulk buyers, food manufacturers, wholesalers, and retailers worldwide." }
+                    {
+                      icon: "/state.svg",
+                      title: "State-of-the-Art Processing",
+                      desc: "Equipped with cutting-edge technology to maintain purity, freshness, and nutritional value.",
+                    },
+                    {
+                      icon: "/quality.svg",
+                      title: "Quality Control",
+                      desc: "Every batch undergoes rigorous testing to meet the highest international benchmarks.",
+                    },
+                    {
+                      icon: "/sustain.svg",
+                      title: "Sustainable Sourcing",
+                      desc: "Partnering with trusted farmers to maintain transparency and environmental responsibility.",
+                    },
+                    {
+                      icon: "/global.svg",
+                      title: "Global Distribution",
+                      desc: "Serving bulk buyers, food manufacturers, wholesalers, and retailers worldwide.",
+                    },
                   ].map((item, index) => (
                     <div key={index} className="flex items-start gap-4">
                       <img src={item.icon} alt="" className="w-12 h-12 mt-1" />
                       <div className="flex flex-col">
-                        <p className="text-[16px] font-semibold text-[#111827]">{item.title}</p>
-                        <p className="text-[14px] font-semibold text-[#4b5563]">{item.desc}</p>
+                        <p className="text-[16px] font-semibold text-[#111827]">
+                          {item.title}
+                        </p>
+                        <p className="text-[14px] font-semibold text-[#4b5563]">
+                          {item.desc}
+                        </p>
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
-              
-              <img src="/aboutSection1.jpg" alt="" className="w-full max-w-[728px] h-[613px] rounded-[8px] object-cover" />
+
+              <img
+                src="/aboutSection1.jpg"
+                alt=""
+                className="w-full max-w-[728px] h-[613px] rounded-[8px] object-cover"
+              />
             </div>
           </section>
-
           {/* Section 2 */}
-          <section className="w-full bg-[#f9fafb] flex justify-center ">
-            <div className="w-full max-w-[1536px] mx-auto flex flex-col lg:flex-row gap-8 ">
+          <br />
+          <br />
+          <br />
+          <section className="w-full bg-[#f9fafb] flex justify-center items-center">
+            <div className="w-full max-w-[1536px] flex flex-col lg:flex-row gap-8 ">
               {/* Mission Card */}
-              <div className="w-full lg:w-1/2 rounded-[16px] bg-white p-8 shadow-lg">
-                <img src="/mission.svg" alt="" className="w-16 h-16" />
-                <h3 className="text-2xl font-bold mt-6 mb-6">Our Mission</h3>
-                
-                <ul className="space-y-4">
+              <div className="w-full lg:w-1/2 rounded-[16px] bg-white shadow-lg flex flex-col gap-6">
+                <div className="flex flex-col  w-[90%] relative left-[5%] ">
+                  {" "}
+                  <br />
+                  <img src="/mission.svg" alt="" className="w-16 h-16" /> <br />
+                  <h3 className="text-2xl font-bold">Our Mission</h3>
+                </div>
+
+                <ul className="space-y-5 w-[90%] relative left-[5%] ">
                   {[
-                    { title: "Uncompromised Quality", desc: "Delivering premium agro products that exceed global quality expectations." },
-                    { title: "Expanding Global Reach", desc: "Strengthening our presence in key international markets with seamless trade operations." },
-                    { title: "Sustainability & Ethical Sourcing", desc: "Empowering farmers and promoting environmentally responsible agricultural practices." },
-                    { title: "Innovation & Growth", desc: "Investing in modern technology and continuous improvement to adapt to evolving market needs." },
-                    { title: "Client Success", desc: "Building long-term partnerships by offering customized solutions and exceptional service." }
+                    {
+                      title: "Uncompromised Quality",
+                      desc: "Delivering premium agro products that exceed global quality expectations.",
+                    },
+                    {
+                      title: "Expanding Global Reach",
+                      desc: "Strengthening our presence in key international markets with seamless trade operations.",
+                    },
+                    {
+                      title: "Sustainability & Ethical Sourcing",
+                      desc: "Empowering farmers and promoting environmentally responsible agricultural practices.",
+                    },
+                    {
+                      title: "Innovation & Growth",
+                      desc: "Investing in modern technology and continuous improvement to adapt to evolving market needs.",
+                    },
+                    {
+                      title: "Client Success",
+                      desc: "Building long-term partnerships by offering customized solutions and exceptional service.",
+                    },
                   ].map((item, index) => (
-                    <li key={index} className="flex">
-                      <span className="text-[#4caf50] text-xl gap-4">✓</span>
-                      <div>
-                        <p className="text-[16px] font-semibold text-[#111827]">{item.title}</p>
-                        <p className="text-[14px] text-[#4b5563]">{item.desc}</p>
+                    <li
+                      key={index}
+                      className="flex items-start gap-6 leading-relaxed"
+                    >
+                      <span className="text-[#4caf50] text-xl font-semibold">
+                        ✓
+                      </span>
+                      <div className="space-y-1">
+                        <p className="text-[16px] font-semibold text-[#111827]">
+                          {item.title}
+                        </p>
+                        <p className="text-[14px] text-[#4b5563] leading-snug">
+                          {item.desc}
+                        </p>
+                        <br />
                       </div>
                     </li>
                   ))}
                 </ul>
               </div>
-              
               {/* Vision Card */}
-              <div className="w-full lg:w-1/2 rounded-[16px] bg-white p-8 shadow-lg flex flex-col">
-                <img src="/vision.svg" alt="" className="w-16 h-16" />
-                <h3 className="text-2xl font-bold mt-6 mb-6">Our Vision</h3>
-                
-                <p className="text-lg font-medium mb-8">
+              <div className="w-full lg:w-1/2 rounded-[16px] bg-white shadow-lg flex flex-col gap-6">
+                <div className="flex flex-col  w-[90%] relative left-[5%] ">
+                  {" "}
+                  <br />
+                  <img src="/vision.svg" alt="" className="w-16 h-16" /> <br />
+                  <h3 className="text-2xl font-bold">Our Vision</h3>
+                </div>
+                <p className="text-lg font-medium leading-relaxed w-[90%] relative left-[5%]">
                   To be a globally recognized leader in agro exports, setting
-                  industry benchmarks in quality, innovation, and sustainable trade
-                  practices.
+                  industry benchmarks in quality, innovation, and sustainable
+                  trade practices.
                 </p>
-                
-                <img 
-                  src="/visionimg.jpg" 
-                  alt="" 
-                  className="w-full h-48 rounded-[16px] object-cover"
+                <img
+                  src="/visionimg.jpg"
+                  alt=""
+                  className="h-48 rounded-[16px] object-cover w-[90%] relative left-[5%]"
                 />
-                
-                <p className="italic text-[#4b5563] mt-6 text-center">
-                  "At Agrolla Impex, we don't just export agro products—we deliver
-                  trust, excellence, and a commitment to quality in every shipment."
-                </p>
+                <p className="italic text-[#4b5563] text-center font-semibold leading-relaxed w-[90%] relative left-[5%]">
+                  "At Agrolla Impex, we don't just export agro products—we
+                  deliver trust, excellence, and a commitment to quality in
+                  every shipment."
+                </p>{" "}
+                <br />
               </div>
             </div>
           </section>
-
           {/* Section 3 */}
           <section className="w-full max-w-[1536px] flex flex-col items-center gap-8 px-4">
+            {" "}
+            <br />
+            <br />
+            <br />
             <h2 className="text-[30px] font-bold text-center">Our Values</h2>
             <p className="w-full max-w-2xl text-[18px] text-[#4b5563] text-center">
-              At Agrolla Impex, our foundation is built on principles that define
-              our commitment to excellence, integrity, and customer satisfaction.
+              At Agrolla Impex, our foundation is built on principles that
+              define our commitment to excellence, integrity, and customer
+              satisfaction.
             </p>
-            
             <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {/* Value Cards */}
               {[
-                { icon: "/uncompromie.svg", title: "Uncompromising Quality", desc: "We adhere to the strictest international food safety standards, ensuring that every product we supply is pure, fresh, and meets global regulatory requirements." },
-                { icon: "/integrety.svg", title: "Integrity & Transparency", desc: "We believe in honest business practices, maintaining full transparency in our sourcing, processing, and export operations. Our clients trust us for ethical dealings and fair trade." },
-                { icon: "/centric.svg", title: "Farmer-Centric Approach", desc: "Our close collaboration with farmers ensures fair compensation and access to best agricultural practices. We maintain traceability and sustainability from farm to market." },
-                { icon: "/innovation.svg", title: "Innovation & Excellence", desc: "We continuously invest in advanced processing technology and innovative techniques to enhance product quality and efficiency, meeting the dynamic needs of the global agro-market." },
-                { icon: "/customer.svg", title: "Customer Commitment", desc: "Customer satisfaction is at the heart of everything we do. We provide tailored solutions, timely deliveries, and unmatched service quality, building long-term partnerships." },
-                { icon: "/Perspective.svg", title: "Global Perspective", desc: "With an international outlook, we understand diverse market needs and cultural preferences, adapting our products and services to meet global demands while maintaining local relevance." }
+                {
+                  icon: "/uncompromie.svg",
+                  title: "Uncompromising Quality",
+                  desc: "We adhere to the strictest international food safety standards, ensuring that every product we supply is pure, fresh, and meets global regulatory requirements.",
+                },
+                {
+                  icon: "/integrety.svg",
+                  title: "Integrity & Transparency",
+                  desc: "We believe in honest business practices, maintaining full transparency in our sourcing, processing, and export operations. Our clients trust us for ethical dealings and fair trade.",
+                },
+                {
+                  icon: "/centric.svg",
+                  title: "Farmer-Centric Approach",
+                  desc: "Our close collaboration with farmers ensures fair compensation and access to best agricultural practices. We maintain traceability and sustainability from farm to market.",
+                },
+                {
+                  icon: "/innovation.svg",
+                  title: "Innovation & Excellence",
+                  desc: "We continuously invest in advanced processing technology and innovative techniques to enhance product quality and efficiency, meeting the dynamic needs of the global agro-market.",
+                },
+                {
+                  icon: "/customer.svg",
+                  title: "Customer Commitment",
+                  desc: "Customer satisfaction is at the heart of everything we do. We provide tailored solutions, timely deliveries, and unmatched service quality, building long-term partnerships.",
+                },
+                {
+                  icon: "/Perspective.svg",
+                  title: "Global Perspective",
+                  desc: "With an international outlook, we understand diverse market needs and cultural preferences, adapting our products and services to meet global demands while maintaining local relevance.",
+                },
               ].map((item, index) => (
-                <div key={index} className="bg-[#f9fafb] rounded-[16px] p-6 shadow-sm hover:shadow-md transition-shadow">
-                  <img src={item.icon} alt="" className="w-14 h-14" />
-                  <h3 className="text-xl font-semibold mt-5">{item.title}</h3>
-                  <p className="text-[#4b5563] mt-3">{item.desc}</p>
+                <div
+                  key={index}
+                  className="bg-[#f9fafb] rounded-[16px] p-6 shadow-sm hover:shadow-md transition-shadow] flex items-center h-[260px]"
+                >
+                  <div className="relative left-[5%] flex flex-col w-[90%]  overflow-hidden">
+                    <img src={item.icon} alt="" className="w-14 h-14" /> <br />
+                    <h3 className="text-xl font-semibold ">
+                      {item.title}
+                    </h3>{" "}
+                    <br />
+                    <p className="text-[#4b5563] w-[432px] font-semibold overflow-hidden">
+                      {item.desc}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
           </section>
-
           {/* Section 4 */}
           <section className="w-full max-w-[1536px] flex flex-col items-center gap-8 px-4">
-            <h2 className="text-[30px] font-bold text-center">Our Quality Assurance Process</h2>
+            <br />
+            <br />
+            <br />
+            <h2 className="text-[30px] font-bold text-center">
+              Our Quality Assurance Process
+            </h2>
             <p className="w-full max-w-2xl text-[18px] text-[#4b5563] text-center">
               We follow a rigorous quality control process to ensure that every
               product meets international standards.
             </p>
-            
+
             <div className="w-full max-w-4xl space-y-8">
               {/* Process Items */}
               {[
-                { 
-                  icon: "/process1.svg", 
-                  title: "Sourcing & Selection", 
+                {
+                  icon: "/process1.svg",
+                  title: "Sourcing & Selection",
                   desc: "We carefully select farmers and suppliers who follow sustainable and ethical farming practices. Our agronomists regularly visit farms to ensure quality standards are maintained from the cultivation stage.",
-                  note: "Direct farmer relationships for traceability and quality control"
+                  note: "Direct farmer relationships for traceability and quality control",
                 },
-                { 
-                  icon: "/process2.svg", 
-                  title: "Raw Material Inspection", 
+                {
+                  icon: "/process2.svg",
+                  title: "Raw Material Inspection",
                   desc: "All incoming raw materials undergo thorough inspection for physical properties, moisture content, and potential contaminants. Only materials meeting our strict criteria proceed to processing.",
-                  note: "Advanced testing equipment for accurate quality assessment"
+                  note: "Advanced testing equipment for accurate quality assessment",
                 },
-                { 
-                  icon: "/process3.svg", 
-                  title: "Processing & Cleaning", 
+                {
+                  icon: "/process3.svg",
+                  title: "Processing & Cleaning",
                   desc: "Our state-of-the-art processing facilities use advanced technology for cleaning, sorting, grading, and packaging. Every step is monitored to maintain product integrity and quality.",
-                  note: "ISO-certified processing facilities with HACCP implementation"
+                  note: "ISO-certified processing facilities with HACCP implementation",
                 },
-                { 
-                  icon: "/process4.svg", 
-                  title: "Laboratory Testing", 
+                {
+                  icon: "/process4.svg",
+                  title: "Laboratory Testing",
                   desc: "Our in-house laboratory conducts comprehensive tests for physical, chemical, and microbiological parameters. We also work with accredited third-party labs for additional verification.",
-                  note: "Comprehensive testing for aflatoxins, pesticide residues, and more"
+                  note: "Comprehensive testing for aflatoxins, pesticide residues, and more",
                 },
-                { 
-                  icon: "/process5.svg", 
-                  title: "Final Inspection & Certification", 
+                {
+                  icon: "/process5.svg",
+                  title: "Final Inspection & Certification",
                   desc: "Before shipping, all products undergo final inspection and receive necessary certifications. Our quality assurance team ensures compliance with destination country requirements.",
-                  note: "Documentation and certification aligned with global standards"
-                }
+                  note: "Documentation and certification aligned with global standards",
+                },
               ].map((item, index) => (
-                <div key={index} className="flex">
-                  <div className="flex flex-col items-center mr-6">
-                    <img src={item.icon} alt="" className="w-10" />
-                    {index < 4 && <div className="w-[2px] h-full bg-gray-300 mt-4"></div>}
+                <div key={index} className="flex gap-6 md:gap-8">
+                  <div className="flex flex-col items-center">
+                    <img src={item.icon} alt="" className="w-10 md:w-12" />
+                    {index < 4 && (
+                      <div className="w-[2px] h-full bg-gray-300 mt-3 md:mt-4"></div>
+                    )}
                   </div>
-                  
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold">{item.title}</h3>
-                    <p className="text-[#4b5563] font-medium mt-2">{item.desc}</p>
-                    
-                    <div className="bg-[#f9fafb] rounded-[16px] p-4 mt-3 flex items-start">
-                      <img src="/bookmark.svg" alt="" className="mt-1 mr-4" />
-                      <p className="text-[#374151] font-medium">{item.note}</p>
+
+                  <div className="flex-1 space-y-3 md:space-y-4">
+                    <h3 className="text-xl md:text-2xl font-semibold leading-[28px] md:leading-normal">
+                      {item.title}
+                    </h3>
+                    <p className="text-[#4b5563] font-semibold leading-relaxed md:leading-loose">
+                      {item.desc}
+                    </p>{" "}
+                    <br />
+                    <div className="bg-[#F9FAFB] rounded-md flex gap-3 md:gap-4 items-center h-[40px]">
+                      <img src="/bookmark.svg" alt="" className="" />
+                      <p className="text-[#374151] font-semibold leading-snug md:leading-normal">
+                        {item.note}
+                      </p>
                     </div>
+                    <br />
                   </div>
                 </div>
               ))}
             </div>
-            
+
             <div className="w-full flex flex-col items-center gap-8 mt-12">
-              <h3 className="text-2xl font-semibold text-center">Our Certifications</h3>
+              <h3 className="text-2xl font-semibold text-center">
+                Our Certifications
+              </h3>
               <div className="w-full flex flex-wrap justify-evenly gap-6 md:gap-4 sm:gap-3">
                 {[1, 2, 3, 4, 5].map((num) => (
-                  <img 
-                    key={num} 
-                    src={`/cer${num}.png`} 
-                    alt="" 
+                  <img
+                    key={num}
+                    src={`/cer${num}.png`}
+                    alt=""
                     className="h-24 md:h-20 sm:h-16 object-contain"
                   />
                 ))}
               </div>
             </div>
           </section>
-
           {/* Section 5 */}
           <section className="w-full max-w-[1536px] flex flex-col items-center gap-8 px-4">
-            <h2 className="text-[30px] font-bold text-center">Meet Our Leadership Team</h2>
+            {" "}
+            <br />
+            <br />
+            <br />
+            <h2 className="text-[30px] font-bold text-center">
+              Meet Our Leadership Team
+            </h2>
             <p className="w-full max-w-2xl text-[18px] text-[#4b5563] text-center">
               Our experienced team brings decades of expertise in agriculture,
               international trade, and quality management.
             </p>
-            
             <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {/* Team Members */}
               {[
-                { 
-                  image: "/member1.png", 
-                  name: "Rajesh Patel", 
-                  position: "Founder & CEO", 
-                  bio: "With 25+ years in agro-exports, Rajesh leads our global vision and strategic partnerships."
+                {
+                  image: "/member1.png",
+                  name: "Rajesh Patel",
+                  position: "Founder & CEO",
+                  bio: "With 25+ years in agro-exports, Rajesh leads our global vision and strategic partnerships.",
                 },
-                { 
-                  image: "/member2.png", 
-                  name: "Priya Sharma", 
-                  position: "Chief Operations Officer", 
-                  bio: "Priya oversees all operational aspects, ensuring efficiency and excellence in our processing facilities."
+                {
+                  image: "/member2.png",
+                  name: "Priya Sharma",
+                  position: "Chief Operations Officer",
+                  bio: "Priya oversees all operational aspects, ensuring efficiency and excellence in our processing facilities.",
                 },
-                { 
-                  image: "/member3.jpg", 
-                  name: "Vikram Mehta", 
-                  position: "Global Sales Director", 
-                  bio: "Vikram leads our international sales team, developing new markets and strengthening client relationships."
+                {
+                  image: "/member3.jpg",
+                  name: "Vikram Mehta",
+                  position: "Global Sales Director",
+                  bio: "Vikram leads our international sales team, developing new markets and strengthening client relationships.",
                 },
-                { 
-                  image: "/member4.jpg", 
-                  name: "Dr. Anand Kumar", 
-                  position: "Quality Assurance Head", 
-                  bio: "With a PhD in Food Science, Dr. Kumar ensures our products meet the highest quality and safety standards."
-                }
+                {
+                  image: "/member4.jpg",
+                  name: "Dr. Anand Kumar",
+                  position: "Quality Assurance Head",
+                  bio: "With a PhD in Food Science, Dr. Kumar ensures our products meet the highest quality and safety standards.",
+                },
               ].map((member, index) => (
-                <div key={index} className="rounded-[16px] shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div
+                  key={index}
+                  className="rounded-[16px] shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+                >
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img 
-                      src={member.image} 
-                      alt={member.name} 
+                    <img
+                      src={member.image}
+                      alt={member.name}
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="p-5">
-                    <p className="text-xl font-semibold">{member.name}</p>
-                    <p className="text-[#4caf50] font-medium mt-1">{member.position}</p>
-                    <p className="text-[#4b5563] mt-3">{member.bio}</p>
+                  <div className="w-[90%] relative left-[5%]">
+                    <p className="text-[20px] leading-[42px] font-bold">
+                      {member.name}
+                    </p>
+                    <p className="text-[#4caf50] leading-[42px] font-semibold text-[16px]">
+                      {member.position}
+                    </p>
+                    <p className="text-[#4b5563] leading-[20px] font-medium text-[14px]">
+                      {member.bio}
+                    </p>
                   </div>
                 </div>
               ))}
             </div>
           </section>
+          {/* Section 6 */}
+<div className="relative w-full bg-gray-50">
+  <div className="mx-auto flex flex-col  sm:gap-20 lg:gap-10">
+    {/* Main Content Grid */}
+        <div className="items-center text-center gap-4"> 
+      <br />
+      <br />
+      <br />
+      <h2 className="text-3xl font-bold text-gray-900">Get in Touch</h2>
+      <p className="text-lg text-gray-600 justify-center">
+        Have questions about our products or services? We'd love to hear from you.
+      </p>
+    </div>
+    <div className="h-[650px] w-[1920px(fixed)] flex justify-center items-center bg-[#F9FAFB] ">
+    <div className="h-[558px] w-[1504px] flex justify-between ">
+      {/* Contact Information */}
+      <div className="bg-white rounded-xl shadow-lg flex flex-col gap-8 justify-between h-[558px] w-[482px]">
+        <div className="flex flex-col gap-4"> <br />
+          <h3 className="text-xl font-semibold text-gray-900 w-[90%] relative left-[5%]">Contact Information</h3>
+          <div className="flex flex-col gap-4  w-[90%] relative left-[5%]">
+            {/* Location */}
+            <div className="flex items-center gap-4">
+              <img src="/location.svg" alt="Location" className="h-10 w-10 flex-shrink-0" />
+              <div>
+                <h4 className="text-base font-semibold text-gray-900">Headquarters</h4>
+                <p className="text-base text-gray-700 font-medium">
+                  BM Square-1, Rajlaxmi Park, <br />
+                  Junagadh
+                </p>
+              </div>
+            </div>
+            {/* Phone */}
+            <div className="flex items-center gap-4">
+              <img src="/call.svg" alt="Phone" className="h-10 w-10 flex-shrink-0" />
+              <div>
+                <h4 className="text-base font-semibold text-gray-900">Phone</h4>
+                <p className="text-base text-gray-700 font-medium">
+                  +91 79 2345 6789<br />
+                  +1 (800) 123-4567 (International)
+                </p>
+              </div>
+            </div>
+            {/* Email */}
+            <div className="flex items-center gap-4">
+              <img src="/mail.svg" alt="Email" className="h-10 w-10 flex-shrink-0" />
+              <div>
+                <h4 className="text-base font-semibold text-gray-900">Email</h4>
+                <p className="text-base text-gray-700 font-medium">
+                  info@agrollaimpex.com<br />
+                  exports@agrollaimpex.com
+                </p>
+              </div>
+            </div>
+            {/* Business Hours */}
+            <div className="flex items-center gap-4">
+              <img src="/clock.svg" alt="Business Hours" className="h-10 w-10 flex-shrink-0" />
+              <div>
+                <h4 className="text-base font-semibold text-gray-900">Business Hours</h4>
+                <p className="text-base text-gray-700">
+                  Monday - Friday: 9:00 AM - 6:00 PM IST<br />
+                  Saturday: 9:00 AM - 1:00 PM IST
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+
+        {/* Social Icons */}
+        <div className="flex flex-col gap-4 w-[90%] relative left-[5%]">
+          <h4 className="text-base font-bold text-gray-900">Connect With Us</h4>
+          <div className="flex gap-4">
+            <img src="/linkedin.svg" alt="LinkedIn" className="h-10 w-10" />
+            <img src="/twitter.svg" alt="Twitter" className="h-10 w-10" />
+            <img src="/facebook.svg" alt="Facebook" className="h-10 w-10" />
+            <img src="/instagram.svg" alt="Instagram" className="h-10 w-10" />
+          </div>
+        </div>
+        <br />
+      </div>
+      {/* Contact Form */}
+      <div className="lg:col-span-2 bg-white rounded-xl shadow-lg flex flex-col gap-4 h-[558px] w-[992px]"> <br />
+        <h3 className="text-xl font-semibold text-gray-900 w-[95%] relative left-[3%]">Send Us a Message</h3>
+
+        <form className="flex flex-col gap-4 w-[95%] relative left-[3%] ">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="flex flex-col gap-2">
+              <label htmlFor="name" className="text-lg font-medium text-gray-700">
+                Your Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                className="block w-full rounded-md border border-gray-300 px-3 py-2  h-[42px]"
+              />
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <label htmlFor="name" className="text-lg font-medium text-gray-700">
+                Email Address
+              </label>
+              <input
+                type="email"
+                id="email"
+                className="block w-full rounded-md border border-gray-300 px-3 py-2  h-[42px]"
+              />
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <label htmlFor="name" className="text-lg font-medium text-gray-700">
+                Company Name
+              </label>
+              <input
+                type="text"
+                id="company"
+                className="block w-full rounded-md border border-gray-300 px-3 py-2  h-[42px]"
+              />
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <label htmlFor="name" className="text-lg font-medium text-gray-700">
+                Subject
+              </label>
+              <input
+                type="text"
+                id="subject"
+                className="block w-full rounded-md border border-gray-300 px-3 py-2  h-[42px]"
+              />
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-2">
+              <label htmlFor="name" className="text-lg font-medium text-gray-700">
+              Your Message
+            </label>
+            <textarea
+              id="message"
+              rows={4}
+                className="block w-full rounded-md border border-gray-300 px-3 py-2  h-[138px]"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            className="rounded-md bg-green-700 text-base font-semibold text-white  hover:bg-green-800 h-[48px] w-[156px]"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+
+
+
+    </div>
+  </div>
+</div>
+
+          {/* Section 7 */}
+          <div className="relative w-full flex justify-center">
+            <div className="w-[1536px]">
+              <div className="text-center">
+                {" "}
+                <br />
+                <br />
+                <br />
+                <h2 className="text-3xl font-bold text-gray-900 leading-[42px]">
+                  Our Global Presence
+                </h2>
+                <p className="mt-4 text-lg text-gray-600">
+                  We export premium agricultural products to over 30 countries
+                  across 5 continents.
+                </p>
+              </div>
+              <br />
+              <br />
+              <div className="rounded-xl overflow-hidden shadow-sm flex justify-center w-[98%]">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d-122.4194154846816!3d37.77492977975971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f0e2c5b1%3A0x4c8b8b6e8f8b8b8b!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sus!4v1681234567890!5m2!1sen!2sus"
+                  width="100%"
+                  height="400"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+              <br /><br />
+            </div>
+          </div>
+          {/* Section 8 */}
+          <div className="relative w-full bg-green-50 ">
+            <div className="text-center">
+              <h2 className="text-3xl font-bold text-gray-900">
+                <br />
+                <br />
+                Ready to Partner with Agrolla Impex?
+              </h2>
+              <p className="mt-4 text-lg text-gray-600">
+                Join our global network of satisfied customers and experience
+                the premium quality and service that sets us apart.
+              </p>
+            </div>
+            <br /><br /> 
+            <div className=" flex flex-col sm:flex-row justify-center gap-4">
+              <button className="rounded-md bg-green-700 text-base font-semibold text-white shadow-sm hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-green-700 focus:ring-offset-2 h-[50px] w-[208px]">
+                Contact Us Today
+              </button>
+              <button className="rounded-md bg-white  text-base font-semibold text-gray-900 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 h-[50px] w-[208px]">
+                Request a Quote
+              </button>
+            </div>
+            <br /><br /><br />
+          </div>
+        </div>
+          {/* Footer */}
+          <br /><br /><br /><br /><br />
+          <Footer/>
       </div>
     </>
   );
