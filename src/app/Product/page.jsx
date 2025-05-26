@@ -2,11 +2,11 @@
 
 import Navbar from "../HomePage/Navbar";
 
-export default function Page() {
+export default function page() {
   return (
     <>
     <Navbar/>
-    <p>Product-Page</p>
+    
     </>
   )
 }
