@@ -33,7 +33,7 @@ export default function HeroSection() {
   }, [count]);
 
   return (
-    <div className="relative w-full max-w-[1920px] mx-auto min-h-screen overflow-hidden">
+    <div className="relative w-full max-w-[1920px] mx-auto min-h-[925px] overflow-hidden">
       {/* Clouds */}
       <img
         src="/cloud.svg"
@@ -67,24 +67,24 @@ export default function HeroSection() {
       <img
         src="/farmer.svg"
         alt="farmer"
-        className="absolute left-[10%] top-[60%] h-[300px] md:h-[250px] sm:h-[200px] farmer"
+        className="absolute left-[15%] top-[65%] h-[300px] md:h-[250px] sm:h-[200px] farmer"
       />
 
       {/* Windmill */}
       <img
         src="/Wingstand.svg"
         alt="windmill base"
-        className="absolute top-[400px] left-[3%] h-[435px] md:h-[370px] sm:h-[300px] windmill"
+        className="absolute top-[480px] left-[3%] h-[435px] md:h-[370px] sm:h-[300px] windmill"
       />
       <img
         src="/sidewing.svg"
         alt="sidewing"
-        className="absolute top-[340px] left-[7%] w-[110px] md:w-[90px] sm:w-[70px] sideWing"
+        className="absolute top-[435px] left-[8%] w-[110px] md:w-[90px] sm:w-[70px] sideWing"
       />
       <img
         src="/wings.svg"
         alt="wings"
-        className="absolute top-[270px] left-[5%] h-[175px] md:h-[140px] sm:h-[100px] wing"
+        className="absolute top-[375px] left-[2.2%] h-[175px] md:h-[140px] sm:h-[100px] wing"
       />
 
       {/* Groundnuts */}
@@ -94,7 +94,7 @@ export default function HeroSection() {
           src="/ground-nut.png"
           alt="groundnut"
           style={{ left: `${left * 4}px` }}
-          className="groundNut absolute top-[740px] z-30 w-[88px] h-[150px] md:w-[72px] md:h-[120px] sm:w-[60px] sm:h-[100px]"
+          className="groundNut absolute top-[755px] z-30 w-[88px] h-[150px] md:w-[72px] md:h-[120px] sm:w-[60px] sm:h-[100px]"
         />
       ))}
 
@@ -102,7 +102,7 @@ export default function HeroSection() {
       <img
         src="/factory.svg"
         alt="factory"
-        className="absolute right-0 top-[270px] h-[640px] md:h-[500px] sm:h-[400px] factory"
+        className="absolute right-0 top-[400px] h-[640px] md:h-[500px] sm:h-[400px] factory"
       />
 
       {/* Tractor */}
@@ -116,7 +116,7 @@ export default function HeroSection() {
       <img
         src="/land.svg"
         alt="land"
-        className="absolute w-full bottom-[-20px] md:bottom-[0px] land"
+        className="absolute w-full bottom-[20px] md:bottom-[0px] land"
       />
 
       {/* Text and Buttons */}
@@ -128,10 +128,10 @@ export default function HeroSection() {
           Agriculture
         </p>
         <br />
-        <p className="text-sm sm:text-base md:text-lg text-[#374151] text-center w-full sm:w-[90%] mx-auto">
-          Agrolla delivers cutting-edge agricultural solutions that maximize yield,
-          minimize environmental impact, and transform farming practices for a
-          sustainable future.
+        <p className="text-sm sm:text-base md:text-lg text-[#374151] text-center w-full sm:w-[100%] mx-auto">
+          Agrolla delivers cutting-edge agricultural solutions that maximize <br /> yield,
+          minimize environmental impact, and transform farming <br /> practices for a
+          sustainable future. 
         </p>
         <br />
         <div className="flex justify-center gap-4 flex-wrap">
