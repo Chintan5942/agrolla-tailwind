@@ -20,7 +20,7 @@ const productsData = [
     description:
       "Premium quality bold peanuts with rich flavor and crunchy texture. Perfect for snacking and cooking.",
     category: "Oilseeds",
-    image: "/Bold-peanuts.png",
+    image: "/Bold-Peanuts.png",
     rating: 18,
   },
   {
