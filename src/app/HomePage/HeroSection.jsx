@@ -66,7 +66,7 @@ export default function HeroSection() {
         src="/birds.svg"
         alt="Flying birds"
         loading="lazy"
-        className="absolute top-[60px] left-[65%] sm:top-[40px] sm:left-[55%] w-[120px] sm:w-[80px]"
+        className="absolute top-[60px] left-[65%] sm:top-[40px] sm:left-[55%] lg:w-[120px] sm:w-[80px]"
       />
       <img
         src="/birds.svg"
@@ -111,7 +111,7 @@ export default function HeroSection() {
           alt="Groundnut plant"
           loading="lazy"
           style={{ left: `${left * 4}px` }}
-          className="groundNut absolute bottom-[35px] z-30 w-[88px] h-[150px] md:w-[72px] md:h-[120px] sm:w-[60px] sm:h-[100px]"
+          className="groundNut absolute bottom-[30px] z-30 w-[88px] h-[150px] md:w-[72px] md:h-[120px] sm:w-[60px] sm:h-[100px]"
         />
       ))}
 
@@ -140,7 +140,7 @@ export default function HeroSection() {
       />
 
       {/* Centered Text Box with Animation */}
-      <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-[700px] text-center flex flex-col items-center">
+      <div className="absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-[700px] text-center flex flex-col items-center">
         <div className="space-y-2 sm:space-y-3 md:space-y-4">
           <h1
             className={`text-[#111827] sm:text-3xl md:text-3xl lg:text-[60px] font-bold transition-all duration-700 delay-[300ms] ${
@@ -171,18 +171,18 @@ export default function HeroSection() {
         </p>
         <br />
         <div
-          className={`grid sm:grid-cols-1 md:grid-cols-2 gap-4 mt-6 transition-opacity duration-700 delay-[1500ms] ${
+          className={`grid sm:grid-cols-1 md:grid-cols-2 gap-4 mt-6 transition-opacity duration-700 delay-[1500ms] h-[52px] ${
             animateText ? "opacity-100" : "opacity-0"
           }`}
         >
           <button
-            className="h-[40px] sm:h-[38px] w-[160px] sm:w-[140px] bg-[#2E7D32] text-white text-xs sm:text-sm rounded-lg"
+            className="lg:h-[52px] sm:h-[38px] lg:w-[193px] sm:w-[140px] bg-[#2E7D32] text-white font-semibold lg:text-[16px] sm:text-sm rounded-lg hover:cursor-pointer hover:bg-[#1b5e1fea]"
             aria-label="Explore our services"
           >
             Explore Services
           </button>
           <button
-            className="h-[40px] sm:h-[38px] w-[160px] sm:w-[140px] border border-[#2e7d32] text-[#2e7d32] bg-white text-xs sm:text-sm rounded-lg"
+            className="lg:h-[52px] sm:h-[38px] lg:w-[193px] sm:w-[140px] border border-[#2e7d32] text-[#2e7d32] bg-white lg:text-[16px] font-semibold sm:text-sm rounded-lg hover:cursor-pointer hover:bg-[1b]"
             aria-label="Contact us for more info"
           >
             Contact Us
