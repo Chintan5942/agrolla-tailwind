@@ -41,7 +41,7 @@ export default function HeroSection() {
 
   return (
     <div className="relative w-full max-w-[1920px] mx-auto h-[840px] overflow-hidden">
-      {/* Clouds */}
+      {/* Clouds - unchanged */}
       <img
         src="/cloud.svg"
         alt="Fluffy cloud"
@@ -61,7 +61,7 @@ export default function HeroSection() {
         className="hidden md:block absolute top-[-20px] left-3/4 w-[300px]"
       />
 
-      {/* Birds */}
+      {/* Birds - unchanged */}
       <img
         src="/birds.svg"
         alt="Flying birds"
@@ -75,63 +75,82 @@ export default function HeroSection() {
         className="hidden md:block absolute top-[60px] left-[25%]"
       />
 
-      {/* Farmer */}
-      <img
-        src="/farmer.svg"
-        alt="Smiling farmer in field"
-        loading="lazy"
-        className="absolute left-[15%] top-[62%] h-[300px] md:h-[250px] sm:h-[200px]"
-      />
-
-      {/* Windmill */}
-      <img
-        src="/Wingstand.svg"
-        alt="Windmill stand"
-        loading="lazy"
-        className="absolute bottom-[48px] left-[3%] lg:h-[435px] md:h-[370px] sm:h-[300px]"
-      />
-      <img
-        src="/sidewing.svg"
-        alt="Windmill sidewing"
-        loading="lazy"
-        className="absolute bottom-[500px] left-[9.3%] lg:w-[110px] md:w-[90px] sm:w-[70px]"
-      />
-      <img
-        src="/wings.svg"
-        alt="Rotating windmill blades"
-        loading="lazy"
-        className="absolute bottom-[435px] left-[2%] lg:h-[175px] md:h-[140px] sm:h-[100px] wing"
-      />
-
-      {/* Groundnuts */}
-      {positions.slice(0, count).map((left, i) => (
+      {/* Farmer - adjusted to maintain position */}
+      <div className="absolute left-[15%] top-[62%] w-auto h-[300px] md:h-[250px] sm:h-[200px]">
         <img
-          key={i}
-          src="/ground-nut.png"
-          alt="Groundnut plant"
+          src="/farmer.svg"
+          alt="Smiling farmer in field"
           loading="lazy"
-          style={{ left: `${left * 4}px` }}
-          className="groundNut absolute bottom-[30px] z-30 w-[88px] h-[150px] md:w-[72px] md:h-[120px] sm:w-[60px] sm:h-[100px]"
+          className="w-full h-full object-contain"
         />
+      </div>
+
+      {/* Windmill - adjusted to maintain position */}
+      <div className="absolute bottom-[48px] left-[3%] h-[435px] md:h-[370px] sm:h-[300px] w-auto">
+        <img
+          src="/Wingstand.svg"
+          alt="Windmill stand"
+          loading="lazy"
+          className="h-full w-auto"
+        />
+      </div>
+      
+      {/* Windmill parts - positioned relative to windmill stand */}
+      <div className="absolute bottom-[420px] left-[8%] w-[110px] md:w-[90px] sm:w-[70px]">
+        <img
+          src="/sidewing.svg"
+          alt="Windmill sidewing"
+          loading="lazy"
+          className="w-full h-auto"
+        />
+      </div>
+      
+      <div className="absolute bottom-[370px] left-[2.2%] h-[175px] md:h-[140px] sm:h-[100px] w-auto">
+        <img
+          src="/wings.svg"
+          alt="Rotating windmill blades"
+          loading="lazy"
+          className="h-full w-auto wing"
+        />
+      </div>
+
+      {/* Groundnuts - adjusted to maintain position */}
+      {positions.slice(0, count).map((left, i) => (
+        <div 
+          key={i}
+          className="groundNut absolute bottom-[30px] z-30 w-[88px] h-[150px] md:w-[72px] md:h-[120px] sm:w-[60px] sm:h-[100px]"
+          style={{ left: `${left * 4}px` }}
+        >
+          <img
+            src="/ground-nut.png"
+            alt="Groundnut plant"
+            loading="lazy"
+            className="w-full h-full object-contain"
+          />
+        </div>
       ))}
 
-      {/* Factory */}
-      <img
-        src="/factory.svg"
-        alt="Modern agriculture factory"
-        loading="lazy"
-        className="absolute right-0 bottom-[15px] h-[640px] md:h-[500px] sm:h-[400px]"
-      />
+      {/* Factory - adjusted to maintain position */}
+      <div className="absolute right-0 bottom-[15px] h-[640px] md:h-[500px] sm:h-[400px] w-auto">
+        <img
+          src="/factory.svg"
+          alt="Modern agriculture factory"
+          loading="lazy"
+          className="h-full w-auto"
+        />
+      </div>
 
-      {/* Tractor */}
-      <img
-        src="/tractor.svg"
-        alt="Tractor on farmland"
-        loading="lazy"
-        className="hidden lg:block absolute bottom-[55px] right-[35%] h-[100px]"
-      />
+      {/* Tractor - adjusted to maintain position */}
+      <div className="hidden lg:block absolute bottom-[55px] right-[35%] h-[100px] w-auto">
+        <img
+          src="/tractor.svg"
+          alt="Tractor on farmland"
+          loading="lazy"
+          className="h-full w-auto"
+        />
+      </div>
 
-      {/* Land */}
+      {/* Land - unchanged */}
       <img
         src="/land.svg"
         alt="Agricultural land"
@@ -139,7 +158,7 @@ export default function HeroSection() {
         className="absolute w-full bottom-0"
       />
 
-      {/* Centered Text Box with Animation */}
+      {/* Centered Text Box with Animation - unchanged */}
       <div className="absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-[700px] text-center flex flex-col items-center">
         <div className="space-y-2 sm:space-y-3 md:space-y-4">
           <h1
