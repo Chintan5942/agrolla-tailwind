@@ -1,5 +1,5 @@
-"use-client";
-
+"use client";
+import { useEffect, useState } from "react";
 import Categories from "./Categories";
 import HeroSection from "./HeroSection";
 import Navbar from "./Navbar";
@@ -11,21 +11,40 @@ import ImageGallery from "./ImageGallery";
 import Slider from "./Slider";
 import Contact from "./Contact";
 import Footer from "./Footer";
+import Preloader from "./Preloader";
 
 export default function Page() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Wait for all images and content to load
+    const handleLoad = () => setLoading(false);
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      window.addEventListener("load", handleLoad);
+      return () => window.removeEventListener("load", handleLoad);
+    }
+  }, []);
+
   return (
     <>
-    <Navbar/>
-    <HeroSection/>
-    <Section1/>
-    <Categories/>
-    <Section3/>
-    <Section4/>
-    <Certificate/>
-    <ImageGallery/>
-    <Slider/>
-    <Contact/>
-    <Footer/>
-     </>
-  )
+      {loading && <Preloader />}
+      {!loading && (
+        <>
+          <Navbar />
+          <HeroSection />
+          <Section1 />
+          <Categories />
+          <Section3 />
+          <Section4 />
+          <Certificate />
+          <ImageGallery />
+          <Slider />
+          <Contact />
+          <Footer />
+        </>
+      )}
+    </>
+  );
 }

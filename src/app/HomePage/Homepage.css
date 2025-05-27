@@ -119,3 +119,158 @@
   animation: fadeSlide 0.8s ease-out forwards;
   animation-delay: 0.9s;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1300px) and (min-width: 1024px) {
+  .hero-farmer-wrapper {
+    width: 520px !important;
+    height: 260px !important;
+    left: 10% !important;
+  }
+  .hero-windmill {
+    height: 380px !important;
+    max-width: 130px !important;
+  }
+  .hero-factory {
+    max-width: 40vw !important;
+    height: 520px !important;
+  }
+  .hero-sidewing {
+    width: 90px !important;
+  }
+  .tractor{
+    display: none;
+  }
+  .sidewing{
+    position: relative;
+    left: 10px;
+  }
+}
+@media (max-width: 980px) and (min-width: 850px) {
+  .hero-farmer-wrapper {
+    width: 420px !important;
+    height: 220px !important;
+    left: 8% !important;
+    bottom: 70px !important;
+  }
+  .hero-windmill {
+    height: 300px !important;
+    max-width: 110px !important;
+    bottom: 30px !important;
+  }
+  .hero-factory {
+    max-width: 60vw !important;
+    height: 380px !important;
+    bottom: 10px !important;
+  }
+  .hero-sidewing {
+    width: 70px !important;
+  }
+  .hero-wings {
+    height: 130px !important;
+  }
+  .farmer{
+    position: relative;
+    top: 20px;
+  }
+  .factory{
+    width: 450px;
+    position: relative;
+    top: 15px;
+  }
+  .groundNut{
+    position: relative;
+    left: -35px;
+  }
+}
+
+@media (max-width: 850px) {
+  .hero-farmer-wrapper {
+    width: 320px !important;
+    height: 180px !important;
+    left: 6% !important;
+    bottom: 50px !important;
+  }
+  .hero-windmill {
+    height: 280px !important;
+    max-width: 90px !important;
+    bottom: 15px !important;
+  }
+  .hero-factory {
+    max-width: 80vw !important;
+    height: 320px !important;
+    bottom: 5px !important;
+  }
+  .hero-sidewing {
+    width: 60px !important;
+  }
+  .hero-wings {
+    height: 100px !important;
+  }
+  .groundNut{
+    position: relative;
+    left: -50px;
+  }
+  .factory{
+    width: 350px;
+    position: relative;
+    top: 60px;
+  }
+  .sidewing{
+    display: none;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 650px) {
+.factory{
+  position: relative;
+  top: 55px;
+}
+.farmer{
+  position: relative;
+  top: 10px !important;
+}
+.wing{
+  width: 400px;
+  border: 1px solid;
+}
+}
+
+/* SM (640px and below) */
+@media (max-width: 767px) {
+  .hero-farmer-wrapper {
+    width: 320px !important;
+    height: 180px !important;
+    left: 6% !important;
+    bottom: 50px !important;
+  }
+  .hero-windmill {
+    height: 280px !important;
+    max-width: 90px !important;
+    bottom: 15px !important;
+  }
+  .hero-sidewing {
+    width: 60px !important;
+    bottom: 320px !important;
+  }
+  .hero-wings {
+    height: 100px !important;
+    bottom: 300px !important;
+  }
+  .hero-factory {
+    height: 360px !important;
+    max-width: 70vw !important;
+    bottom: 5px !important;
+  }
+}
