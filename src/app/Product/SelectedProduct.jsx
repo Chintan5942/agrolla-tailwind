@@ -1,15 +1,26 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import Footer from "../HomePage/Footer";
 import Navbar from "../HomePage/Navbar";
-import productsData from "../HomePage/productsData";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-const ProductPage = () => {
-  // Default to first product
-  const [selectedProduct, setSelectedProduct] = useState(productsData[0]);
+const SelectedProduct = ({ product }) => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800, // Animation duration
+      easing: "ease-in-out", // Easing type
+      once: false, // Whether animation should happen only once
+    });
+  }, []);
 
-  // Other products for thumbnails (exclude selected)
-  const otherProducts = productsData.filter((p) => p.id !== selectedProduct.id);
+  if (!product) {
+    return (
+      <div className="flex items-center justify-center text-xl font-semibold text-gray-600 h-96">
+        Product not found.
+      </div>
+    );
+  }
 
   return (
     <div className="bg-white">
@@ -19,19 +30,19 @@ const ProductPage = () => {
         <div className="container lg:w-[90%] lg:relative lg:left-[5%]">
           <div className="flex flex-col gap-10 lg:flex-row">
             {/* Product Image */}
-            <div className="lg:w-1/2">
+            <div className="lg:w-1/2" data-aos="fade-right">
               <div className="bg-white rounded-2xl shadow-lg h-[400px] flex items-center justify-center">
                 <img
-                  src={selectedProduct.image}
-                  alt={selectedProduct.title}
+                  src={product.image}
+                  alt={product.title}
                   className="w-[476px] h-[352px] object-contain"
                 />
               </div>
             </div>
             {/* Product Details */}
-            <div className="lg:w-1/2"> <br />
+            <div className="lg:w-1/2" data-aos="fade-left"> <br />
               <h4 className="mb-2 text-3xl font-bold text-gray-900">
-                {selectedProduct.title}
+                {product.title}
               </h4>
               <div className="flex items-center mb-4">
                 <img
@@ -39,12 +50,12 @@ const ProductPage = () => {
                   alt="Rating"
                   className="w-6 h-6 mr-2"
                 />
-                <span className="text-gray-500">
-                ({selectedProduct.reviews} reviews)
+                <span className="font-semibold text-gray-500">
+                ({product.reviews} reviews)
                 </span>
               </div>
               <p className="mb-6 font-bold leading-7 text-gray-700">
-                {selectedProduct.aboutProduct}
+                {product.aboutProduct || product.description}
               </p>
               {/* Highlights */}
               <div className="rounded-2xl"> <br />
@@ -52,10 +63,12 @@ const ProductPage = () => {
                   Key Highlights
                 </h5> <br />
                 <ul className="gap-4">
-                  {selectedProduct.highlights.map((item, index) => (
+                  {product.highlights && product.highlights.map((item, index) => (
                     <li
                       key={index}
                       className="flex items-start gap-4 leading-8"
+                      data-aos="fade-up"
+                      data-aos-delay={index * 100}
                     >
                       <img
                         src="/right.svg"
@@ -71,29 +84,16 @@ const ProductPage = () => {
               </div>
             </div>
           </div>
-          {/* Thumbnail Images */} <br />
-                <div className="flex gap-4 mt-10 lg:mt-12  w-[52%] overflow-scroll overflow-y-hidden scrollbar-y-hide catagory-images">
-            {[selectedProduct, ...otherProducts].map((product, index) => (
-              <img
-                key={product.id}
-                src={product.image}
-                alt={product.title}
-                onClick={() => setSelectedProduct(product)}
-                className={`w-36 h-24 rounded-xl cursor-pointer object-contain transition-all duration-200 ${
-                  product.id === selectedProduct.id
-                    ? "border-2 border-green-500"
-                    : "border border-gray-200 opacity-80 hover:opacity-100"
-                }`}
-              />
-            ))}
-          </div>
         </div>
-      </div> 
+      </div>
       <br />
       {/* Section 2: Product Description */}
       <div className="container lg:w-[90%] lg:relative lg:left-[5%]">
         {/* Tabs */}
-        <div className="flex text-sm border-1 border-b border-gray-200 sm:text-base justify-between w-[45%]">
+        <div 
+          className="flex text-sm border-1 border-b border-gray-200 sm:text-base justify-between w-[45%]"
+          data-aos="fade-down"
+        >
           {[
             { label: "Product Description", active: true },
             { label: "Specifications" },
@@ -117,63 +117,66 @@ const ProductPage = () => {
           {/* Left Column */}
           <div className="space-y-10 lg:w-2/3">
             {/* Overview */}
-            <div>
+            <div data-aos="fade-up">
               <h4 className="mb-4 text-2xl font-bold text-gray-900">
-                {selectedProduct.title} Overview
+                {product.title} Overview
               </h4>
               <br />
               <p className="font-semibold leading-6 text-gray-700">
-                {selectedProduct.description}
+                {product.overview}
               </p>
             </div>
             <br />
             {/* Quality & Versatility */}
-            <div>
+            <div data-aos="fade-up" data-aos-delay="100">
               <h4 className="mb-3 text-xl font-semibold text-gray-900">
                 Premium Quality & Versatility
               </h4>
               <br />
               <p className="font-semibold leading-6 text-gray-700">
-                {selectedProduct.features &&
-                  selectedProduct.features.join(". ")}
+                {product.premiumQuality}
               </p>
             </div>
             <br />
             {/* Why Choose */}
-            <div>
+            <div data-aos="fade-up" data-aos-delay="200">
               <h4 className="mb-4 text-xl font-semibold text-gray-900">
-                Why Choose Agrolla's {selectedProduct.title}?
+                Why Choose Agrolla's {product.title}?
               </h4>
               <br />
               <div className="grid gap-6 md:grid-cols-2">
-                {selectedProduct.features &&
-                  selectedProduct.features
-                    .slice(0, 4)
-                    .map((feature, index) => (
-                      <div
-                        key={index}
-                        className="border-1 border-gray-200 bg-gray-50 rounded-2xl h-[172px] w-[492px]"
-                      >
-                        <img
-                          src="/house.svg"
-                          alt=""
-                          className="relative w-10 h-10 left-[5%] top-3"
-                        />
-                        <h5 className="mb-1 text-lg font-semibold text-gray-900 relative left-[5%] top-6">
-                          {feature.split(" ")[0]}
-                        </h5>
-                        <p className="text-gray-700 relative left-[5%] font-semibold w-[90%] top-9">
-                          {feature}
-                        </p>
-                      </div>
-                    ))}
+                {product.features &&
+                  product.features.slice(0, 4).map((feature, index) => (
+                    <div
+                      key={index}
+                      className="border-1 border-gray-200 bg-gray-50 rounded-2xl h-[172px] w-[492px]"
+                      data-aos="zoom-in"
+                      data-aos-delay={index * 100}
+                    >
+                      <img
+                        src="/house.svg"
+                        alt=""
+                        className="relative w-10 h-10 left-[5%] top-3"
+                      />
+                      <h5 className="mb-1 text-lg font-semibold text-gray-900 relative left-[5%] top-6">
+                        {feature.split(" ")[0]}
+                      </h5>
+                      <p className="text-gray-700 relative left-[5%] font-semibold w-[90%] top-9">
+                        {feature}
+                      </p>
+                    </div>
+                  ))}
               </div>
             </div>
           </div>
           {/* Right Column (Sidebar) */}
-          <div className="space-y-6 ">
+          <div className="space-y-6">
             {/* Certifications */}
-            <div className="border-gray-200 border-1 bg-gray-50 rounded-2xl w-[480px] h-[228px]">
+            <div 
+              className="border-gray-200 border-1 bg-gray-50 rounded-2xl w-[480px] h-[228px]"
+              data-aos="fade-left"
+              data-aos-delay="100"
+            >
               <br />
               <h4 className="text-lg font-semibold text-gray-900 w-[90%] relative left-[5%]">
                 Quality Certifications
@@ -185,6 +188,8 @@ const ProductPage = () => {
                     <li
                       key={index}
                       className="flex items-center gap-5 leading-8 w-[90%] relative left-[5%]"
+                      data-aos="fade-left"
+                      data-aos-delay={150 + (index * 50)}
                     >
                       <img src="/bookmark.svg" alt="" className="w-7 h-7" />
                       <span className="font-semibold text-gray-700">{item}</span>
@@ -197,25 +202,37 @@ const ProductPage = () => {
             <br />
             <br />
             {/* Contact Box */}
-            <div className="border-gray-200 border-1 bg-gray-50 rounded-2xl w-[480px] h-[284px]">
+            <div 
+              className="border-gray-200 border-1 bg-gray-50 rounded-2xl w-[480px] h-[284px]"
+              data-aos="fade-left"
+              data-aos-delay="200"
+            >
               <br />
               <h4 className="mb-3 text-lg font-semibold text-gray-900 w-[90%] relative left-[5%]">
                 Need More Information?
               </h4>
               <p className="mb-4 text-gray-700 w-[90%] relative left-[5%] font-semibold">
                 Our agricultural experts are available to answer your questions
-                and provide detailed information about our {selectedProduct.title}.
+                and provide detailed information about our {product.title}.
               </p>
               <div className="space-y-3 w-[90%] relative left-[5%]">
                 <br />
-                <div className="flex items-center gap-2">
+                <div 
+                  className="flex items-center gap-2"
+                  data-aos="fade-left"
+                  data-aos-delay="250"
+                >
                   <img src="/call.svg" alt="" className="w-10 h-10" />
                   <span className="font-semibold text-gray-700">
                     +1 (555) 123-4567
                   </span>
                 </div>
                 <br />
-                <div className="flex items-center gap-2">
+                <div 
+                  className="flex items-center gap-2"
+                  data-aos="fade-left"
+                  data-aos-delay="300"
+                >
                   <img src="/mail.svg" alt="" className="w-10 h-10" />
                   <span className="font-semibold text-gray-700">
                     info@agrolla.com
@@ -227,17 +244,19 @@ const ProductPage = () => {
         </div>
         <br />
         {/* Applications */}
-        <div className="mt-16 w-[66%]">
+        <div className="mt-16 w-[66%]" data-aos="fade-up">
           <h4 className="mb-4 text-xl font-semibold text-gray-900 ">
             Applications
           </h4>
           <br />
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-            {selectedProduct.applications
-              ? selectedProduct.applications.split(",").map((app, index) => (
+            {product.applications
+              ? product.applications.split(",").map((app, index) => (
                   <div
                     key={index}
                     className="flex items-center p-4 border-gray-200 border-1 bg-gray-50 rounded-2xl h-[72px] w-[325px]"
+                    data-aos="zoom-in"
+                    data-aos-delay={index * 50}
                   >
                     <img src="/food.svg" alt="" className="w-10 h-10 mr-3" />
                     <span className="font-semibold text-gray-700">
@@ -252,9 +271,8 @@ const ProductPage = () => {
       <br />
       <br />
       <br />
-      <Footer />
     </div>
   );
 };
 
-export default ProductPage;
+export default SelectedProduct;

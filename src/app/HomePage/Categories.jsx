@@ -4,10 +4,20 @@ import "@/app/HomePage/Homepage.css";
 import { FaStar, FaRegStar, FaStarHalfAlt } from "react-icons/fa";
 import productsData from "./productsData";
 import { useRouter } from "next/navigation";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Categories({ onCategorySelect }) {
   const [selectedCategory, setSelectedCategory] = useState("All Products");
   const router = useRouter();
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: "ease-in-out",
+      once: false,
+    });
+  }, []);
 
   const categoryImages = {
     "All Products": "/all-product.svg",
@@ -35,15 +45,11 @@ export default function Categories({ onCategorySelect }) {
     }
   };
 
-  useEffect(() => {
-    console.log("Category Changed:", selectedCategory);
-  }, [selectedCategory]);
-
   return (
     <>
       <div className="relative top-20 w-[90%] mx-auto">
         {/* Header */}
-        <div className="text-center lg:relative lg:left-30">
+        <div className="text-center lg:relative lg:left-30" data-aos="fade-down">
           {/* Title Line */}
           <div className="flex items-center justify-center space-x-3">
             <hr className="w-10 border border-[#2E7D32]" />
@@ -69,7 +75,7 @@ export default function Categories({ onCategorySelect }) {
         </div>
         <div className="flex flex-col lg:flex-row gap-6 mt-16 catagory-container h-[1000px]">
           {/* Categories - Mobile/Tablet Dropdown */}
-          <div className="w-full px-4 lg:hidden">
+          <div className="w-full px-4 lg:hidden" data-aos="fade-right">
             <div className="p-4 shadow-md bg-stone-50 rounded-xl">
               <div className="flex items-center mb-4">
                 <img
@@ -112,19 +118,24 @@ export default function Categories({ onCategorySelect }) {
           </div>
 
           {/* Sidebar - Only shown on desktop */}
-          <aside className="hidden lg:block lg:w-[20%] bg-stone-50 rounded-xl shadow-lg catagory-aside h-[900px]">
+          <aside 
+            className="hidden lg:block lg:w-[20%] bg-stone-50 rounded-xl shadow-lg catagory-aside h-[900px]"
+            data-aos="fade-right"
+          >
             <div className="flex items-center px-4 pt-4">
               <img src="/catagory.svg" alt="Category Icon" className="h-12" />
               <span className="ml-4 text-2xl font-semibold">Categories</span>
             </div>
             <ul className="px-4 pb-6 mt-6 space-y-4">
-              {Object.keys(categoryImages).map((cat) => (
+              {Object.keys(categoryImages).map((cat, index) => (
                 <li
                   key={cat}
                   onClick={() => handleCategoryClick(cat)}
                   className={`flex items-center gap-4 p-3 rounded-lg cursor-pointer transition hover:bg-green-100 ${
                     selectedCategory === cat ? "bg-green-200" : ""
                   }`}
+                  data-aos="fade-right"
+                  data-aos-delay={index * 50}
                 >
                   <img src={categoryImages[cat]} alt={cat} className="h-14" />
                   <div>
@@ -145,7 +156,11 @@ export default function Categories({ onCategorySelect }) {
               ))}
 
               {/* "Need Help?" section - hidden on tablet and below */}
-              <li className="h-[240px] bg-[#F2F9F2] rounded-2xl p-4 mt-6 hidden lg:block">
+              <li 
+                className="h-[240px] bg-[#F2F9F2] rounded-2xl p-4 mt-6 hidden lg:block"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
                 <div className="flex items-center h-12">
                   <img src="/help.svg" alt="Help Icon" />
                   <p className="ml-3 text-2xl font-bold">Need Help?</p>
@@ -161,8 +176,11 @@ export default function Categories({ onCategorySelect }) {
           </aside>
 
           {/* Product Grid */}
-          <section className="w-full lg:w-[80%] grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 p-2 catagory-section h-[980px]">
-            {filteredProducts.map((product) => {
+          <section 
+            className="w-full lg:w-[80%] grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 p-2 catagory-section h-[980px]"
+            data-aos="fade-up"
+          >
+            {filteredProducts.map((product, index) => {
               const fullStars = Math.floor(product.rating);
               const hasHalfStar = product.rating % 1 >= 0.5;
               const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
@@ -170,8 +188,10 @@ export default function Categories({ onCategorySelect }) {
               return (
                 <div
                   key={product.id}
-                  className="bg-white rounded-2xl h-[450px] card cursor-pointer relative flex flex-col justify-between hover:shadow-lg transition-shadow duration-300 "
+                  className="bg-white rounded-2xl h-[450px] card cursor-pointer relative flex flex-col justify-between hover:shadow-lg transition-shadow duration-300"
                   onClick={() => router.push(`/Product/${product.id}`)}
+                  data-aos="zoom-in"
+                  data-aos-delay={index % 3 * 100}
                 >
                   <img
                     src={product.image}
