@@ -11,9 +11,9 @@ export default function Section3() {
         <div className="absolute inset-0 bg-black/85 z-0"></div>
 
         {/* Main content */}
-        <div className="relative z-10 h-[750px] bg-[url('/section3-BG.png')] bg-cover bg-top-right bg-no-repeat bg-fixed flex flex-col md:flex-row justify-center items-center">
+        <div className="relative z-10 h-[750px] bg-[url('/section3-BG.png')] bg-cover bg-top-right bg-no-repeat bg-fixed flex flex-col md:flex-row justify-center items-center" data-aos="fade-up">
           {/* Text Content */}
-          <div className="md:w-[670px] md:mt-[70px] md:pl-4 text-center md:text-left text-white">
+          <div className="md:w-[670px] md:mt-[70px] md:pl-4 text-center md:text-left text-white" data-aos="fade-right">
               <div className="h-10 lg:w-[200px] bg-white rounded-full flex items-center justify-center text-[16px] text-[#2e7d32] font-bold  ">
                 <img src="/leaf.svg" alt="leaf" className="h-5 mr-2" />
                 100% ORGANIC
@@ -44,7 +44,7 @@ export default function Section3() {
           </div>
 
           {/* Image */}
-          <div className="mt-10 md:mt-8 md:ml-[100px]">
+          <div className="mt-10 md:mt-8 md:ml-[100px]" data-aos="fade-left">
             <img
               src="/farmer.png"
               alt="Farmer"

@@ -4,11 +4,15 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Slider() {
   const swiperRef = useRef(null);
 
   useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+
     const swiperEl = swiperRef.current;
     if (!swiperEl) return;
 
@@ -53,40 +57,31 @@ export default function Slider() {
     <>
       <br />
       <br />
-      <div className="bg-white max-w-[1920px(fixed)]  overflow-hidden">
-        <div className="">
-            <div className="text-center">
-          <center>
-                  <br />
-                  <br />
-              <h1 className="text-3xl md:text-4xl font-semibold text-gray-900">
+      <div className="bg-white max-w-[1920px] overflow-hidden">
+        <div>
+          <div className="text-center" data-aos="fade-down">
+            <center>
+              <br />
+              <br />
+              <h1 className="text-3xl font-semibold text-gray-900 md:text-4xl">
                 What Our <span className="text-green-700">Clients</span> Say
               </h1>
               <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto lg:w-[600px]">
                 Hear from farmers who have transformed their agricultural
                 practices with our solutions.
               </p>
-          </center>
-            </div> 
-            <br />
-          <div className="w-[1536px] lg:relative lg:left-50">
+            </center>
+          </div>
+          <br />
+          <div className="w-[1536px] lg:relative lg:left-50" data-aos="fade-up">
             <Swiper
               ref={swiperRef}
               spaceBetween={20}
               slidesPerView={1}
               breakpoints={{
-                640: {
-                  slidesPerView: 1,
-                  spaceBetween: 20,
-                },
-                768: {
-                  slidesPerView: 2,
-                  spaceBetween: 30,
-                },
-                1024: {
-                  slidesPerView: 3,
-                  spaceBetween: 40,
-                },
+                640: { slidesPerView: 1, spaceBetween: 20 },
+                768: { slidesPerView: 2, spaceBetween: 30 },
+                1024: { slidesPerView: 3, spaceBetween: 40 },
               }}
               pagination={{
                 clickable: true,
@@ -95,11 +90,14 @@ export default function Slider() {
               }}
               autoplay={{ delay: 900, disableOnInteraction: false }}
               modules={[Pagination, Autoplay]}
-              className=" h-[350px]"
+              className="h-[350px]"
             >
               {testimonials.concat(testimonials).map((item, index) => (
                 <SwiperSlide key={index}>
-                  <div className="bg-white rounded-xl shadow-xl p-6 transition-all duration-300 hover:shadow-2xl h-[275px] w-[450px] flex flex-col lg:relative lg:top-10">
+                  <div
+                    className="bg-white rounded-xl shadow-xl p-6 transition-all duration-300 hover:shadow-2xl h-[275px] w-[450px] flex flex-col lg:relative lg:top-10"
+                    data-aos="zoom-in-up"
+                  >
                     <br />
                     <div className="flex space-x-1 w-80 relative left-[25px]">
                       {[...Array(5)].map((_, i) => (
@@ -118,19 +116,19 @@ export default function Slider() {
                       "{item.text}"
                     </p>
                     <br />
-                    <div className="flex items-center justify-items-start gap-4  w-80 relative left-[25px]">
-                      <div className="w-12 h-12 rounded-full bg-gray-200">
+                    <div className="flex items-center gap-4 w-80 relative left-[25px]">
+                      <div className="w-12 h-12 bg-gray-200 rounded-full">
                         <img
                           src={item.image}
                           alt={item.name}
-                          className="w-full h-full object-cover rounded-full"
+                          className="object-cover w-full h-full rounded-full"
                         />
                       </div>
                       <div>
-                        <p className="font-semibold text-gray-900 text-sm">
+                        <p className="text-sm font-semibold text-gray-900">
                           {item.name}
                         </p>
-                        <p className="text-gray-500 text-xs">{item.title}</p>
+                        <p className="text-xs text-gray-500">{item.title}</p>
                       </div>
                     </div>
                     <br />
@@ -140,7 +138,8 @@ export default function Slider() {
             </Swiper>
             <div className="swiper-pagination !relative !bottom-0 mt-8"></div>
           </div>
-          <br /><br />
+          <br />
+          <br />
         </div>
       </div>
     </>

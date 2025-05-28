@@ -2,6 +2,8 @@
 import { useEffect, useState } from "react";
 import "@/app/HomePage/Homepage.css";
 import { FaStar, FaRegStar, FaStarHalfAlt } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 // Fixed product data (removed duplicate)
 const productsData = [
@@ -160,6 +162,10 @@ export default function Categories() {
   };
 
   useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
+  useEffect(() => {
     console.log("Category Changed:", selectedCategory);
   }, [selectedCategory]);
 
@@ -167,8 +173,7 @@ export default function Categories() {
     <>
       <div className="relative top-20 w-[90%] mx-auto">
         {/* Header */}
-        <div className="text-center lg:relative lg:left-30">
-          {/* Title Line */}
+        <div className="text-center lg:relative lg:left-30" data-aos="fade-up">
           <div className="flex items-center justify-center space-x-3">
             <hr className="w-10 border border-[#2E7D32]" />
             <p className="text-xs sm:text-sm text-[#2E7D32] font-medium uppercase tracking-wider">
@@ -177,31 +182,29 @@ export default function Categories() {
             <hr className="w-10 border border-[#2E7D32]" />
           </div>
 
-          {/* Heading */}
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] mt-6 leading-snug sm:leading-tight">
             Premium <span className="text-[#2E7D32]">Agricultural</span>{" "}
             Products
           </h2>
 
-          {/* Paragraph */}
           <p className="text-sm sm:text-base lg:text-lg text-[#4B5563] font-normal mt-6 leading-relaxed sm:leading-loose">
             Agrolla Impex is a distinguished One Star Export House and a leading
             <br className="hidden md:inline" />
             manufacturer and exporter of peanuts, oilseeds, grains, and pulses.
           </p>
         </div>
-        <div className="flex flex-col lg:flex-row gap-6 mt-16 catagory-container h-[1000px]">
 
-          {/* Categories - Mobile/Tablet Dropdown */}
-          <div className="lg:hidden w-full px-4">
-            <div className="bg-stone-50 p-4 rounded-xl shadow-md">
+        <div className="flex flex-col lg:flex-row gap-6 mt-16 catagory-container h-[1000px]">
+          {/* Mobile Category Dropdown */}
+          <div className="w-full px-4 lg:hidden" data-aos="fade-right">
+            <div className="p-4 shadow-md bg-stone-50 rounded-xl">
               <div className="flex items-center mb-4">
                 <img
                   src="/catagory.svg"
                   alt="Category Icon"
-                  className="h-10 w-10"
+                  className="w-10 h-10"
                 />
-                <span className="text-xl font-semibold text-gray-800 ml-3">
+                <span className="ml-3 text-xl font-semibold text-gray-800">
                   Select Category
                 </span>
               </div>
@@ -213,31 +216,31 @@ export default function Categories() {
                   className="w-full h-[45px] appearance-none bg-white p-3 rounded-lg border border-gray-300 shadow-inner text-gray-800 transition duration-200 text-center text-xl font-semibold"
                 >
                   {Object.keys(categoryImages).map((cat) => (
-                    <option key={cat} value={cat} className="text-center text-lg font-regular">
+                    <option key={cat} value={cat}>
                       {cat}
                     </option>
                   ))}
                 </select>
-                <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                  <svg 
-                    className="fill-current h-6 w-6" 
-                    xmlns="http://www.w3.org/2000/svg" 
+                <div className="absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 pointer-events-none">
+                  <svg
+                    className="w-6 h-6 fill-current"
+                    xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                   >
-                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                   </svg>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Sidebar - Only shown on desktop */}
-          <aside className="hidden lg:block lg:w-[20%] bg-stone-50 rounded-xl shadow-lg catagory-aside h-[900px]">
+          {/* Sidebar - Desktop only */}
+          <aside className="hidden lg:block lg:w-[20%] bg-stone-50 rounded-xl shadow-lg catagory-aside h-[900px]" data-aos="fade-right">
             <div className="flex items-center px-4 pt-4">
               <img src="/catagory.svg" alt="Category Icon" className="h-12" />
-              <span className="text-2xl font-semibold ml-4">Categories</span>
+              <span className="ml-4 text-2xl font-semibold">Categories</span>
             </div>
-            <ul className="space-y-4 mt-6 px-4 pb-6">
+            <ul className="px-4 pb-6 mt-6 space-y-4">
               {Object.keys(categoryImages).map((cat) => (
                 <li
                   key={cat}
@@ -263,12 +266,10 @@ export default function Categories() {
                   </div>
                 </li>
               ))}
-
-              {/* "Need Help?" section - hidden on tablet and below */}
               <li className="h-[240px] bg-[#F2F9F2] rounded-2xl p-4 mt-6 hidden lg:block">
                 <div className="flex items-center h-12">
                   <img src="/help.svg" alt="Help Icon" />
-                  <p className="text-2xl font-bold ml-3">Need Help?</p>
+                  <p className="ml-3 text-2xl font-bold">Need Help?</p>
                 </div>
                 <p className="text-[#4B5563] text-xl mt-4">
                   Contact our customer support team anytime
@@ -280,7 +281,7 @@ export default function Categories() {
 
           {/* Product Grid */}
           <section className="w-full lg:w-[80%] grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 p-2 catagory-section h-[980px]">
-            {filteredProducts.map((product) => {
+            {filteredProducts.map((product, index) => {
               const fullStars = Math.floor(product.rating);
               const hasHalfStar = product.rating % 1 >= 0.5;
               const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
@@ -289,11 +290,13 @@ export default function Categories() {
                 <div
                   key={product.id}
                   className="bg-white rounded-2xl h-[450px] card cursor-pointer"
+                  data-aos="zoom-in"
+                  data-aos-delay={index * 100}
                 >
                   <img
                     src={product.image}
                     alt={product.title}
-                    className="w-full h-48 object-contain rounded-xl"
+                    className="object-contain w-full h-48 rounded-xl"
                   />
                   <div className="flex items-center gap-1 mt-4">
                     {[...Array(fullStars)].map((_, i) => (
@@ -309,7 +312,7 @@ export default function Categories() {
                       {product.rating * 4}
                     </span>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-800 mt-4">
+                  <h3 className="mt-4 text-2xl font-bold text-gray-800">
                     {product.title}
                   </h3>
                   <p className="text-lg text-[#6B7280] font-semibold mt-2">

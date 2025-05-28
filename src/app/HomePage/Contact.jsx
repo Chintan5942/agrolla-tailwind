@@ -1,10 +1,17 @@
 "use client";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Contact() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
-<> 
-    <div className="bg-gray-50 font-[Poppins] flex flex-col items-center gap-12 overflow-hidden">
-      <div className="text-center flex flex-col gap-4">
+    <> 
+    <div className="bg-gray-50 font-[Poppins] flex flex-col items-center gap-12 overflow-hidden" data-aos="fade-up">
+      <div className="text-center flex flex-col gap-4" data-aos="fade-down">
         <br /><br />
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
           Get In <span className="text-green-700">Touch</span>
@@ -17,7 +24,7 @@ export default function Contact() {
 
       <div className="flex flex-col lg:flex-row gap-x-10 gap-y-10 w-full max-w-screen-xl">
         {/* Left Form */}
-        <div className="w-full lg:w-1/2 bg-white rounded-xl shadow-lg flex justify-center items-center h-[765px]">
+        <div className="w-full lg:w-1/2 bg-white rounded-xl shadow-lg flex justify-center items-center h-[765px]" data-aos="fade-right">
           <div className="flex flex-col gap-6 w-[90%] max-w-[500px]">
             <form className="flex flex-col gap-8">
               <div className="flex flex-col gap-1">
@@ -96,9 +103,9 @@ export default function Contact() {
         </div>
 
         {/* Right Contact Info */}
- <div className="w-full lg:w-1/2 flex flex-col gap-8">
+ <div className="w-full lg:w-1/2 flex flex-col gap-8" data-aos="fade-left">
   {/* Address Section */}
-  <div className="bg-white rounded-xl shadow-lg h-[425px] flex flex-col justify-center ">
+  <div className="bg-white rounded-xl shadow-lg h-[425px] flex flex-col justify-center " data-aos="zoom-in-up">
     <div className="w-[90%] max-w-[500px] lg:relative lg:left-5 ">
       <p className="text-xl font-bold">Contact Information</p>
       <div className="gap-2">
@@ -140,7 +147,7 @@ export default function Contact() {
   </div>
 
   {/* Map Section */}
-  <div className="bg-white rounded-xl shadow-lg h-[300px] flex items-center justify-center">
+  <div className="bg-white rounded-xl shadow-lg h-[300px] flex items-center justify-center" data-aos="zoom-in">
     <div className="w-[100%] max-w-[620px] h-[100%]">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d-122.4194154846816!3d37.77492977975971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f0e2c5b1%3A0x4c8b8b6e8f8b8b8b!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sus!4v1681234567890!5m2!1sen!2sus"

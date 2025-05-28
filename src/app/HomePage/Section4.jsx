@@ -19,6 +19,7 @@ export default function Section4() {
 
   useEffect(() => {
     let startTime = null;
+    let hasAnimated = false;
 
     const animateCounters = (timestamp) => {
       if (!startTime) startTime = timestamp;
@@ -37,8 +38,9 @@ export default function Section4() {
 
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries[0].isIntersecting) {
+        if (entries[0].isIntersecting && !hasAnimated) {
           requestAnimationFrame(animateCounters);
+          hasAnimated = true;
         }
       },
       { threshold: 0.1 }
@@ -56,20 +58,27 @@ export default function Section4() {
     };
   }, []);
 
+  const counterData = [
+    { value: yearsExp, label: "Years Experience" },
+    { value: happyFarmers, label: "Happy Farmers" },
+    { value: teamMembers, label: "Team Members" },
+    { value: statesCovered, label: "States Covered" },
+  ];
+
   return (
     <>
-    <br /><br /><br />
-      <div className="flex flex-col items-center overflow-hidden lg:items-start lg:flex-row justify-evenly gap-x-4 sm:gap-x-8 md:gap-x-10">
+      <br /><br /><br />
+      <div className="flex flex-col items-center overflow-hidden lg:flex-row justify-evenly gap-x-4 sm:gap-x-8 md:gap-x-10" data-aos="fade-up">
         {/* Image Section */}
         <img
           src="/about-agrolla.png"
           alt="About Agrolla"
-          className="lg:w-[720px] lg:h-[536px] lg:relative lg:top-5 "
+          className="lg:w-[720px] lg:h-[536px] lg:relative lg:top-5"
+          data-aos="zoom-in-right"
         />
 
         {/* Text + Counters */}
-        <div className="lg:w-[680px] lg:h-[536px] w-full flex flex-col gap-4 sm:w-[700px]">
-          {" "}
+        <div className="lg:w-[680px] lg:h-[536px] w-full flex flex-col gap-4 sm:w-[700px]" data-aos="fade-left">
           <br />
           <div className="flex items-center justify-center space-x-3">
             <hr className="w-10 border border-[#2E7D32]" />
@@ -89,17 +98,15 @@ export default function Section4() {
             integrated operations, ensuring uncompromised quality, consistency,
             and reliability in every shipment.
           </h5>
+
           {/* Counters */}
           <div className="flex flex-wrap justify-between text-center gap-y-6">
-            {[
-              { value: yearsExp, label: "Years Experience" },
-              { value: happyFarmers, label: "Happy Farmers" },
-              { value: teamMembers, label: "Team Members" },
-              { value: statesCovered, label: "States Covered" },
-            ].map((item, index) => (
+            {counterData.map((item, index) => (
               <div
                 key={index}
                 className="flex flex-col items-center w-1/2 md:w-1/4"
+                data-aos="flip-up"
+                data-aos-delay={index * 100}
               >
                 <div className="text-2xl font-bold text-green-700 counter-number sm:text-3xl lg:text-4xl">
                   {item.value}+
@@ -110,9 +117,13 @@ export default function Section4() {
               </div>
             ))}
           </div>
+
           {/* Button */}
           <div className="flex justify-center lg:justify-start">
-            <button className="bg-green-700 h-[48px] w-[154px] hover:bg-green-700/80 text-white font-medium rounded">
+            <button
+              className="bg-green-700 h-[48px] w-[154px] hover:bg-green-700/80 text-white font-medium rounded"
+              data-aos="fade-up"
+            >
               Contact Us
             </button>
           </div>
