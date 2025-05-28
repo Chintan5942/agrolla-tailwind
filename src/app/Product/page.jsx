@@ -1,12 +1,11 @@
 "use-client";
 
-import Footer from "../HomePage/Footer";
-import Navbar from "../HomePage/Navbar";
+import Page from "../Product/[id]/page";
 
 export default function page() {
   return (
     <>
-    <Navbar/>
+    <Page/>
     </>
   )
 }
