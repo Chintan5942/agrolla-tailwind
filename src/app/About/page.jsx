@@ -2,8 +2,20 @@
 
 import Footer from "../HomePage/Footer";
 import Navbar from "../HomePage/Navbar";
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function About() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 100,
+    });
+  }, []);
+
   return (
     <>
       <div className="font-poppins">
@@ -12,7 +24,11 @@ export default function About() {
 
         {/* Hero Section */}
         <div className="w-full h-[1000px] bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('/abouthero.png')] bg-cover bg-bottom flex items-center">
-          <div className="flex flex-col items-center justify-start w-full max-w-[600px] gap-4 absolute top-[450px] left-[5%]">
+          <div 
+            className="flex flex-col items-center justify-start w-full max-w-[600px] gap-4 absolute top-[450px] left-[5%]"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <h1 className="text-[48px] font-bold text-white leading-tight">
               Nurturing Quality, Cultivating Trust
             </h1>
@@ -21,7 +37,7 @@ export default function About() {
               Export House and leading manufacturer of premium agricultural
               products.
             </p>
-            <div className="flex flex-row gap-4 w-full justify-start">
+            <div className="flex flex-row justify-start w-full gap-4">
               <button className="h-[50px] w-[123px] bg-[#2E7D32] text-white text-[16px] font-semibold rounded-[8px]">
                 Our Story
               </button>
@@ -31,10 +47,14 @@ export default function About() {
             </div>
           </div>
         </div>
+        
         {/* Main Content Container */}
-        <div className="w-full flex flex-col items-center gap-16 md:gap-12 sm:gap-8 px-4">
+        <div className="flex flex-col items-center w-full gap-16 px-4 md:gap-12 sm:gap-8">
           {/* Section 1 */}
-          <section className="w-full max-w-[1536px] flex flex-col items-center gap-8">
+          <section 
+            className="w-full max-w-[1536px] flex flex-col items-center gap-8"
+            data-aos="fade-up"
+          >
             {" "}
             <br />
             <br />
@@ -45,8 +65,11 @@ export default function About() {
               leading manufacturer and exporter of peanuts, oilseeds, grains,
               and pulses.
             </p>
-            <div className="w-full flex flex-col lg:flex-row items-center justify-center gap-8">
-              <div className="flex flex-col justify-center gap-6 max-w-[728px] w-full">
+            <div className="flex flex-col items-center justify-center w-full gap-8 lg:flex-row">
+              <div 
+                className="flex flex-col justify-center gap-6 max-w-[728px] w-full"
+                data-aos="fade-right"
+              >
                 <p className="text-[16px] font-semibold text-[#374151] leading-[24px]">
                   Headquartered in Gujarat, India, we take immense pride in our
                   fully integrated operations, ensuring uncompromised quality,
@@ -61,7 +84,7 @@ export default function About() {
                   preferred supplier across international markets.
                 </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+                <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
                   {/* Quality Items */}
                   {[
                     {
@@ -85,7 +108,12 @@ export default function About() {
                       desc: "Serving bulk buyers, food manufacturers, wholesalers, and retailers worldwide.",
                     },
                   ].map((item, index) => (
-                    <div key={index} className="flex items-start gap-4">
+                    <div 
+                      key={index} 
+                      className="flex items-start gap-4"
+                      data-aos="fade-up"
+                      data-aos-delay={100 * index}
+                    >
                       <img src={item.icon} alt="" className="w-12 h-12 mt-1" />
                       <div className="flex flex-col">
                         <p className="text-[16px] font-semibold text-[#111827]">
@@ -104,25 +132,33 @@ export default function About() {
                 src="/aboutSection1.jpg"
                 alt=""
                 className="w-full max-w-[728px] h-[613px] rounded-[8px] object-cover"
+                data-aos="fade-left"
               />
             </div>
           </section>
+          
           {/* Section 2 */}
           <br />
           <br />
           <br />
-          <section className="w-full bg-[#f9fafb] flex justify-center items-center">
-            <div className="w-full max-w-[1536px] flex flex-col lg:flex-row gap-8 ">
+          <section 
+            className="w-full bg-[#f9fafb] flex justify-center items-center"
+            data-aos="fade-up"
+          >
+            <div className="w-full max-w-[1536px] flex flex-col lg:flex-row gap-8">
               {/* Mission Card */}
-              <div className="w-full lg:w-1/2 rounded-[16px] bg-white shadow-lg flex flex-col gap-6">
-                <div className="flex flex-col  w-[90%] relative left-[5%] ">
+              <div 
+                className="w-full lg:w-1/2 rounded-[16px] bg-white shadow-lg flex flex-col gap-6"
+                data-aos="fade-right"
+              >
+                <div className="flex flex-col  w-[90%] relative left-[5%]">
                   {" "}
                   <br />
                   <img src="/mission.svg" alt="" className="w-16 h-16" /> <br />
                   <h3 className="text-2xl font-bold">Our Mission</h3>
                 </div>
 
-                <ul className="space-y-5 w-[90%] relative left-[5%] ">
+                <ul className="space-y-5 w-[90%] relative left-[5%]">
                   {[
                     {
                       title: "Uncompromised Quality",
@@ -148,6 +184,8 @@ export default function About() {
                     <li
                       key={index}
                       className="flex items-start gap-6 leading-relaxed"
+                      data-aos="fade-up"
+                      data-aos-delay={100 * index}
                     >
                       <span className="text-[#4caf50] text-xl font-semibold">
                         ✓
@@ -165,9 +203,13 @@ export default function About() {
                   ))}
                 </ul>
               </div>
+              
               {/* Vision Card */}
-              <div className="w-full lg:w-1/2 rounded-[16px] bg-white shadow-lg flex flex-col gap-6">
-                <div className="flex flex-col  w-[90%] relative left-[5%] ">
+              <div 
+                className="w-full lg:w-1/2 rounded-[16px] bg-white shadow-lg flex flex-col gap-6"
+                data-aos="fade-left"
+              >
+                <div className="flex flex-col  w-[90%] relative left-[5%]">
                   {" "}
                   <br />
                   <img src="/vision.svg" alt="" className="w-16 h-16" /> <br />
@@ -182,6 +224,7 @@ export default function About() {
                   src="/visionimg.jpg"
                   alt=""
                   className="h-48 rounded-[16px] object-cover w-[90%] relative left-[5%]"
+                  data-aos="zoom-in"
                 />
                 <p className="italic text-[#4b5563] text-center font-semibold leading-relaxed w-[90%] relative left-[5%]">
                   "At Agrolla Impex, we don't just export agro products—we
@@ -192,8 +235,12 @@ export default function About() {
               </div>
             </div>
           </section>
+          
           {/* Section 3 */}
-          <section className="w-full max-w-[1536px] flex flex-col items-center gap-8 px-4">
+          <section 
+            className="w-full max-w-[1536px] flex flex-col items-center gap-8 px-4"
+            data-aos="fade-up"
+          >
             {" "}
             <br />
             <br />
@@ -204,7 +251,7 @@ export default function About() {
               define our commitment to excellence, integrity, and customer
               satisfaction.
             </p>
-            <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
               {/* Value Cards */}
               {[
                 {
@@ -241,10 +288,12 @@ export default function About() {
                 <div
                   key={index}
                   className="bg-[#f9fafb] rounded-[16px] p-6 shadow-sm hover:shadow-md transition-shadow] flex items-center h-[260px]"
+                  data-aos="fade-up"
+                  data-aos-delay={100 * (index % 3)}
                 >
                   <div className="relative left-[5%] flex flex-col w-[90%]  overflow-hidden">
                     <img src={item.icon} alt="" className="w-14 h-14" /> <br />
-                    <h3 className="text-xl font-semibold ">
+                    <h3 className="text-xl font-semibold">
                       {item.title}
                     </h3>{" "}
                     <br />
@@ -256,8 +305,12 @@ export default function About() {
               ))}
             </div>
           </section>
+          
           {/* Section 4 */}
-          <section className="w-full max-w-[1536px] flex flex-col items-center gap-8 px-4">
+          <section 
+            className="w-full max-w-[1536px] flex flex-col items-center gap-8 px-4"
+            data-aos="fade-up"
+          >
             <br />
             <br />
             <br />
@@ -303,7 +356,12 @@ export default function About() {
                   note: "Documentation and certification aligned with global standards",
                 },
               ].map((item, index) => (
-                <div key={index} className="flex gap-6 md:gap-8">
+                <div 
+                  key={index} 
+                  className="flex gap-6 md:gap-8"
+                  data-aos="fade-up"
+                  data-aos-delay={100 * index}
+                >
                   <div className="flex flex-col items-center">
                     <img src={item.icon} alt="" className="w-10 md:w-12" />
                     {index < 4 && (
@@ -331,24 +389,33 @@ export default function About() {
               ))}
             </div>
 
-            <div className="w-full flex flex-col items-center gap-8 mt-12">
+            <div 
+              className="flex flex-col items-center w-full gap-8 mt-12"
+              data-aos="fade-up"
+            >
               <h3 className="text-2xl font-semibold text-center">
                 Our Certifications
               </h3>
-              <div className="w-full flex flex-wrap justify-evenly gap-6 md:gap-4 sm:gap-3">
-                {[1, 2, 3, 4, 5].map((num) => (
+              <div className="flex flex-wrap w-full gap-6 justify-evenly md:gap-4 sm:gap-3">
+                {[1, 2, 3, 4, 5].map((num, index) => (
                   <img
                     key={num}
                     src={`/cer${num}.png`}
                     alt=""
-                    className="h-24 md:h-20 sm:h-16 object-contain"
+                    className="object-contain h-24 md:h-20 sm:h-16"
+                    data-aos="zoom-in"
+                    data-aos-delay={100 * index}
                   />
                 ))}
               </div>
             </div>
           </section>
+          
           {/* Section 5 */}
-          <section className="w-full max-w-[1536px] flex flex-col items-center gap-8 px-4">
+          <section 
+            className="w-full max-w-[1536px] flex flex-col items-center gap-8 px-4"
+            data-aos="fade-up"
+          >
             {" "}
             <br />
             <br />
@@ -360,7 +427,7 @@ export default function About() {
               Our experienced team brings decades of expertise in agriculture,
               international trade, and quality management.
             </p>
-            <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {/* Team Members */}
               {[
                 {
@@ -391,12 +458,14 @@ export default function About() {
                 <div
                   key={index}
                   className="rounded-[16px] shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+                  data-aos="fade-up"
+                  data-aos-delay={100 * index}
                 >
                   <div className="aspect-[4/3] overflow-hidden">
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="w-full h-full object-cover"
+                      className="object-cover w-full h-full"
                     />
                   </div>
                   <div className="w-[90%] relative left-[5%]">
@@ -414,165 +483,176 @@ export default function About() {
               ))}
             </div>
           </section>
+          
           {/* Section 6 */}
-<div className="relative w-full bg-gray-50">
-  <div className="mx-auto flex flex-col  sm:gap-20 lg:gap-10">
-    {/* Main Content Grid */}
-        <div className="items-center text-center gap-4"> 
-      <br />
-      <br />
-      <br />
-      <h2 className="text-3xl font-bold text-gray-900">Get in Touch</h2>
-      <p className="text-lg text-gray-600 justify-center">
-        Have questions about our products or services? We'd love to hear from you.
-      </p>
-    </div>
-    <div className="h-[650px] w-[1920px(fixed)] flex justify-center items-center bg-[#F9FAFB] ">
-    <div className="h-[558px] w-[1504px] flex justify-between ">
-      {/* Contact Information */}
-      <div className="bg-white rounded-xl shadow-lg flex flex-col gap-8 justify-between h-[558px] w-[482px]">
-        <div className="flex flex-col gap-4"> <br />
-          <h3 className="text-xl font-semibold text-gray-900 w-[90%] relative left-[5%]">Contact Information</h3>
-          <div className="flex flex-col gap-4  w-[90%] relative left-[5%]">
-            {/* Location */}
-            <div className="flex items-center gap-4">
-              <img src="/location.svg" alt="Location" className="h-10 w-10 flex-shrink-0" />
-              <div>
-                <h4 className="text-base font-semibold text-gray-900">Headquarters</h4>
-                <p className="text-base text-gray-700 font-medium">
-                  BM Square-1, Rajlaxmi Park, <br />
-                  Junagadh
-                </p>
-              </div>
-            </div>
-            {/* Phone */}
-            <div className="flex items-center gap-4">
-              <img src="/call.svg" alt="Phone" className="h-10 w-10 flex-shrink-0" />
-              <div>
-                <h4 className="text-base font-semibold text-gray-900">Phone</h4>
-                <p className="text-base text-gray-700 font-medium">
-                  +91 79 2345 6789<br />
-                  +1 (800) 123-4567 (International)
-                </p>
-              </div>
-            </div>
-            {/* Email */}
-            <div className="flex items-center gap-4">
-              <img src="/mail.svg" alt="Email" className="h-10 w-10 flex-shrink-0" />
-              <div>
-                <h4 className="text-base font-semibold text-gray-900">Email</h4>
-                <p className="text-base text-gray-700 font-medium">
-                  info@agrollaimpex.com<br />
-                  exports@agrollaimpex.com
-                </p>
-              </div>
-            </div>
-            {/* Business Hours */}
-            <div className="flex items-center gap-4">
-              <img src="/clock.svg" alt="Business Hours" className="h-10 w-10 flex-shrink-0" />
-              <div>
-                <h4 className="text-base font-semibold text-gray-900">Business Hours</h4>
-                <p className="text-base text-gray-700">
-                  Monday - Friday: 9:00 AM - 6:00 PM IST<br />
-                  Saturday: 9:00 AM - 1:00 PM IST
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Social Icons */}
-        <div className="flex flex-col gap-4 w-[90%] relative left-[5%]">
-          <h4 className="text-base font-bold text-gray-900">Connect With Us</h4>
-          <div className="flex gap-4">
-            <img src="/linkedin.svg" alt="LinkedIn" className="h-10 w-10" />
-            <img src="/twitter.svg" alt="Twitter" className="h-10 w-10" />
-            <img src="/facebook.svg" alt="Facebook" className="h-10 w-10" />
-            <img src="/instagram.svg" alt="Instagram" className="h-10 w-10" />
-          </div>
-        </div>
-        <br />
-      </div>
-      {/* Contact Form */}
-      <div className="lg:col-span-2 bg-white rounded-xl shadow-lg flex flex-col gap-4 h-[558px] w-[992px]"> <br />
-        <h3 className="text-xl font-semibold text-gray-900 w-[95%] relative left-[3%]">Send Us a Message</h3>
-
-        <form className="flex flex-col gap-4 w-[95%] relative left-[3%] ">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="flex flex-col gap-2">
-              <label htmlFor="name" className="text-lg font-medium text-gray-700">
-                Your Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                className="block w-full rounded-md border border-gray-300 px-3 py-2  h-[42px]"
-              />
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <label htmlFor="name" className="text-lg font-medium text-gray-700">
-                Email Address
-              </label>
-              <input
-                type="email"
-                id="email"
-                className="block w-full rounded-md border border-gray-300 px-3 py-2  h-[42px]"
-              />
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <label htmlFor="name" className="text-lg font-medium text-gray-700">
-                Company Name
-              </label>
-              <input
-                type="text"
-                id="company"
-                className="block w-full rounded-md border border-gray-300 px-3 py-2  h-[42px]"
-              />
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <label htmlFor="name" className="text-lg font-medium text-gray-700">
-                Subject
-              </label>
-              <input
-                type="text"
-                id="subject"
-                className="block w-full rounded-md border border-gray-300 px-3 py-2  h-[42px]"
-              />
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-2">
-              <label htmlFor="name" className="text-lg font-medium text-gray-700">
-              Your Message
-            </label>
-            <textarea
-              id="message"
-              rows={4}
-                className="block w-full rounded-md border border-gray-300 px-3 py-2  h-[138px]"
-            ></textarea>
-          </div>
-
-          <button
-            type="submit"
-            className="rounded-md bg-green-700 text-base font-semibold text-white  hover:bg-green-800 h-[48px] w-[156px]"
+          <div 
+            className="relative w-full bg-gray-50"
+            data-aos="fade-up"
           >
-            Send Message
-          </button>
-        </form>
-      </div>
-    </div>
+            <div className="flex flex-col mx-auto sm:gap-20 lg:gap-10">
+              {/* Main Content Grid */}
+              <div className="items-center gap-4 text-center"> 
+                <br />
+                <br />
+                <br />
+                <h2 className="text-3xl font-bold text-gray-900">Get in Touch</h2>
+                <p className="justify-center text-lg text-gray-600">
+                  Have questions about our products or services? We'd love to hear from you.
+                </p>
+              </div>
+              <div className="h-[650px] w-[1920px(fixed)] flex justify-center items-center bg-[#F9FAFB] ">
+                <div className="h-[558px] w-[1504px] flex justify-between ">
+                  {/* Contact Information */}
+                  <div 
+                    className="bg-white rounded-xl shadow-lg flex flex-col gap-8 justify-between h-[558px] w-[482px]"
+                    data-aos="fade-right"
+                  >
+                    <div className="flex flex-col gap-4"> <br />
+                      <h3 className="text-xl font-semibold text-gray-900 w-[90%] relative left-[5%]">Contact Information</h3>
+                      <div className="flex flex-col gap-4  w-[90%] relative left-[5%]">
+                        {/* Location */}
+                        <div className="flex items-center gap-4">
+                          <img src="/location.svg" alt="Location" className="flex-shrink-0 w-10 h-10" />
+                          <div>
+                            <h4 className="text-base font-semibold text-gray-900">Headquarters</h4>
+                            <p className="text-base font-medium text-gray-700">
+                              BM Square-1, Rajlaxmi Park, <br />
+                              Junagadh
+                            </p>
+                          </div>
+                        </div>
+                        {/* Phone */}
+                        <div className="flex items-center gap-4">
+                          <img src="/call.svg" alt="Phone" className="flex-shrink-0 w-10 h-10" />
+                          <div>
+                            <h4 className="text-base font-semibold text-gray-900">Phone</h4>
+                            <p className="text-base font-medium text-gray-700">
+                              +91 79 2345 6789<br />
+                              +1 (800) 123-4567 (International)
+                            </p>
+                          </div>
+                        </div>
+                        {/* Email */}
+                        <div className="flex items-center gap-4">
+                          <img src="/mail.svg" alt="Email" className="flex-shrink-0 w-10 h-10" />
+                          <div>
+                            <h4 className="text-base font-semibold text-gray-900">Email</h4>
+                            <p className="text-base font-medium text-gray-700">
+                              info@agrollaimpex.com<br />
+                              exports@agrollaimpex.com
+                            </p>
+                          </div>
+                        </div>
+                        {/* Business Hours */}
+                        <div className="flex items-center gap-4">
+                          <img src="/clock.svg" alt="Business Hours" className="flex-shrink-0 w-10 h-10" />
+                          <div>
+                            <h4 className="text-base font-semibold text-gray-900">Business Hours</h4>
+                            <p className="text-base text-gray-700">
+                              Monday - Friday: 9:00 AM - 6:00 PM IST<br />
+                              Saturday: 9:00 AM - 1:00 PM IST
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
+                    {/* Social Icons */}
+                    <div className="flex flex-col gap-4 w-[90%] relative left-[5%]">
+                      <h4 className="text-base font-bold text-gray-900">Connect With Us</h4>
+                      <div className="flex gap-4">
+                        <img src="/linkedin.svg" alt="LinkedIn" className="w-10 h-10" />
+                        <img src="/twitter.svg" alt="Twitter" className="w-10 h-10" />
+                        <img src="/facebook.svg" alt="Facebook" className="w-10 h-10" />
+                        <img src="/instagram.svg" alt="Instagram" className="w-10 h-10" />
+                      </div>
+                    </div>
+                    <br />
+                  </div>
+                  
+                  {/* Contact Form */}
+                  <div 
+                    className="lg:col-span-2 bg-white rounded-xl shadow-lg flex flex-col gap-4 h-[558px] w-[992px]"
+                    data-aos="fade-left"
+                  > <br />
+                    <h3 className="text-xl font-semibold text-gray-900 w-[95%] relative left-[3%]">Send Us a Message</h3>
 
+                    <form className="flex flex-col gap-4 w-[95%] relative left-[3%] ">
+                      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                        <div className="flex flex-col gap-2">
+                          <label htmlFor="name" className="text-lg font-medium text-gray-700">
+                            Your Name
+                          </label>
+                          <input
+                            type="text"
+                            id="name"
+                            className="block w-full rounded-md border border-gray-300 px-3 py-2  h-[42px]"
+                          />
+                        </div>
 
-    </div>
-  </div>
-</div>
+                        <div className="flex flex-col gap-2">
+                          <label htmlFor="name" className="text-lg font-medium text-gray-700">
+                            Email Address
+                          </label>
+                          <input
+                            type="email"
+                            id="email"
+                            className="block w-full rounded-md border border-gray-300 px-3 py-2  h-[42px]"
+                          />
+                        </div>
+
+                        <div className="flex flex-col gap-2">
+                          <label htmlFor="name" className="text-lg font-medium text-gray-700">
+                            Company Name
+                          </label>
+                          <input
+                            type="text"
+                            id="company"
+                            className="block w-full rounded-md border border-gray-300 px-3 py-2  h-[42px]"
+                          />
+                        </div>
+
+                        <div className="flex flex-col gap-2">
+                          <label htmlFor="name" className="text-lg font-medium text-gray-700">
+                            Subject
+                          </label>
+                          <input
+                            type="text"
+                            id="subject"
+                            className="block w-full rounded-md border border-gray-300 px-3 py-2  h-[42px]"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="flex flex-col gap-2">
+                          <label htmlFor="name" className="text-lg font-medium text-gray-700">
+                          Your Message
+                        </label>
+                        <textarea
+                          id="message"
+                          rows={4}
+                            className="block w-full rounded-md border border-gray-300 px-3 py-2  h-[138px]"
+                        ></textarea>
+                      </div>
+
+                      <button
+                        type="submit"
+                        className="rounded-md bg-green-700 text-base font-semibold text-white  hover:bg-green-800 h-[48px] w-[156px]"
+                      >
+                        Send Message
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
           {/* Section 7 */}
-          <div className="relative w-full flex justify-center">
+          <div 
+            className="relative flex justify-center w-full"
+            data-aos="fade-up"
+          >
             <div className="w-[1536px]">
               <div className="text-center">
                 {" "}
@@ -589,7 +669,10 @@ export default function About() {
               </div>
               <br />
               <br />
-              <div className="rounded-xl overflow-hidden shadow-sm flex justify-center w-[98%]">
+              <div 
+                className="rounded-xl overflow-hidden shadow-sm flex justify-center w-[98%]"
+                data-aos="zoom-in"
+              >
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d-122.4194154846816!3d37.77492977975971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f0e2c5b1%3A0x4c8b8b6e8f8b8b8b!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sus!4v1681234567890!5m2!1sen!2sus"
                   width="100%"
@@ -603,8 +686,12 @@ export default function About() {
               <br /><br />
             </div>
           </div>
+          
           {/* Section 8 */}
-          <div className="relative w-full bg-green-50 ">
+          <div 
+            className="relative w-full bg-green-50"
+            data-aos="fade-up"
+          >
             <div className="text-center">
               <h2 className="text-3xl font-bold text-gray-900">
                 <br />
@@ -617,7 +704,11 @@ export default function About() {
               </p>
             </div>
             <br /><br /> 
-            <div className=" flex flex-col sm:flex-row justify-center gap-4">
+            <div 
+              className="flex flex-col justify-center gap-4 sm:flex-row"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               <button className="rounded-md bg-green-700 text-base font-semibold text-white shadow-sm hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-green-700 focus:ring-offset-2 h-[50px] w-[208px]">
                 Contact Us Today
               </button>

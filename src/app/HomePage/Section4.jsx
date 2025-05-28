@@ -57,64 +57,67 @@ export default function Section4() {
   }, []);
 
   return (
-<div className="flex flex-col lg:flex-row items-center justify-evenly overflow-hidden gap-x-4 sm:gap-x-8 md:gap-x-10">
-      {/* Image Section */}
-      <img
-        src="/about-agrolla.png"
-        alt="About Agrolla"
-        className="lg:w-[720px] lg:h-[536px] lg:relative lg:top-5 "
-      />
+    <>
+    <br /><br /><br />
+      <div className="flex flex-col items-center overflow-hidden lg:items-start lg:flex-row justify-evenly gap-x-4 sm:gap-x-8 md:gap-x-10">
+        {/* Image Section */}
+        <img
+          src="/about-agrolla.png"
+          alt="About Agrolla"
+          className="lg:w-[720px] lg:h-[536px] lg:relative lg:top-5 "
+        />
 
-      {/* Text + Counters */}
-      <div className="lg:w-[680px] lg:h-[536px] w-full flex flex-col gap-4 sm:w-[700px]">
-        {" "}
-        <br />
-        <div className="flex items-center justify-center space-x-3">
-          <hr className="w-10 border border-[#2E7D32]" />
-          <p className="text-xs sm:text-sm text-[#2E7D32] font-bold uppercase tracking-wider">
-            &nbsp;Featured Products&nbsp;
-          </p>
-          <hr className="w-10 border border-[#2E7D32]" />
-        </div>
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#111827] leading-snug">
-          <span className="text-green-700">Agrolla Impex</span>: Nurturing
-          Quality, Cultivating Trust
-        </h1>
-        <h5 className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed lg:w-[580px]">
-          Agrolla Impex is a distinguished One Star Export House and a leading
-          manufacturer and exporter of peanuts, oilseeds, grains, and pulses.
-          Headquartered in Gujarat, India, we take immense pride in our fully
-          integrated operations, ensuring uncompromised quality, consistency,
-          and reliability in every shipment.
-        </h5>
-        {/* Counters */}
-        <div className="flex flex-wrap justify-between text-center gap-y-6">
-          {[
-            { value: yearsExp, label: "Years Experience" },
-            { value: happyFarmers, label: "Happy Farmers" },
-            { value: teamMembers, label: "Team Members" },
-            { value: statesCovered, label: "States Covered" },
-          ].map((item, index) => (
-            <div
-              key={index}
-              className="w-1/2 md:w-1/4 flex flex-col items-center"
-            >
-              <div className="counter-number text-2xl sm:text-3xl lg:text-4xl font-bold text-green-700">
-                {item.value}+
+        {/* Text + Counters */}
+        <div className="lg:w-[680px] lg:h-[536px] w-full flex flex-col gap-4 sm:w-[700px]">
+          {" "}
+          <br />
+          <div className="flex items-center justify-center space-x-3">
+            <hr className="w-10 border border-[#2E7D32]" />
+            <p className="text-xs sm:text-sm text-[#2E7D32] font-bold uppercase tracking-wider">
+              &nbsp;Featured Products&nbsp;
+            </p>
+            <hr className="w-10 border border-[#2E7D32]" />
+          </div>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#111827] leading-snug">
+            <span className="text-green-700">Agrolla Impex</span>: Nurturing
+            Quality, Cultivating Trust
+          </h1>
+          <h5 className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed lg:w-[580px]">
+            Agrolla Impex is a distinguished One Star Export House and a leading
+            manufacturer and exporter of peanuts, oilseeds, grains, and pulses.
+            Headquartered in Gujarat, India, we take immense pride in our fully
+            integrated operations, ensuring uncompromised quality, consistency,
+            and reliability in every shipment.
+          </h5>
+          {/* Counters */}
+          <div className="flex flex-wrap justify-between text-center gap-y-6">
+            {[
+              { value: yearsExp, label: "Years Experience" },
+              { value: happyFarmers, label: "Happy Farmers" },
+              { value: teamMembers, label: "Team Members" },
+              { value: statesCovered, label: "States Covered" },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center w-1/2 md:w-1/4"
+              >
+                <div className="text-2xl font-bold text-green-700 counter-number sm:text-3xl lg:text-4xl">
+                  {item.value}+
+                </div>
+                <div className="text-xs font-semibold text-center text-gray-700 sm:text-sm md:text-base">
+                  {item.label}
+                </div>
               </div>
-              <div className="text-xs sm:text-sm md:text-base text-gray-700 font-semibold text-center">
-                {item.label}
-              </div>
-            </div>
-          ))}
-        </div>
-        {/* Button */}
-        <div className="flex justify-center lg:justify-start">
-          <button className="bg-green-700 h-[48px] w-[154px] hover:bg-green-700/80 text-white font-medium rounded">
-            Contact Us
-          </button>
+            ))}
+          </div>
+          {/* Button */}
+          <div className="flex justify-center lg:justify-start">
+            <button className="bg-green-700 h-[48px] w-[154px] hover:bg-green-700/80 text-white font-medium rounded">
+              Contact Us
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
