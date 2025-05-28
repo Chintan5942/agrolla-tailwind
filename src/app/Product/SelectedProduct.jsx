@@ -16,7 +16,7 @@ const ProductPage = () => {
       <Navbar />
       {/* Section 1: Product Overview */}
       <div className="py-12">
-        <div className="container border-2 lg:w-[90%] lg:relative lg:left-[5%]">
+        <div className="container lg:w-[90%] lg:relative lg:left-[5%]">
           <div className="flex flex-col gap-10 lg:flex-row">
             {/* Product Image */}
             <div className="lg:w-1/2">
@@ -29,7 +29,7 @@ const ProductPage = () => {
               </div>
             </div>
             {/* Product Details */}
-            <div className="lg:w-1/2">
+            <div className="lg:w-1/2"> <br />
               <h4 className="mb-2 text-3xl font-bold text-gray-900">
                 {selectedProduct.title}
               </h4>
@@ -40,17 +40,17 @@ const ProductPage = () => {
                   className="w-6 h-6 mr-2"
                 />
                 <span className="text-gray-500">
-                  {selectedProduct.rating} ({selectedProduct.reviews} reviews)
+                ({selectedProduct.reviews} reviews)
                 </span>
               </div>
-              <p className="mb-6 leading-7 text-gray-700">
-                {selectedProduct.description}
+              <p className="mb-6 font-bold leading-7 text-gray-700">
+                {selectedProduct.aboutProduct}
               </p>
               {/* Highlights */}
-              <div className="rounded-2xl">
+              <div className="rounded-2xl"> <br />
                 <h5 className="mb-4 text-xl font-semibold text-gray-700">
                   Key Highlights
-                </h5>
+                </h5> <br />
                 <ul className="gap-4">
                   {selectedProduct.highlights.map((item, index) => (
                     <li
@@ -71,8 +71,8 @@ const ProductPage = () => {
               </div>
             </div>
           </div>
-          {/* Thumbnail Images */}
-          <div className="flex gap-4 mt-10 lg:mt-12 border-3 w-[52%] overflow-scroll overflow-y-hidden ">
+          {/* Thumbnail Images */} <br />
+                <div className="flex gap-4 mt-10 lg:mt-12  w-[52%] overflow-scroll overflow-y-hidden scrollbar-y-hide catagory-images">
             {[selectedProduct, ...otherProducts].map((product, index) => (
               <img
                 key={product.id}
@@ -88,9 +88,10 @@ const ProductPage = () => {
             ))}
           </div>
         </div>
-      </div>
+      </div> 
+      <br />
       {/* Section 2: Product Description */}
-      <div className="container border-2 lg:w-[90%] lg:relative lg:left-[5%]">
+      <div className="container lg:w-[90%] lg:relative lg:left-[5%]">
         {/* Tabs */}
         <div className="flex text-sm border-1 border-b border-gray-200 sm:text-base justify-between w-[45%]">
           {[

@@ -26,6 +26,8 @@ const productsData = [
     ],
     applications:
       "Used in cooking, snacks, peanut butter production, and oil extraction.",
+    aboutProduct:
+      "Ground Nuts are premium quality oilseeds, rich in protein, healthy fats, and essential minerals. Their natural freshness and versatility make them ideal for snacks, cooking, and oil extraction. They are sourced from sustainable farms and carefully packaged to preserve taste and nutrition. Enjoyed worldwide, ground nuts are a staple in both traditional and modern recipes.",
   },
   {
     id: 2,
@@ -52,6 +54,8 @@ const productsData = [
       "Non-GMO product",
     ],
     applications: "Ideal for snacking, baking, and confectionery.",
+    aboutProduct:
+      "Bold Peanuts offer a rich flavor and crunchy texture, handpicked for quality and high oil content. Perfect for snacking, baking, and packed with antioxidants for a healthy treat. These peanuts are non-GMO and uniform in size, making them a favorite for roasting and frying. Their natural goodness supports a healthy lifestyle and culinary creativity.",
   },
   {
     id: 3,
@@ -78,6 +82,8 @@ const productsData = [
       "Packed in food-grade material",
     ],
     applications: "Perfect for snacks and health foods.",
+    aboutProduct:
+      "TJ Peanuts are a special variety known for exceptional taste and high nutritional value. Low in saturated fat and rich in fiber, they are perfect for healthy snacking and traditional sweets. Carefully selected TJ variety ensures consistent crunch and flavor in every bite. Packed in food-grade material, they are suitable for vegan diets and health-conscious consumers.",
   },
   {
     id: 4,
@@ -104,6 +110,8 @@ const productsData = [
       "Suitable for gluten-free diets",
     ],
     applications: "Used in gourmet and specialty foods.",
+    aboutProduct:
+      "Java Peanuts feature a distinctive flavor and smooth texture, preferred by chefs for gourmet recipes. High in vitamin E and vacuum packed, they are a premium choice for specialty foods. Their uniform size and easy-to-roast nature make them ideal for desserts and confectionery. Java peanuts are free from artificial coloring and suitable for gluten-free diets.",
   },
   {
     id: 5,
@@ -130,6 +138,8 @@ const productsData = [
       "Allergen tested",
     ],
     applications: "Ideal for baking and as a snack.",
+    aboutProduct:
+      "Roasted Blanch Peanuts are delicately roasted and blanched for a smooth, skinless texture. Easy to digest and allergen tested, they are great for baking, snacking, and trail mixes. With no added oils or fats, they are a healthy addition to recipes. Their ready-to-use form saves time in the kitchen and enhances flavor in every dish.",
   },
   {
     id: 6,
@@ -156,6 +166,8 @@ const productsData = [
       "Easy to sprinkle on dishes",
     ],
     applications: "Used for garnishing and cooking.",
+    aboutProduct:
+      "Roasted Split Peanuts are split and roasted for enhanced flavor and aroma. Crispy and protein-rich, they are ideal for garnishing, cooking, and quick energy snacks. Sealed for freshness, they are a favorite in Indian chaats and savory dishes. Their plant-based protein content makes them a nutritious choice for all ages.",
   },
   {
     id: 7,
@@ -182,6 +194,8 @@ const productsData = [
       "Packed in resealable bags",
     ],
     applications: "Used in spice blends and cooking.",
+    aboutProduct:
+      "Coriander seeds are sun-dried for maximum aroma and a mild, sweet flavor. Essential in spice blends and curries, they are rich in antioxidants and support digestion. These seeds are packed in resealable bags to maintain freshness. Used whole or ground, coriander seeds add depth and fragrance to a variety of cuisines.",
   },
   {
     id: 8,
@@ -208,6 +222,8 @@ const productsData = [
       "Rich in dietary fiber",
     ],
     applications: "Used in spice mixes and as a mouth freshener.",
+    aboutProduct:
+      "Fennel seeds have a distinct licorice-like flavor and are rich in dietary fiber. Used in teas and spice mixes, they aid digestion and serve as a natural breath freshener. Fennel seeds are aromatic and sweet, making them popular after meals. They are also used in herbal teas and traditional remedies for digestive health.",
   },
   {
     id: 9,
@@ -234,6 +250,8 @@ const productsData = [
       "Rich in antioxidants",
     ],
     applications: "Used in porridge, flatbreads, and animal feed.",
+    aboutProduct:
+      "Green millet, or bajra, is a nutritious, gluten-free grain high in magnesium and antioxidants. It thrives in dry conditions and is used in porridge, flatbreads, and animal feed. Sustainably grown, green millet is easy to cook and has a low glycemic index. It is valued for its health benefits and versatility in global cuisines.",
   },
   {
     id: 10,
@@ -260,6 +278,8 @@ const productsData = [
       "Rich in iron",
     ],
     applications: "Used in curries and spice blends.",
+    aboutProduct:
+      "Cummin Seeds are aromatic, flavorful, and rich in iron, essential for curries and spice blends. They boost immunity and are valued for their traditional medicinal uses. Hand-cleaned for purity, cumin seeds enhance the flavor of many dishes. Their unique taste and health benefits make them a staple in kitchens worldwide.",
   },
   {
     id: 11,
@@ -286,6 +306,8 @@ const productsData = [
       "Long shelf life",
     ],
     applications: "Used for oil, tofu, and animal feed.",
+    aboutProduct:
+      "Soyabeans are versatile legumes high in protein and oil, essential for vegan diets. Used for tofu, soy milk, and oil extraction, they offer a long shelf life and health benefits. Non-GMO and packed with amino acids, soybeans are a key ingredient in plant-based diets. They are also used for animal feed and various food products.",
   },
   {
     id: 12,
@@ -312,6 +334,8 @@ const productsData = [
       "Gluten-free",
     ],
     applications: "Used in hummus, salads, and curries.",
+    aboutProduct:
+      "Chickpeas are nutritious, high in folate and fiber, and support heart health. Widely used in hummus, salads, and curries, they are low in fat and gluten-free. Chickpeas are easy to cook and versatile in both savory and sweet recipes. Their protein and fiber content make them a staple in vegetarian and vegan diets.",
   },
   {
     id: 13,
@@ -338,6 +362,8 @@ const productsData = [
       "Used in sweet and savory dishes",
     ],
     applications: "Used in a variety of dishes globally.",
+    aboutProduct:
+      "Rice is a staple food, naturally gluten-free and easy to digest, available in many varieties. It is a vital source of energy and used in sweet and savory dishes worldwide. Rice is quick to cook and low in fat, making it suitable for all ages. Its versatility allows it to be enjoyed in countless traditional and modern recipes.",
   },
   {
     id: 14,
@@ -364,6 +390,8 @@ const productsData = [
       "Available in white and black varieties",
     ],
     applications: "Used in bakery, sweets, and oil extraction.",
+    aboutProduct:
+      "Sesame Seeds are oil-rich, nutritious, and add crunch to bakery and sweets. Rich in calcium and healthy fats, they are cold-pressed for oil and used in many dishes. Available in white and black varieties, sesame seeds are a natural source of antioxidants. They enhance the flavor and texture of both savory and sweet foods.",
   },
 ];
 
