@@ -195,7 +195,7 @@
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 850px) and (min-width: 768px) {
   .hero-farmer-wrapper {
     width: 320px !important;
     height: 180px !important;
@@ -232,45 +232,221 @@
   }
 }
 
-@media (max-width: 768px) and (min-width: 650px) {
+@media (max-width: 767px) and (min-width: 640px) {
 .factory{
   position: relative;
-  top: 55px;
-}
-.farmer{
-  position: relative;
-  top: 10px !important;
+  top: -15px;
 }
 .wing{
-  width: 400px;
-  border: 1px solid;
+  position: relative;
+  top: 75px;
+}
+.sidewing{
+  display: none;
+}
+.groundNut{
+  position: relative;
+  left: -110px;
+  top: -15px;
 }
 }
-
-/* SM (640px and below) */
-@media (max-width: 767px) {
-  .hero-farmer-wrapper {
-    width: 320px !important;
-    height: 180px !important;
-    left: 6% !important;
-    bottom: 50px !important;
-  }
-  .hero-windmill {
-    height: 280px !important;
-    max-width: 90px !important;
-    bottom: 15px !important;
-  }
-  .hero-sidewing {
-    width: 60px !important;
-    bottom: 320px !important;
-  }
-  .hero-wings {
-    height: 100px !important;
-    bottom: 300px !important;
-  }
-  .hero-factory {
-    height: 360px !important;
-    max-width: 70vw !important;
-    bottom: 5px !important;
-  }
+@media (max-width: 639px) and (min-width: 575px) {
+.factory{
+  height: 300px;
+  position: relative;
+  top: 330px;
+}
+.sidewing{
+  display: none;
+}
+.wing{
+  position: relative;
+  top: 150px;
+  width: 120px;
+}
+.wingstand{
+  height: 300px;
+  position: relative;
+  top: 120px;
+  left: 10px;
+}
+.farmer{
+  width: 300px;
+  position: relative;
+  top: 525px;
+  left: 100px;
+}
+.groundNut{
+  width: 50px;
+  position: relative;
+  top: 470px;
+  left: -30px;
+}
+}
+@media (max-width: 574px) and (min-width: 500px) {
+.factory{
+  height: 200px;
+  position: relative;
+  top: 420px;
+}
+.sidewing{
+  display: none;
+}
+.wing{
+  position: relative;
+  top: 150px;
+  left: -10px;
+  width: 120px;
+}
+.wingstand{
+  height: 300px;
+  position: relative;
+  top: 120px;
+}
+.farmer{
+  width: 300px;
+  position: relative;
+  top: 525px;
+  left: 85px;
+}
+.groundNut{
+  width: 40px;
+  position: relative;
+  top: 470px;
+  left: -60px;
+}
+}
+@media (max-width: 499px) and (min-width: 425px) {
+.factory{
+  height: 200px;
+  position: relative;
+  top: 420px;
+}
+.sidewing{
+  display: none;
+}
+.wing{
+  position: relative;
+  top: 210px;
+  left: -10px;
+  width: 100px;
+}
+.wingstand{
+  height: 250px;
+  position: relative;
+  top: 175px;
+}
+.farmer{
+  width: 200px;
+  position: relative;
+  top: 550px;
+  left: 85px;
+}
+.groundNut{
+  width: 30px;
+  position: relative;
+  top: 475px;
+  left: -100px;
+}
+}
+@media (max-width: 424px) and (min-width: 375px) {
+.factory{
+  height: 200px;
+  position: relative;
+  top: 420px;
+}
+.sidewing{
+  display: none;
+}
+.wing{
+  position: relative;
+  top: 260px;
+  left: -10px;
+  width: 80px;
+  border: 2px solid;
+}
+.wingstand{
+  height: 200px;
+  position: relative;
+  top: 220px;
+  left: -2px;
+}
+.farmer{
+  width: 200px;
+  position: relative;
+  top: 550px;
+  left: 55px;
+}
+.groundNut{
+  width: 30px;
+  position: relative;
+  top: 475px;
+  left: -130px;
+}
+}
+@media (max-width: 374px) and (min-width: 320px) {
+.factory{
+  height: 200px;
+  position: relative;
+  top: 435px;
+}
+.sidewing{
+  display: none;
+}
+.wing{
+  position: relative;
+  top: 310px;
+  left: -2px;
+  width: 60px;
+}
+.wingstand{
+  height: 150px;
+  position: relative;
+  top: 270px;
+}
+.farmer{
+  width: 180px;
+  position: relative;
+  top: 550px;
+  left: 45px;
+}
+.groundNut{
+  width: 25px;
+  position: relative;
+  top: 475px;
+  left: -162px;
+}
+}
+@media (max-width: 319px) {
+.factory{
+  height: 200px;
+  position: relative;
+  top: 450px;
+}
+.sidewing{
+  display: none;
+}
+.wing{
+  position: relative;
+  top: 360px;
+  left: -2px;
+  width: 50px;
+}
+.wingstand{
+  height: 100px;
+  position: relative;
+  top: 320px;
+}
+.farmer{
+  width: 160px;
+  position: relative;
+  top: 550px;
+  left: 35px;
+}
+.groundNut{
+  width: 20px;
+  position: relative;
+  top: 475px;
+  left: -200px;
+}
 }

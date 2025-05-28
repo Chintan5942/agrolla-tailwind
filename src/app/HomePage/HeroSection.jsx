@@ -42,25 +42,25 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <div className="relative w-full max-w-[1920px] mx-auto min-h-screen sm:min-h-[700px] md:min-h-[765px] lg:min-h-[840px] overflow-hidden">
+    <div className="relative w-full max-w-[1920px] mx-auto min-h-screen sm:min-h-[755px] md:min-h-[750px] lg:min-h-[840px] overflow-hidden">
       {/* Clouds */}
       <img
         src="/cloud.svg"
         alt="Cloud"
         loading="lazy"
-        className="absolute left-[5%] top-0 lg:w-[300px] sm:w-[180px]"
+        className="absolute left-[5%] top-0 lg:w-[300px] sm:w-[180px] cloud"
       />
       <img
         src="/cloud.svg"
         alt="Cloud center"
         loading="lazy"
-        className="hidden md:block absolute top-[-50px] left-[45%] w-[300px]"
+        className="hidden md:block absolute top-[-50px] left-[45%] w-[300px] cloud"
       />
       <img
         src="/cloud.svg"
         alt="Cloud right"
         loading="lazy"
-        className="hidden md:block absolute top-[-20px] left-3/4 w-[300px]"
+        className="hidden md:block absolute top-[-20px] left-3/4 w-[300px] cloud"
       />
 
       {/* Birds */}
@@ -68,13 +68,13 @@ export default function HeroSection() {
         src="/birds.svg"
         alt="Birds"
         loading="lazy"
-        className="absolute top-[60px] left-[65%] sm:top-[40px] sm:left-[55%] lg:w-[120px] sm:w-[80px]"
+        className="absolute top-[60px] left-[65%] sm:top-[40px] sm:left-[55%] lg:w-[120px] sm:w-[80px] bird"
       />
       <img
         src="/birds.svg"
         alt="Flock"
         loading="lazy"
-        className="hidden md:block absolute top-[60px] left-[25%]"
+        className="hidden md:block absolute top-[60px] left-[25%] bird"
       />
 
       {/* Farmer + Groundnuts */}
@@ -85,7 +85,7 @@ export default function HeroSection() {
             src="/farmer.svg"
             alt="Farmer"
             loading="lazy"
-            className="relative w-auto h-full object-contain z-0 farmer"
+            className="relative z-0 object-contain w-auto h-full farmer"
           />
 
           {/* Groundnuts in front of Farmer */}
@@ -99,7 +99,7 @@ export default function HeroSection() {
                   src="/ground-nut.png"
                   alt="Groundnut"
                   loading="lazy"
-                  className="w-full h-full object-contain"
+                  className="object-contain w-full h-full"
                 />
               </div>
             ))}
@@ -113,7 +113,7 @@ export default function HeroSection() {
           src="/Wingstand.svg"
           alt="Windmill stand"
           loading="lazy"
-          className="h-full w-auto wingstand"
+          className="w-auto h-full wingstand"
         />
       </div>
       <div className="absolute lg:bottom-[400px] sm:bottom-[400px] left-[8%] w-[110px] md:w-[90px] sm:w-[70px] xs:w-[60px]">
@@ -130,7 +130,7 @@ export default function HeroSection() {
           src="/wings.svg"
           alt="Wings"
           loading="lazy"
-          className="h-full w-auto wing"
+          className="w-auto h-full wing"
         />
       </div>
 
@@ -140,17 +140,17 @@ export default function HeroSection() {
           src="/factory.svg"
           alt="Factory"
           loading="lazy"
-          className="h-full w-auto factory"
+          className="w-auto h-full factory"
         />
       </div>
 
       {/* Tractor */}
-      <div className="hidden lg:block absolute bottom-[55px] right-[35%] h-[100px] w-auto">
+      <div className="hidden lg:block absolute bottom-[65px] right-[35%] h-[100px] w-auto">
         <img
           src="/tractor.svg"
           alt="Tractor"
           loading="lazy"
-          className="h-full w-auto tractor"
+          className="w-auto h-full tractor"
         />
       </div>
 
@@ -187,9 +187,7 @@ export default function HeroSection() {
           }`}
         >
           Agrolla delivers cutting-edge agricultural solutions that maximize
-          <br />
           yield, minimize environmental impact, and transform farming
-          <br />
           practices for a sustainable future.
         </p>
         <br />
