@@ -4,9 +4,9 @@ import Image from "next/image";
 export default function Section1() {
   return (
     <> 
-      <section className="w-full h-[1450px] lg:h-[850px] bg-white bg-[url('/section1-BG.png')] bg-cover bg-center overflow-hidden bg-no-repeat md:h-255" data-aos="fade-up">
+      <section className="w-full h-[1450px] lg:h-[850px] bg-white bg-[url('/section1-BG.png')] bg-cover bg-center bg-no-repeat bg-fixed overflow-hidden md:h-255">
         {/* Header Text */}
-        <div className="relative text-center top-20" data-aos="fade-down">
+        <div className="relative text-center top-20">
           <div className="flex items-center justify-center ">
             <hr className="w-12 border border-[#2E7D32]" />
             <p className="text-sm text-[#2E7D32] font-medium uppercase">
@@ -27,11 +27,11 @@ export default function Section1() {
         </div>
 
         {/* Features Section */}
-        <div className="relative grid grid-cols-1 gap-10 px-4 lg:grid-cols-3 top-60 items-center " data-aos="fade-up" data-aos-delay="200">
+        <div className="relative grid items-center grid-cols-1 gap-10 px-4 lg:grid-cols-3 top-60 ">
           {/* Left Features */}
-          <div className="flex flex-col gap-10 items-center sm:items-start lg:items-end text-center sm:text-left lg:text-right">
+          <div className="flex flex-col items-center gap-10 text-center sm:items-start lg:items-end sm:text-left lg:text-right">
             {/* Customer Centric */}
-            <div className="flex flex-col sm:flex-row items-center gap-4 max-w-xs sm:max-w-200 lg:relative lg:top-[-100px] left-20 " data-aos="fade-right">
+            <div className="flex flex-col sm:flex-row items-center gap-4 max-w-xs sm:max-w-200 lg:relative lg:top-[-100px] left-20 ">
               <Image
                 src="/centric.svg"
                 alt="Customer Centric"
@@ -51,7 +51,7 @@ export default function Section1() {
             </div>
 
             {/* Certified Quality */}
-            <div className="flex flex-col sm:flex-row items-center gap-4 max-w-xs sm:max-w-none lg:relative lg:top-[50px] left-20 " data-aos="fade-right" data-aos-delay="200">
+            <div className="flex flex-col sm:flex-row items-center gap-4 max-w-xs sm:max-w-none lg:relative lg:top-[50px] left-20 ">
               <Image
                 src="/certified.svg"
                 alt="Certified Quality"
@@ -71,7 +71,7 @@ Internationally recognized quality standards, ensuring <br /> food safety and co
           </div>
 
           {/* Centered Tree Image */}
-          <div className="hidden lg:flex justify-center" data-aos="zoom-in">
+          <div className="justify-center hidden lg:flex">
             <Image
               src="/Section1-tree.svg"
               alt="Tree"
@@ -82,9 +82,9 @@ Internationally recognized quality standards, ensuring <br /> food safety and co
           </div>
 
           {/* Right Features */}
-          <div className="flex flex-col gap-10 items-center sm:items-start text-center sm:text-left">
+          <div className="flex flex-col items-center gap-10 text-center sm:items-start sm:text-left">
             {/* Seamless Global Supply Chain */}
-            <div className="flex flex-col sm:flex-row items-center gap-4 max-w-xs sm:max-w-none lg:relative lg:top-[-20px] left-[-50px]" data-aos="fade-left">
+            <div className="flex flex-col sm:flex-row items-center gap-4 max-w-xs sm:max-w-none lg:relative lg:top-[-20px] left-[-50px]">
               <Image
                 src="/global.svg"
                 alt="Global Supply Chain"
@@ -104,7 +104,7 @@ Internationally recognized quality standards, ensuring <br /> food safety and co
             </div>
 
             {/* Competitive Pricing */}
-            <div className="flex flex-col sm:flex-row items-center gap-4 max-w-xs sm:max-w-none lg:relative lg:top-[100px] left-[-50px] " data-aos="fade-left" data-aos-delay="200">
+            <div className="flex flex-col sm:flex-row items-center gap-4 max-w-xs sm:max-w-none lg:relative lg:top-[100px] left-[-50px] ">
               <Image
                 src="/pricing.svg"
                 alt="Competitive Pricing"

@@ -177,7 +177,7 @@ export default function Categories({ onCategorySelect }) {
 
           {/* Product Grid */}
           <section 
-            className="w-full lg:w-[80%] grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 p-2 catagory-section h-[980px]"
+            className="w-full lg:w-[80%] grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 p-2 catagory-section h-[980px] overflow-scroll"
             data-aos="fade-up"
           >
             {filteredProducts.map((product, index) => {
