@@ -1,7 +1,6 @@
 "use client";
 
 import Footer from "../HomePage/Footer";
-import Navbar from "../HomePage/Navbar";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -19,20 +18,17 @@ export default function About() {
   return (
     <>
       <div className="overflow-hidden font-poppins">
-        {/* Navbar */}
-        <Navbar />
-
         {/* Hero Section */}
-        <div className="w-full h-[1000px] bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('/abouthero.png')] bg-cover bg-bottom flex items-center">
+        <div className="w-full h-[1000px] bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('/abouthero.png')] bg-cover bg-bottom flex items-center overflow-hidden">
           <div
-            className="flex flex-col items-center justify-start w-full max-w-[600px] gap-4 absolute top-[450px] left-[5%]"
+            className="flex flex-col items-center justify-start w-full max-w-[600px] gap-4 absolute top-[450px] lg:left-[5%]"
             data-aos="fade-up"
             data-aos-delay="100"
           >
             <h1 className="text-[48px] font-bold text-white leading-tight">
               Nurturing Quality, Cultivating Trust
             </h1>
-            <p className="text-[18px] font-normal text-[#d3d3d3] text-start">
+            <p className="text-[18px] font-normal w-full text-[#d3d3d3] text-start flex flex-wrap ">
               Discover the story behind Agrolla Impex, a distinguished One Star
               Export House and leading manufacturer of premium agricultural
               products.
@@ -52,7 +48,7 @@ export default function About() {
         <div className="flex flex-col items-center w-full gap-16 px-4 md:gap-12 sm:gap-8">
           {/* Section 1 */}
           <section
-            className="w-full max-w-[1536px] flex flex-col items-center gap-8"
+            className="w-full max-w-[1536px] flex flex-col items-center gap-8 overflow-scroll"
             data-aos="fade-up"
           >
             {" "}
@@ -65,7 +61,7 @@ export default function About() {
               leading manufacturer and exporter of peanuts, oilseeds, grains,
               and pulses.
             </p>
-            <div className="flex flex-col items-center justify-center w-full gap-8 lg:flex-row">
+            <div className="flex flex-col items-center justify-center w-full gap-8 overflow-hidden lg:flex-row">
               <div
                 className="flex flex-col justify-center gap-6 max-w-[728px] w-full"
                 data-aos="fade-right"
@@ -142,7 +138,7 @@ export default function About() {
           <br />
           <br />
           <section
-            className="w-full bg-[#f9fafb] flex justify-center items-center"
+            className="w-full bg-[#f9fafb] flex justify-center items-center overflow-hidden"
             data-aos="fade-up"
           >
             <div className="w-full max-w-[1536px] flex flex-col lg:flex-row gap-8">
@@ -238,7 +234,7 @@ export default function About() {
 
           {/* Section 3 */}
           <section
-            className="w-full max-w-[1536px] flex flex-col items-center gap-8 px-4"
+            className="w-full max-w-[1536px] flex flex-col items-center gap-8 px-4 overflow-hidden"
             data-aos="fade-up"
           >
             {" "}
@@ -306,7 +302,7 @@ export default function About() {
 
           {/* Section 4 */}
           <section
-            className="w-full max-w-[1536px] flex flex-col items-center gap-8 px-4"
+            className="w-full max-w-[1536px] flex flex-col items-center gap-8 px-4 overflow-hidden"
             data-aos="fade-up"
           >
             <br />
@@ -411,7 +407,7 @@ export default function About() {
 
           {/* Section 5 */}
           <section
-            className="w-full max-w-[1536px] flex flex-col items-center gap-8 px-4"
+            className="w-full max-w-[1536px] flex flex-col items-center gap-8 px-4 overflow-hidden"
             data-aos="fade-up"
           >
             {" "}
@@ -484,7 +480,7 @@ export default function About() {
 
           {/* Section 6 */}
           <div
-            className="relative w-full px-4 bg-gray-50 md:px-8"
+            className="relative w-full px-4 overflow-hidden bg-gray-50 md:px-8"
             data-aos="fade-up"
           >
             <br />
@@ -704,7 +700,7 @@ export default function About() {
 
           {/* Section 7 */}
           <div
-            className="relative flex justify-center w-full"
+            className="relative flex justify-center w-full overflow-hidden"
             data-aos="fade-up"
           >
             <div className="w-[1536px]">
@@ -743,7 +739,7 @@ export default function About() {
           </div>
 
           {/* Section 8 */}
-          <div className="relative w-full bg-green-50" data-aos="fade-up">
+          <div className="relative w-full overflow-hidden bg-green-50" data-aos="fade-up">
             <div className="text-center">
               <h2 className="text-3xl font-bold text-gray-900">
                 <br />

@@ -11,15 +11,14 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="relative bg-[url('/footer.png')] bg-cover bg-center bg-no-repeat overflow-hidden" data-aos="fade-up">
-      <br /><br /><br /><br /><br />
-      <div className="relative flex flex-col w-full h-full gap-10 max-w-screen-2xl lg:relative lg:left-50">
-        <div className="grid w-full gap-5 sm:grid-cols-6 lg:grid-cols-4">
+    <footer className="bg-[url('/footer.png')] bg-cover bg-center bg-no-repeat overflow-hidden lg:h-[600px] flex justify-center items-center" data-aos="fade-up">
+      <div className="flex flex-col max-w-screen-2xl">
+        <div className="grid w-full grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 
           {/* Company Info */}
-          <div className="flex flex-col gap-6" data-aos="fade-right">
+          <div className="flex flex-col items-center gap-6 text-center" data-aos="fade-right">
             <Link href="/">
-              <img src="/footer-logo.png" alt="Agrolla Logo" className="h-auto w-36" />
+              <img src="/footer-logo.png" alt="Agrolla Logo" className="h-auto mx-auto w-36 sm:mx-0" />
             </Link>
             <p className="leading-6 text-gray-300">
               Transforming agriculture through innovation and sustainable solutions for a better tomorrow.
@@ -42,7 +41,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="flex flex-col gap-6" data-aos="fade-up">
+          <div className="flex flex-col items-center gap-6 text-center" data-aos="fade-up">
             <h3 className="text-xl font-bold text-gray-300 lg:text-2xl">Quick Links</h3>
             <ul className="flex flex-col gap-3">
               {[
@@ -63,7 +62,7 @@ export default function Footer() {
           </div>
 
           {/* Our Services */}
-          <div className="flex flex-col gap-6" data-aos="fade-up">
+          <div className="flex flex-col items-center gap-6 text-center" data-aos="fade-up">
             <h3 className="text-xl font-bold text-gray-300 lg:text-2xl">Our Services</h3>
             <ul className="flex flex-col gap-3">
               {[
@@ -84,19 +83,19 @@ export default function Footer() {
           </div>
 
           {/* Working Hours & Social */}
-          <div className="flex flex-col gap-8" data-aos="fade-left">
+          <div className="flex flex-col items-center gap-8 text-center" data-aos="fade-left">
             <div className="flex flex-col gap-6">
               <h3 className="text-xl font-bold text-gray-300 lg:text-2xl">Working Hours</h3>
-              <ul className="flex flex-col gap-3">
-                <li className="flex justify-between text-gray-300">
+              <ul className="flex flex-col gap-3 text-gray-300">
+                <li className="flex justify-between gap-2">
                   <span>Monday - Friday:</span>
                   <span>9:00 AM - 6:00 PM</span>
                 </li>
-                <li className="flex justify-between text-gray-300">
+                <li className="flex justify-between gap-2">
                   <span>Saturday:</span>
                   <span>9:00 AM - 4:00 PM</span>
                 </li>
-                <li className="flex justify-between text-gray-300">
+                <li className="flex justify-between gap-2">
                   <span>Sunday:</span>
                   <span className="text-green-500">Closed</span>
                 </li>
@@ -105,18 +104,18 @@ export default function Footer() {
 
             <div className="flex flex-col gap-6">
               <h3 className="text-xl font-bold text-gray-300 lg:text-2xl">Follow Us</h3>
-              <div className="flex gap-4">
+              <div className="flex justify-center gap-4 sm:justify-start">
                 {[
                   { platform: 'facebook', url: 'https://facebook.com/agrolla' },
                   { platform: 'x', url: 'https://twitter.com/agrolla' },
                   { platform: 'instagram', url: 'https://instagram.com/agrolla' },
                   { platform: 'linkedin', url: 'https://linkedin.com/company/agrolla' }
                 ].map((social) => (
-                  <a 
-                    key={social.platform} 
-                    href={social.url} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                  <a
+                    key={social.platform}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-8 h-8 transition-transform hover:scale-105 hover:opacity-80"
                   >
                     <img src={`/${social.platform}.png`} alt={social.platform} className="w-full h-full" />
@@ -126,11 +125,11 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
-        {/* Footer Bottom */} 
-        <div className="border-t border-gray-600" data-aos="fade-up">
+        <br />
+        {/* Bottom Footer Bar */}
+        <div className="w-full border-t border-gray-600" data-aos="fade-up">
           <br /><br />
-          <div className="flex flex-col gap-4 text-sm text-gray-300 md:flex-row md:justify-between">
+          <div className="flex flex-col items-center gap-4 text-sm text-gray-300 md:flex-row md:justify-between md:items-center">
             <p className="text-center md:text-left">© 2025 Agrolla. All rights reserved.</p>
             <div className="flex flex-wrap justify-center gap-4 md:justify-end">
               <Link href="/privacy-policy" className="transition-colors hover:text-white hover:underline">
@@ -146,7 +145,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <br /><br /><br /><br /><br />
     </footer>
   );
 }

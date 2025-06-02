@@ -7,7 +7,6 @@ import Categories from "../HomePage/Categories";
 const ProductPage = () => {
   return (
     <div className="bg-white">
-      <Navbar />
       <Categories />
       <Footer />
     </div>

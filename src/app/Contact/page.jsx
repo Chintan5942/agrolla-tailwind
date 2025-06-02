@@ -1,6 +1,5 @@
 "use client";
 import { useEffect } from "react";
-import Navbar from "@/app/HomePage/Navbar";
 import Footer from "@/app/HomePage/Footer";
 import $ from "jquery";
 import AOS from "aos";
@@ -30,8 +29,6 @@ export default function Page() {
 
   return (
     <div className="overflow-hidden">
-      <Navbar />
-
       {/* Heading Section */}
       <div
         className="flex flex-col items-center justify-center text-center"
@@ -242,7 +239,7 @@ export default function Page() {
         <div style={{ height: "48px" }}></div>
         <div className="w-full max-w-[1504px]">
           <iframe
-            src="https://www.google.com/maps/embed"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d-122.4194154846816!3d37.77492977975971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f0e2c5b1%3A0x4c8b8b6e8f8b8b8b!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sus!4v1681234567890!5m2!1sen!2sus"
             width="99%"
             height="400"
             style={{ border: 0 }}

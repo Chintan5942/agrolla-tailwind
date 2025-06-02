@@ -32,7 +32,6 @@ export default function Page() {
       {loading && <Preloader />}
       {!loading && (
         <>
-          <Navbar />
           <HeroSection />
           <Section1 />
           <Categories />

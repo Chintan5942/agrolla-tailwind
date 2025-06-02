@@ -3,10 +3,10 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../HomePage/Navbar";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import '@/app/HomePage/HomePage.css';
+import "@/app/HomePage/HomePage.css";
 import productsData from "../HomePage/productsData";
 
-const galleryImages = productsData.map(product => product.image);
+const galleryImages = productsData.map((product) => product.image);
 
 const SelectedProduct = ({ product }) => {
   const [currentProduct, setCurrentProduct] = useState(product);
@@ -24,7 +24,9 @@ const SelectedProduct = ({ product }) => {
   useEffect(() => {
     if (!currentProduct) return;
     // Exclude product.image from randoms
-    const filtered = galleryImages.filter(img => img !== currentProduct.image);
+    const filtered = galleryImages.filter(
+      (img) => img !== currentProduct.image
+    );
     // Shuffle and pick 3 random images
     const randoms = filtered.sort(() => 0.5 - Math.random()).slice(0, 3);
     // Main image first, then 3 randoms
@@ -48,104 +50,124 @@ const SelectedProduct = ({ product }) => {
     "/gal5.png",
   ];
 
+  // Dynamic icons for features and applications
+  const featureIcons = currentProduct.featureIcons || [
+    "/house.svg",
+    "/premium.svg",
+    "/oil.svg",
+    "/global.svg",
+  ];
+  const applicationIcons = currentProduct.applicationIcons || [
+    "/food.svg",
+    "/snack.svg",
+    "/leaf.svg",
+    "/oildrop.svg",
+    "/animal.svg",
+    "/Confectionery.svg",
+  ];
+
   return (
     <div className="bg-white">
-      <Navbar />
       {/* Section 1: Product Overview */}
-      <div className="py-12">
-        <div className="container w-full mx-auto px-2 sm:px-4 lg:w-[100%]">
-          <div className="flex lg:flex-row flex-col gap-25 lg:w-[1536px] lg:relative lg:left-[192px]">
-            {/* Product Image */}
-            <div className="w-full lg:w-1/2" data-aos="fade-right">
-              <div className="bg-white rounded-2xl shadow-lg h-64 sm:h-80 md:h-[400px] flex items-center justify-center">
-                <img
-                  src={selectedImage}
-                  alt={currentProduct.title}
-                  className="w-full max-w-xs sm:max-w-md md:max-w-lg h-48 sm:h-64 md:h-[352px] object-contain"
-                />
-              </div>
-              
-              {/* Additional Images Gallery */}
-              <div className=""> <br />
-                <h4 className="mb-3 text-lg font-semibold text-gray-700">More Images</h4> <br />
-                <div className="flex gap-4 pb-2 overflow-x-auto catagory-images">
-                  {gallery.map((img, index) => (
-                    <div
-                      key={index}
-                      className={`flex-shrink-0 h-20 sm:h-28 md:h-32 transition-all border rounded-lg w-28 sm:w-36 md:w-44 cursor-pointer hover:border-green-500 ${selectedImage === img ? "border-green-500 border-4" : "border-gray-200"}`}
-                      onClick={() => {
-                        setSelectedImage(img);
-                        const found = productsData.find(p => p.image === img);
-                        if (found) setCurrentProduct(found);
-                      }}
-                    >
-                      <img
-                        src={img}
-                        alt={`${currentProduct.title} view ${index + 1}`}
-                        className="object-contain w-full h-full"
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>
+ <div className="flex justify-center w-full">
+  <div className="flex flex-col gap-10 max-w-[1536px] w-full lg:flex-row lg:gap-20">
+    {/* Product Image */}
+    <div
+      className="flex flex-col items-center w-full gap-6 lg:w-1/2"
+      data-aos="fade-right"
+    >
+      <div className="bg-white rounded-2xl shadow-lg w-full h-64 sm:h-80 md:h-[400px] flex items-center justify-center">
+        <img
+          src={selectedImage}
+          alt={currentProduct.title}
+          className="w-full max-w-xs sm:max-w-md md:max-w-lg h-48 sm:h-64 md:h-[352px] object-contain"
+          style={{ display: selectedImage ? "block" : "none" }}
+        />
+      </div>
+
+      {/* Additional Images Gallery */}
+      <div className="flex flex-col w-full gap-4">
+        <h4 className="text-lg font-semibold text-gray-700">More Images</h4>
+        <div className="flex gap-4 overflow-x-auto catagory-images">
+          {gallery.map((img, index) => (
+            <div
+              key={index}
+              className={`flex-shrink-0 h-20 sm:h-28 md:h-32 transition-all border rounded-lg w-28 sm:w-36 md:w-44 cursor-pointer hover:border-green-500 ${
+                selectedImage === img
+                  ? "border-green-500 border-4"
+                  : "border-gray-200"
+              }`}
+              onClick={() => {
+                setSelectedImage(img);
+                const found = productsData.find((p) => p.image === img);
+                if (found) setCurrentProduct(found);
+              }}
+            >
+              <img
+                src={img}
+                alt={`${currentProduct.title} view ${index + 1}`}
+                className="object-contain w-full h-full"
+              />
             </div>
-            
-            {/* Product Details */}
-            <div className="w-full lg:w-1/2" data-aos="fade-left"> <br />
-              <h4 className="mb-2 text-3xl font-bold text-gray-900">
-                {currentProduct.title}
-              </h4>
-              <div className="flex items-center mb-4">
-                <img
-                  src="/star.svg"
-                  alt="Rating"
-                  className="w-6 h-6 mr-2"
-                />
-                <span className="font-semibold text-gray-500">
-                ({currentProduct.reviews} reviews)
-                </span>
-              </div>
-              <p className="mb-6 font-bold leading-7 text-gray-700">
-                {currentProduct.aboutProduct || currentProduct.description}
-              </p>
-              {/* Highlights */}
-              <div className="rounded-2xl"> <br />
-                <h5 className="mb-4 text-xl font-semibold text-gray-700">
-                  Key Highlights
-                </h5> <br />
-                <ul className="gap-4">
-                  {currentProduct.highlights && currentProduct.highlights.map((item, index) => (
-                    <li
-                      key={index}
-                      className="flex items-start gap-4 leading-8"
-                      data-aos="fade-up"
-                      data-aos-delay={index * 100}
-                    >
-                      <img
-                        src="/right.svg"
-                        alt=""
-                        className="items-center w-6 h-6 mt-1 mr-3"
-                      />
-                      <span className="font-semibold text-gray-700">
-                        {item}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
+    </div>
+
+    {/* Product Details */}
+    <div
+      className="flex flex-col w-full gap-6 lg:w-1/2"
+      data-aos="fade-left"
+    >
+      <h4 className="text-3xl font-bold text-gray-900">
+        {currentProduct.title}
+      </h4>
+      <div className="flex items-center gap-2">
+        <img src="/star.svg" alt="Rating" className="w-6 h-6" />
+        <span className="font-semibold text-gray-500">
+          ({currentProduct.reviews} reviews)
+        </span>
+      </div>
+      <p className="font-bold leading-7 text-gray-700">
+        {currentProduct.aboutProduct || currentProduct.description}
+      </p>
+
+      {/* Highlights */}
+      <div className="flex flex-col gap-4">
+        <h5 className="text-xl font-semibold text-gray-700">Key Highlights</h5>
+        <ul className="flex flex-col gap-4">
+          {currentProduct.highlights &&
+            currentProduct.highlights.map((item, index) => (
+              <li
+                key={index}
+                className="flex items-start gap-4"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
+                <img
+                  src="/right.svg"
+                  alt=""
+                  className="w-6 h-6 mt-1"
+                />
+                <span className="font-semibold text-gray-700">{item}</span>
+              </li>
+            ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
       <br />
       {/* Section 2: Product Description */}
-      <div className="container  lg:w-[1536px] lg:flex-row lg:relative lg:left-[192px]">
+      <div className="flex flex-col items-center justify-center w-full ">
         {/* Tabs */}
-        <div 
-          className="flex flex-wrap text-sm sm:text-base cursor-pointer justify-between w-full md:w-[70%] lg:w-[50%]"
+        <div
+          className=" flex-wrap text-sm sm:text-base cursor-pointer w-full md:w-[70%] lg:w-[80%]"
           data-aos="fade-down"
         >
-          {[
+        <div className=" lg:w-[60%] md:w-full sm:w-full flex justify-between flex-wrap">
+                    {[
             { label: "Product Description", active: true },
             { label: "Specifications" },
             { label: "Packaging & Shipping" },
@@ -163,10 +185,11 @@ const SelectedProduct = ({ product }) => {
             </span>
           ))}
         </div>
+        </div>
         <br />
-        <div className="flex flex-col gap-12 lg:flex-row">
+        <div className="flex flex-col gap-12 lg:flex-row max-w-[1536px] w-full items-center justify-center">
           {/* Left Column */}
-          <div className="w-full space-y-10  lg:w-[60%]">
+          <div className="w-full space-y-10 lg:w-[60%]">
             {/* Overview */}
             <div data-aos="fade-up">
               <h4 className="mb-4 text-2xl font-bold text-gray-900">
@@ -200,12 +223,12 @@ const SelectedProduct = ({ product }) => {
                   currentProduct.features.slice(0, 4).map((feature, index) => (
                     <div
                       key={index}
-                      className="border-1 border-gray-200 bg-gray-50 rounded-2xl h-[152px] w-[100%]"
+                      className="border-1 border-gray-200 bg-gray-50 rounded-2xl h-[152px] w-[100%] flex flex-col"
                       data-aos="zoom-in"
                       data-aos-delay={index * 100}
                     >
                       <img
-                        src="/house.svg"
+                        src={featureIcons[index % featureIcons.length]}
                         alt=""
                         className="relative w-10 h-10 left-[5%] top-3"
                       />
@@ -223,7 +246,7 @@ const SelectedProduct = ({ product }) => {
           {/* Right Column (Sidebar) */}
           <div className="w-full space-y-10 lg:w-[40%]">
             {/* Certifications */}
-            <div 
+            <div
               className="border-gray-200 border-1 bg-gray-50 rounded-2xl w-full max-w-md h-auto min-h-[180px] p-4"
               data-aos="fade-left"
               data-aos-delay="100"
@@ -234,26 +257,29 @@ const SelectedProduct = ({ product }) => {
               </h4>
               <ul className="space-y-3">
                 <br />
-                {["ISO 22000:2018", "HACCP Certified", "GMP Compliant", "FDA Registered"].map(
-                  (item, index) => (
-                    <li
-                      key={index}
-                      className="flex items-center gap-5 leading-8 w-[90%] relative left-[5%]"
-                      data-aos="fade-left"
-                      data-aos-delay={150 + (index * 50)}
-                    >
-                      <img src="/bookmark.svg" alt="" className="w-7 h-7" />
-                      <span className="font-semibold text-gray-700">{item}</span>
-                    </li>
-                  )
-                )}
+                {[
+                  "ISO 22000:2018",
+                  "HACCP Certified",
+                  "GMP Compliant",
+                  "FDA Registered",
+                ].map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex items-center gap-5 leading-8 w-[90%] relative left-[5%]"
+                    data-aos="fade-left"
+                    data-aos-delay={150 + index * 50}
+                  >
+                    <img src="/bookmark.svg" alt="" className="w-7 h-7" />
+                    <span className="font-semibold text-gray-700">{item}</span>
+                  </li>
+                ))}
               </ul>
             </div>
             <br />
             <br />
             <br />
             {/* Contact Box */}
-            <div 
+            <div
               className="border-gray-200 border-1 bg-gray-50 rounded-2xl w-full max-w-md h-auto min-h-[220px] p-4"
               data-aos="fade-left"
               data-aos-delay="200"
@@ -264,11 +290,12 @@ const SelectedProduct = ({ product }) => {
               </h4>
               <p className="mb-4 text-gray-700 w-[90%] relative left-[5%] font-semibold">
                 Our agricultural experts are available to answer your questions
-                and provide detailed information about our {currentProduct.title}.
+                and provide detailed information about our{" "}
+                {currentProduct.title}.
               </p>
               <div className="space-y-3 w-[90%] relative left-[5%]">
                 <br />
-                <div 
+                <div
                   className="flex items-center gap-2"
                   data-aos="fade-left"
                   data-aos-delay="250"
@@ -279,7 +306,7 @@ const SelectedProduct = ({ product }) => {
                   </span>
                 </div>
                 <br />
-                <div 
+                <div
                   className="flex items-center gap-2"
                   data-aos="fade-left"
                   data-aos-delay="300"
@@ -295,7 +322,7 @@ const SelectedProduct = ({ product }) => {
         </div>
         <br />
         {/* Applications */}
-        <div className="mt-16 w-full md:w-[90%] lg:w-[66%]" data-aos="fade-up">
+        <div className=" w-full md:w-[100%] lg:w-[80%]  flex flex-col items-start justify-start" data-aos="fade-up">
           <h4 className="mb-4 text-xl font-semibold text-gray-900 ">
             Applications
           </h4>
@@ -309,7 +336,11 @@ const SelectedProduct = ({ product }) => {
                     data-aos="zoom-in"
                     data-aos-delay={index * 50}
                   >
-                    <img src="/food.svg" alt="" className="w-10 h-10 mr-3" />
+                    <img
+                      src={applicationIcons[index % applicationIcons.length]}
+                      alt=""
+                      className="w-10 h-10 mr-3"
+                    />
                     <span className="font-semibold text-gray-700">
                       {app.trim()}
                     </span>
