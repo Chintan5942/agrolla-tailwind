@@ -160,7 +160,7 @@ const SelectedProduct = ({ product }) => {
 
       <br />
       {/* Section 2: Product Description */}
-      <div className="flex flex-col items-center justify-center w-full ">
+      <div className="flex flex-col items-center justify-center w-full">
         {/* Tabs */}
         <div
           className=" flex-wrap text-sm sm:text-base cursor-pointer w-full md:w-[70%] lg:w-[80%]"
@@ -322,7 +322,7 @@ const SelectedProduct = ({ product }) => {
         </div>
         <br />
         {/* Applications */}
-        <div className=" w-full md:w-[100%] lg:w-[80%]  flex flex-col items-start justify-start" data-aos="fade-up">
+        <div className=" w-full md:w-[100%] lg:w-[85%]  flex flex-col items-start justify-start" data-aos="fade-up">
           <h4 className="mb-4 text-xl font-semibold text-gray-900 ">
             Applications
           </h4>
