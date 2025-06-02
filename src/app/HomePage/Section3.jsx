@@ -19,7 +19,7 @@ export default function Section3() {
           >
             {/* Text Content */}
             <div
-              className="md:w-[670px] md:mt-[70px] md:pl-4 text-center md:text-left text-white"
+              className="md:w-[670px] md:mt-[70px] md:pl-4 text-center md:text-left text-white lg:relative lg:left-5"
               data-aos="fade-right"
             >
               <div className="h-10 lg:w-[200px] bg-white rounded-full flex items-center justify-center text-[16px] text-[#2e7d32] font-bold">

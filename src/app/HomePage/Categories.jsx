@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import "@/app/HomePage/Homepage.css";
+import "../HomePage/Homepage.css";
 import { FaStar, FaRegStar, FaStarHalfAlt } from "react-icons/fa";
 import productsData from "./productsData";
 import { useRouter } from "next/navigation";
@@ -109,30 +109,36 @@ export default function Categories({ onCategorySelect }) {
 
         {/* Sidebar (Desktop) */}
         <aside
-          className="hidden lg:block lg:w-[20%] bg-stone-50 rounded-xl shadow-lg catagory-aside h-[900px]"
+          className="w-full lg:w-[22%] bg-stone-50 rounded-xl shadow-lg catagory-aside h-auto lg:h-[900px] mb-6 lg:mb-0 px-2 lg:px-0 catagory-section overflow-scroll"
           data-aos="fade-right"
         >
+          {/* Header: Categories */}
           <div className="flex items-center px-4 pt-4">
-            <img src="/catagory.svg" alt="Category Icon" className="h-12" />
-            <span className="ml-4 text-2xl font-semibold">Categories</span>
+            <img src="/catagory.svg" alt="Category Icon" className="h-10 sm:h-12 lg:h-14" />
+            <span className="ml-4 text-lg font-semibold sm:text-xl lg:text-2xl">Categories</span>
           </div>
-          <ul className="px-4 pb-6 mt-6 space-y-4">
+
+          {/* Category List */}
+          <ul className="px-2 pb-6 mt-6 space-y-4 lg:px-4">
             {Object.keys(categoryImages).map((cat, index) => (
               <li
                 key={cat}
                 onClick={() => handleCategoryClick(cat)}
-                className={`flex items-center gap-4 p-3 rounded-lg cursor-pointer transition hover:bg-green-100 ${
+                className={`flex items-center gap-3 lg:gap-4 p-2 lg:p-3 rounded-lg cursor-pointer transition hover:bg-green-100 ${
                   selectedCategory === cat ? "bg-green-200" : ""
                 }`}
                 data-aos="fade-right"
                 data-aos-delay={index * 50}
               >
-                <img src={categoryImages[cat]} alt={cat} className="h-14" />
+                <img src={categoryImages[cat]} alt={cat} className="h-10 sm:h-12 lg:h-14 catImg" />
                 <div>
-                  <p className="text-lg font-semibold text-gray-800">
-                    {cat} <span className="items-center text-sm gray-500">({categoryCounts[cat]})</span>
+                  <p className="text-sm font-semibold text-gray-800 sm:text-base lg:text-lg">
+                    {cat}{" "}
+                    <span className="text-xs text-gray-500 sm:text-sm">
+                      ({categoryCounts[cat]})
+                    </span>
                   </p>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-xs text-gray-600 sm:text-sm lg:text-base">
                     {cat === "All Products"
                       ? "View all items"
                       : cat === "Oilseeds"
@@ -147,22 +153,20 @@ export default function Categories({ onCategorySelect }) {
               </li>
             ))}
 
-            {/* Need Help Section */}
+            {/* Need Help Section - Visible only on lg and up */}
             <li
-              className="h-[240px] bg-[#F2F9F2] rounded-2xl p-4 mt-6 hidden lg:block"
+              className="h-[180px] lg:h-[220px] bg-[#F2F9F2] rounded-2xl p-3 lg:p-4 mt-6 hidden lg:block"
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              <div className="flex items-center h-12">
-                <img src="/help.svg" alt="Help Icon" />
-                <p className="ml-3 text-2xl font-bold">Need Help?</p>
+              <div className="flex items-center h-10 lg:h-12">
+                <img src="/help.svg" alt="Help Icon" className="h-8 lg:h-10" />
+                <p className="ml-3 text-lg font-bold lg:text-xl">Need Help?</p>
               </div>
-              <p className="text-[#4B5563] text-xl mt-4">
+              <p className="text-[#4B5563] text-sm lg:text-base mt-3 lg:mt-4">
                 Contact our customer support team anytime
               </p>
-              <p className="text-[#4CAF50] text-xl mt-2">
-                Contact Support →
-              </p>
+              <p className="text-[#4CAF50] text-sm lg:text-base mt-2">Contact Support →</p>
             </li>
           </ul>
         </aside>
