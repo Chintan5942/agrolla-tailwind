@@ -6,18 +6,25 @@ export default function Section3() {
       <br />
       <br />
       <br />
-      <div className="relative">
+      {/* Move background image and bg-fixed to the outermost div */}
+      <div className="relative min-h-screen bg-[url('/section3-BG.png')] bg-no-repeat bg-cover bg-center bg-fixed">
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/85 z-0"></div>
+        <div className="absolute inset-2 bg-black/80"></div>
 
-        {/* Main content */}
-        <div className="relative z-10 h-[750px] bg-[url('/section3-BG.png')] bg-cover bg-top-right bg-no-repeat bg-fixed flex flex-col md:flex-row justify-center items-center" data-aos="fade-up">
+        {/* Main content without background image or bg-fixed */}
+        <div
+          className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 md:flex-row"
+          data-aos="fade-up"
+        >
           {/* Text Content */}
-          <div className="md:w-[670px] md:mt-[70px] md:pl-4 text-center md:text-left text-white" data-aos="fade-right">
-              <div className="h-10 lg:w-[200px] bg-white rounded-full flex items-center justify-center text-[16px] text-[#2e7d32] font-bold  ">
-                <img src="/leaf.svg" alt="leaf" className="h-5 mr-2" />
-                100% ORGANIC
-              </div>
+          <div
+            className="md:w-[670px] md:mt-[70px] md:pl-4 text-center md:text-left text-white"
+            data-aos="fade-right"
+          >
+            <div className="h-10 lg:w-[200px] bg-white rounded-full flex items-center justify-center text-[16px] text-[#2e7d32] font-bold">
+              <img src="/leaf.svg" alt="leaf" className="h-5 mr-2" />
+              100% ORGANIC
+            </div>
 
             <p className="font-bold text-[32px] sm:text-[36px] md:text-[60px] text-[#2e7d32] pt-8">
               Fresh From Farm
@@ -32,8 +39,8 @@ export default function Section3() {
               <br className="hidden md:block" />
               nutritious food directly from our farms to your table.
             </p>
-            <br />
-            <div className="flex flex-col sm:flex-row items-center justify-start gap-4 mt-8">
+
+            <div className="flex flex-col items-center justify-start gap-4 mt-8 sm:flex-row">
               <button className="h-[52px] w-[144px] bg-[#2e7d32] text-white rounded-md hover:bg-[#2e7d32d2] text-[16px] font-medium hover:cursor-pointer">
                 Shop Now
               </button>
