@@ -23,7 +23,8 @@ export default function ImageGallery() {
           </h5>
         </div>
         {/* Gallery 1 */}
-        <div className="flex flex-col lg:flex-row justify-between gap-6 mt-16 max-w-[1488px] lg:relative lg:left-[216px]" data-aos="fade-up" data-aos-delay="200">
+        <div className="flex justify-center w-full ">
+        <div className="flex flex-col lg:flex-row justify-between gap-6 mt-16 max-w-[1488px]" data-aos="fade-up" data-aos-delay="200">
           {/* Left big image */}
           <div className="w-full overflow-hidden lg:w-1/3 rounded-xl" data-aos="zoom-in-right">
             <img
@@ -60,11 +61,13 @@ export default function ImageGallery() {
             />
           </div>
         </div>
+        </div>
     <br />
         <hr className="my-12 border-2 border-gray-300 max-w-[1488px] mx-auto lg:relative lg:left-[216px]" />
 <br />
         {/* Gallery 2 */}
-        <div className="flex flex-wrap justify-between gap-6 max-w-[1488px] lg:relative lg:left-[216px]" data-aos="fade-up" data-aos-delay="400">
+        <div className="flex justify-center">
+                  <div className="flex flex-wrap justify-between gap-6 max-w-[1488px]" data-aos="fade-up" data-aos-delay="400">
           {["gal5.png", "gal6.png", "gal7.png", "gal8.png"].map((img, i) => (
             <div key={i} className="w-[45%] sm:w-[22%] overflow-hidden rounded-xl" data-aos="flip-left" data-aos-delay={i * 100}>
               <img
@@ -74,6 +77,7 @@ export default function ImageGallery() {
               />
             </div>
           ))}
+        </div>
         </div>
       </div>
     </>
