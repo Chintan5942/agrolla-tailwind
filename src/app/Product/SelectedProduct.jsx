@@ -1,26 +1,52 @@
 "use client";
-import React, { useEffect } from "react";
-import Footer from "../HomePage/Footer";
+import React, { useEffect, useState } from "react";
 import Navbar from "../HomePage/Navbar";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import '@/app/HomePage/HomePage.css';
+import productsData from "../HomePage/productsData";
+
+const galleryImages = productsData.map(product => product.image);
 
 const SelectedProduct = ({ product }) => {
+  const [currentProduct, setCurrentProduct] = useState(product);
+  const [selectedImage, setSelectedImage] = useState(product?.image || "");
+  const [gallery, setGallery] = useState([]);
+
   useEffect(() => {
     AOS.init({
-      duration: 800, // Animation duration
-      easing: "ease-in-out", // Easing type
-      once: false, // Whether animation should happen only once
+      duration: 800,
+      easing: "ease-in-out",
+      once: false,
     });
   }, []);
 
-  if (!product) {
+  useEffect(() => {
+    if (!currentProduct) return;
+    // Exclude product.image from randoms
+    const filtered = galleryImages.filter(img => img !== currentProduct.image);
+    // Shuffle and pick 3 random images
+    const randoms = filtered.sort(() => 0.5 - Math.random()).slice(0, 3);
+    // Main image first, then 3 randoms
+    setGallery([currentProduct.image, ...randoms]);
+    setSelectedImage(currentProduct.image);
+  }, [currentProduct]);
+
+  if (!currentProduct) {
     return (
       <div className="flex items-center justify-center text-xl font-semibold text-gray-600 h-96">
         Product not found.
       </div>
     );
   }
+  // Update additionalImages to use images that exist in public/
+  const additionalImages = [
+    "/gal1.png",
+    "/gal2.png",
+    "/gal3.png",
+    "/gal4.png",
+    "/gal5.png",
+  ];
 
   return (
     <div className="bg-white">
@@ -33,16 +59,41 @@ const SelectedProduct = ({ product }) => {
             <div className="lg:w-1/2" data-aos="fade-right">
               <div className="bg-white rounded-2xl shadow-lg h-[400px] flex items-center justify-center">
                 <img
-                  src={product.image}
-                  alt={product.title}
+                  src={selectedImage}
+                  alt={currentProduct.title}
                   className="w-[476px] h-[352px] object-contain"
                 />
               </div>
+              
+              {/* Additional Images Gallery */}
+              <div className="">
+                <h4 className="mb-3 text-lg font-semibold text-gray-700">More Images</h4>
+                <div className="flex gap-4 overflow-scroll catagory-section">
+                  {gallery.map((img, index) => (
+                    <div
+                      key={index}
+                      className={`flex-shrink-0 h-32 transition-all border rounded-lg w-44 cursor-pointer hover:border-green-500 ${selectedImage === img ? "border-green-500 border-4" : "border-gray-200"}`}
+                      onClick={() => {
+                        setSelectedImage(img);
+                        const found = productsData.find(p => p.image === img);
+                        if (found) setCurrentProduct(found);
+                      }}
+                    >
+                      <img
+                        src={img}
+                        alt={`${currentProduct.title} view ${index + 1}`}
+                        className="object-contain w-full h-full"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
+            
             {/* Product Details */}
             <div className="lg:w-1/2" data-aos="fade-left"> <br />
               <h4 className="mb-2 text-3xl font-bold text-gray-900">
-                {product.title}
+                {currentProduct.title}
               </h4>
               <div className="flex items-center mb-4">
                 <img
@@ -51,11 +102,11 @@ const SelectedProduct = ({ product }) => {
                   className="w-6 h-6 mr-2"
                 />
                 <span className="font-semibold text-gray-500">
-                ({product.reviews} reviews)
+                ({currentProduct.reviews} reviews)
                 </span>
               </div>
               <p className="mb-6 font-bold leading-7 text-gray-700">
-                {product.aboutProduct || product.description}
+                {currentProduct.aboutProduct || currentProduct.description}
               </p>
               {/* Highlights */}
               <div className="rounded-2xl"> <br />
@@ -63,7 +114,7 @@ const SelectedProduct = ({ product }) => {
                   Key Highlights
                 </h5> <br />
                 <ul className="gap-4">
-                  {product.highlights && product.highlights.map((item, index) => (
+                  {currentProduct.highlights && currentProduct.highlights.map((item, index) => (
                     <li
                       key={index}
                       className="flex items-start gap-4 leading-8"
@@ -119,11 +170,11 @@ const SelectedProduct = ({ product }) => {
             {/* Overview */}
             <div data-aos="fade-up">
               <h4 className="mb-4 text-2xl font-bold text-gray-900">
-                {product.title} Overview
+                {currentProduct.title} Overview
               </h4>
               <br />
               <p className="font-semibold leading-6 text-gray-700">
-                {product.overview}
+                {currentProduct.overview}
               </p>
             </div>
             <br />
@@ -134,19 +185,19 @@ const SelectedProduct = ({ product }) => {
               </h4>
               <br />
               <p className="font-semibold leading-6 text-gray-700">
-                {product.premiumQuality}
+                {currentProduct.premiumQuality}
               </p>
             </div>
             <br />
             {/* Why Choose */}
             <div data-aos="fade-up" data-aos-delay="200">
               <h4 className="mb-4 text-xl font-semibold text-gray-900">
-                Why Choose Agrolla's {product.title}?
+                Why Choose Agrolla's {currentProduct.title}?
               </h4>
               <br />
               <div className="grid gap-6 md:grid-cols-2">
-                {product.features &&
-                  product.features.slice(0, 4).map((feature, index) => (
+                {currentProduct.features &&
+                  currentProduct.features.slice(0, 4).map((feature, index) => (
                     <div
                       key={index}
                       className="border-1 border-gray-200 bg-gray-50 rounded-2xl h-[172px] w-[492px]"
@@ -213,7 +264,7 @@ const SelectedProduct = ({ product }) => {
               </h4>
               <p className="mb-4 text-gray-700 w-[90%] relative left-[5%] font-semibold">
                 Our agricultural experts are available to answer your questions
-                and provide detailed information about our {product.title}.
+                and provide detailed information about our {currentProduct.title}.
               </p>
               <div className="space-y-3 w-[90%] relative left-[5%]">
                 <br />
@@ -250,8 +301,8 @@ const SelectedProduct = ({ product }) => {
           </h4>
           <br />
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-            {product.applications
-              ? product.applications.split(",").map((app, index) => (
+            {currentProduct.applications
+              ? currentProduct.applications.split(",").map((app, index) => (
                   <div
                     key={index}
                     className="flex items-center p-4 border-gray-200 border-1 bg-gray-50 rounded-2xl h-[72px] w-[325px]"
