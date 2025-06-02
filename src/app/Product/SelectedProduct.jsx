@@ -53,26 +53,26 @@ const SelectedProduct = ({ product }) => {
       <Navbar />
       {/* Section 1: Product Overview */}
       <div className="py-12">
-        <div className="container lg:w-[90%] lg:relative lg:left-[5%]">
-          <div className="flex flex-col gap-10 lg:flex-row">
+        <div className="container w-full mx-auto px-2 sm:px-4 lg:w-[100%]">
+          <div className="flex lg:flex-row flex-col gap-25 lg:w-[1536px] lg:relative lg:left-[192px]">
             {/* Product Image */}
-            <div className="lg:w-1/2" data-aos="fade-right">
-              <div className="bg-white rounded-2xl shadow-lg h-[400px] flex items-center justify-center">
+            <div className="w-full lg:w-1/2" data-aos="fade-right">
+              <div className="bg-white rounded-2xl shadow-lg h-64 sm:h-80 md:h-[400px] flex items-center justify-center">
                 <img
                   src={selectedImage}
                   alt={currentProduct.title}
-                  className="w-[476px] h-[352px] object-contain"
+                  className="w-full max-w-xs sm:max-w-md md:max-w-lg h-48 sm:h-64 md:h-[352px] object-contain"
                 />
               </div>
               
               {/* Additional Images Gallery */}
-              <div className="">
-                <h4 className="mb-3 text-lg font-semibold text-gray-700">More Images</h4>
-                <div className="flex gap-4 overflow-scroll catagory-section">
+              <div className=""> <br />
+                <h4 className="mb-3 text-lg font-semibold text-gray-700">More Images</h4> <br />
+                <div className="flex gap-4 pb-2 overflow-x-auto catagory-images">
                   {gallery.map((img, index) => (
                     <div
                       key={index}
-                      className={`flex-shrink-0 h-32 transition-all border rounded-lg w-44 cursor-pointer hover:border-green-500 ${selectedImage === img ? "border-green-500 border-4" : "border-gray-200"}`}
+                      className={`flex-shrink-0 h-20 sm:h-28 md:h-32 transition-all border rounded-lg w-28 sm:w-36 md:w-44 cursor-pointer hover:border-green-500 ${selectedImage === img ? "border-green-500 border-4" : "border-gray-200"}`}
                       onClick={() => {
                         setSelectedImage(img);
                         const found = productsData.find(p => p.image === img);
@@ -91,7 +91,7 @@ const SelectedProduct = ({ product }) => {
             </div>
             
             {/* Product Details */}
-            <div className="lg:w-1/2" data-aos="fade-left"> <br />
+            <div className="w-full lg:w-1/2" data-aos="fade-left"> <br />
               <h4 className="mb-2 text-3xl font-bold text-gray-900">
                 {currentProduct.title}
               </h4>
@@ -139,10 +139,10 @@ const SelectedProduct = ({ product }) => {
       </div>
       <br />
       {/* Section 2: Product Description */}
-      <div className="container lg:w-[90%] lg:relative lg:left-[5%]">
+      <div className="container  lg:w-[1536px] lg:flex-row lg:relative lg:left-[192px]">
         {/* Tabs */}
         <div 
-          className="flex text-sm border-1 border-b border-gray-200 sm:text-base justify-between w-[45%]"
+          className="flex flex-wrap text-sm sm:text-base cursor-pointer justify-between w-full md:w-[70%] lg:w-[50%]"
           data-aos="fade-down"
         >
           {[
@@ -164,9 +164,9 @@ const SelectedProduct = ({ product }) => {
           ))}
         </div>
         <br />
-        <div className="flex flex-col gap-12 mt-10 lg:flex-row">
+        <div className="flex flex-col gap-12 lg:flex-row">
           {/* Left Column */}
-          <div className="space-y-10 lg:w-2/3">
+          <div className="w-full space-y-10  lg:w-[60%]">
             {/* Overview */}
             <div data-aos="fade-up">
               <h4 className="mb-4 text-2xl font-bold text-gray-900">
@@ -200,7 +200,7 @@ const SelectedProduct = ({ product }) => {
                   currentProduct.features.slice(0, 4).map((feature, index) => (
                     <div
                       key={index}
-                      className="border-1 border-gray-200 bg-gray-50 rounded-2xl h-[172px] w-[492px]"
+                      className="border-1 border-gray-200 bg-gray-50 rounded-2xl h-[152px] w-[100%]"
                       data-aos="zoom-in"
                       data-aos-delay={index * 100}
                     >
@@ -221,10 +221,10 @@ const SelectedProduct = ({ product }) => {
             </div>
           </div>
           {/* Right Column (Sidebar) */}
-          <div className="space-y-6">
+          <div className="w-full space-y-10 lg:w-[40%]">
             {/* Certifications */}
             <div 
-              className="border-gray-200 border-1 bg-gray-50 rounded-2xl w-[480px] h-[228px]"
+              className="border-gray-200 border-1 bg-gray-50 rounded-2xl w-full max-w-md h-auto min-h-[180px] p-4"
               data-aos="fade-left"
               data-aos-delay="100"
             >
@@ -254,7 +254,7 @@ const SelectedProduct = ({ product }) => {
             <br />
             {/* Contact Box */}
             <div 
-              className="border-gray-200 border-1 bg-gray-50 rounded-2xl w-[480px] h-[284px]"
+              className="border-gray-200 border-1 bg-gray-50 rounded-2xl w-full max-w-md h-auto min-h-[220px] p-4"
               data-aos="fade-left"
               data-aos-delay="200"
             >
@@ -295,17 +295,17 @@ const SelectedProduct = ({ product }) => {
         </div>
         <br />
         {/* Applications */}
-        <div className="mt-16 w-[66%]" data-aos="fade-up">
+        <div className="mt-16 w-full md:w-[90%] lg:w-[66%]" data-aos="fade-up">
           <h4 className="mb-4 text-xl font-semibold text-gray-900 ">
             Applications
           </h4>
           <br />
-          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
             {currentProduct.applications
               ? currentProduct.applications.split(",").map((app, index) => (
                   <div
                     key={index}
-                    className="flex items-center p-4 border-gray-200 border-1 bg-gray-50 rounded-2xl h-[72px] w-[325px]"
+                    className="flex items-center p-4 border-gray-200 border-1 bg-gray-50 rounded-2xl h-20 sm:h-[72px] w-[100%] min-w-0"
                     data-aos="zoom-in"
                     data-aos-delay={index * 50}
                   >
