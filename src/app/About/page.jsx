@@ -51,7 +51,8 @@ export default function About() {
             className="w-full max-w-[1536px] flex flex-col items-center gap-8"
             data-aos="fade-up"
           >
-            <br /><br />
+            <br />
+            <br />
             <h2 className="text-[30px] font-bold text-center">Who We Are</h2>
             <p className="w-full max-w-xl text-[18px] text-[#4b5563] text-center">
               Agrolla Impex is a distinguished One Star Export House and a
@@ -471,210 +472,212 @@ export default function About() {
           >
             <br />
             <br />
-            <div className="flex flex-col lg:flex-row mx-auto gap-8 lg:gap-10 max-w-[1536px] w-full lg:relative lg:left-[5%]">
-              {/* Contact Information */}
-              <div className="w-full gap-8 p-6 mx-auto bg-white shadow-lg x-w-lg w- rounded-xl lg:max-w-md lg:w-1/3 lg:mx-">
-                <div
-                  className="flex flex-col justify-between relative left-[5%]"
-                  data-aos="fade-right"
-                >
-                  <div className="flex flex-col gap-4">
-                    {" "}
-                    <br />
-                    <h3 className="text-xl font-semibold text-gray-900">
-                      Contact Information
-                    </h3>
+            <div className="w-[90%] relative left-[5%]">
+              <div className="flex flex-col lg:flex-row mx-auto gap-8 lg:gap-10 max-w-[1536px] w-full lg:relative lg:left-[5%]">
+                {/* Contact Information */}
+                <div className="w-full gap-8 p-6 mx-auto bg-white shadow-lg x-w-lg w- rounded-xl lg:max-w-md lg:w-1/3 lg:mx-">
+                  <div
+                    className="flex flex-col w-[90%] justify-between relative left-[5%]"
+                    data-aos="fade-right"
+                  >
                     <div className="flex flex-col gap-4">
-                      {/* Location */}
-                      <div className="flex items-center gap-4">
-                        <img
-                          src="/location.svg"
-                          alt="Location"
-                          className="flex-shrink-0 w-10 h-10"
-                        />
-                        <div>
-                          <h4 className="text-base font-semibold text-gray-900">
-                            Headquarters
-                          </h4>
-                          <p className="text-base font-medium text-gray-700">
-                            BM Square-1, Rajlaxmi Park, <br />
-                            Junagadh
-                          </p>
+                      {" "}
+                      <br />
+                      <h3 className="text-xl font-semibold text-gray-900">
+                        Contact Information
+                      </h3>
+                      <div className="flex flex-col gap-4">
+                        {/* Location */}
+                        <div className="flex items-center gap-4">
+                          <img
+                            src="/location.svg"
+                            alt="Location"
+                            className="flex-shrink-0 w-10 h-10"
+                          />
+                          <div>
+                            <h4 className="text-base font-semibold text-gray-900">
+                              Headquarters
+                            </h4>
+                            <p className="text-base font-medium text-gray-700">
+                              BM Square-1, Rajlaxmi Park, <br />
+                              Junagadh
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                      {/* Phone */}
-                      <div className="flex items-center gap-4">
-                        <img
-                          src="/call.svg"
-                          alt="Phone"
-                          className="flex-shrink-0 w-10 h-10"
-                        />
-                        <div>
-                          <h4 className="text-base font-semibold text-gray-900">
-                            Phone
-                          </h4>
-                          <p className="text-base font-medium text-gray-700">
-                            +91 79 2345 6789
-                            <br />
-                            +1 (800) 123-4567 (International)
-                          </p>
+                        {/* Phone */}
+                        <div className="flex items-center gap-4">
+                          <img
+                            src="/call.svg"
+                            alt="Phone"
+                            className="flex-shrink-0 w-10 h-10"
+                          />
+                          <div>
+                            <h4 className="text-base font-semibold text-gray-900">
+                              Phone
+                            </h4>
+                            <p className="text-base font-medium text-gray-700">
+                              +91 79 2345 6789
+                              <br />
+                              +1 (800) 123-4567 (International)
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                      {/* Email */}
-                      <div className="flex items-center gap-4">
-                        <img
-                          src="/mail.svg"
-                          alt="Email"
-                          className="flex-shrink-0 w-10 h-10"
-                        />
-                        <div>
-                          <h4 className="text-base font-semibold text-gray-900">
-                            Email
-                          </h4>
-                          <p className="text-base font-medium text-gray-700">
-                            info@agrollaimpex.com
-                            <br />
-                            exports@agrollaimpex.com
-                          </p>
+                        {/* Email */}
+                        <div className="flex items-center gap-4">
+                          <img
+                            src="/mail.svg"
+                            alt="Email"
+                            className="flex-shrink-0 w-10 h-10"
+                          />
+                          <div>
+                            <h4 className="text-base font-semibold text-gray-900">
+                              Email
+                            </h4>
+                            <p className="text-base font-medium text-gray-700">
+                              info@agrollaimpex.com
+                              <br />
+                              exports@agrollaimpex.com
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                      {/* Business Hours */}
-                      <div className="flex items-center gap-4">
-                        <img
-                          src="/clock.svg"
-                          alt="Business Hours"
-                          className="flex-shrink-0 w-10 h-10"
-                        />
-                        <div>
-                          <h4 className="text-base font-semibold text-gray-900">
-                            Business Hours
-                          </h4>
-                          <p className="text-base text-gray-700">
-                            Monday - Friday: 9:00 AM - 6:00 PM IST
-                            <br />
-                            Saturday: 9:00 AM - 1:00 PM IST
-                          </p>
+                        {/* Business Hours */}
+                        <div className="flex items-center gap-4">
+                          <img
+                            src="/clock.svg"
+                            alt="Business Hours"
+                            className="flex-shrink-0 w-10 h-10"
+                          />
+                          <div>
+                            <h4 className="text-base font-semibold text-gray-900">
+                              Business Hours
+                            </h4>
+                            <p className="text-base text-gray-700">
+                              Monday - Friday: 9:00 AM - 6:00 PM IST
+                              <br />
+                              Saturday: 9:00 AM - 1:00 PM IST
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  {/* Social Icons */}
-                  <div className="flex flex-col gap-4">
-                    <h4 className="text-base font-bold text-gray-900">
-                      Connect With Us
-                    </h4>
-                    <div className="flex gap-4">
-                      <img
-                        src="/linkedin.svg"
-                        alt="LinkedIn"
-                        className="w-10 h-10"
-                      />
-                      <img
-                        src="/twitter.svg"
-                        alt="Twitter"
-                        className="w-10 h-10"
-                      />
-                      <img
-                        src="/facebook.svg"
-                        alt="Facebook"
-                        className="w-10 h-10"
-                      />
-                      <img
-                        src="/instagram.svg"
-                        alt="Instagram"
-                        className="w-10 h-10"
-                      />
+                    {/* Social Icons */} <br />
+                    <div className="flex flex-col gap-4">
+                      <h4 className="text-base font-bold text-gray-900">
+                        Connect With Us
+                      </h4>
+                      <div className="flex gap-4">
+                        <img
+                          src="/linkedin.svg"
+                          alt="LinkedIn"
+                          className="w-10 h-10"
+                        />
+                        <img
+                          src="/twitter.svg"
+                          alt="Twitter"
+                          className="w-10 h-10"
+                        />
+                        <img
+                          src="/facebook.svg"
+                          alt="Facebook"
+                          className="w-10 h-10"
+                        />
+                        <img
+                          src="/instagram.svg"
+                          alt="Instagram"
+                          className="w-10 h-10"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              {/* Contact Form */}
-              <div className="w-full gap-6 bg-white shadow-lg rounded-xl">
-                <div
-                  className="flex flex-col  w-[95%] relative left-[2.5%]"
-                  data-aos="fade-left"
-                >
-                  {" "}
-                  <br />
-                  <h3 className="mb-2 text-xl font-semibold text-gray-900">
-                    Send Us a Message
-                  </h3>
-                  <form className="flex flex-col w-full gap-6">
-                    <div className="grid grid-cols-1 gap-y-6 gap-x-12 md:grid-cols-2">
-                      <div className="flex flex-col gap-4">
-                        <label
-                          htmlFor="name"
-                          className="text-lg font-medium text-gray-700"
-                        >
-                          Your Name
-                        </label>
-                        <input
-                          type="text"
-                          id="name"
-                          className="block w-full rounded-md border border-gray-300 px-3 py-2 pl-6 pr-6 h-[42px]"
-                        />
-                      </div>
-                      <div className="flex flex-col gap-4">
-                        <label
-                          htmlFor="email"
-                          className="text-lg font-medium text-gray-700"
-                        >
-                          Email Address
-                        </label>
-                        <input
-                          type="email"
-                          id="email"
-                          className="block w-full rounded-md border border-gray-300 px-3 py-2 pl-6 pr-6 h-[42px] "
-                        />
-                      </div>
-                      <div className="flex flex-col gap-4">
-                        <label
-                          htmlFor="company"
-                          className="text-lg font-medium text-gray-700"
-                        >
-                          Company Name
-                        </label>
-                        <input
-                          type="text"
-                          id="company"
-                          className="block w-full rounded-md border border-gray-300 px-3 py-2 pl-6 pr-6 h-[42px]"
-                        />
-                      </div>
-                      <div className="flex flex-col gap-4">
-                        <label
-                          htmlFor="subject"
-                          className="text-lg font-medium text-gray-700"
-                        >
-                          Subject
-                        </label>
-                        <input
-                          type="text"
-                          id="subject"
-                          className="block w-full rounded-md border border-gray-300 px-3 py-2 pl-6 pr-6 h-[42px]"
-                        />
-                      </div>
-                    </div>
-                    <div className="flex flex-col gap-4">
-                      <label
-                        htmlFor="message"
-                        className="text-lg font-medium text-gray-700"
-                      >
-                        Your Message
-                      </label>
-                      <textarea
-                        id="message"
-                        rows={4}
-                        className="block w-full rounded-md border border-gray-300 px-3 py-2 pl-6 pr-6 min-h-[120px]"
-                      ></textarea>
-                    </div>
-                    <button
-                      type="submit"
-                      className="rounded-md bg-green-700 text-base font-semibold text-white hover:bg-green-800 h-[48px] w-full md:w-[200px] self-start transition-all duration-200"
-                    >
-                      Send Message
-                    </button>
+                {/* Contact Form */}
+                <div className="w-full gap-6 bg-white shadow-lg rounded-xl">
+                  <div
+                    className="flex flex-col  w-[95%] relative left-[2.5%]"
+                    data-aos="fade-left"
+                  >
+                    {" "}
                     <br />
-                  </form>
+                    <h3 className="mb-2 text-xl font-semibold text-gray-900">
+                      Send Us a Message
+                    </h3>
+                    <form className="flex flex-col w-full gap-6">
+                      <div className="grid grid-cols-1 gap-y-6 gap-x-12 md:grid-cols-2">
+                        <div className="flex flex-col gap-4">
+                          <label
+                            htmlFor="name"
+                            className="text-lg font-medium text-gray-700"
+                          >
+                            Your Name
+                          </label>
+                          <input
+                            type="text"
+                            id="name"
+                            className="block w-full rounded-md border border-gray-300 px-3 py-2 pl-6 pr-6 h-[42px]"
+                          />
+                        </div>
+                        <div className="flex flex-col gap-4">
+                          <label
+                            htmlFor="email"
+                            className="text-lg font-medium text-gray-700"
+                          >
+                            Email Address
+                          </label>
+                          <input
+                            type="email"
+                            id="email"
+                            className="block w-full rounded-md border border-gray-300 px-3 py-2 pl-6 pr-6 h-[42px] "
+                          />
+                        </div>
+                        <div className="flex flex-col gap-4">
+                          <label
+                            htmlFor="company"
+                            className="text-lg font-medium text-gray-700"
+                          >
+                            Company Name
+                          </label>
+                          <input
+                            type="text"
+                            id="company"
+                            className="block w-full rounded-md border border-gray-300 px-3 py-2 pl-6 pr-6 h-[42px]"
+                          />
+                        </div>
+                        <div className="flex flex-col gap-4">
+                          <label
+                            htmlFor="subject"
+                            className="text-lg font-medium text-gray-700"
+                          >
+                            Subject
+                          </label>
+                          <input
+                            type="text"
+                            id="subject"
+                            className="block w-full rounded-md border border-gray-300 px-3 py-2 pl-6 pr-6 h-[42px]"
+                          />
+                        </div>
+                      </div>
+                      <div className="flex flex-col gap-4">
+                        <label
+                          htmlFor="message"
+                          className="text-lg font-medium text-gray-700"
+                        >
+                          Your Message
+                        </label>
+                        <textarea
+                          id="message"
+                          rows={4}
+                          className="block w-full rounded-md border border-gray-300 px-3 py-2 pl-6 pr-6 min-h-[120px]"
+                        ></textarea>
+                      </div>
+                      <button
+                        type="submit"
+                        className="rounded-md bg-green-700 text-base font-semibold text-white hover:bg-green-800 h-[48px] w-full md:w-[200px] self-start transition-all duration-200"
+                      >
+                        Send Message
+                      </button>
+                      <br />
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
