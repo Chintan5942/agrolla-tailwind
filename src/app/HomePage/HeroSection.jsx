@@ -196,10 +196,10 @@ export default function HeroSection() {
             animateText ? "opacity-100" : "opacity-0"
           }`}
         >
-          <button className="lg:h-[52px] sm:h-[38px] lg:w-[193px] sm:w-[140px] bg-[#2E7D32] text-white font-semibold lg:text-[16px] sm:text-sm rounded-lg hover:cursor-pointer hover:bg-[#1b5e1fea]">
+          <button className="lg:h-[52px] sm:h-[38px] lg:w-[193px] sm:w-[140px] border bg-[#2E7D32] text-white font-semibold lg:text-[16px] sm:text-[10px] rounded-lg hover:cursor-pointer hover:bg-[#1b5e1fea] bt1">
             Explore Services
           </button>
-          <button className="lg:h-[52px] sm:h-[38px] lg:w-[193px] sm:w-[140px] border border-[#2e7d32] text-[#2e7d32] bg-white lg:text-[16px] font-semibold sm:text-sm rounded-lg hover:cursor-pointer">
+          <button className="lg:h-[52px] sm:h-[38px] lg:w-[193px] sm:w-[140px] border border-[#2e7d32] text-[#2e7d32] bg-white lg:text-[16px] font-semibold sm:text-sm rounded-lg hover:cursor-pointer bt2">
             Contact Us
           </button>
         </div>

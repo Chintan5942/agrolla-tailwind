@@ -184,7 +184,7 @@
   .factory {
     width: 500px;
     position: relative;
-    top: -10px;
+    top: 0px;
   }
   .groundNut {
     position: relative;
@@ -324,6 +324,10 @@
   .words {
     width: 65%;
   }
+  .bt1 , .bt2{
+    height: 40px;
+    width: 160px;
+  }
 }
 @media (max-width: 584px) and (min-width: 500px) {
   .hero {
@@ -362,6 +366,10 @@
   }
   .words {
     width: 65%;
+  }
+    .bt1 , .bt2{
+    height: 40px;
+    width: 160px;
   }
 }
 @media (max-width: 499px) and (min-width: 425px) {
@@ -403,6 +411,10 @@
   .words {
     width: 65%;
   }
+    .bt1 , .bt2{
+    height: 40px;
+    width: 160px;
+  }
 }
 @media (max-width: 424px) and (min-width: 375px) {
   .hero {
@@ -439,6 +451,10 @@
     position: relative;
     top: 490px;
     left: -125px;
+  }
+    .bt1 , .bt2{
+    height: 40px;
+    width: 160px;
   }
 }
 @media (max-width: 374px) and (min-width: 320px) {
@@ -485,37 +501,59 @@
     top: 455px;
     left: -150px;
   }
+    .bt1 , .bt2{
+    height: 40px;
+    width: 100px;
+    font-size: 10px;
+  }
 }
 @media (max-width: 319px) {
-  .factory {
-    height: 200px;
+  .cloud{
+    height: 100px;
+  }
+  .bird{
+    height: 40px;
     position: relative;
-    top: 450px;
+    left:150px;
+  }
+  .hero {
+    height: 840px;
+  }
+  .factory {
+    height: 250px;
+    position: relative;
+    top: 417px;
   }
   .sidewing {
     display: none;
   }
   .wing {
     position: relative;
-    top: 360px;
-    left: -2px;
-    width: 50px;
+    top: 265px;
+    left: 2px;
+    width: 65px;
   }
   .wingstand {
-    height: 100px;
+    height: 180px;
     position: relative;
-    top: 320px;
+    top: 228px;
+    left: 5px;
   }
   .farmer {
-    width: 160px;
+    width: 180px;
     position: relative;
-    top: 550px;
-    left: 35px;
+    top: 535px;
+    left: 50px;
   }
   .groundNut {
-    width: 20px;
+    width: 30px;
     position: relative;
-    top: 475px;
-    left: -200px;
+    top: 455px;
+    left: -170px;
+  }
+    .bt1 , .bt2{
+    height: 40px;
+    width: 100px;
+    font-size: 10px;
   }
 }
