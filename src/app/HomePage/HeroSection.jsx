@@ -42,7 +42,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <div className="relative w-full max-w-[1920px] mx-auto min-h-[640px] lg:min-h-[840px] overflow-hidden hero">
+    <div className="relative w-screen min-h-[640px] lg:min-h-[840px] overflow-hidden hero">
       {/* Clouds */}
       <img
         src="/cloud.svg"
@@ -163,7 +163,7 @@ export default function HeroSection() {
       />
 
       {/* Text Content */}
-      <div className="absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-[700px] text-center flex flex-col items-center">
+      <div className="absolute top-[36%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-[700px] text-center flex flex-col items-center">
         <div className="space-y-2 sm:space-y-3 md:space-y-4">
           <h1
             className={`text-[#111827] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[60px] font-bold transition-all duration-700 delay-[300ms] ${
@@ -196,10 +196,10 @@ export default function HeroSection() {
             animateText ? "opacity-100" : "opacity-0"
           }`}
         >
-          <button className="h-[52px] w-[200px]  bg-[#2E7D32] text-white font-semibold lg:text-[16px] sm:text-sm rounded-lg hover:cursor-pointer hover:bg-[#1b5e1fea]">
+          <button className="lg:h-[52px] lg:w-[200px] md:h-[40px] md:w-[200px] sm:h-[35px] sm:w-[160px]  h-[32px] w-[120px]  bg-[#2E7D32] text-white font-medium lg:text-[16px] md:text-[14px] sm:text-[14px] text-[12px] rounded-lg hover:cursor-pointer hover:bg-[#1b5e1fea]">
             Explore Services
           </button>
-          <button className="h-[52px]  lg:w-[193px]  border border-[#2e7d32] text-[#2e7d32] bg-white lg:text-[16px] font-semibold sm:text-sm rounded-lg hover:cursor-pointer">
+          <button className="lg:h-[52px]  lg:w-[193px] md:h-[40px] md:w-[180px] sm:h-[32px] sm:w-[160px] h-[32px] w-[120px] border border-[#2e7d32] text-[#2e7d32] bg-white lg:text-[16px] font-semibold sm:text-sm rounded-lg hover:cursor-pointer">
             Contact Us
           </button>
         </div>

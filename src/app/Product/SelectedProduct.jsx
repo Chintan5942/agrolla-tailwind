@@ -323,12 +323,13 @@ const SelectedProduct = ({ product }) => {
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
             {currentProduct.applications
               ? currentProduct.applications.split(",").map((app, index) => (
-                  <div
+                <div
                     key={index}
-                    className="flex items-center p-4 border-gray-200 border-1 bg-gray-50 rounded-2xl h-20 sm:h-[72px] w-[100%] min-w-0"
+                    className="flex items-center border-gray-200 rounded-2xl h-20 sm:h-[72px] lg:w-[300px] border-2"
                     data-aos="zoom-in"
                     data-aos-delay={index * 50}
                   >
+                <div className="flex items-center w-[90%] relative left-[5%]">
                     <img
                       src={applicationIcons[index % applicationIcons.length]}
                       alt=""
@@ -338,6 +339,7 @@ const SelectedProduct = ({ product }) => {
                       {app.trim()}
                     </span>
                   </div>
+                </div>
                 ))
               : null}
           </div>

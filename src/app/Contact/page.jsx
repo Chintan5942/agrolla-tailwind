@@ -54,7 +54,7 @@ export default function Page() {
           className="shadow-xl rounded-lg bg-white w-full max-w-[992px] lg:relative lg:top-20 lg:h-[859px] sm:h-[1000px]"
           data-aos="fade-right"
         >
-          <div className="text-2xl font-semibold text-gray-900 w-[95%] lg:left-5 relative">
+          <div className="text-2xl font-semibold text-gray-900 w-[95%] left-5 relative">
             <div style={{ height: "24px" }}></div>
             <p className="text-lg">Send Us a Message</p>
             <div style={{ height: "24px" }}></div>

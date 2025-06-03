@@ -48,13 +48,10 @@ export default function About() {
         <div className="flex flex-col items-center w-full gap-16 px-4 md:gap-12 sm:gap-8">
           {/* Section 1 */}
           <section
-            className="w-full max-w-[1536px] flex flex-col items-center gap-8 overflow-scroll"
+            className="w-full max-w-[1536px] flex flex-col items-center gap-8"
             data-aos="fade-up"
           >
-            {" "}
-            <br />
-            <br />
-            <br />
+            <br /><br />
             <h2 className="text-[30px] font-bold text-center">Who We Are</h2>
             <p className="w-full max-w-xl text-[18px] text-[#4b5563] text-center">
               Agrolla Impex is a distinguished One Star Export House and a
@@ -127,120 +124,114 @@ export default function About() {
               <img
                 src="/aboutSection1.jpg"
                 alt=""
-                className="w-full max-w-[728px] h-[613px] rounded-[8px] object-cover"
+                className="w-full max-w-[728px] h-[613px] rounded-[8px]"
                 data-aos="fade-left"
               />
             </div>
           </section>
-
           {/* Section 2 */}
-          <br />
-          <br />
-          <br />
           <section
-            className="w-full bg-[#f9fafb] flex justify-center items-center overflow-hidden"
+            className="w-full bg-[#F9FAFB] flex justify-center items-center overflow-hidden"
             data-aos="fade-up"
           >
-            <div className="w-full max-w-[1536px] flex flex-col lg:flex-row gap-8">
-              {/* Mission Card */}
-              <div
-                className="w-full lg:w-1/2 rounded-[16px] bg-white shadow-lg flex flex-col gap-6"
-                data-aos="fade-right"
-              >
-                <div className="flex flex-col  w-[90%] relative left-[5%]">
-                  {" "}
-                  <br />
-                  <img src="/mission.svg" alt="" className="w-16 h-16" /> <br />
-                  <h3 className="text-2xl font-bold">Our Mission</h3>
-                </div>
+            <div className="lg:h-[650px] flex items-center">
+              <div className="w-full  max-w-[1536px] flex flex-col lg:flex-row gap-8">
+                {/* Mission Card */}
+                <div
+                  className="w-full lg:w-1/2 rounded-[16px] bg-white shadow-lg flex flex-col gap-6"
+                  data-aos="fade-right"
+                >
+                  <div className="flex flex-col  w-[90%] relative left-[5%]">
+                    {" "}
+                    <br />
+                    <img src="/mission.svg" alt="" className="w-16 h-16" />{" "}
+                    <br />
+                    <h3 className="text-2xl font-bold">Our Mission</h3>
+                  </div>
 
-                <ul className="space-y-5 w-[90%] relative left-[5%]">
-                  {[
-                    {
-                      title: "Uncompromised Quality",
-                      desc: "Delivering premium agro products that exceed global quality expectations.",
-                    },
-                    {
-                      title: "Expanding Global Reach",
-                      desc: "Strengthening our presence in key international markets with seamless trade operations.",
-                    },
-                    {
-                      title: "Sustainability & Ethical Sourcing",
-                      desc: "Empowering farmers and promoting environmentally responsible agricultural practices.",
-                    },
-                    {
-                      title: "Innovation & Growth",
-                      desc: "Investing in modern technology and continuous improvement to adapt to evolving market needs.",
-                    },
-                    {
-                      title: "Client Success",
-                      desc: "Building long-term partnerships by offering customized solutions and exceptional service.",
-                    },
-                  ].map((item, index) => (
-                    <li
-                      key={index}
-                      className="flex items-start gap-6 leading-relaxed"
-                      data-aos="fade-up"
-                      data-aos-delay={100 * index}
-                    >
-                      <span className="text-[#4caf50] text-xl font-semibold">
-                        ✓
-                      </span>
-                      <div className="space-y-1">
-                        <p className="text-[16px] font-semibold text-[#111827]">
-                          {item.title}
-                        </p>
-                        <p className="text-[14px] text-[#4b5563] leading-snug">
-                          {item.desc}
-                        </p>
-                        <br />
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Vision Card */}
-              <div
-                className="w-full lg:w-1/2 rounded-[16px] bg-white shadow-lg flex flex-col gap-6"
-                data-aos="fade-left"
-              >
-                <div className="flex flex-col  w-[90%] relative left-[5%]">
-                  {" "}
-                  <br />
-                  <img src="/vision.svg" alt="" className="w-16 h-16" /> <br />
-                  <h3 className="text-2xl font-bold">Our Vision</h3>
+                  <ul className="space-y-5 w-[90%] relative left-[5%]">
+                    {[
+                      {
+                        title: "Uncompromised Quality",
+                        desc: "Delivering premium agro products that exceed global quality expectations.",
+                      },
+                      {
+                        title: "Expanding Global Reach",
+                        desc: "Strengthening our presence in key international markets with seamless trade operations.",
+                      },
+                      {
+                        title: "Sustainability & Ethical Sourcing",
+                        desc: "Empowering farmers and promoting environmentally responsible agricultural practices.",
+                      },
+                      {
+                        title: "Innovation & Growth",
+                        desc: "Investing in modern technology and continuous improvement to adapt to evolving market needs.",
+                      },
+                      {
+                        title: "Client Success",
+                        desc: "Building long-term partnerships by offering customized solutions and exceptional service.",
+                      },
+                    ].map((item, index) => (
+                      <li
+                        key={index}
+                        className="flex items-start gap-6 leading-relaxed"
+                        data-aos="fade-up"
+                        data-aos-delay={100 * index}
+                      >
+                        <span className="text-[#4caf50] text-xl font-semibold">
+                          ✓
+                        </span>
+                        <div className="space-y-1">
+                          <p className="text-[16px] font-semibold text-[#111827]">
+                            {item.title}
+                          </p>
+                          <p className="text-[14px] text-[#4b5563] leading-snug">
+                            {item.desc}
+                          </p>
+                          <br />
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <p className="text-lg font-medium leading-relaxed w-[90%] relative left-[5%]">
-                  To be a globally recognized leader in agro exports, setting
-                  industry benchmarks in quality, innovation, and sustainable
-                  trade practices.
-                </p>
-                <img
-                  src="/visionimg.jpg"
-                  alt=""
-                  className="h-48 rounded-[16px] object-cover w-[90%] relative left-[5%]"
-                  data-aos="zoom-in"
-                />
-                <p className="italic text-[#4b5563] text-center font-semibold leading-relaxed w-[90%] relative left-[5%]">
-                  "At Agrolla Impex, we don't just export agro products—we
-                  deliver trust, excellence, and a commitment to quality in
-                  every shipment."
-                </p>{" "}
-                <br />
+                {/* Vision Card */}
+                <div
+                  className="w-full lg:w-1/2 rounded-[16px] bg-white shadow-lg flex flex-col gap-6"
+                  data-aos="fade-left"
+                >
+                  <div className="flex flex-col  w-[90%] relative left-[5%]">
+                    {" "}
+                    <br />
+                    <img src="/vision.svg" alt="" className="w-16 h-16" />{" "}
+                    <br />
+                    <h3 className="text-2xl font-bold">Our Vision</h3>
+                  </div>
+                  <p className="text-lg font-medium leading-relaxed w-[90%] relative left-[5%]">
+                    To be a globally recognized leader in agro exports, setting
+                    industry benchmarks in quality, innovation, and sustainable
+                    trade practices.
+                  </p>
+                  <img
+                    src="/visionimg.jpg"
+                    alt=""
+                    className="h-48 rounded-[16px] object-cover w-[90%] relative left-[5%]"
+                    data-aos="zoom-in"
+                  />
+                  <p className="italic text-[#4b5563] text-center font-semibold leading-relaxed w-[90%] relative left-[5%]">
+                    "At Agrolla Impex, we don't just export agro products—we
+                    deliver trust, excellence, and a commitment to quality in
+                    every shipment."
+                  </p>{" "}
+                  <br />
+                </div>
               </div>
             </div>
           </section>
-
           {/* Section 3 */}
           <section
             className="w-full max-w-[1536px] flex flex-col items-center gap-8 px-4 overflow-hidden"
             data-aos="fade-up"
           >
-            {" "}
-            <br />
-            <br />
-            <br />
             <h2 className="text-[30px] font-bold text-center">Our Values</h2>
             <p className="w-full max-w-2xl text-[18px] text-[#4b5563] text-center">
               At Agrolla Impex, our foundation is built on principles that
@@ -299,13 +290,11 @@ export default function About() {
               ))}
             </div>
           </section>
-
           {/* Section 4 */}
           <section
             className="w-full max-w-[1536px] flex flex-col items-center gap-8 px-4 overflow-hidden"
             data-aos="fade-up"
           >
-            <br />
             <br />
             <br />
             <h2 className="text-[30px] font-bold text-center">
@@ -404,14 +393,12 @@ export default function About() {
               </div>
             </div>
           </section>
-
           {/* Section 5 */}
           <section
             className="w-full max-w-[1536px] flex flex-col items-center gap-8 px-4 overflow-hidden"
             data-aos="fade-up"
           >
             {" "}
-            <br />
             <br />
             <br />
             <h2 className="text-[30px] font-bold text-center">
@@ -477,7 +464,6 @@ export default function About() {
               ))}
             </div>
           </section>
-
           {/* Section 6 */}
           <div
             className="relative w-full px-4 overflow-hidden bg-gray-50 md:px-8"
@@ -485,12 +471,11 @@ export default function About() {
           >
             <br />
             <br />
-            <br />
-            <div className="flex flex-col lg:flex-row mx-auto gap-8 lg:gap-10 max-w-[1536px] w-fu0ll lg:relative lg:left-[10%]">
+            <div className="flex flex-col lg:flex-row mx-auto gap-8 lg:gap-10 max-w-[1536px] w-full lg:relative lg:left-[10%]">
               {/* Contact Information */}
               <div className="w-full gap-8 p-6 mx-auto bg-white shadow-lg x-w-lg w- rounded-xl lg:max-w-md lg:w-1/3 lg:mx-">
                 <div
-                  className="flex flex-col justify-between lg:relative lg:left-[5%]"
+                  className="flex flex-col justify-between relative left-[5%]"
                   data-aos="fade-right"
                 >
                   <div className="flex flex-col gap-4">
@@ -606,7 +591,7 @@ export default function About() {
               {/* Contact Form */}
               <div className="w-full gap-6 bg-white shadow-lg rounded-xl">
                 <div
-                  className="flex flex-col  w-[95%] lg:relative lg:left-[2.5%]"
+                  className="flex flex-col  w-[95%] relative left-[2.5%]"
                   data-aos="fade-left"
                 >
                   {" "}
@@ -695,9 +680,7 @@ export default function About() {
             </div>
             <br />
             <br />
-            <br />
           </div>
-
           {/* Section 7 */}
           <div
             className="relative flex justify-center w-full overflow-hidden"
@@ -706,7 +689,6 @@ export default function About() {
             <div className="w-[1536px]">
               <div className="text-center">
                 {" "}
-                <br />
                 <br />
                 <br />
                 <h2 className="text-3xl font-bold text-gray-900 leading-[42px]">
@@ -737,9 +719,11 @@ export default function About() {
               <br />
             </div>
           </div>
-
           {/* Section 8 */}
-          <div className="relative w-full overflow-hidden bg-green-50" data-aos="fade-up">
+          <div
+            className="relative w-full overflow-hidden bg-green-50"
+            data-aos="fade-up"
+          >
             <div className="text-center">
               <h2 className="text-3xl font-bold text-gray-900">
                 <br />
