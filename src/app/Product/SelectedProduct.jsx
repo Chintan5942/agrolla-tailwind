@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../HomePage/Navbar";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "@/app/HomePage/HomePage.css";
+
 import productsData from "../HomePage/productsData";
 
 const SelectedProduct = ({ product }) => {
