@@ -18,8 +18,8 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="">
-          <nav className="w-[95%] h-[72px] px-4 md:px-8 flex items-center justify-between lg:justify-around bg-[#ffffff] top-0 sticky z-40" data-aos="fade-down">
+    <div className="sticky top-0">
+          <nav className="w-[95%] h-[72px] px-4 md:px-8 flex items-center justify-between lg:justify-around bg-[#ffffff] z-40" data-aos="fade-down">
       {/* Logo */}
       <a href="/" className="flex items-center" data-aos="fade-right">
         <img src="/agrolla-logo.png" alt="Agrolla Logo" className="w-[85.71px] h-[60px]" />
