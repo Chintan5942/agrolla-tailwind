@@ -46,7 +46,7 @@ const SelectedProduct = ({ product }) => {
   // Dynamic icons for features and applications
   const featureIcons = currentProduct.featureIcons || [
     "/house.svg",
-    "/premium.svg",
+    "/Premium.svg",
     "/oil.svg",
     "/global.svg",
   ];
