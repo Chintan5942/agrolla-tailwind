@@ -6,12 +6,15 @@ import "aos/dist/aos.css";
 import "@/app/HomePage/HomePage.css";
 import productsData from "../HomePage/productsData";
 
-const galleryImages = productsData.map((product) => product.image);
-
 const SelectedProduct = ({ product }) => {
   const [currentProduct, setCurrentProduct] = useState(product);
-  const [selectedImage, setSelectedImage] = useState(product?.image || "");
-  const [gallery, setGallery] = useState([]);
+  // Use moreImage/moreImages from product data, fallback to images or image
+  const galleryImages =
+    (product.moreImage && product.moreImage.length > 0 && product.moreImage) ||
+    (product.moreImages && product.moreImages.length > 0 && product.moreImages) ||
+    (product.images && product.images.length > 0 && product.images) ||
+    [product.image];
+  const [selectedImage, setSelectedImage] = useState(galleryImages[0]);
 
   useEffect(() => {
     AOS.init({
@@ -23,16 +26,14 @@ const SelectedProduct = ({ product }) => {
 
   useEffect(() => {
     if (!currentProduct) return;
-    // Exclude product.image from randoms
-    const filtered = galleryImages.filter(
-      (img) => img !== currentProduct.image
-    );
-    // Shuffle and pick 3 random images
-    const randoms = filtered.sort(() => 0.5 - Math.random()).slice(0, 3);
-    // Main image first, then 3 randoms
-    setGallery([currentProduct.image, ...randoms]);
-    setSelectedImage(currentProduct.image);
-  }, [currentProduct]);
+    // Always update selectedImage when product changes
+    const newGallery =
+      (product.moreImage && product.moreImage.length > 0 && product.moreImage) ||
+      (product.moreImages && product.moreImages.length > 0 && product.moreImages) ||
+      (product.images && product.images.length > 0 && product.images) ||
+      [product.image];
+    setSelectedImage(newGallery[0]);
+  }, [currentProduct, product]);
 
   if (!currentProduct) {
     return (
@@ -41,14 +42,6 @@ const SelectedProduct = ({ product }) => {
       </div>
     );
   }
-  // Update additionalImages to use images that exist in public/
-  const additionalImages = [
-    "/gal1.png",
-    "/gal2.png",
-    "/gal3.png",
-    "/gal4.png",
-    "/gal5.png",
-  ];
 
   // Dynamic icons for features and applications
   const featureIcons = currentProduct.featureIcons || [
@@ -69,95 +62,95 @@ const SelectedProduct = ({ product }) => {
   return (
     <div className="bg-white">
       {/* Section 1: Product Overview */}
- <div className="flex justify-center w-full">
-  <div className="flex flex-col gap-10 max-w-[1536px] w-full lg:flex-row lg:gap-20">
-    {/* Product Image */}
-    <div
-      className="flex flex-col items-center w-full gap-6 lg:w-1/2"
-      data-aos="fade-right"
-    >
-      <div className="bg-white rounded-2xl shadow-lg w-full h-64 sm:h-80 md:h-[400px] flex items-center justify-center">
-        <img
-          src={selectedImage}
-          alt={currentProduct.title}
-          className="w-full max-w-xs sm:max-w-md md:max-w-lg h-48 sm:h-64 md:h-[352px] object-contain"
-          style={{ display: selectedImage ? "block" : "none" }}
-        />
-      </div>
-
-      {/* Additional Images Gallery */}
-      <div className="flex flex-col w-full gap-4">
-        <h4 className="text-lg font-semibold text-gray-700">More Images</h4>
-        <div className="flex gap-4 overflow-x-auto catagory-images">
-          {gallery.map((img, index) => (
-            <div
-              key={index}
-              className={`flex-shrink-0 h-20 sm:h-28 md:h-32 transition-all border rounded-lg w-28 sm:w-36 md:w-44 cursor-pointer hover:border-green-500 ${
-                selectedImage === img
-                  ? "border-green-500 border-4"
-                  : "border-gray-200"
-              }`}
-              onClick={() => {
-                setSelectedImage(img);
-                const found = productsData.find((p) => p.image === img);
-                if (found) setCurrentProduct(found);
-              }}
-            >
+      <div className="flex justify-center w-full">
+        <div className="flex flex-col gap-10 max-w-[1536px] w-full lg:flex-row lg:gap-20">
+          {/* Product Image */}
+          <div
+            className="flex flex-col items-center w-full gap-6 lg:w-1/2"
+            data-aos="fade-right"
+          >
+            <div className="bg-white rounded-2xl shadow-lg w-full h-64 sm:h-80 md:h-[400px] flex items-center justify-center">
               <img
-                src={img}
-                alt={`${currentProduct.title} view ${index + 1}`}
-                className="object-contain w-full h-full"
+                src={selectedImage}
+                alt={currentProduct.title}
+                className="w-full max-w-xs sm:max-w-md md:max-w-lg h-48 sm:h-64 md:h-[352px] object-contain"
+                style={{ display: selectedImage ? "block" : "none" }}
               />
             </div>
-          ))}
+
+            {/* Additional Images Gallery */}
+            {galleryImages && galleryImages.length > 1 && (
+              <div className="flex flex-col w-full gap-4">
+                <h4 className="text-lg font-semibold text-gray-700">More Images</h4>
+                <div className="flex gap-4 overflow-x-auto catagory-images">
+                  {galleryImages.map((img, index) => (
+                    <div
+                      key={index}
+                      className={`flex-shrink-0 h-20 sm:h-28 md:h-32 transition-all border rounded-lg w-28 sm:w-36 md:w-44 cursor-pointer hover:border-green-500 ${
+                        selectedImage === img
+                          ? "border-green-500 border-4"
+                          : "border-gray-200"
+                      }`}
+                      onClick={() => setSelectedImage(img)}
+                    >
+                      <img
+                        src={img}
+                        alt={`Gallery view ${index + 1}`}
+                        className="object-contain w-full h-full"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Rest of your component remains the same... */}
+          {/* Product Details */}
+          <div
+            className="flex flex-col w-full gap-6 lg:w-1/2"
+            data-aos="fade-left"
+          >
+            <h4 className="text-3xl font-bold text-gray-900">
+              {currentProduct.title}
+            </h4>
+            <div className="flex items-center gap-2">
+              <img src="/star.svg" alt="Rating" className="w-6 h-6" />
+              <span className="font-semibold text-gray-500">
+                ({currentProduct.reviews} reviews)
+              </span>
+            </div>
+            <p className="font-bold leading-7 text-gray-700">
+              {currentProduct.aboutProduct || currentProduct.description}
+            </p>
+
+            {/* Highlights */}
+            <div className="flex flex-col gap-4">
+              <h5 className="text-xl font-semibold text-gray-700">Key Highlights</h5>
+              <ul className="flex flex-col gap-4">
+                {currentProduct.highlights &&
+                  currentProduct.highlights.map((item, index) => (
+                    <li
+                      key={index}
+                      className="flex items-start gap-4"
+                      data-aos="fade-up"
+                      data-aos-delay={index * 100}
+                    >
+                      <img
+                        src="/right.svg"
+                        alt=""
+                        className="w-6 h-6 mt-1"
+                      />
+                      <span className="font-semibold text-gray-700">{item}</span>
+                    </li>
+                  ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
 
-    {/* Product Details */}
-    <div
-      className="flex flex-col w-full gap-6 lg:w-1/2"
-      data-aos="fade-left"
-    >
-      <h4 className="text-3xl font-bold text-gray-900">
-        {currentProduct.title}
-      </h4>
-      <div className="flex items-center gap-2">
-        <img src="/star.svg" alt="Rating" className="w-6 h-6" />
-        <span className="font-semibold text-gray-500">
-          ({currentProduct.reviews} reviews)
-        </span>
-      </div>
-      <p className="font-bold leading-7 text-gray-700">
-        {currentProduct.aboutProduct || currentProduct.description}
-      </p>
-
-      {/* Highlights */}
-      <div className="flex flex-col gap-4">
-        <h5 className="text-xl font-semibold text-gray-700">Key Highlights</h5>
-        <ul className="flex flex-col gap-4">
-          {currentProduct.highlights &&
-            currentProduct.highlights.map((item, index) => (
-              <li
-                key={index}
-                className="flex items-start gap-4"
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-              >
-                <img
-                  src="/right.svg"
-                  alt=""
-                  className="w-6 h-6 mt-1"
-                />
-                <span className="font-semibold text-gray-700">{item}</span>
-              </li>
-            ))}
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
+      {/* Rest of your component remains unchanged... */}
       <br />
       {/* Section 2: Product Description */}
       <div className="flex flex-col items-center justify-center w-full">

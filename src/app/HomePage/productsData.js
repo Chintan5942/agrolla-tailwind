@@ -8,6 +8,12 @@ const productsData = [
     category: "Oilseeds",
     image: "/ground-nuts.png",
     images: ["/ground-nuts.png"],
+    moreImage: [
+      "/ground-nuts.png",
+      "/related.1.1.jpg",
+      "/related.1.2.jpeg",
+      "/related.1.3.jpeg"
+    ],
     rating: 18,
     reviews: 42,
     highlights: [
@@ -41,6 +47,12 @@ const productsData = [
     category: "Oilseeds",
     image: "/Bold-Peanuts.png",
     images: ["/Bold-Peanuts.png"],
+    moreImage: [
+      "/Bold-Peanuts.png",
+      "/related.2.1.jpg",
+      "/related.1.3.jpeg",
+      "/related.2.3.jpg",
+    ],
     rating: 18,
     reviews: 35,
     highlights: [
@@ -73,6 +85,13 @@ const productsData = [
     category: "Oilseeds",
     image: "/TJ-Peanuts.png",
     images: ["/TJ-Peanuts.png"],
+    moreImage: [
+      "/TJ-Peanuts.png",
+      "/related.3.1.jpg",
+      "/related.2.1.jpg",
+      "/related.1.3.jpeg",
+
+    ],
     rating: 32,
     reviews: 51,
     highlights: [
@@ -105,6 +124,12 @@ const productsData = [
     category: "Oilseeds",
     image: "/Java-Peanuts.png",
     images: ["/Java-Peanuts.png"],
+    moreImage: [
+      "/Java-Peanuts.png",
+      "/related.2.1.jpg",
+      "/related.1.1.JPG",
+      "/related.2.3.jpg"
+    ],
     rating: 27,
     reviews: 28,
     highlights: [
@@ -137,6 +162,12 @@ const productsData = [
     category: "Oilseeds",
     image: "/Roasted-Blanch-Peanuts.png",
     images: ["/Roasted-Blanch-Peanuts.png"],
+    moreImage: [
+      "/Roasted-Blanch-Peanuts.png",
+      "/related.2.1.jpg",
+      "/related.1.3.jpeg",
+      "/related.2.3.jpg"
+    ],
     rating: 21,
     reviews: 19,
     highlights: [
@@ -169,6 +200,12 @@ const productsData = [
     category: "Oilseeds",
     image: "/Roasted-Split-Peanuts.png",
     images: ["/Roasted-Split-Peanuts.png"],
+    moreImage: [
+      "/Roasted-Split-Peanuts.png",
+      "/related.2.1.jpg",
+      "/related.1.3.jpeg",
+      "/related.2.3.jpg"
+    ],
     rating: 29,
     reviews: 24,
     highlights: [
@@ -201,6 +238,12 @@ const productsData = [
     category: "Spices",
     image: "/Coriander-seed.png",
     images: ["/Coriander-seed.png"],
+    moreImage: [
+      "/Coriander-seed.png",
+      "/related.7.1.jpeg",
+      "/related.7.2.png",
+      "/related.7.3.jpg"
+    ],
     rating: 18,
     reviews: 17,
     highlights: [
@@ -233,6 +276,13 @@ const productsData = [
     category: "Spices",
     image: "/fennel.png",
     images: ["/fennel.png"],
+    moreImage: [
+      "/fennel.png",
+      "/related.8.1.webp",
+      "/related.8.2.jpeg",
+      "/related.8.3.jpeg"
+
+    ],
     rating: 18,
     reviews: 22,
     highlights: [
@@ -265,6 +315,12 @@ const productsData = [
     category: "Other Grains",
     image: "/millet.png",
     images: ["/millet.png"],
+    moreImage: [
+      "/millet.png",
+       "/related.9.1.jpeg",
+      "/related.9.2.jpeg",
+      "/related.9.3.jpg",
+    ],
     rating: 18,
     reviews: 14,
     highlights: [
@@ -297,6 +353,12 @@ const productsData = [
     category: "Spices",
     image: "/cumin-seed.png",
     images: ["/cumin-seed.png"],
+    moreImage: [
+      "/cumin-seed.png",
+      "/related.10.1.jpeg",
+      "/related.10.2.jpeg",
+      "/related.10.3.jpeg",
+    ],
     rating: 18,
     reviews: 20,
     highlights: [
@@ -329,6 +391,12 @@ const productsData = [
     category: "Other Grains",
     image: "/soyabean.png",
     images: ["/soyabean.png"],
+    moreImage: [
+      "/soyabean.png",
+      "/related.11.1.jpg",
+      "/related.11.2.jpg",
+      "/related.11.3.jpg"
+    ],
     rating: 18,
     reviews: 27,
     highlights: [
@@ -361,6 +429,12 @@ const productsData = [
     category: "Pulses",
     image: "/chickpea.png",
     images: ["/chickpea.png"],
+    moreImage: [
+      "/chickpea.png",
+      "/related.12.1.jpg",
+      "/related.12.2.webp",
+      "/related.12.3.webp",
+    ],
     rating: 18,
     reviews: 33,
     highlights: [
@@ -393,6 +467,12 @@ const productsData = [
     category: "Pulses",
     image: "/rise.png",
     images: ["/rise.png"],
+    moreImage: [
+      "/rise.png",
+      "/related.13.1.jpeg",
+      "/related.13.2.jpg",
+      "/related.13.3.jpg"
+    ],
     rating: 27,
     reviews: 39,
     highlights: [
@@ -425,6 +505,12 @@ const productsData = [
     category: "Oilseeds",
     image: "/Sesame.png",
     images: ["/Sesame.png"],
+    moreImage: [
+      "/Sesame.png",
+      "/related.14.1.jpg",
+      "/related.14.2.jpeg",
+      "/related.14.3.jpg"
+    ],
     rating: 27,
     reviews: 25,
     highlights: [
