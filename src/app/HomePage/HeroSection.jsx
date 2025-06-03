@@ -42,7 +42,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <div className="relative w-screen min-h-[640px] lg:min-h-[840px] overflow-hidden hero">
+    <div className="relative w-full max-w-[1920px] min-h-[640px] lg:min-h-[840px] overflow-hidden hero">
       {/* Clouds */}
       <img
         src="/cloud.svg"
