@@ -89,14 +89,14 @@
   overflow: scroll;
   overflow-x: hidden;
 }
-.catagory-section::-webkit-scrollbar{
+.catagory-section::-webkit-scrollbar {
   display: none;
 }
-.catagory-images::-webkit-scrollbar{
+.catagory-images::-webkit-scrollbar {
   display: none;
 }
-.card{
- padding: 15px;
+.card {
+  padding: 15px;
 }
 
 @keyframes fadeSlide {
@@ -123,18 +123,6 @@
   animation-delay: 0.9s;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 1300px) and (min-width: 1024px) {
   .hero-farmer-wrapper {
     width: 520px !important;
@@ -152,58 +140,85 @@
   .hero-sidewing {
     width: 90px !important;
   }
-  .tractor{
+  .tractor {
     display: none;
   }
-  .sidewing{
+  .sidewing {
     position: relative;
     left: 10px;
   }
-  aside{
+  aside {
     width: 32%;
   }
-  .catImg{
+  .catImg {
     display: none;
   }
 }
-@media (max-width: 980px) and (min-width: 850px) {
+@media (max-width: 1023px) and (min-width: 981px) {
   .hero-farmer-wrapper {
-    width: 420px !important;
-    height: 220px !important;
-    left: 8% !important;
-    bottom: 70px !important;
+    width: 480px !important;
+    height: 240px !important;
+    left: 9% !important;
+    bottom: 80px !important;
   }
   .hero-windmill {
-    height: 300px !important;
-    max-width: 110px !important;
-    bottom: 30px !important;
+    height: 350px !important;
+    max-width: 120px !important;
+    bottom: 40px !important;
   }
   .hero-factory {
-    max-width: 60vw !important;
-    height: 380px !important;
-    bottom: 10px !important;
+    max-width: 50vw !important;
+    height: 450px !important;
+    bottom: 20px !important;
   }
   .hero-sidewing {
-    width: 70px !important;
+    width: 80px !important;
   }
   .hero-wings {
-    height: 130px !important;
+    height: 150px !important;
   }
-  .farmer{
+  .farmer {
+    position: relative;
+    top: -10px;
+  }
+  .factory {
+    width: 500px;
+    position: relative;
+    top: -10px;
+  }
+  .groundNut {
+    position: relative;
+    left: -20px;
+  }
+  .tractor {
+    display: none;
+  }
+  .sidewing {
+    position: relative;
+    left: 10px;
+  }
+  .words {
+    width: 80% !important;
+  }
+}
+@media (max-width: 980px) and (min-width: 850px) {
+  .words {
+    width: 80% !important;
+  }
+  .farmer {
     position: relative;
     top: 20px;
   }
-  .factory{
+  .factory {
     width: 450px;
     position: relative;
     top: 15px;
   }
-  .groundNut{
+  .groundNut {
     position: relative;
     left: -35px;
   }
 }
-
 @media (max-width: 850px) and (min-width: 768px) {
   .hero-farmer-wrapper {
     width: 320px !important;
@@ -227,235 +242,274 @@
   .hero-wings {
     height: 100px !important;
   }
-  .groundNut{
+  .groundNut {
     position: relative;
     left: -50px;
   }
-  .factory{
+  .factory {
     width: 350px;
     position: relative;
     top: 60px;
   }
-  .sidewing{
+  .sidewing {
     display: none;
   }
+  .words {
+    width: 70% !important;
+  }
 }
-
 @media (max-width: 767px) and (min-width: 640px) {
-.factory{
-  position: relative;
-  top: -15px;
+  .factory {
+    position: relative;
+    top: -15px;
+  }
+  .wing {
+    position: relative;
+    top: 75px;
+  }
+  .sidewing {
+    display: none;
+  }
+  .groundNut {
+    height: 80px;
+    position: relative;
+    left: -110px;
+    top: -15px;
+  }
+  .words {
+    width: 75%;
+  }
 }
-.wing{
-  position: relative;
-  top: 75px;
+@media (max-width: 639px) and (min-width: 585px) {
+  .hero {
+    height: 840px;
+  }
+  .factory {
+    height: 300px;
+    position: relative;
+    top: 330px;
+  }
+  .sidewing {
+    display: none;
+  }
+  .wing {
+    position: relative;
+    top: 150px;
+    width: 120px;
+  }
+  .wingstand {
+    height: 300px;
+    position: relative;
+    top: 120px;
+    left: 10px;
+  }
+  .farmer {
+    width: 300px;
+    position: relative;
+    top: 540px;
+    left: 100px;
+  }
+  .groundNut {
+    width: 45px;
+    position: relative;
+    top: 485px;
+    left: -30px;
+  }
+  .words {
+    width: 65%;
+  }
 }
-.sidewing{
-  display: none;
-}
-.groundNut{
-  position: relative;
-  left: -110px;
-  top: -15px;
-}
-}
-@media (max-width: 639px) and (min-width: 575px) {
-.factory{
-  height: 300px;
-  position: relative;
-  top: 330px;
-}
-.sidewing{
-  display: none;
-}
-.wing{
-  position: relative;
-  top: 150px;
-  width: 120px;
-}
-.wingstand{
-  height: 300px;
-  position: relative;
-  top: 120px;
-  left: 10px;
-}
-.farmer{
-  width: 300px;
-  position: relative;
-  top: 525px;
-  left: 100px;
-}
-.groundNut{
-  width: 50px;
-  position: relative;
-  top: 470px;
-  left: -30px;
-}
-}
-@media (max-width: 574px) and (min-width: 500px) {
-.factory{
-  height: 200px;
-  position: relative;
-  top: 420px;
-}
-.sidewing{
-  display: none;
-}
-.wing{
-  position: relative;
-  top: 150px;
-  left: -10px;
-  width: 120px;
-}
-.wingstand{
-  height: 300px;
-  position: relative;
-  top: 120px;
-}
-.farmer{
-  width: 300px;
-  position: relative;
-  top: 525px;
-  left: 85px;
-}
-.groundNut{
-  width: 40px;
-  position: relative;
-  top: 470px;
-  left: -60px;
-}
+@media (max-width: 584px) and (min-width: 500px) {
+  .hero {
+    height: 840px;
+  }
+  .factory {
+    height: 300px;
+    position: relative;
+    top: 350px;
+  }
+  .sidewing {
+    display: none;
+  }
+  .wing {
+    position: relative;
+    top: 150px;
+    width: 120px;
+  }
+  .wingstand {
+    height: 300px;
+    position: relative;
+    top: 120px;
+    left: 10px;
+  }
+  .farmer {
+    width: 300px;
+    position: relative;
+    top: 540px;
+    left: 90px;
+  }
+  .groundNut {
+    width: 35px;
+    position: relative;
+    top: 485px;
+    left: -68px;
+  }
+  .words {
+    width: 65%;
+  }
 }
 @media (max-width: 499px) and (min-width: 425px) {
-.factory{
-  height: 200px;
-  position: relative;
-  top: 420px;
-}
-.sidewing{
-  display: none;
-}
-.wing{
-  position: relative;
-  top: 210px;
-  left: -10px;
-  width: 100px;
-}
-.wingstand{
-  height: 250px;
-  position: relative;
-  top: 175px;
-}
-.farmer{
-  width: 200px;
-  position: relative;
-  top: 550px;
-  left: 85px;
-}
-.groundNut{
-  width: 30px;
-  position: relative;
-  top: 475px;
-  left: -100px;
-}
+  .hero {
+    height: 840px;
+  }
+  .factory {
+    height: 250px;
+    position: relative;
+    top: 390px;
+  }
+  .sidewing {
+    display: none;
+  }
+  .wing {
+    position: relative;
+    top: 215px;
+    left: 2px;
+    width: 85px;
+  }
+  .wingstand {
+    height: 250px;
+    position: relative;
+    top: 175px;
+    left: 5px;
+  }
+  .farmer {
+    width: 270px;
+    position: relative;
+    top: 545px;
+    left: 75px;
+  }
+  .groundNut {
+    width: 30px;
+    position: relative;
+    top: 490px;
+    left: -105px;
+  }
+  .words {
+    width: 65%;
+  }
 }
 @media (max-width: 424px) and (min-width: 375px) {
-.factory{
-  height: 200px;
-  position: relative;
-  top: 420px;
-}
-.sidewing{
-  display: none;
-}
-.wing{
-  position: relative;
-  top: 260px;
-  left: -10px;
-  width: 80px;
-  border: 2px solid;
-}
-.wingstand{
-  height: 200px;
-  position: relative;
-  top: 220px;
-  left: -2px;
-}
-.farmer{
-  width: 200px;
-  position: relative;
-  top: 550px;
-  left: 55px;
-}
-.groundNut{
-  width: 30px;
-  position: relative;
-  top: 475px;
-  left: -130px;
-}
+  .hero {
+    height: 840px;
+  }
+  .factory {
+    height: 250px;
+    position: relative;
+    top: 400px;
+  }
+  .sidewing {
+    display: none;
+  }
+  .wing {
+    position: relative;
+    top: 215px;
+    left: 2px;
+    width: 85px;
+  }
+  .wingstand {
+    height: 250px;
+    position: relative;
+    top: 175px;
+    left: 5px;
+  }
+  .farmer {
+    width: 270px;
+    position: relative;
+    top: 545px;
+    left: 75px;
+  }
+  .groundNut {
+    width: 30px;
+    position: relative;
+    top: 490px;
+    left: -125px;
+  }
 }
 @media (max-width: 374px) and (min-width: 320px) {
-.factory{
-  height: 200px;
-  position: relative;
-  top: 435px;
-}
-.sidewing{
-  display: none;
-}
-.wing{
-  position: relative;
-  top: 310px;
-  left: -2px;
-  width: 60px;
-}
-.wingstand{
-  height: 150px;
-  position: relative;
-  top: 270px;
-}
-.farmer{
-  width: 180px;
-  position: relative;
-  top: 550px;
-  left: 45px;
-}
-.groundNut{
-  width: 25px;
-  position: relative;
-  top: 475px;
-  left: -162px;
-}
+  .cloud{
+    height: 100px;
+  }
+  .bird{
+    height: 40px;
+    position: relative;
+    left:250px;
+  }
+  .hero {
+    height: 840px;
+  }
+  .factory {
+    height: 250px;
+    position: relative;
+    top: 410px;
+  }
+  .sidewing {
+    display: none;
+  }
+  .wing {
+    position: relative;
+    top: 215px;
+    left: 2px;
+    width: 85px;
+  }
+  .wingstand {
+    height: 250px;
+    position: relative;
+    top: 175px;
+    left: 5px;
+  }
+  .farmer {
+    width: 180px;
+    position: relative;
+    top: 535px;
+    left: 75px;
+  }
+  .groundNut {
+    width: 30px;
+    position: relative;
+    top: 455px;
+    left: -150px;
+  }
 }
 @media (max-width: 319px) {
-.factory{
-  height: 200px;
-  position: relative;
-  top: 450px;
-}
-.sidewing{
-  display: none;
-}
-.wing{
-  position: relative;
-  top: 360px;
-  left: -2px;
-  width: 50px;
-}
-.wingstand{
-  height: 100px;
-  position: relative;
-  top: 320px;
-}
-.farmer{
-  width: 160px;
-  position: relative;
-  top: 550px;
-  left: 35px;
-}
-.groundNut{
-  width: 20px;
-  position: relative;
-  top: 475px;
-  left: -200px;
-}
+  .factory {
+    height: 200px;
+    position: relative;
+    top: 450px;
+  }
+  .sidewing {
+    display: none;
+  }
+  .wing {
+    position: relative;
+    top: 360px;
+    left: -2px;
+    width: 50px;
+  }
+  .wingstand {
+    height: 100px;
+    position: relative;
+    top: 320px;
+  }
+  .farmer {
+    width: 160px;
+    position: relative;
+    top: 550px;
+    left: 35px;
+  }
+  .groundNut {
+    width: 20px;
+    position: relative;
+    top: 475px;
+    left: -200px;
+  }
 }

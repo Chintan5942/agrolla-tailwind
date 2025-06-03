@@ -9,7 +9,7 @@ export default function HeroSection() {
     const width = window.innerWidth;
     if (width >= 1024) {
       setCount(5);
-    } else if (width <= 866) {
+    } else if (width >= 866) {
       setCount(3);
     } else if (width >= 768) {
       setCount(4);
@@ -42,7 +42,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <div className="relative w-full max-w-[1920px] mx-auto min-h-screen sm:min-h-[755px] md:min-h-[750px] lg:min-h-[840px] overflow-hidden">
+    <div className="relative w-full max-w-[1920px] mx-auto min-h-[640px] lg:min-h-[840px] overflow-hidden hero">
       {/* Clouds */}
       <img
         src="/cloud.svg"
@@ -182,7 +182,7 @@ export default function HeroSection() {
         </div>
         <br />
         <p
-          className={`text-sm sm:text-base md:text-lg leading-[28px] text-[#374151] transition-opacity duration-700 delay-[1200ms] ${
+          className={`text-sm sm:text-base md:text-lg leading-[28px] text-[#374151] transition-opacity duration-700 delay-[1200ms] words ${
             animateText ? "opacity-100" : "opacity-0"
           }`}
         >
