@@ -14,7 +14,7 @@ export default function Section3() {
         {/* Main content without background image or bg-fixed */}
         <div className="flex justify-center max-w-full ">
           <div
-            className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4  md:flex-row max-w-[]"
+            className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 md:flex-row "
             data-aos="fade-up"
           >
             {/* Text Content */}
@@ -25,8 +25,8 @@ export default function Section3() {
               >
                 <br />
                 <div className="flex justify-center lg:justify-start md:justify-start">
-                  <div className="h-10 lg:w-[220px] md:w-[220px]  sm:w-[220px] bg-white rounded-full flex items-center justify-center text-[16px] text-[#2e7d32] font-bold">
-                    <img src="/leaf.svg" alt="leaf" className="h-5 mr-2" />
+                  <div className="h-10 w-[260px] lg:w-[200px] md:w-[200px] sm:w-[200px] bg-white rounded-full flex items-center justify-center text-[16px] text-[#2e7d32] font-bold">
+                    <img src="/leaf.svg" alt="leaf" className="h-5" />
                     100% ORGANIC
                   </div>
                 </div>

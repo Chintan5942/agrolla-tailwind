@@ -471,7 +471,7 @@ export default function About() {
           >
             <br />
             <br />
-            <div className="flex flex-col lg:flex-row mx-auto gap-8 lg:gap-10 max-w-[1536px] w-full lg:relative lg:left-[10%]">
+            <div className="flex flex-col lg:flex-row mx-auto gap-8 lg:gap-10 max-w-[1536px] w-full lg:relative lg:left-[5%]">
               {/* Contact Information */}
               <div className="w-full gap-8 p-6 mx-auto bg-white shadow-lg x-w-lg w- rounded-xl lg:max-w-md lg:w-1/3 lg:mx-">
                 <div
