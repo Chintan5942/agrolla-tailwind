@@ -19,6 +19,13 @@ export default function Categories({ onCategorySelect }) {
     });
   }, []);
 
+  // Refresh AOS on category change
+  useEffect(() => {
+    setTimeout(() => {
+      AOS.refresh();
+    }, 100); // Slight delay ensures DOM update
+  }, [selectedCategory]);
+
   const categoryImages = {
     "All Products": "/all-product.svg",
     Oilseeds: "/oilseed.svg",
@@ -50,24 +57,29 @@ export default function Categories({ onCategorySelect }) {
     if (onCategorySelect && category !== "All Products") {
       onCategorySelect(category);
     }
+
+    // Optional second refresh
+    setTimeout(() => {
+      AOS.refresh();
+    }, 100);
   };
 
   return (
     <div className="relative top-20 w-[90%] left-[5%]">
       {/* Header */}
       <div className="text-center" data-aos="fade-down">
-        <div className="flex items-center justify-center gap-3 w-[100%] sm:w-[100%] ">
+        <div className="flex items-center justify-center w-full gap-3">
           <hr className="w-10 border border-[#2E7D32]" />
           <p className="text-xs sm:text-sm text-[#2E7D32] font-medium uppercase tracking-wider">
             Featured Products
           </p>
           <hr className="w-10 border border-[#2E7D32]" />
-        </div>{" "}
+        </div>
         <br />
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] mt-6 leading-snug sm:leading-tight w-[100%]">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] mt-6 leading-snug sm:leading-tight">
           Premium <span className="text-[#2E7D32]">Agricultural</span> Products
         </h2>
-        <p className="text-sm sm:text-base lg:text-lg text-[#4B5563] font-normal mt-6 leading-relaxed sm:leading-loose w-[100%]">
+        <p className="text-sm sm:text-base lg:text-lg text-[#4B5563] font-normal mt-6 leading-relaxed sm:leading-loose">
           Agrolla Impex is a distinguished One Star Export House and a leading
           <br className="hidden md:inline" />
           manufacturer and exporter of peanuts, oilseeds, grains, and pulses.
@@ -80,11 +92,7 @@ export default function Categories({ onCategorySelect }) {
           <div className="p-4 shadow-md bg-stone-50 rounded-xl">
             <br />
             <div className="flex items-center mb-4">
-              <img
-                src="/catagory.svg"
-                alt="Category Icon"
-                className="w-10 h-10"
-              />
+              <img src="/catagory.svg" alt="Category Icon" className="w-10 h-10" />
               <span className="ml-3 text-xl font-semibold text-gray-800">
                 Select Category
               </span>
@@ -117,19 +125,13 @@ export default function Categories({ onCategorySelect }) {
           className="w-full lg:w-[25%] bg-stone-50 rounded-xl shadow-lg catagory-aside h-auto lg:h-[900px] catagory-section overflow-scroll"
           data-aos="fade-right"
         >
-          {/* Header: Categories */}
           <div className="flex items-center">
-            <img
-              src="/catagory.svg"
-              alt="Category Icon"
-              className="h-10 sm:h-12 lg:h-14"
-            />
+            <img src="/catagory.svg" alt="Category Icon" className="h-10 sm:h-12 lg:h-14" />
             <span className="ml-4 text-lg font-semibold sm:text-xl lg:text-2xl">
               Categories
             </span>
           </div>
 
-          {/* Category List */}
           <ul className="px-2 pb-6 mt-6 space-y-4 lg:px-4">
             {Object.keys(categoryImages).map((cat, index) => (
               <li
@@ -141,11 +143,7 @@ export default function Categories({ onCategorySelect }) {
                 data-aos="fade-right"
                 data-aos-delay={index * 50}
               >
-                <img
-                  src={categoryImages[cat]}
-                  alt={cat}
-                  className="h-10 sm:h-12 lg:h-14 catImg"
-                />
+                <img src={categoryImages[cat]} alt={cat} className="h-10 sm:h-12 lg:h-14 catImg" />
                 <div>
                   <p className="text-sm font-semibold text-gray-800 sm:text-base lg:text-lg">
                     {cat}{" "}
@@ -168,7 +166,7 @@ export default function Categories({ onCategorySelect }) {
               </li>
             ))}
 
-            {/* Need Help Section - Visible only on lg and up */}
+            {/* Need Help Section */}
             <li
               className="h-[180px] lg:h-[220px] bg-[#F2F9F2] rounded-2xl p-3 lg:p-4 mt-6 hidden lg:block"
               data-aos="fade-up"
@@ -190,8 +188,7 @@ export default function Categories({ onCategorySelect }) {
 
         {/* Product Grid */}
         <section
-          className="w-full lg:w-[75%]  grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 p-2 catagory-section h-full lg:h-[980px] sm:h-[00px] overflow-scroll"
-          // Removed data-aos from here to disable animation on product grid
+          className="w-full lg:w-[75%] grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 p-2 catagory-section h-full lg:h-[980px] overflow-scroll"
         >
           {filteredProducts &&
             filteredProducts.map((product, index) => {
@@ -204,8 +201,6 @@ export default function Categories({ onCategorySelect }) {
                   key={product.id}
                   className="bg-white rounded-2xl h-[450px] card cursor-pointer relative flex flex-col justify-between hover:shadow-lg transition-shadow duration-300"
                   onClick={() => router.push(`/Product/${product.id}`)}
-                  // data-aos removed here to disable animation per product card
-                  // data-aos-delay removed as well
                 >
                   <img
                     src={product.image}
@@ -216,9 +211,7 @@ export default function Categories({ onCategorySelect }) {
                     {[...Array(fullStars)].map((_, i) => (
                       <FaStar key={`full-${i}`} className="text-yellow-500" />
                     ))}
-                    {hasHalfStar && (
-                      <FaStarHalfAlt className="text-yellow-500" />
-                    )}
+                    {hasHalfStar && <FaStarHalfAlt className="text-yellow-500" />}
                     {[...Array(emptyStars)].map((_, i) => (
                       <FaRegStar key={`empty-${i}`} className="text-gray-300" />
                     ))}
