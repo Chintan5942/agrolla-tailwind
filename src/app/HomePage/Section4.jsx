@@ -90,7 +90,7 @@ export default function Section4() {
               data-aos="fade-left"
             >
               <br />
-              <div className="flex items-center justify-start">
+              <div className="flex items-center justify-center">
                 <hr className="w-10 border border-[#2E7D32]" />
                 <p className="text-xs sm:text-sm md:text-base text-[#2E7D32] font-bold uppercase tracking-wider">
                   &nbsp;Featured Products&nbsp;

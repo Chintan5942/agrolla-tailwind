@@ -6,7 +6,7 @@ export default function Preloader() {
   const [show, setShow] = useState(true);
 
   useEffect(() => {
-    const minDelay = 1500;
+    const minDelay = 2000;
     const handleLoad = () => {
       setTimeout(() => setShow(false), minDelay);
     };

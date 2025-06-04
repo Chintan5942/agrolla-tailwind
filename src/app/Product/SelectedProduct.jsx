@@ -39,7 +39,7 @@ const SelectedProduct = ({ product }) => {
 
   const featureIcons = currentProduct.featureIcons || [
     "/house.svg",
-    "/premium.svg",
+    "/Premium.svg",
     "/oil.svg",
     "/global.svg",
   ];

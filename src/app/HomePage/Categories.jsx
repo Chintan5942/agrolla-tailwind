@@ -74,7 +74,7 @@ export default function Categories({ onCategorySelect }) {
         </p>
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-6 mt-16 catagory-container h-[1000px]">
+      <div className="flex flex-col lg:flex-row gap-6 mt-16 catagory-container h-[1100px]">
         {/* Mobile/Tablet Dropdown */}
         <div className="w-full px-4 lg:hidden" data-aos="fade-right">
           <div className="p-4 shadow-md bg-stone-50 rounded-xl">
@@ -190,7 +190,7 @@ export default function Categories({ onCategorySelect }) {
 
         {/* Product Grid */}
         <section
-          className="w-full lg:w-[75%]  grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 p-2 catagory-section h-[980px] overflow-scroll"
+          className="w-full lg:w-[75%]  grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 p-2 catagory-section h-full lg:h-[980px] sm:h-[00px] overflow-scroll"
           // Removed data-aos from here to disable animation on product grid
         >
           {filteredProducts &&
