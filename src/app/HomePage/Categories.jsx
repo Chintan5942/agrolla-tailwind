@@ -78,6 +78,7 @@ export default function Categories({ onCategorySelect }) {
         {/* Mobile/Tablet Dropdown */}
         <div className="w-full px-4 lg:hidden" data-aos="fade-right">
           <div className="p-4 shadow-md bg-stone-50 rounded-xl">
+            <br />
             <div className="flex items-center mb-4">
               <img
                 src="/catagory.svg"
@@ -88,6 +89,7 @@ export default function Categories({ onCategorySelect }) {
                 Select Category
               </span>
             </div>
+            <br />
             <div className="relative">
               <select
                 id="categorySelect"
@@ -112,11 +114,11 @@ export default function Categories({ onCategorySelect }) {
 
         {/* Sidebar (Desktop) */}
         <aside
-          className="w-full lg:w-[22%] bg-stone-50 rounded-xl shadow-lg catagory-aside h-auto lg:h-[900px] mb-6 lg:mb-0 px-2 lg:px-0 catagory-section overflow-scroll"
+          className="w-full lg:w-[25%] bg-stone-50 rounded-xl shadow-lg catagory-aside h-auto lg:h-[900px] catagory-section overflow-scroll"
           data-aos="fade-right"
         >
           {/* Header: Categories */}
-          <div className="flex items-center px-4 pt-4">
+          <div className="flex items-center">
             <img
               src="/catagory.svg"
               alt="Category Icon"
@@ -188,7 +190,7 @@ export default function Categories({ onCategorySelect }) {
 
         {/* Product Grid */}
         <section
-          className="w-full lg:w-[80%] grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 p-2 catagory-section h-[980px] overflow-scroll"
+          className="w-full lg:w-[75%]  grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 p-2 catagory-section h-[980px] overflow-scroll"
           // Removed data-aos from here to disable animation on product grid
         >
           {filteredProducts &&
