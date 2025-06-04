@@ -97,11 +97,11 @@ export default function Section4() {
                 </p>
                 <hr className="w-10 border border-[#2E7D32]" />
               </div>
-              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold text-[#111827] leading-snug">
+              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold text-[#111827] leading-snug text-center">
                 <span className="text-3xl text-green-700">Agrolla Impex</span>:
                 Nurturing Quality, Cultivating Trust
               </h1>
-              <h5 className="flex flex-wrap text-xs leading-relaxed text-gray-700 sm:text-sm md:text-base lg:text-md">
+              <h5 className="flex flex-wrap text-xs leading-relaxed text-center text-gray-700 sm:text-sm md:text-base lg:text-md">
                 Agrolla Impex is a distinguished One Star Export House and a
                 leading manufacturer and exporter of peanuts, oilseeds, grains,
                 and pulses. Headquartered in Gujarat, India, we take immense
@@ -129,7 +129,7 @@ export default function Section4() {
               </div>
                 <br />
               {/* Button */}
-              <div className="flex justify-center lg:justify-start">
+              <div className="flex justify-center lg:justify-center">
                 <button
                   className="bg-green-700 h-[48px] w-[154px] hover:bg-green-700/80 text-xs sm:text-sm md:text-base text-white font-medium rounded"
                   data-aos="fade-up"

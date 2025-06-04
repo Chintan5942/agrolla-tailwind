@@ -28,7 +28,7 @@ export default function Navbar() {
           <img
             src="/agrolla-logo.png"
             alt="Agrolla Logo"
-            className="w-[75px] h-[50px]"
+            className="w-[85px] h-[50px]"
           />
         </a>
         <div
