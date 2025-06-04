@@ -18,40 +18,115 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="sticky top-0 bg-[#ffffff] z-40">
-          <nav className="w-[95%] h-[72px]  flex items-center justify-between lg:justify-around bg-[#ffffff] z-40" data-aos="fade-down">
-      {/* Logo */}
-      <a href="/  " className="flex items-center" data-aos="fade-right">
-        <img src="/agrolla-logo.png" alt="Agrolla Logo" className="w-[85.71px] h-[60px]" />
-      </a>
-      <div className="hidden md:flex gap-8 text-[#4E4E4E] text-base font-semibold" data-aos="fade-up">
-        <a href="/" className={`hover:underline hover:underline-offset-[5px] hover:text-[#2E7D32] ${isActive("/") ? "text-[#2E7D32]" : ""}`}>Home</a>
-        <a href="/Product" className={`hover:underline hover:underline-offset-[5px] hover:text-[#2E7D32] ${isActive("/Product") ? "text-[#2E7D32]" : ""}`}>Products</a>
-        <a href="/About" className={`hover:underline hover:underline-offset-[5px] hover:text-[#2E7D32] ${isActive("/About") ? "text-[#2E7D32]" : ""}`}>About Us</a>
-        <a href="/Contact" className={`hover:underline hover:underline-offset-[5px] hover:text-[#2E7D32] ${isActive("/Contact") ? "text-[#2E7D32]" : ""}`}>Contact</a>
-      </div>
+    <div className="sticky top-0 bg-[#ffffff] z-40 flex justify-center">
+      <nav
+        className="w-[95%] h-[72px]  flex items-center justify-between lg:justify-around bg-[#ffffff] z-40"
+        data-aos="fade-down"
+      >
+        {/* Logo */}
+        <a href="/  " className="flex items-center" data-aos="fade-right">
+          <img
+            src="/agrolla-logo.png"
+            alt="Agrolla Logo"
+            className="w-[70px] h-[50px]"
+          />
+        </a>
+        <div
+          className="hidden md:flex gap-8 text-[#4E4E4E] text-base font-semibold"
+          data-aos="fade-up"
+        >
+          <a
+            href="/"
+            className={`hover:underline hover:underline-offset-[5px] hover:text-[#2E7D32] ${
+              isActive("/") ? "text-[#2E7D32]" : ""
+            }`}
+          >
+            Home
+          </a>
+          <a
+            href="/Product"
+            className={`hover:underline hover:underline-offset-[5px] hover:text-[#2E7D32] ${
+              isActive("/Product") ? "text-[#2E7D32]" : ""
+            }`}
+          >
+            Products
+          </a>
+          <a
+            href="/About"
+            className={`hover:underline hover:underline-offset-[5px] hover:text-[#2E7D32] ${
+              isActive("/About") ? "text-[#2E7D32]" : ""
+            }`}
+          >
+            About Us
+          </a>
+          <a
+            href="/Contact"
+            className={`hover:underline hover:underline-offset-[5px] hover:text-[#2E7D32] ${
+              isActive("/Contact") ? "text-[#2E7D32]" : ""
+            }`}
+          >
+            Contact
+          </a>
+        </div>
 
-      <div className="hidden md:block" data-aos="fade-left">
-        <button className="h-[40px] w-[130px] bg-[#2E7D32] rounded-lg text-white text-base font-semibold">Get Quote</button>
-      </div>
-
-      <button className="md:hidden" onClick={() => setIsOpen(!isOpen)} data-aos="zoom-in">
-        {isOpen ? <X size={32} /> : <Menu size={28} />}
-      </button>
-
-{/* Mobile  */}
-      {isOpen && (
-        <div className="absolute top-[72px] left-0 w-full bg-white shadow-md flex flex-col items-center gap-4 py-4 z-50 text-[#4E4E4E] text-base font-semibold" data-aos="fade-down">
-          <a href="/" className={isActive("/") ? "text-[#2E7D32]" : ""} onClick={() => setIsOpen(false)}>Home</a>
-          <a href="/Product" className={isActive("/Product") ? "text-[#2E7D32]" : ""} onClick={() => setIsOpen(false)}>Products</a>
-          <a href="/About" className={isActive("/About") ? "text-[#2E7D32]" : ""} onClick={() => setIsOpen(false)}>About Us</a>
-          <a href="/Contact" className={isActive("/Contact") ? "text-[#2E7D32]" : ""} onClick={() => setIsOpen(false)}>Contact</a>
-            <button className="h-[40px] w-[130px] bg-[#2E7D32] rounded-lg text-white font-semibold" onClick={() => setIsOpen(false)}>
+        <div className="hidden md:block" data-aos="fade-left">
+          <button className="h-[40px] w-[130px] bg-[#2E7D32] rounded-lg text-white text-base font-semibold">
             Get Quote
           </button>
         </div>
-      )}
-    </nav>
+
+        <button
+          className="md:hidden"
+          onClick={() => setIsOpen(!isOpen)}
+          data-aos="zoom-in"
+        >
+          {isOpen ? <X size={32} /> : <Menu size={28} />}
+        </button>
+
+        {/* Mobile  */}
+        {isOpen && (
+          <div
+            className="absolute top-[72px] left-0 w-full bg-white shadow-md flex flex-col items-center gap-4 py-4 z-50 text-[#4E4E4E] text-base font-semibold"
+            data-aos="fade-down"
+          >
+            <a
+              href="/"
+              className={isActive("/") ? "text-[#2E7D32]" : ""}
+              onClick={() => setIsOpen(false)}
+            >
+              Home
+            </a>
+            <a
+              href="/Product"
+              className={isActive("/Product") ? "text-[#2E7D32]" : ""}
+              onClick={() => setIsOpen(false)}
+            >
+              Products
+            </a>
+            <a
+              href="/About"
+              className={isActive("/About") ? "text-[#2E7D32]" : ""}
+              onClick={() => setIsOpen(false)}
+            >
+              About Us
+            </a>
+            <a
+              href="/Contact"
+              className={isActive("/Contact") ? "text-[#2E7D32]" : ""}
+              onClick={() => setIsOpen(false)}
+            >
+              Contact
+            </a>
+            <button
+              className="h-[40px] w-[130px] bg-[#2E7D32] rounded-lg text-white font-semibold"
+              onClick={() => setIsOpen(false)}
+            >
+              Get Quote
+            </button>
+            <br />
+          </div>
+        )}
+      </nav>
     </div>
   );
 }

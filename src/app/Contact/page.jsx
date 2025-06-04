@@ -38,9 +38,9 @@ export default function Page() {
         <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
           Contact Us
         </h1>
-        <p className="text-sm text-gray-600 sm:text-base md:text-lg">
-          We're here to help! Reach out to us through any of the channels below and we'll get <br />
-          back to you as soon as possible.
+        <p className="max-w-2xl text-sm text-gray-600 sm:text-base md:text-lg">
+          We're here to help! Reach out to us through any of the channels below
+          and we'll get back to you as soon as possible.
         </p>
       </div>
 
@@ -176,7 +176,11 @@ export default function Page() {
 
             {/* Location */}
             <div className="flex items-center gap-4">
-              <img src="/location.svg" alt="Location" style={{ width: "40px", height: "40px" }} />
+              <img
+                src="/location.svg"
+                alt="Location"
+                style={{ width: "40px", height: "40px" }}
+              />
               <div>
                 <p className="font-semibold text-gray-900">Main Office</p>
                 <p className="text-sm text-gray-700">
@@ -188,7 +192,11 @@ export default function Page() {
 
             {/* Phone */}
             <div className="flex items-center gap-4">
-              <img src="/call.svg" alt="Phone" style={{ width: "40px", height: "40px" }} />
+              <img
+                src="/call.svg"
+                alt="Phone"
+                style={{ width: "40px", height: "40px" }}
+              />
               <div>
                 <p className="font-semibold text-gray-900">Phone</p>
                 <p className="text-sm text-gray-700">
@@ -201,7 +209,11 @@ export default function Page() {
 
             {/* Hours */}
             <div className="flex items-center gap-4">
-              <img src="/clock.svg" alt="Hours" style={{ width: "40px", height: "40px" }} />
+              <img
+                src="/clock.svg"
+                alt="Hours"
+                style={{ width: "40px", height: "40px" }}
+              />
               <div>
                 <p className="font-semibold text-gray-900">Business Hours</p>
                 <p className="text-sm text-gray-700">
@@ -218,10 +230,26 @@ export default function Page() {
 
             {/* Socials */}
             <div className="flex gap-4">
-              <img src="/facebook.svg" alt="Facebook" style={{ width: "40px", height: "40px" }} />
-              <img src="/twitter.svg" alt="Twitter" style={{ width: "40px", height: "40px" }} />
-              <img src="/linkedin.svg" alt="LinkedIn" style={{ width: "40px", height: "40px" }} />
-              <img src="/instagram.svg" alt="Instagram" style={{ width: "40px", height: "40px" }} />
+              <img
+                src="/facebook.svg"
+                alt="Facebook"
+                style={{ width: "40px", height: "40px" }}
+              />
+              <img
+                src="/twitter.svg"
+                alt="Twitter"
+                style={{ width: "40px", height: "40px" }}
+              />
+              <img
+                src="/linkedin.svg"
+                alt="LinkedIn"
+                style={{ width: "40px", height: "40px" }}
+              />
+              <img
+                src="/instagram.svg"
+                alt="Instagram"
+                style={{ width: "40px", height: "40px" }}
+              />
             </div>
           </div>
         </div>
@@ -233,8 +261,9 @@ export default function Page() {
         <p className="text-xl font-bold text-gray-900 md:text-2xl">
           Visit Our Office
         </p>
-        <p className="max-w-xl text-sm text-center text-gray-600 md:text-base">
-          Find us at our main office location. We'd love to meet you in person.
+        <p className="max-w-2xl text-sm text-center w-[90%] text-gray-600 md:text-base">
+          Find us at our main office location. We'd love to meet you in person
+          and discuss how we can help with your agricultural needs.{" "}
         </p>
         <div style={{ height: "48px" }}></div>
         <div className="w-full max-w-[1504px]">
@@ -257,7 +286,8 @@ export default function Page() {
           Frequently Asked Questions
         </p>
         <p className="max-w-2xl text-sm font-semibold text-center text-gray-600 md:text-base">
-          Find quick answers to common questions about contacting and working with us.
+          Find quick answers to common questions about contacting and working
+          with us.
         </p>
         <div style={{ height: "24px" }}></div>
 
@@ -286,12 +316,12 @@ export default function Page() {
           ].map((faq, idx) => (
             <div
               key={idx}
-              className="border border-gray-300 rounded-lg shadow-lg accordion-item"
+              className="border border-gray-300 max-w-2xl w-[95%] relative left-[2.5%] rounded-lg shadow-lg accordion-item"
               data-aos="fade-up"
               data-aos-delay={idx * 100}
             >
               <div style={{ height: "24px" }}></div>
-              <button className="accordion-title text-left text-lg font-semibold text-gray-800 w-[90%] left-8 relative hover:cursor-pointer flex justify-between items-center">
+              <button className="accordion-title text-left text-lg font-semibold text-gray-800 w-[90%] left-6 relative hover:cursor-pointer flex justify-between items-center">
                 {faq.title}
                 <svg
                   className="w-5 h-5 text-gray-500 transition-transform duration-300 chevron"

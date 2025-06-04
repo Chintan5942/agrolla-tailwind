@@ -1,12 +1,26 @@
 "use client";
 import Image from "next/image";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Section1() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800, // animation duration in ms
+      easing: "ease-in-out",
+      once: true, // whether animation should happen only once - while scrolling down
+      mirror: false, // whether elements should animate out while scrolling past them
+    });
+  }, []);
+
   return (
     <>
-      <section className="w-full h-[1450px] lg:h-[850px] bg-white bg-[url('/section1-BG.png')] bg-cover bg-center bg-no-repeat bg-fixed overflow-hidden md:h-255">
+      <section
+        className="w-full h-[1450px] lg:h-[850px] bg-white bg-[url('/section1-BG.png')] bg-cover bg-center bg-no-repeat bg-fixed overflow-hidden md:h-255"
+      >
         {/* Header Text */}
-        <div className="relative text-center top-20">
+        <div className="relative text-center top-20" data-aos="fade-up" data-aos-delay="100">
           <div className="flex items-center justify-center ">
             <hr className="w-12 border border-[#2E7D32]" />
             <p className="text-sm text-[#2E7D32] font-medium uppercase">
@@ -30,7 +44,11 @@ export default function Section1() {
         <div className="flex justify-center max-w-full">
           <div className="relative grid items-center grid-cols-1 gap-10 px-4 lg:grid-cols-3 top-60 max-w-[1536px]">
             {/* Left Features */}
-            <div className="flex flex-col items-center gap-10 text-center sm:items-start lg:items-end sm:text-left lg:text-right">
+            <div
+              className="flex flex-col items-center gap-10 text-center sm:items-start lg:items-end sm:text-left lg:text-right"
+              data-aos="fade-right"
+              data-aos-delay="200"
+            >
               {/* Customer Centric */}
               <div className="flex flex-col sm:flex-row items-center gap-4 max-w-xs sm:max-w-200 lg:relative lg:top-[-100px] left-5 ">
                 <Image
@@ -79,7 +97,11 @@ export default function Section1() {
             </div>
 
             {/* Centered Tree Image */}
-            <div className="justify-center hidden lg:flex">
+            <div
+              className="justify-center hidden lg:flex"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+            >
               <Image
                 src="/Section1-tree.svg"
                 alt="Tree"
@@ -90,7 +112,11 @@ export default function Section1() {
             </div>
 
             {/* Right Features */}
-            <div className="flex flex-col items-center gap-10 text-center sm:items-start sm:text-left">
+            <div
+              className="flex flex-col items-center gap-10 text-center sm:items-start sm:text-left"
+              data-aos="fade-left"
+              data-aos-delay="200"
+            >
               {/* Seamless Global Supply Chain */}
               <div className="flex flex-col sm:flex-row items-center gap-4 max-w-xs sm:max-w-none lg:relative lg:top-[-20px] left-[-20px]">
                 <Image

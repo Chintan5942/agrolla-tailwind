@@ -6,7 +6,7 @@ export default function Preloader() {
   const [show, setShow] = useState(true);
 
   useEffect(() => {
-    const minDelay = 2000;
+    const minDelay = 1500;
     const handleLoad = () => {
       setTimeout(() => setShow(false), minDelay);
     };
@@ -21,12 +21,12 @@ export default function Preloader() {
   if (!show) return null;
 
   return (
-    <div className="fixed inset-0 flex flex-col items-center justify-center bg-white">
+    <div className="fixed inset-0 flex flex-col items-center justify-center bg-[#fff]">
       <img
         src="/agrolla-logo.png"
         alt="Agrolla Logo"
-        className="w-16 h-16 animate-bounce"
-      />
+        className="w-[70px] h-[50px] animate-bounce"
+      /> <br />
       <span className="text-2xl font-bold text-[#2E7D32] tracking-wide">Loading...</span>
     </div>
   );

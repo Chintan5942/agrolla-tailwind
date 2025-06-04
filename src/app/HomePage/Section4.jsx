@@ -84,57 +84,59 @@ export default function Section4() {
           />
 
           {/* Text + Counters */}
-          <div
-            className="lg:w-[680px] lg:h-[536px] w-full flex flex-col gap-2 sm:w-[700px] flex-wrap "
-            data-aos="fade-left"
-          >
-            <br />
-            <div className="flex items-center justify-start">
-              <hr className="w-10 border border-[#2E7D32]" />
-              <p className="text-xs sm:text-sm md:text-base text-[#2E7D32] font-bold uppercase tracking-wider">
-                &nbsp;Featured Products&nbsp;
-              </p>
-              <hr className="w-10 border border-[#2E7D32]" />
-            </div>
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold text-[#111827] leading-snug">
-              <span className="text-3xl text-green-700">Agrolla Impex</span>:
-              Nurturing Quality, Cultivating Trust
-            </h1>
-            <h5 className="flex flex-wrap text-xs leading-relaxed text-gray-700 sm:text-sm md:text-base lg:text-md">
-              Agrolla Impex is a distinguished One Star Export House and a
-              leading manufacturer and exporter of peanuts, oilseeds, grains,
-              and pulses. Headquartered in Gujarat, India, we take immense pride
-              in our fully integrated operations, ensuring uncompromised
-              quality, consistency, and reliability in every shipment.
-            </h5>
-
-            {/* Counters */}
-            <div className="flex flex-wrap justify-between text-center gap-y-6">
-              {counterData.map((item, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col items-center w-1/2 md:w-1/4"
-                  data-aos="flip-up"
-                  data-aos-delay={index * 100}
+          <div className="lg:w-[680px] lg:h-[536px] w-full flex flex-col gap-2 sm:w-[700px] flex-wrap">
+            <div
+              className="w-[90%] relative left-[5%]"
+              data-aos="fade-left"
+            >
+              <br />
+              <div className="flex items-center justify-start">
+                <hr className="w-10 border border-[#2E7D32]" />
+                <p className="text-xs sm:text-sm md:text-base text-[#2E7D32] font-bold uppercase tracking-wider">
+                  &nbsp;Featured Products&nbsp;
+                </p>
+                <hr className="w-10 border border-[#2E7D32]" />
+              </div>
+              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold text-[#111827] leading-snug">
+                <span className="text-3xl text-green-700">Agrolla Impex</span>:
+                Nurturing Quality, Cultivating Trust
+              </h1>
+              <h5 className="flex flex-wrap text-xs leading-relaxed text-gray-700 sm:text-sm md:text-base lg:text-md">
+                Agrolla Impex is a distinguished One Star Export House and a
+                leading manufacturer and exporter of peanuts, oilseeds, grains,
+                and pulses. Headquartered in Gujarat, India, we take immense
+                pride in our fully integrated operations, ensuring uncompromised
+                quality, consistency, and reliability in every shipment.
+              </h5>
+              <br />
+              {/* Counters */}
+              <div className="flex flex-wrap justify-between text-center gap-y-6">
+                {counterData.map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex flex-col items-center w-1/2 md:w-1/4"
+                    data-aos="flip-up"
+                    data-aos-delay={index * 100}
+                  >
+                    <div className="text-xl font-bold text-green-700 sm:text-2xl md:text-3xl lg:text-4xl counter-number">
+                      {item.value}+
+                    </div>
+                    <div className="text-xs font-semibold text-center text-gray-700 sm:text-sm md:text-base lg:text-md">
+                      {item.label}
+                    </div>
+                  </div>
+                ))}
+              </div>
+                <br />
+              {/* Button */}
+              <div className="flex justify-center lg:justify-start">
+                <button
+                  className="bg-green-700 h-[48px] w-[154px] hover:bg-green-700/80 text-xs sm:text-sm md:text-base text-white font-medium rounded"
+                  data-aos="fade-up"
                 >
-                  <div className="text-xl font-bold text-green-700 sm:text-2xl md:text-3xl lg:text-4xl counter-number">
-                    {item.value}+
-                  </div>
-                  <div className="text-xs font-semibold text-center text-gray-700 sm:text-sm md:text-base lg:text-md">
-                    {item.label}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Button */}
-            <div className="flex justify-center lg:justify-start">
-              <button
-                className="bg-green-700 h-[48px] w-[154px] hover:bg-green-700/80 text-xs sm:text-sm md:text-base text-white font-medium rounded"
-                data-aos="fade-up"
-              >
-                Contact Us
-              </button>
+                  Contact Us
+                </button>
+              </div>
             </div>
           </div>
         </div>

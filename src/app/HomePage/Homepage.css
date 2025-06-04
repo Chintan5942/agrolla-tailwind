@@ -231,27 +231,9 @@
   }
 }
 @media (max-width: 850px) and (min-width: 768px) {
-  .hero-farmer-wrapper {
-    width: 320px !important;
-    height: 180px !important;
-    left: 6% !important;
-    bottom: 50px !important;
-  }
-  .hero-windmill {
-    height: 280px !important;
-    max-width: 90px !important;
-    bottom: 15px !important;
-  }
-  .hero-factory {
-    max-width: 80vw !important;
-    height: 320px !important;
-    bottom: 5px !important;
-  }
-  .hero-sidewing {
-    width: 60px !important;
-  }
-  .hero-wings {
-    height: 100px !important;
+  .wing{
+    position: relative;
+    left: -5px;
   }
   .groundNut {
     position: relative;
@@ -267,7 +249,7 @@
     display: none;
   }
   .words {
-    width: 70% !important;
+    width: 68% !important;
   }
     aside{
     display: none;
@@ -391,8 +373,11 @@
     position: relative;
     top: 390px;
   }
-  .sidewing {
-    display: none;
+    .sidewing {
+    width: 60px;
+    position: relative;
+    top: 515px;
+    left:45px;
   }
   .wing {
     position: relative;
@@ -431,7 +416,7 @@
   }
   .bird{
     position: relative;
-    left: 102px;
+    left: 200px;
   }
   .factory {
     height: 250px;
@@ -442,7 +427,10 @@
     height: 100px;
   }
   .sidewing {
-    display: none;
+    width: 50px;
+    position: relative;
+    top: 515px;
+    left: 50px;
   }
   .wing {
     position: relative;
@@ -490,7 +478,10 @@
     top: 410px;
   }
   .sidewing {
-    display: none;
+    width: 50px;
+    position: relative;
+    top: 475px;
+    left: 50px;
   }
   .wing {
     position: relative;

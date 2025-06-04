@@ -66,7 +66,7 @@ export default function Slider() {
               <h1 className="text-3xl font-semibold text-gray-900 md:text-4xl">
                 What Our <span className="text-green-700">Clients</span> Say
               </h1>
-              <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto lg:w-[600px]">
+              <p className="text-sm font-medium leading-relaxed text-center text-gray-600 ">
                 Hear from farmers who have transformed their agricultural
                 practices with our solutions.
               </p>

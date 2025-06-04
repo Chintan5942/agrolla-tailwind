@@ -11,64 +11,64 @@ export default function Contact() {
   return (
     <> 
     <div className="bg-gray-50 font-[Poppins] flex flex-col items-center gap-12 overflow-hidden" data-aos="fade-up">
-      <div className="text-center flex flex-col gap-4" data-aos="fade-down">
+      <div className="flex flex-col gap-4 text-center" data-aos="fade-down">
         <br /><br />
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
+        <h1 className="text-3xl font-bold text-gray-900 md:text-4xl">
           Get In <span className="text-green-700">Touch</span>
         </h1>
-        <h5 className="text-gray-600 font-semibold max-w-xl text-base md:text-lg mx-auto">
+        <h5 className="max-w-2xl mx-auto text-sm font-semibold leading-relaxed text-center w-[90%]  relative left-[5%] text-gray-600  md:text-lg ">
           Have questions about our services or products? Contact us today and
           our team will be happy to assist you.
         </h5>
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-x-10 gap-y-10 w-full max-w-screen-xl">
+      <div className="flex flex-col w-full max-w-screen-xl lg:flex-row gap-x-10 gap-y-10">
         {/* Left Form */}
         <div className="w-full lg:w-1/2 bg-white rounded-xl shadow-lg flex justify-center items-center h-[765px]" data-aos="fade-right">
           <div className="flex flex-col gap-6 w-[90%] max-w-[500px]">
             <form className="flex flex-col gap-8">
               <div className="flex flex-col gap-1">
-                <label className="text-gray-700 font-semibold">Your Name</label>
-                <div className="border-2 border-gray-300 rounded-md flex items-center h-12">
+                <label className="font-semibold text-gray-700">Your Name</label>
+                <div className="flex items-center h-12 border-2 border-gray-300 rounded-md">
                   <input
                     type="text"
                     placeholder="   Enter Your name"
-                    className="w-full h-full text-base outline-none bg-transparent pl-3"
+                    className="w-full h-full pl-3 text-base bg-transparent outline-none"
                   />
                 </div>
               </div>
 
               <div className="flex flex-col gap-1">
-                <label className="text-gray-700 font-semibold">
+                <label className="font-semibold text-gray-700">
                   Email Address
                 </label>
-                <div className="border-2 border-gray-300 rounded-md flex items-center h-12">
+                <div className="flex items-center h-12 border-2 border-gray-300 rounded-md">
                   <input
                     type="text"
                     placeholder="   Enter Your email"
-                    className="w-full h-full text-base outline-none bg-transparent pl-3"
+                    className="w-full h-full pl-3 text-base bg-transparent outline-none"
                   />
                 </div>
               </div>
 
               <div className="flex flex-col gap-1">
-                <label className="text-gray-700 font-semibold">
+                <label className="font-semibold text-gray-700">
                   Phone Number
                 </label>
-                <div className="border-2 border-gray-300 rounded-md flex items-center h-12">
+                <div className="flex items-center h-12 border-2 border-gray-300 rounded-md">
                   <input
                     type="text"
                     placeholder="   Enter Your phone number"
-                    className="w-full h-full text-base outline-none bg-transparent pl-3"
+                    className="w-full h-full pl-3 text-base bg-transparent outline-none"
                   />
                 </div>
               </div>
 
               <div className="flex flex-col gap-1">
-                <label className="text-gray-700 font-semibold">
+                <label className="font-semibold text-gray-700">
                   Service Interested In
                 </label>
-                <select className="w-full bg-gray-100 font-semibold border-2 border-gray-300 rounded-md h-12 pl-3">
+                <select className="w-full h-12 pl-3 font-semibold bg-gray-100 border-2 border-gray-300 rounded-md">
                   <option value=""> Select a service</option>
                   <option value=""> Service1</option>
                   <option value=""> Service2</option>
@@ -76,12 +76,12 @@ export default function Contact() {
               </div>
 
               <div className="flex flex-col gap-1">
-                <label className="text-gray-700 font-semibold">
+                <label className="font-semibold text-gray-700">
                   Your Message
                 </label>
                 <textarea
                   placeholder="   Enter your message"
-                  className="w-full h-32 border-2 border-gray-300 rounded-md text-base outline-none bg-transparent pl-3 pt-2 resize-none"
+                  className="w-full h-32 pt-2 pl-3 text-base bg-transparent border-2 border-gray-300 rounded-md outline-none resize-none"
                 ></textarea>
               </div>
 
@@ -94,7 +94,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full bg-green-700 text-white h-12 rounded-md text-lg font-semibold hover:bg-green-800 transition"
+                className="w-full h-12 text-lg font-semibold text-white transition bg-green-700 rounded-md hover:bg-green-800"
               >
                 Send Message
               </button>
@@ -103,10 +103,10 @@ export default function Contact() {
         </div>
 
         {/* Right Contact Info */}
- <div className="w-full lg:w-1/2 flex flex-col gap-8" data-aos="fade-left">
+ <div className="flex flex-col w-full gap-8 lg:w-1/2" data-aos="fade-left">
   {/* Address Section */}
-  <div className="bg-white rounded-xl shadow-lg h-[425px] flex flex-col justify-center " data-aos="zoom-in-up">
-    <div className="w-[90%] max-w-[500px] lg:relative lg:left-5 ">
+  <div className="bg-white rounded-xl shadow-lg h-[425px] flex flex-col justify-center" data-aos="zoom-in-up">
+    <div className="w-[90%] max-w-[500px] relative left-5 ">
       <p className="text-xl font-bold">Contact Information</p>
       <div className="gap-2">
         <div className="flex items-center gap-4 ">
@@ -151,7 +151,7 @@ export default function Contact() {
     <div className="w-[100%] max-w-[620px] h-[100%]">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d-122.4194154846816!3d37.77492977975971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f0e2c5b1%3A0x4c8b8b6e8f8b8b8b!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sus!4v1681234567890!5m2!1sen!2sus"
-        className="w-full h-full rounded-lg border-0"
+        className="w-full h-full border-0 rounded-lg"
         allowFullScreen=""
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"

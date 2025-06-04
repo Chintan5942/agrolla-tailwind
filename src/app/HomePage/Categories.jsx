@@ -2,10 +2,10 @@
 import { useEffect, useState } from "react";
 import "../HomePage/Homepage.css";
 import { FaStar, FaRegStar, FaStarHalfAlt } from "react-icons/fa";
-import productsData from "./productsData";
 import { useRouter } from "next/navigation";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import productsData from "./productsData";
 
 export default function Categories({ onCategorySelect }) {
   const [selectedCategory, setSelectedCategory] = useState("All Products");
@@ -27,11 +27,9 @@ export default function Categories({ onCategorySelect }) {
     Spices: "/spices.svg",
   };
 
-  // ✅ Calculate product count per category
   const categoryCounts = Object.keys(categoryImages).reduce((acc, category) => {
     acc[category] = productsData.filter(
-      (product) =>
-        category === "All Products" || product.category === category
+      (product) => category === "All Products" || product.category === category
     ).length;
     return acc;
   }, {});
@@ -55,20 +53,21 @@ export default function Categories({ onCategorySelect }) {
   };
 
   return (
-    <div className="relative top-20 w-[90%] mx-auto">
+    <div className="relative top-20 w-[90%] left-[5%]">
       {/* Header */}
-      <div className="text-center lg:relative lg:left-30" data-aos="fade-down">
-        <div className="flex items-center justify-center space-x-3">
+      <div className="text-center" data-aos="fade-down">
+        <div className="flex items-center justify-center gap-3 w-[100%] sm:w-[100%] ">
           <hr className="w-10 border border-[#2E7D32]" />
           <p className="text-xs sm:text-sm text-[#2E7D32] font-medium uppercase tracking-wider">
             Featured Products
           </p>
           <hr className="w-10 border border-[#2E7D32]" />
-        </div>
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] mt-6 leading-snug sm:leading-tight">
+        </div>{" "}
+        <br />
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111827] mt-6 leading-snug sm:leading-tight w-[100%]">
           Premium <span className="text-[#2E7D32]">Agricultural</span> Products
         </h2>
-        <p className="text-sm sm:text-base lg:text-lg text-[#4B5563] font-normal mt-6 leading-relaxed sm:leading-loose">
+        <p className="text-sm sm:text-base lg:text-lg text-[#4B5563] font-normal mt-6 leading-relaxed sm:leading-loose w-[100%]">
           Agrolla Impex is a distinguished One Star Export House and a leading
           <br className="hidden md:inline" />
           manufacturer and exporter of peanuts, oilseeds, grains, and pulses.
@@ -80,7 +79,11 @@ export default function Categories({ onCategorySelect }) {
         <div className="w-full px-4 lg:hidden" data-aos="fade-right">
           <div className="p-4 shadow-md bg-stone-50 rounded-xl">
             <div className="flex items-center mb-4">
-              <img src="/catagory.svg" alt="Category Icon" className="w-10 h-10" />
+              <img
+                src="/catagory.svg"
+                alt="Category Icon"
+                className="w-10 h-10"
+              />
               <span className="ml-3 text-xl font-semibold text-gray-800">
                 Select Category
               </span>
@@ -114,8 +117,14 @@ export default function Categories({ onCategorySelect }) {
         >
           {/* Header: Categories */}
           <div className="flex items-center px-4 pt-4">
-            <img src="/catagory.svg" alt="Category Icon" className="h-10 sm:h-12 lg:h-14" />
-            <span className="ml-4 text-lg font-semibold sm:text-xl lg:text-2xl">Categories</span>
+            <img
+              src="/catagory.svg"
+              alt="Category Icon"
+              className="h-10 sm:h-12 lg:h-14"
+            />
+            <span className="ml-4 text-lg font-semibold sm:text-xl lg:text-2xl">
+              Categories
+            </span>
           </div>
 
           {/* Category List */}
@@ -130,7 +139,11 @@ export default function Categories({ onCategorySelect }) {
                 data-aos="fade-right"
                 data-aos-delay={index * 50}
               >
-                <img src={categoryImages[cat]} alt={cat} className="h-10 sm:h-12 lg:h-14 catImg" />
+                <img
+                  src={categoryImages[cat]}
+                  alt={cat}
+                  className="h-10 sm:h-12 lg:h-14 catImg"
+                />
                 <div>
                   <p className="text-sm font-semibold text-gray-800 sm:text-base lg:text-lg">
                     {cat}{" "}
@@ -166,7 +179,9 @@ export default function Categories({ onCategorySelect }) {
               <p className="text-[#4B5563] text-sm lg:text-base mt-3 lg:mt-4">
                 Contact our customer support team anytime
               </p>
-              <p className="text-[#4CAF50] text-sm lg:text-base mt-2">Contact Support →</p>
+              <p className="text-[#4CAF50] text-sm lg:text-base mt-2">
+                Contact Support →
+              </p>
             </li>
           </ul>
         </aside>
@@ -174,50 +189,55 @@ export default function Categories({ onCategorySelect }) {
         {/* Product Grid */}
         <section
           className="w-full lg:w-[80%] grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 p-2 catagory-section h-[980px] overflow-scroll"
-          data-aos="fade-up"
+          // Removed data-aos from here to disable animation on product grid
         >
-          {filteredProducts.map((product, index) => {
-            const fullStars = Math.floor(product.rating);
-            const hasHalfStar = product.rating % 1 >= 0.5;
-            const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+          {filteredProducts &&
+            filteredProducts.map((product, index) => {
+              const fullStars = Math.floor(product.rating);
+              const hasHalfStar = product.rating % 1 >= 0.5;
+              const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
 
-            return (
-              <div
-                key={product.id}
-                className="bg-white rounded-2xl h-[450px] card cursor-pointer relative flex flex-col justify-between hover:shadow-lg transition-shadow duration-300"
-                onClick={() => router.push(`/Product/${product.id}`)}
-                data-aos="zoom-in"
-                data-aos-delay={index % 3 * 100}
-              >
-                <img
-                  src={product.image}
-                  alt={product.title}
-                  className="object-contain w-full h-48 rounded-xl"
-                />
-                <div className="flex items-center gap-1 mt-4">
-                  {[...Array(fullStars)].map((_, i) => (
-                    <FaStar key={`full-${i}`} className="text-yellow-500" />
-                  ))}
-                  {hasHalfStar && <FaStarHalfAlt className="text-yellow-500" />}
-                  {[...Array(emptyStars)].map((_, i) => (
-                    <FaRegStar key={`empty-${i}`} className="text-gray-300" />
-                  ))}
-                  <span className="text-[#6B7280] text-lg font-semibold">
-                    {product.reviews}
-                  </span>
+              return (
+                <div
+                  key={product.id}
+                  className="bg-white rounded-2xl h-[450px] card cursor-pointer relative flex flex-col justify-between hover:shadow-lg transition-shadow duration-300"
+                  onClick={() => router.push(`/Product/${product.id}`)}
+                  // data-aos removed here to disable animation per product card
+                  // data-aos-delay removed as well
+                >
+                  <img
+                    src={product.image}
+                    alt={product.title}
+                    className="object-contain w-full h-48 rounded-xl"
+                  />
+                  <div className="flex items-center gap-1 mt-4">
+                    {[...Array(fullStars)].map((_, i) => (
+                      <FaStar key={`full-${i}`} className="text-yellow-500" />
+                    ))}
+                    {hasHalfStar && (
+                      <FaStarHalfAlt className="text-yellow-500" />
+                    )}
+                    {[...Array(emptyStars)].map((_, i) => (
+                      <FaRegStar key={`empty-${i}`} className="text-gray-300" />
+                    ))}
+                    <span className="text-[#6B7280] text-lg font-semibold">
+                      {product.reviews}
+                    </span>
+                  </div>
+                  <h3 className="mt-4 text-2xl font-bold text-gray-800">
+                    {product.title}
+                  </h3>
+                  <p className="mt-2 text-base font-semibold text-left text-gray-600 line-clamp-3">
+                    {product.description}
+                  </p>
+                  <div className="flex justify-start mt-4">
+                    <span className="text-xs font-semibold tracking-wide text-white bg-green-600 rounded-lg flex items-center justify-center shadow-sm h-[30px] w-[100px]">
+                      {product.category}
+                    </span>
+                  </div>
                 </div>
-                <h3 className="mt-4 text-2xl font-bold text-gray-800">{product.title}</h3>
-                <p className="mt-2 text-base font-semibold text-left text-gray-600 line-clamp-3">
-                  {product.description}
-                </p>
-                <div className="flex justify-start mt-4">
-                  <span className="text-xs font-semibold tracking-wide text-white bg-green-600 rounded-lg flex items-center justify-center shadow-sm h-[30px] w-[100px]">
-                    {product.category}
-                  </span>
-                </div>
-              </div>
-            );
-          })}
+              );
+            })}
         </section>
       </div>
     </div>

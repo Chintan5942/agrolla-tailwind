@@ -16,11 +16,12 @@ export default function ImageGallery() {
             Capturing Agricultural
             <span className="text-green-800">Excellence</span>
           </h1> <br />
-          <h5 className="max-w-xl mt-5 text-sm font-normal text-gray-600 sm:text-base md:text-lg">
+          <h5 className="max-w-xl text-sm font-medium leading-relaxed text-center text-gray-600 ">
             Experience the beauty and innovation of modern agriculture through our
             lens. Each image tells a story of dedication, technology, and
             sustainable farming practices.
           </h5>
+          <br />
         </div>
         {/* Gallery 1 */}
         <div className="flex justify-center w-full ">

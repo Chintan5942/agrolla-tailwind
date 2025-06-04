@@ -7,25 +7,19 @@ export default function Section3() {
       <br />
       <br />
       {/* Move background image and bg-fixed to the outermost div */}
-      <div className="relative min-h-screen bg-[url('/section3-BG.png')] bg-no-repeat bg-cover bg-center bg-fixed">
+      <div className="relative min-h-screen bg-[url('/section3-BG.png')] bg-no-repeat bg-cover bg-fixed">
         {/* Dark overlay */}
-        <div className="absolute inset-2 bg-black/80"></div>
+        <div className="absolute inset-2 bg-black/75"></div>
 
         {/* Main content without background image or bg-fixed */}
         <div className="flex justify-center max-w-full ">
-          <div
-            className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 md:flex-row "
-            data-aos="fade-up"
-          >
+          <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 md:flex-row animate-fadeIn">
             {/* Text Content */}
             <div className="">
-              <div
-                className="text-center text-white md:text-left lg:relative lg:left-5 md:relative md:left-5 w-[90%] relative left-[5%]"
-                data-aos="fade-right"
-              >
+              <div className="text-center text-white md:text-left lg:relative lg:left-5 md:relative md:left-5 w-[90%] relative left-[5%] animate-slideInLeft">
                 <br />
                 <div className="flex justify-center lg:justify-start md:justify-start">
-                  <div className="h-10 w-[260px] lg:w-[200px] md:w-[200px] sm:w-[200px] bg-white rounded-full flex items-center justify-center text-[16px] text-[#2e7d32] font-bold">
+                  <div className="h-10 w-[260px] lg:w-[200px] md:w-[200px] sm:w-[200px] bg-white rounded-full flex items-center justify-center text-[16px] text-[#2e7d32] font-bold animate-bounce">
                     <img src="/leaf.svg" alt="leaf" className="h-5" />
                     100% ORGANIC
                   </div>
@@ -56,7 +50,7 @@ export default function Section3() {
               </div>
             </div>
             {/* Image */}
-            <div className="mt-10 md:mt-8 md:ml-[100px]" data-aos="fade-left">
+            <div className="mt-10 md:mt-8 md:ml-[100px] animate-slideInRight">
               <img
                 src="/farmer.png"
                 alt="Farmer"

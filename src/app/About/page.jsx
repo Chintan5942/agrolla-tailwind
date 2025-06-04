@@ -20,26 +20,26 @@ export default function About() {
       <div className="overflow-hidden font-poppins">
         {/* Hero Section */}
         <div className="w-full h-[1000px] bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('/abouthero.png')] bg-cover bg-bottom flex items-center overflow-hidden">
-          <div
-            className="flex flex-col items-center justify-start w-full max-w-[600px] gap-4 absolute top-[450px] lg:left-[5%]"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <h1 className="text-[48px] font-bold text-white leading-tight">
-              Nurturing Quality, Cultivating Trust
-            </h1>
-            <p className="text-[18px] font-normal w-full text-[#d3d3d3] text-start flex flex-wrap ">
-              Discover the story behind Agrolla Impex, a distinguished One Star
-              Export House and leading manufacturer of premium agricultural
-              products.
-            </p>
-            <div className="flex flex-row justify-start w-full gap-4">
-              <button className="h-[50px] w-[123px] bg-[#2E7D32] text-white text-[16px] font-semibold rounded-[8px]">
-                Our Story
-              </button>
-              <button className="h-[50px] w-[123px] bg-white text-[#1f2937] text-[16px] font-semibold rounded-[8px]">
-                Contact Us
-              </button>
+          <div className="flex flex-col items-center justify-start w-full max-w-[600px] gap-4 absolute top-[450px] lg:left-[5%]">
+            <div className="w-[90%]" data-aos="fade-up" data-aos-delay="100">
+              <h1 className="lg:text-[48px] text-4xl font-bold text-white leading-tight ">
+                Nurturing Quality, Cultivating Trust
+              </h1>{" "}
+              <br />
+              <p className="lg:text-[18px] font-normal w-full text-[#d3d3d3] text-start flex flex-wrap ">
+                Discover the story behind Agrolla Impex, a distinguished One
+                Star Export House and leading manufacturer of premium
+                agricultural products.
+              </p>{" "}
+              <br />
+              <div className="flex flex-row justify-start w-full gap-4">
+                <button className="h-[50px] w-[123px] bg-[#2E7D32] text-white text-[16px] font-semibold rounded-[8px]">
+                  Our Story
+                </button>
+                <button className="h-[50px] w-[123px] bg-white text-[#1f2937] text-[16px] font-semibold rounded-[8px]">
+                  Contact Us
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -60,68 +60,74 @@ export default function About() {
               and pulses.
             </p>
             <div className="flex flex-col items-center justify-center w-full gap-8 overflow-hidden lg:flex-row">
-              <div
-                className="flex flex-col justify-center gap-6 max-w-[728px] w-full"
-                data-aos="fade-right"
-              >
-                <p className="text-[16px] font-semibold text-[#374151] leading-[24px]">
-                  Headquartered in Gujarat, India, we take immense pride in our
-                  fully integrated operations, ensuring uncompromised quality,
-                  consistency, and reliability in every shipment.
-                </p>
-                <p className="text-[16px] font-semibold text-[#374151] leading-[24px]">
-                  Our strategic location allows us to stay directly connected
-                  with farmers, enabling real-time communication and strict
-                  quality oversight right from the cultivation phase. This
-                  hands-on approach ensures that our products meet stringent
-                  global food safety and quality standards, making us a
-                  preferred supplier across international markets.
-                </p>
-
-                <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
-                  {/* Quality Items */}
-                  {[
-                    {
-                      icon: "/state.svg",
-                      title: "State-of-the-Art Processing",
-                      desc: "Equipped with cutting-edge technology to maintain purity, freshness, and nutritional value.",
-                    },
-                    {
-                      icon: "/quality.svg",
-                      title: "Quality Control",
-                      desc: "Every batch undergoes rigorous testing to meet the highest international benchmarks.",
-                    },
-                    {
-                      icon: "/sustain.svg",
-                      title: "Sustainable Sourcing",
-                      desc: "Partnering with trusted farmers to maintain transparency and environmental responsibility.",
-                    },
-                    {
-                      icon: "/global.svg",
-                      title: "Global Distribution",
-                      desc: "Serving bulk buyers, food manufacturers, wholesalers, and retailers worldwide.",
-                    },
-                  ].map((item, index) => (
-                    <div
-                      key={index}
-                      className="flex items-start gap-4"
-                      data-aos="fade-up"
-                      data-aos-delay={100 * index}
-                    >
-                      <img src={item.icon} alt="" className="w-12 h-12 mt-1" />
-                      <div className="flex flex-col">
-                        <p className="text-[16px] font-semibold text-[#111827]">
-                          {item.title}
-                        </p>
-                        <p className="text-[14px] font-semibold text-[#4b5563]">
-                          {item.desc}
-                        </p>
+              <div className="flex flex-col justify-center gap-6 max-w-[728px] w-full">
+                <div
+                  className=" w-[90%] relative left-[5%]"
+                  data-aos="fade-right"
+                >
+                  <p className="text-[16px] font-semibold text-[#374151] leading-[24px]">
+                    Headquartered in Gujarat, India, we take immense pride in
+                    our fully integrated operations, ensuring uncompromised
+                    quality, consistency, and reliability in every shipment.
+                  </p>{" "}
+                  <br />
+                  <p className="text-[16px] font-semibold text-[#374151] leading-[24px]">
+                    Our strategic location allows us to stay directly connected
+                    with farmers, enabling real-time communication and strict
+                    quality oversight right from the cultivation phase. This
+                    hands-on approach ensures that our products meet stringent
+                    global food safety and quality standards, making us a
+                    preferred supplier across international markets.
+                  </p>{" "}
+                  <br />
+                  <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
+                    {/* Quality Items */}
+                    {[
+                      {
+                        icon: "/state.svg",
+                        title: "State-of-the-Art Processing",
+                        desc: "Equipped with cutting-edge technology to maintain purity, freshness, and nutritional value.",
+                      },
+                      {
+                        icon: "/quality.svg",
+                        title: "Quality Control",
+                        desc: "Every batch undergoes rigorous testing to meet the highest international benchmarks.",
+                      },
+                      {
+                        icon: "/sustain.svg",
+                        title: "Sustainable Sourcing",
+                        desc: "Partnering with trusted farmers to maintain transparency and environmental responsibility.",
+                      },
+                      {
+                        icon: "/global.svg",
+                        title: "Global Distribution",
+                        desc: "Serving bulk buyers, food manufacturers, wholesalers, and retailers worldwide.",
+                      },
+                    ].map((item, index) => (
+                      <div
+                        key={index}
+                        className="flex items-start gap-4"
+                        data-aos="fade-up"
+                        data-aos-delay={100 * index}
+                      >
+                        <img
+                          src={item.icon}
+                          alt=""
+                          className="w-12 h-12 mt-1"
+                        />
+                        <div className="flex flex-col">
+                          <p className="text-[16px] font-semibold text-[#111827]">
+                            {item.title}
+                          </p>
+                          <p className="text-[14px] font-semibold text-[#4b5563]">
+                            {item.desc}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
-
               <img
                 src="/aboutSection1.jpg"
                 alt=""
@@ -234,7 +240,7 @@ export default function About() {
             data-aos="fade-up"
           >
             <h2 className="text-[30px] font-bold text-center">Our Values</h2>
-            <p className="w-full max-w-2xl text-[18px] text-[#4b5563] text-center">
+            <p className=" max-w-2xl text-[18px] text-[#4b5563] text-center w-[90%]">
               At Agrolla Impex, our foundation is built on principles that
               define our commitment to excellence, integrity, and customer
               satisfaction.
@@ -587,6 +593,7 @@ export default function About() {
                           className="w-10 h-10"
                         />
                       </div>
+                      <br />
                     </div>
                   </div>
                 </div>
@@ -690,14 +697,13 @@ export default function About() {
             data-aos="fade-up"
           >
             <div className="w-[1536px]">
-              <div className="text-center">
-                {" "}
+              <div className="text-center  w-[90%] relative left-[5%]">
                 <br />
                 <br />
                 <h2 className="text-3xl font-bold text-gray-900 leading-[42px]">
                   Our Global Presence
                 </h2>
-                <p className="mt-4 text-lg text-gray-600">
+                <p className="mt-4 text-lg text-gray-600 ">
                   We export premium agricultural products to over 30 countries
                   across 5 continents.
                 </p>
@@ -740,17 +746,19 @@ export default function About() {
             </div>
             <br />
             <br />
-            <div
-              className="flex flex-col justify-center gap-4 sm:flex-row"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <button className="rounded-md bg-green-700 text-base font-semibold text-white shadow-sm hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-green-700 focus:ring-offset-2 h-[50px] w-[208px]">
-                Contact Us Today
-              </button>
-              <button className="rounded-md bg-white  text-base font-semibold text-gray-900 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 h-[50px] w-[208px]">
-                Request a Quote
-              </button>
+            <div className="flex flex-row justify-center gap-4">
+              <div
+                className="w-[90%] flex justify-center gap-6"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <button className="rounded-md bg-green-700 text-base font-semibold text-white shadow-sm hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-green-700 focus:ring-offset-2 h-[50px] w-[208px]">
+                  Contact Us Today
+                </button>
+                <button className="rounded-md bg-white  text-base font-semibold text-gray-900 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 h-[50px] w-[208px]">
+                  Request a Quote
+                </button>
+              </div>
             </div>
             <br />
             <br />
