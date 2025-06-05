@@ -16,7 +16,7 @@ export default function ImageGallery() {
             Capturing Agricultural
             <span className="text-green-800">Excellence</span>
           </h1> <br />
-          <h5 className="max-w-xl text-sm font-medium leading-relaxed text-center text-gray-600 ">
+          <h5 className="max-w-xl text-sm font-medium leading-relaxed text-center w-[90%] text-gray-600 ">
             Experience the beauty and innovation of modern agriculture through our
             lens. Each image tells a story of dedication, technology, and
             sustainable farming practices.

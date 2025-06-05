@@ -27,7 +27,7 @@ export default function Section5() {
             Quality <span className="text-green-700">Certifications</span> & Standards
           </h1>
           <br />
-          <h5 className="max-w-2xl text-sm font-medium leading-relaxed text-center text-gray-600 " data-aos="fade-up" data-aos-delay="400">
+          <h5 className="max-w-2xl text-sm font-medium leading-relaxed text-center text-gray-600 w-[90%] " data-aos="fade-up" data-aos-delay="400">
             Our commitment to excellence is backed by international certifications and quality
             standards, ensuring the highest level of product quality and safety.
           </h5>

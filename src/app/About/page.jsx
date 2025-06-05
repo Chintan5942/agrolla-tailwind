@@ -307,7 +307,7 @@ export default function About() {
             <h2 className="text-[30px] font-bold text-center">
               Our Quality Assurance Process
             </h2>
-            <p className="w-full max-w-2xl text-[18px] text-[#4b5563] text-center">
+            <p className=" max-w-2xl text-[18px] text-[#4b5563] text-center w-[90%]">
               We follow a rigorous quality control process to ensure that every
               product meets international standards.
             </p>

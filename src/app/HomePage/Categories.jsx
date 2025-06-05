@@ -86,7 +86,7 @@ export default function Categories({ onCategorySelect }) {
         </p>
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-6 mt-16 catagory-container h-[1100px]">
+      <div className="flex flex-col lg:flex-row gap-6 max-w-[1536px] catagory-container h-[1100px] relative left-[-2.5%]">
         {/* Mobile/Tablet Dropdown */}
         <div className="w-full px-4 lg:hidden" data-aos="fade-right">
           <div className="p-4 shadow-md bg-stone-50 rounded-xl">
@@ -103,7 +103,7 @@ export default function Categories({ onCategorySelect }) {
                 id="categorySelect"
                 value={selectedCategory}
                 onChange={(e) => handleCategoryClick(e.target.value)}
-                className="w-full h-[45px] appearance-none bg-white p-3 rounded-lg border border-gray-300 shadow-inner text-gray-800 transition duration-200 text-center text-xl font-semibold"
+                className="w-full  h-[45px] appearance-none bg-white p-3 rounded-lg border border-gray-300 shadow-inner text-gray-800 transition duration-200 text-center text-xl font-semibold"
               >
                 {Object.keys(categoryImages).map((cat) => (
                   <option key={cat} value={cat}>
