@@ -199,7 +199,7 @@ export default function Categories({ onCategorySelect }) {
               return (
                 <div
                   key={product.id}
-                  className="bg-white rounded-2xl h-[450px] card cursor-pointer relative flex flex-col justify-between border-2 hover:shadow-lg transition-shadow duration-300"
+                  className="bg-white rounded-2xl h-[450px] card cursor-pointer relative flex flex-col justify-between hover:shadow-lg transition-shadow duration-300"
                   onClick={() => router.push(`/Product/${product.id}`)}
                 >
                   <img
