@@ -188,7 +188,7 @@ export default function Categories({ onCategorySelect }) {
 
         {/* Product Grid */}
         <section
-          className="w-full lg:w-[75%] grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 p-2 catagory-section h-full lg:h-[980px] overflow-scroll"
+          className="w-full lg:w-[75%] grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 p-2 catagory-section h-full lg:h-[980px] overflow-scroll"
         >
           {filteredProducts &&
             filteredProducts.map((product, index) => {
@@ -199,7 +199,7 @@ export default function Categories({ onCategorySelect }) {
               return (
                 <div
                   key={product.id}
-                  className="bg-white rounded-2xl h-[450px] card cursor-pointer relative flex flex-col justify-between hover:shadow-lg transition-shadow duration-300"
+                  className="bg-white rounded-2xl h-[450px] card cursor-pointer relative flex flex-col justify-between border-2 hover:shadow-lg transition-shadow duration-300"
                   onClick={() => router.push(`/Product/${product.id}`)}
                 >
                   <img

@@ -16,33 +16,37 @@ export default function Section1() {
 
   return (
     <>
-      <section
-        className="w-full h-[1450px] lg:h-[850px] bg-white bg-[url('/section1-BG.png')] bg-cover bg-center bg-no-repeat bg-fixed overflow-hidden md:h-255"
-      >
+      <section className="w-full h-[1450px] lg:h-[850px] bg-white bg-[url('/section1-BG.png')] bg-cover bg-center bg-no-repeat bg-fixed overflow-hidden md:h-255">
         {/* Header Text */}
-        <div className="relative text-center top-20" data-aos="fade-up" data-aos-delay="100">
-          <div className="flex items-center justify-center ">
-            <hr className="w-12 border border-[#2E7D32]" />
-            <p className="text-sm text-[#2E7D32] font-medium uppercase">
-              Trusted Quality, Global Reach
+        <div
+          className="relative text-center top-20"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <center>
+            <div className="flex items-center justify-center gap-2">
+              <hr className="w-12 border border-[#2E7D32]" />
+              <p className="text-sm text-[#2E7D32] font-medium uppercase">
+                Trusted Quality, Global Reach
+              </p>
+              <hr className="w-12 border border-[#2E7D32]" />
+            </div>
+            <br />
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#111827] ">
+              Why Choose <span className="text-[#2E7D32]">Agrolla Impex</span>?
+            </h2>
+            <br />
+            <p className="text-sm sm:text-base text-[#4B5563] max-w-xl w-[90%] text-center">
+              Agrolla Impex is a distinguished One Star Export House and a
+              leading manufacturer and exporter of peanuts, oilseeds, grains,
+              and pulses.
             </p>
-            <hr className="w-12 border border-[#2E7D32]" />
-          </div>
-
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#111827] ">
-            Why Choose <span className="text-[#2E7D32]">Agrolla Impex</span>?
-          </h2>
-
-          <p className="text-sm sm:text-base text-[#4B5563] mx-auto">
-            Agrolla Impex is a distinguished One Star Export House and a leading
-            manufacturer <br /> and exporter of peanuts, oilseeds, grains, and
-            pulses.
-          </p>
+          </center>
         </div>
 
         {/* Features Section */}
         <div className="flex justify-center max-w-full">
-          <div className="relative grid items-center grid-cols-1 gap-10 px-4 lg:grid-cols-3 top-60 max-w-[1536px]">
+          <div className="relative grid items-center grid-cols-1 gap-10 px-4 lg:grid-cols-3 top-50 max-w-[1536px]">
             {/* Left Features */}
             <div
               className="flex flex-col items-center gap-10 text-center sm:items-start lg:items-end sm:text-left lg:text-right"
@@ -63,7 +67,6 @@ export default function Section1() {
                     Customer Centric Approach
                   </h3>
                   <p className="text-base font-semibold text-[#4B5563]">
-                    {" "}
                     <br />
                     Tailored Solutions, transparency, <br /> and exceptional
                     service to meet <br /> your specific requirements.

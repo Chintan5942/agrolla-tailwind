@@ -465,10 +465,12 @@ export default function About() {
                     </p>
                     <p className="text-[#4b5563] leading-[20px] font-medium text-[14px]">
                       {member.bio}
-                    </p>
+                    </p> 
+                    <br />
                   </div>
                 </div>
               ))}
+              <br />
             </div>
           </section>
           {/* Section 6 */}
