@@ -62,6 +62,12 @@ export default function RootLayout({ children }) {
             }),
           }}
         />
+        <link
+          rel="icon"
+          href="/agrolla-logo.png"
+          type="image/x-icon"
+          sizes="16x16"
+        ></link>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
