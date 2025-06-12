@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 // ✅ Default metadata for SEO
 export const metadata = {
-  title: "Agrolla Impex – Premium Seeds Supplier in Gujarat | Saurashtra",
+  title: "Agrolla Impex – Premium Seeds Supplier in India",
   description:
     "Agrolla Impex is a trusted seed production company based in Saurashtra, Gujarat. We supply high-quality seeds for agriculture across India.",
   keywords:
@@ -38,6 +38,31 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Agrolla Impex",
+              url: "https://www.agrollaimpex.com",
+              logo: "https://www.agrollaimpex.com/agrolla-logo.png",
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+91-9977333388",
+                contactType: "Customer Support",
+              },
+              address: {
+                "@type": "362001",
+                addressLocality: "Saurashtra",
+                addressRegion: "Gujarat",
+                addressCountry: "India",
+              },
+            }),
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
