@@ -243,7 +243,9 @@ export default function About() {
             <p className=" max-w-2xl text-[18px] text-[#4b5563] text-center w-[90%]">
               At Agrolla Impex, our foundation is built on principles that
               define our commitment to excellence, integrity, and customer
-              satisfaction.
+              satisfaction. Our values guide every aspect of our operations,
+              from sourcing to delivery, ensuring that we uphold the highest
+              standards in the agro-export industryion.
             </p>
             <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
               {/* Value Cards */}
@@ -251,27 +253,27 @@ export default function About() {
                 {
                   icon: "/uncompromie.svg",
                   title: "Uncompromising Quality",
-                  desc: "We adhere to the strictest international food safety standards, ensuring that every product we supply is pure, fresh, and meets global regulatory requirements.",
+                  desc: "We adhere to the strictest international food safety standards, ensuring that every product we supply is pure, fresh, and meets global regulatory requirements. Our rigorous quality control processes guarantee superior-grade agricultural commodities.",
                 },
                 {
                   icon: "/integrety.svg",
                   title: "Integrity & Transparency",
-                  desc: "We believe in honest business practices, maintaining full transparency in our sourcing, processing, and export operations. Our clients trust us for ethical dealings and fair trade.",
+                  desc: "At Agrolla Impex, our foundation is built on principles that define our commitment to excellence, integrity, and customer satisfaction. Our values guide every aspect of our operations, from sourcing to delivery, ensuring that we uphold the highest standards in the agro-export industry",
                 },
                 {
                   icon: "/centric.svg",
                   title: "Farmer-Centric Approach",
-                  desc: "Our close collaboration with farmers ensures fair compensation and access to best agricultural practices. We maintain traceability and sustainability from farm to market.",
+                  desc: "Our close collaboration with farmers ensures that they receive fair compensation and access to the best agricultural practices. By working directly with growers, we maintain traceability, sustainability, and product integrity from farm to market",
                 },
                 {
                   icon: "/innovation.svg",
                   title: "Innovation & Excellence",
-                  desc: "We continuously invest in advanced processing technology and innovative techniques to enhance product quality and efficiency, meeting the dynamic needs of the global agro-market.",
+                  desc: "We continuously invest in advanced processing technology and innovative techniques to enhance product quality and efficiency. Our dedication to excellence in operations enables us to meet the dynamic needs of the global agro-market.",
                 },
                 {
                   icon: "/customer.svg",
                   title: "Customer Commitment",
-                  desc: "Customer satisfaction is at the heart of everything we do. We provide tailored solutions, timely deliveries, and unmatched service quality, building long-term partnerships.",
+                  desc: "Customer satisfaction is at the heart of everything we do. We strive to provide tailored solutions, timely deliveries, and unmatched service quality, building long-term partnerships with our global clientele",
                 },
                 {
                   icon: "/Perspective.svg",
@@ -465,7 +467,7 @@ export default function About() {
                     </p>
                     <p className="text-[#4b5563] leading-[20px] font-medium text-[14px]">
                       {member.bio}
-                    </p> 
+                    </p>
                     <br />
                   </div>
                 </div>
