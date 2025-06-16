@@ -52,6 +52,14 @@ export default function Navbar() {
             Products
           </a>
           <a
+            href="/Blog"
+            className={`hover:underline hover:underline-offset-[5px] hover:text-[#2E7D32] ${
+              isActive("/Blog") ? "text-[#2E7D32]" : ""
+            }`}
+          >
+            Blog
+          </a>
+          <a
             href="/About"
             className={`hover:underline hover:underline-offset-[5px] hover:text-[#2E7D32] ${
               isActive("/About") ? "text-[#2E7D32]" : ""
@@ -102,6 +110,14 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
             >
               Products
+            </a>
+            <a
+              href="/Blog"
+              className={`hover:underline hover:underline-offset-[5px] hover:text-[#2E7D32] ${
+                isActive("/Blog") ? "text-[#2E7D32]" : ""
+              }`}
+            >
+              Blog
             </a>
             <a
               href="/About"

@@ -80,15 +80,12 @@ export default function HeroSection() {
       {/* Farmer + Groundnuts */}
       <div className="absolute lg:bottom-[80px] md:bottom-[85px] sm:bottom-[70px] lg:left-[12%] md:left-[12%] sm:left-[10%]">
         <div className="relative w-[600px] h-[300px] md:h-[250px] sm:h-[200px] xs:h-[180px]">
-          {/* Farmer */}
           <img
             src="/farmer.svg"
             alt="Farmer"
             loading="lazy"
             className="relative z-0 object-contain w-auto h-full farmer"
           />
-
-          {/* Groundnuts in front of Farmer */}
           <div className="absolute bottom-[0px] left-1/2 transform -translate-x-1/2 translate-y-[30%] flex items-end gap-2 sm:gap-1 z-30">
             {Array.from({ length: count }).map((_, i) => (
               <div
@@ -122,7 +119,7 @@ export default function HeroSection() {
           alt="Sidewing"
           loading="lazy"
           className="w-full h-auto sidewing"
-          style={{ height: 'auto', maxHeight: '100%' }}
+          style={{ height: "auto", maxHeight: "100%" }}
         />
       </div>
       <div className="absolute bottom-[450px] sm:bottom-[350px] left-[2.2%] h-[175px] md:h-[140px] sm:h-[100px] xs:h-[80px] w-auto">
@@ -204,6 +201,20 @@ export default function HeroSection() {
           </button>
         </div>
       </div>
+
+      {/* ✅ WhatsApp Floating Icon */}
+      <a
+        href="https://wa.me/919999999999"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed z-50 bottom-15 right-10"
+      >
+        <img
+          src="/whatsapp.svg"
+          alt="WhatsApp Chat"
+          className="transition-transform duration-300 w-50 h-50 sm:w-10 sm:h-10 hover:scale-110"
+        />
+      </a>
     </div>
   );
 }

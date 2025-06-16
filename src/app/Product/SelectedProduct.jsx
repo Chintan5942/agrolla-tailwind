@@ -1,7 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Navbar from "../HomePage/Navbar";
-import productsData from "../HomePage/productsData";
 
 const SelectedProduct = ({ product }) => {
   const [currentProduct, setCurrentProduct] = useState(product);
@@ -49,7 +47,7 @@ const SelectedProduct = ({ product }) => {
   ];
 
   return (
-    <div className="bg-white">
+    <div className="bg-white"> <br /><br /><br />
       <div className="flex justify-center w-[90%] relative left-[5%]">
         <div className="flex flex-col gap-10 max-w-[1536px] w-full lg:flex-row lg:gap-20">
           {/* Left: Product Image */}
