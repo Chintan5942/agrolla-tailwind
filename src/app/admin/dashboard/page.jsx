@@ -146,8 +146,8 @@ export default function DashboardPage() {
       {/* Main Content */}
       <main className="flex-1 overflow-auto ">
         {/* Header */}
-        <header className="bg-white shadow-sm border-b border-gray-200 px-8 py-6">
-          <div className="flex items-center justify-between">
+        <header className="bg-white shadow-sm border-b border-gray-200 px-4  py-6">
+          <div className="flex items-center justify-between p-4">
             <div>
               <h1 className="text-2xl font-bold text-gray-900">
                 Blog Dashboard

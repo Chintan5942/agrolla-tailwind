@@ -387,6 +387,81 @@ export default function AdminBlogAddEdit() {
 
             {/* Sidebar */}
             <div className="space-y-6">
+              {/* Featured Image */}
+              <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                <div className="flex items-center space-x-3 mb-4">
+                  <ImageIcon className="text-gray-400" size={20} />
+                  <h2 className="text-lg font-semibold text-gray-900">
+                    Featured Image
+                  </h2>
+                </div>
+
+                {imagePreview ? (
+                  <div className="relative">
+                    <img
+                      src={imagePreview}
+                      alt="Preview"
+                      className="w-full h-auto object-cover rounded-lg"
+                    />
+                    <button
+                      type="button"
+                      onClick={removeImage}
+                      className="absolute top-[2px] right-0 bg-red-500 hover:bg-red-600 text-white p-1 rounded-full transition-colors cursor-pointer"
+                    >
+                      <X size={16} />
+                    </button>
+                    <div className="mt-3">
+                      <label className="cursor-pointer">
+                        <input
+                          type="file"
+                          accept="image/*"
+                          onChange={handleFileInput}
+                          className="hidden"
+                        />
+                        <span className="inline-flex items-center space-x-2 text-sm text-green-600 hover:text-green-700 font-medium">
+                          <Upload size={16} />
+                          <span>Change Image</span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                ) : (
+                  <div
+                    className={`border-2 border-dashed rounded-lg p-4 text-center transition-colors ${
+                      dragActive
+                        ? "border-green-500 bg-green-50"
+                        : "border-gray-300 hover:border-gray-400"
+                    }`}
+                    onDragEnter={handleDrag}
+                    onDragLeave={handleDrag}
+                    onDragOver={handleDrag}
+                    onDrop={handleDrop}
+                  >
+                    <ImageIcon className="mx-auto h-12 w-12 text-gray-400 mb-4" />
+                    <div className="space-y-2">
+                      <p className="text-sm text-gray-600">
+                        Drag and drop an image here, or
+                      </p>
+                      <label className="cursor-pointer">
+                        <input
+                          type="file"
+                          accept="image/*"
+                          onChange={handleFileInput}
+                          className="hidden"
+                        />
+                        <span className="inline-flex items-center space-x-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+                          <Upload size={16} />
+                          <span>Choose File</span>
+                        </span>
+                      </label>
+                    </div>
+                    <p className="text-xs text-gray-500 mt-2">
+                      PNG, JPG, GIF up to 10MB
+                    </p>
+                  </div>
+                )}
+              </div>
+
               {/* Publish Settings */}
               <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
                 <h2 className="text-lg font-semibold text-gray-900 mb-4">
@@ -426,81 +501,6 @@ export default function AdminBlogAddEdit() {
                     )}
                   </button>
                 </div>
-              </div>
-
-              {/* Featured Image */}
-              <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-                <div className="flex items-center space-x-3 mb-4">
-                  <ImageIcon className="text-gray-400" size={20} />
-                  <h2 className="text-lg font-semibold text-gray-900">
-                    Featured Image
-                  </h2>
-                </div>
-
-                {imagePreview ? (
-                  <div className="relative">
-                    <img
-                      src={imagePreview}
-                      alt="Preview"
-                      className="w-full h-48 object-cover rounded-lg"
-                    />
-                    <button
-                      type="button"
-                      onClick={removeImage}
-                      className="absolute top-2 right-2 bg-red-500 hover:bg-red-600 text-white p-1 rounded-full transition-colors"
-                    >
-                      <X size={16} />
-                    </button>
-                    <div className="mt-3">
-                      <label className="cursor-pointer">
-                        <input
-                          type="file"
-                          accept="image/*"
-                          onChange={handleFileInput}
-                          className="hidden"
-                        />
-                        <span className="inline-flex items-center space-x-2 text-sm text-green-600 hover:text-green-700 font-medium">
-                          <Upload size={16} />
-                          <span>Change Image</span>
-                        </span>
-                      </label>
-                    </div>
-                  </div>
-                ) : (
-                  <div
-                    className={`border-2 border-dashed rounded-lg p-8 text-center transition-colors ${
-                      dragActive
-                        ? "border-green-500 bg-green-50"
-                        : "border-gray-300 hover:border-gray-400"
-                    }`}
-                    onDragEnter={handleDrag}
-                    onDragLeave={handleDrag}
-                    onDragOver={handleDrag}
-                    onDrop={handleDrop}
-                  >
-                    <ImageIcon className="mx-auto h-12 w-12 text-gray-400 mb-4" />
-                    <div className="space-y-2">
-                      <p className="text-sm text-gray-600">
-                        Drag and drop an image here, or
-                      </p>
-                      <label className="cursor-pointer">
-                        <input
-                          type="file"
-                          accept="image/*"
-                          onChange={handleFileInput}
-                          className="hidden"
-                        />
-                        <span className="inline-flex items-center space-x-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-medium transition-colors">
-                          <Upload size={16} />
-                          <span>Choose File</span>
-                        </span>
-                      </label>
-                    </div>
-                    <p className="text-xs text-gray-500 mt-2">
-                      PNG, JPG, GIF up to 10MB
-                    </p>
-                  </div>
-                )}
               </div>
             </div>
           </div>
