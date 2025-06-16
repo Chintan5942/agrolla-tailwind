@@ -8,7 +8,6 @@ const ProductPage = () => {
   return (
     <div className="bg-white">
       <Categories />
-      <Footer />
     </div>
   );
 };

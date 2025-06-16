@@ -10,7 +10,6 @@ import Certificate from "./Certificate";
 import ImageGallery from "./ImageGallery";
 import Slider from "./Slider";
 import Contact from "./Contact";
-import Footer from "./Footer";
 import Preloader from "./Preloader";
 
 export default function Page() {
@@ -41,7 +40,6 @@ export default function Page() {
           <ImageGallery />
           <Slider />
           <Contact />
-          <Footer />
         </>
       )}
     </>

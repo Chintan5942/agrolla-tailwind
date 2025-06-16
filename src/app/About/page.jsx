@@ -702,7 +702,6 @@ export default function About() {
         <br />
         <br />
         <br />
-        <Footer />
       </div>
     </>
   );

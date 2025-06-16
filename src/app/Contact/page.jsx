@@ -346,8 +346,6 @@ export default function Page() {
         </div>
         <div style={{ height: "72px" }}></div>
       </div>
-
-      <Footer />
     </div>
   );
 }

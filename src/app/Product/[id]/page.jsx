@@ -17,7 +17,6 @@ export default function ProductDetailPage() {
         <div className="flex items-center justify-center text-xl font-semibold text-gray-600 h-96">
           Product not found.
         </div>
-        <Footer />
       </>
     );
   }
@@ -25,7 +24,6 @@ export default function ProductDetailPage() {
   return (
     <>
       <SelectedProduct product={product} />
-      <Footer />
     </>
   );
 }

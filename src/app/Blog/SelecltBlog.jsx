@@ -28,7 +28,6 @@ export default function BlogDetailPage({blog}) {
         <p className="text-lg leading-7 text-left text-gray-700">{currentBlog.summary}</p>
       </div>
     </div>
-      <Footer/>
       </>
   );
 }
