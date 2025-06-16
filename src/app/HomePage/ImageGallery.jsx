@@ -29,7 +29,7 @@ export default function ImageGallery() {
           {/* Left big image */}
           <div className="w-full overflow-hidden lg:w-1/3 rounded-xl" data-aos="zoom-in-right">
             <img
-              src="/gal1.png"
+              src="/gal1.jpg"
               alt=""
               className="w-full h-[300px] sm:h-[450px] md:h-[600px] object-contain sm:object-cover transition-transform duration-500 hover:scale-105 rounded-xl"
             />
@@ -39,14 +39,14 @@ export default function ImageGallery() {
           <div className="flex flex-col w-full gap-12 lg:w-1/3">
             <div className="overflow-hidden rounded-xl" data-aos="zoom-in">
               <img
-                src="/gal2.png"
+                src="/gal2.jpg"
                 alt=""
                 className="w-full h-[130px] sm:h-[200px] md:h-[270px] object-contain sm:object-cover transition-transform duration-500 hover:scale-105 rounded-xl"
               />
             </div>
             <div className="overflow-hidden rounded-xl" data-aos="zoom-in">
               <img
-                src="/gal3.png"
+                src="/gal3.jpg"
                 alt=""
                 className="w-full h-[130px] sm:h-[200px] md:h-[270px] object-contain sm:object-cover transition-transform duration-500 hover:scale-105 rounded-xl"
               />
@@ -56,7 +56,7 @@ export default function ImageGallery() {
           {/* Right big image */}
           <div className="w-full overflow-hidden lg:w-1/3 rounded-xl" data-aos="zoom-in-left">
             <img
-              src="/gal4.png"
+              src="/gal4.jpg"
               alt=""
               className="w-full h-[300px] sm:h-[450px] md:h-[600px] object-contain sm:object-cover transition-transform duration-500 hover:scale-105 rounded-xl"
             />
@@ -69,7 +69,7 @@ export default function ImageGallery() {
         {/* Gallery 2 */}
         <div className="flex justify-center">
                   <div className="flex flex-wrap justify-between gap-6 max-w-[1488px]" data-aos="fade-up" data-aos-delay="400">
-          {["gal5.png", "gal6.png", "gal7.png", "gal8.png"].map((img, i) => (
+          {["gal5.jpg", "gal6.jpg", "gal7.jpg", "gal8.jpg"].map((img, i) => (
             <div key={i} className="w-[45%] sm:w-[22%] overflow-hidden rounded-xl" data-aos="flip-left" data-aos-delay={i * 100}>
               <img
                 src={`/${img}`}

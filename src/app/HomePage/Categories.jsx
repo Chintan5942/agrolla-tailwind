@@ -41,16 +41,15 @@ export default function Categories({ onCategorySelect }) {
     return acc;
   }, {});
 
-  const filteredProducts = productsData
-    .filter(
-      (product) =>
-        selectedCategory === "All Products" ||
-        product.category === selectedCategory
-    )
-    .map((product) => ({
-      ...product,
-      rating: Math.random() > 0.5 ? 4.5 : 4,
-    }));
+const filteredProducts = productsData
+  .filter((product) =>
+    selectedCategory === "All Products" || product.category === selectedCategory
+  )
+  .map((product) => ({
+    ...product,
+    rating: Math.random() > 0.5 ? 4.5 : 4, // 👈 PROBLEM
+  }));
+
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
