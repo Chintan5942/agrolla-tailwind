@@ -23,16 +23,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         {/* Google Translate Widget */}
-        <GoogleTranslate />
+        {/* <GoogleTranslate /> */}
 
         {/* Navbar always on top */}
         <Navbar />
-
         {/* Main page content */}
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

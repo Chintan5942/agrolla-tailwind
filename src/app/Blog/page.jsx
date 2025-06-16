@@ -1,48 +1,73 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import BlogData from "../Blog/BlogData";
-import Footer from "../HomePage/Footer";
+import { supabase } from "@/lib/supabaseClient";
 
 export default function BlogPage() {
+  const [blogs, setBlogs] = useState([]);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      console.log(supabase);
+      const { data, error } = await supabase.from("Blog").select("*");
+
+      if (error) {
+        console.error("Error fetching blogs:", error);
+      } else {
+        console.log(data);
+        setBlogs(data);
+      }
+    };
+    fetchBlogs();
+  }, []);
+
   return (
     <>
-      <div className="min-h-screen px-4 py-16 bg-gray-50">
-        <div className="mx-auto max-w-[80%] relative left-[10%] ">
-          {/* Page Header */}
-          <div className="mb-16 text-center">
-            <br />
-            <h1 className="mb-4 text-5xl font-bold text-gray-900"> Blog</h1>
-          </div>
-          <br />
-          <br />
-          {/* Blog Grid */}
-          <div className="flex justify-center ">
-            <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 w-[90%]">
-              {BlogData.map((post) => (
-                <div key={post.id} className="overflow-hidden rounded-xl ">
-                  <img
-                    src={post.image}
-                    alt={post.title}
-                    className="object-cover w-full h-65 sm:h-64 md:h-60 rounded-xl"
-                  />
-                  <div className="p-6">
-                    <br />
-                    <p className="mb-4 font-semibold leading-5 text-gray-600">
-                      {post.summary}
-                    </p>
+      <div className="flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 pt-28 pb-16 mt-10">
+        {/* Page Title */}
+        <div className="text-center mb-16 max-w-3xl">
+          <h1 className="text-5xl font-bold text-gray-900 mb-4">Blog</h1>
+          <p className="text-lg text-gray-600">
+            Explore insights, tutorials, and stories from our team. Stay
+            informed and inspired with our latest blog posts.
+          </p>
+        </div>
 
-                    <Link
-                      href={`/Blog/${post.id}`}
-                      className="inline-flex items-center font-bold leading-10 tracking-wide"
-                    >
-                      Read more <b>↗</b>
-                    </Link>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+        {/* Blog Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl w-full mt-10">
+          {blogs.map((post) => (
+            <article key={post.id} className="group">
+              {/* Image */}
+              <div className="relative overflow-hidden rounded-lg mb-6 aspect-[4/3]">
+                <img
+                  src={post.image}
+                  alt={post.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+
+              {/* Content */}
+              <div className="space-y-4 text-center">
+                <h2 className="text-xl font-semibold text-gray-900 leading-tight group-hover:text-green-600 transition-colors">
+                  {post.title}
+                </h2>
+
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {post.summary}
+                </p>
+
+                <Link
+                  href={`/Blog/${post.id}`}
+                  className="inline-flex items-center text-gray-900 font-medium hover:text-green-600 transition-colors group/link"
+                >
+                  Read Post
+                  <span className="ml-2 group-hover/link:translate-x-1 transition-transform">
+                    ↗
+                  </span>
+                </Link>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </>
