@@ -129,7 +129,7 @@ export default function About() {
                 </div>
               </div>
               <img
-                src="/aboutSection1.jpg"
+                src="/aboutSection1.jpg"  
                 alt=""
                 className="w-full max-w-[728px] h-[613px] rounded-[8px]"
                 data-aos="fade-left"
@@ -229,7 +229,7 @@ export default function About() {
                     deliver trust, excellence, and a commitment to quality in
                     every shipment."
                   </p>{" "}
-                  <br />
+                  <br />  
                 </div>
               </div>
             </div>
@@ -287,7 +287,7 @@ export default function About() {
                   data-aos="fade-up"
                   data-aos-delay={100 * (index % 3)}
                 >
-                  <div className="relative left-[5%] flex flex-col w-[90%]  overflow-hidden">
+                  <div className="relative left-[5%] flex flex-col w-[90%]  overflow-hidden  h-[200px]">
                     <img src={item.icon} alt="" className="w-14 h-14" /> <br />
                     <h3 className="text-xl font-semibold">{item.title}</h3>{" "}
                     <br />
@@ -350,7 +350,7 @@ export default function About() {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="flex gap-6 md:gap-8"
+                  className="flex gap-6 md:gap-8 "
                   data-aos="fade-up"
                   data-aos-delay={100 * index}
                 >
@@ -622,7 +622,7 @@ export default function About() {
             <br />
             <br />
           </div>
-          {/* Section 7 */}
+          {/* Section 6 */}
           <div
             className="relative flex justify-center w-full overflow-hidden"
             data-aos="fade-up"
@@ -659,7 +659,7 @@ export default function About() {
               <br />
             </div>
           </div>
-          {/* Section 8 */}
+          {/* Section 7 */}
           <div
             className="relative w-full overflow-hidden bg-green-50"
             data-aos="fade-up"
@@ -696,12 +696,6 @@ export default function About() {
             <br />
           </div>
         </div>
-        {/* Footer */}
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
       </div>
     </>
   );

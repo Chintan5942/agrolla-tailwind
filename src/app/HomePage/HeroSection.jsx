@@ -202,19 +202,24 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* ✅ WhatsApp Floating Icon */}
-      <a
-        href="https://wa.me/919999999999"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed z-50 bottom-15 right-10"
-      >
-        <img
-          src="/whatsapp.svg"
-          alt="WhatsApp Chat"
-          className="transition-transform duration-300 w-50 h-50 sm:w-10 sm:h-10 hover:scale-110"
-        />
-      </a>
+{/* ✅ Enhanced WhatsApp Floating Icon */}
+<a
+  href="https://wa.me/919999999999"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="fixed z-50 flex items-center space-x-3 bottom-6 right-6 group sm:space-x-2"
+>
+  {/* Chat bubble text */}
+  <div className="hidden sm:flex items-center bg-white text-[#25D366] rounded-md shadow-md text-xl font-semibold  w-[150px] h-[40px]   justify-around">
+    Let’s Chat
+    <img
+      src="/whatsapp.svg"
+      alt="WhatsApp"
+      className="w-7 h-7 sm:w-6 sm:h-6"
+    />
+  </div>
+</a>
+
     </div>
   );
 }
