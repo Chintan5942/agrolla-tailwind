@@ -15,10 +15,10 @@ export default function BlogDetailPage({blog}) {
 
   return (
     <>
-    <div className="flex justify-center px-4 py-16 bg-white">
+    <div className="flex justify-center px-4 py-16 bg-white w-[90%] relative left-[5%]">
       <div className="max-w-4xl mx-auto">
-        <h1 className="mb-6 text-4xl font-bold text-gray-800 leading-15">{currentBlog.title}</h1> 
-        <h1 className="mb-6 font-bold text-gray-800  text-md w-[18%] leading-8">{currentBlog.date}</h1> 
+        <h1 className="mb-6 font-bold text-gray-800 lg:text-4xl sm:text-2xl">{currentBlog.title}</h1> 
+        <h1 className="mb-6 font-bold text-gray-800 text-md">{currentBlog.date}</h1> 
         <img
           src={currentBlog.image}
           alt={currentBlog.title}
