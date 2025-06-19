@@ -127,7 +127,7 @@
 // }
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { supabase } from "@/lib/supabaseClient";
 import Link from "next/link";
@@ -145,7 +145,7 @@ import {
   Edit3,
 } from "lucide-react";
 
-export default function AdminBlogAddEdit() {
+function AdminBlogAddEditContain() {
   const [formData, setFormData] = useState({
     title: "",
     summary: "",
@@ -507,5 +507,18 @@ export default function AdminBlogAddEdit() {
         </form>
       </main>
     </div>
+  );
+}
+export default function AdminBlogAddEdit() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-500"></div>
+        </div>
+      }
+    >
+      <AdminBlogAddEditContain />
+    </Suspense>
   );
 }

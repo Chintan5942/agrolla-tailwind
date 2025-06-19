@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { supabase } from "@/lib/supabaseClient";
 import Link from "next/link";
@@ -19,8 +19,7 @@ import {
   Calendar,
   Save,
 } from "lucide-react";
-import { useParams } from "next/navigation";
-export default function AddProduct() {
+function AddProductContent() {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const [dragActive, setDragActive] = useState(false);
@@ -46,6 +45,7 @@ export default function AddProduct() {
     packagingShipping: "",
     nutritionalInfo: "",
   });
+
   useEffect(() => {
     const fetchProduct = async () => {
       if (!productId) return;
@@ -179,50 +179,50 @@ export default function AddProduct() {
       router.push("/admin/dashboard");
     }
   };
-  const handleCSVUpload = async (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
 
-    Papa.parse(file, {
-      header: true,
-      skipEmptyLines: true,
-      complete: async function (results) {
-        const products = results.data.map((row) => ({
-          title: row.title || "",
-          description: row.description || "",
-          category: row.category || "",
-          image: row.image || "",
-          images: row.images ? JSON.parse(row.images) : [],
-          more_image: row.moreImage ? JSON.parse(row.moreImage) : [],
-          rating: row.rating ? Number(row.rating) : 0,
-          reviews: row.reviews ? Number(row.reviews) : 0,
-          highlights: row.highlights ? JSON.parse(row.highlights) : [],
-          features: row.features ? JSON.parse(row.features) : [],
-          applications: row.applications || "",
-          about_product: row.aboutProduct || "",
-          overview: row.overview || "",
-          premium_quality: row.premiumQuality || "",
-          specifications: row.specifications || "",
-          packaging_shipping: row.packagingShipping || "",
-          nutritional_info: row.nutritionalInfo || "",
-        }));
+  // const handleCSVUpload = async (e) => {
+  //   const file = e.target.files[0];
+  //   if (!file) return;
 
-        const { error } = await supabase.from("products").insert(products);
+  //   Papa.parse(file, {
+  //     header: true,
+  //     skipEmptyLines: true,
+  //     complete: async function (results) {
+  //       const products = results.data.map((row) => ({
+  //         title: row.title || "",
+  //         description: row.description || "",
+  //         category: row.category || "",
+  //         image: row.image || "",
+  //         images: row.images ? JSON.parse(row.images) : [],
+  //         more_image: row.moreImage ? JSON.parse(row.moreImage) : [],
+  //         rating: row.rating ? Number(row.rating) : 0,
+  //         reviews: row.reviews ? Number(row.reviews) : 0,
+  //         highlights: row.highlights ? JSON.parse(row.highlights) : [],
+  //         features: row.features ? JSON.parse(row.features) : [],
+  //         applications: row.applications || "",
+  //         about_product: row.aboutProduct || "",
+  //         overview: row.overview || "",
+  //         premium_quality: row.premiumQuality || "",
+  //         specifications: row.specifications || "",
+  //         packaging_shipping: row.packagingShipping || "",
+  //         nutritional_info: row.nutritionalInfo || "",
+  //       }));
 
-        if (error) {
-          alert("Upload failed: " + error.message);
-        } else {
-          alert(`${products.length} products added successfully.`);
-          router.push("/admin/dashboard");
-        }
-      },
-      error: function (err) {
-        console.error("CSV parse error:", err);
-        alert("Failed to parse CSV.");
-      },
-    });
-  };
+  //       const { error } = await supabase.from("products").insert(products);
 
+  //       if (error) {
+  //         alert("Upload failed: " + error.message);
+  //       } else {
+  //         alert(`${products.length} products added successfully.`);
+  //         router.push("/admin/dashboard");
+  //       }
+  //     },
+  //     error: function (err) {
+  //       console.error("CSV parse error:", err);
+  //       alert("Failed to parse CSV.");
+  //     },
+  //   });
+  // };
   return (
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white shadow-sm border-b border-gray-200">
@@ -538,5 +538,18 @@ export default function AddProduct() {
         </form>
       </main>
     </div>
+  );
+}
+export default function AddProduct() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-500"></div>
+        </div>
+      }
+    >
+      <AddProductContent />
+    </Suspense>
   );
 }
