@@ -1,18 +1,18 @@
-'use client';
+"use client";
 
-import { supabase } from '@/lib/supabaseClient';
-import { useEffect } from 'react';
+import { supabase } from "@/lib/supabaseClient";
+import { useEffect } from "react";
 
 export default function GoogleLogin() {
   const handleGoogleLogin = async () => {
     const { error } = await supabase.auth.signInWithOAuth({
-      provider: 'google',
+      provider: "google",
       options: {
-        redirectTo: 'http://localhost:3000/auth/callback', // ✅ Set this in your Supabase dashboard too
+        redirectTo: "https://agrolla-tailwind-liard.vercel.app/auth/callback", // ✅ Set this in your Supabase dashboard too
       },
     });
 
-    if (error) console.error('Google login error:', error.message);
+    if (error) console.error("Google login error:", error.message);
   };
 
   return (
