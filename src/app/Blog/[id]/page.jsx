@@ -1,17 +1,16 @@
 "use client";
-import { useParams } from "next/navigation";
+
 import { useEffect, useState } from "react";
-import { supabase } from "@/lib/supabaseClient";
+import { supabase } from "@/lib/supabaseClient"; // Ensure this import is correct
 import { ArrowLeft, Calendar, Clock, MessageCircle } from "lucide-react";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation"; // Use Next.js's useRouter
 
 export default function BlogPostPage() {
-  const { id } = useParams();
   const router = useRouter();
-  const [currentBlog, setCurrentBlog] = useState([]);
-  const [loading, setLoading] = useState(true);
-  // Ensure both sides are strings for comparison
-  // const blog = BlogData.find((e) => String(e.id) === String(id));
+  const { id } = useParams(); // Use useRouter() to get the query params
+  const [currentBlog, setCurrentBlog] = useState(null); // Initialize as null
+  const [loading, setLoading] = useState(true); // Loading state for data fetching
+
   const fetchBlog = async (id) => {
     const { data, error } = await supabase
       .from("Blog")
@@ -26,19 +25,22 @@ export default function BlogPostPage() {
 
     return data;
   };
+
   useEffect(() => {
     if (id) {
       fetchBlog(id).then((blogData) => {
         if (blogData) {
-          setCurrentBlog(blogData); // Or setBlog(blogData) if you're storing it
+          setCurrentBlog(blogData);
           setLoading(false);
         }
       });
     }
-  }, [id]);
+  }, [id]); // Re-run effect when 'id' changes
+
   const handleGoBack = () => {
-    router.back();
+    router.back(); // Navigate back to the previous page
   };
+
   const formatDate = (dateString) => {
     return new Date(dateString).toLocaleDateString("en-US", {
       year: "numeric",
@@ -46,36 +48,21 @@ export default function BlogPostPage() {
       day: "numeric",
     });
   };
-  if (!currentBlog) {
+
+  if (!currentBlog && loading == false) {
     return (
       <div className="flex items-center justify-center min-h-screen">
         <p className="text-lg text-red-500">Blog not found</p>
       </div>
     );
   }
-  if (loading) {
-    return (
-      <>
-        {/* Top Loading Bar */}
-        <div className="fixed top-0 left-0 w-full h-2 bg-green-500 animate-pulse z-50"></div>
 
-        {/* Skeleton Loader */}
-        <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-6 animate-pulse">
-          <div className="h-6 w-1/3 bg-gray-300 rounded"></div>
-          <div className="h-10 w-full bg-gray-300 rounded"></div>
-          <div className="h-4 w-1/2 bg-gray-200 rounded"></div>
-          <div className="h-48 w-full bg-gray-200 rounded-xl"></div>
-          <div className="space-y-4">
-            {Array.from({ length: 4 }).map((_, i) => (
-              <div key={i} className="h-5 bg-gray-200 rounded w-full"></div>
-            ))}
-          </div>
-        </main>
-      </>
-    );
-  }
   return (
     <>
+      {loading && (
+        <div className="fixed top-0 left-0 w-full h-2 bg-green-500 animate-pulse z-50"></div>
+      )}
+
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Back Button */}
         <div className="mb-8">
@@ -95,14 +82,14 @@ export default function BlogPostPage() {
         <article className="bg-white">
           <header className="mb-8">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
-              {currentBlog.title}
+              {currentBlog?.title}
             </h1>
 
             {/* Meta Information */}
             <div className="flex items-center space-x-6 text-gray-600 mb-8">
               <div className="flex items-center space-x-2">
                 <Calendar size={16} />
-                <span className="text-sm">{formatDate(currentBlog.date)}</span>
+                <span className="text-sm">{formatDate(currentBlog?.date)}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Clock size={16} />
@@ -113,7 +100,7 @@ export default function BlogPostPage() {
             {/* Summary */}
             <div className="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg mb-8">
               <p className="text-lg text-gray-700 leading-relaxed font-medium">
-                {currentBlog.summary}
+                {currentBlog?.summary}
               </p>
             </div>
           </header>
@@ -121,8 +108,8 @@ export default function BlogPostPage() {
           {/* Featured Image */}
           <div className="mb-10">
             <img
-              src={currentBlog.image}
-              alt={currentBlog.title}
+              src={currentBlog?.image}
+              alt={currentBlog?.title}
               className="w-full max-h-[500px] object-cover rounded-xl shadow-lg"
             />
           </div>
