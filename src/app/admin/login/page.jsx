@@ -8,7 +8,7 @@ export default function GoogleLogin() {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
-        redirectTo: "https://agrolla-tailwind-liard.vercel.app/auth/callback", // ✅ Set this in your Supabase dashboard too
+        redirectTo: "https://agrollaimpex.com/auth/callback", // ✅ Set this in your Supabase dashboard too
       },
     });
 
