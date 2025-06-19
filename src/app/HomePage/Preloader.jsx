@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect, useState } from "react";
 
 export default function Preloader() {
@@ -21,13 +20,21 @@ export default function Preloader() {
   if (!show) return null;
 
   return (
-    <div className="fixed inset-0 flex flex-col items-center justify-center bg-[#fff]">
+    <div className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#E8F5E9]">
+      {/* Logo */}
       <img
         src="/agrolla-logo.png"
         alt="Agrolla Logo"
-        className="w-[70px] h-[50px] animate-bounce"
-      /> <br />
-      <span className="text-2xl font-bold text-[#2E7D32] tracking-wide">Loading...</span>
+        className="w-[80px] h-[50px] mb-6"
+      />
+
+      {/* Spinner */}
+      <div className="w-12 h-12 border-4 border-green-600 border-t-transparent rounded-full animate-spin mb-4" />
+
+      {/* Text */}
+      <span className="text-xl font-semibold text-green-800 tracking-wide">
+        Preparing Agrolla...
+      </span>
     </div>
   );
 }

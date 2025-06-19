@@ -57,7 +57,7 @@ export default function Slider() {
     <>
       <br />
       <br />
-      <div className="bg-white max-w-[1920px] overflow-hidden">
+      <div className="bg-white max-w-[1920px] overflow-hidden px-4">
         <div>
           <div className="text-center" data-aos="fade-down">
             <center>
@@ -91,12 +91,12 @@ export default function Slider() {
                 }}
                 autoplay={{ delay: 900, disableOnInteraction: false }}
                 modules={[Pagination, Autoplay]}
-                className="h-[350px]"
+                className=""
               >
                 {testimonials.concat(testimonials).map((item, index) => (
-                  <SwiperSlide key={index}>
+                  <SwiperSlide key={index} className="min-h-[400px]">
                     <div
-                      className="bg-white rounded-xl shadow-xl p-6 transition-all duration-300 hover:shadow-2xl h-[275px] w-full max-w-[450px] mx-auto flex flex-col lg:relative lg:top-10"
+                      className="bg-white rounded-xl shadow-xl p-6 transition-all duration-300 hover:shadow-2xl w-full max-w-[450px] mx-auto flex flex-col lg:relative lg:top-10"
                       data-aos="zoom-in-up"
                     >
                       <br />

@@ -1,30 +1,49 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import "../HomePage/Homepage.css";
 import { FaStar, FaRegStar, FaStarHalfAlt } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import productsData from "./productsData";
+import { supabase } from "@/lib/supabaseClient";
 
 export default function Categories({ onCategorySelect }) {
   const [selectedCategory, setSelectedCategory] = useState("All Products");
+  const [products, setProducts] = useState([]);
+  const [categories, setCategories] = useState(["All Products"]);
   const router = useRouter();
-
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
-    AOS.init({
-      duration: 800,
-      easing: "ease-in-out",
-      once: false,
-    });
+    AOS.init({ duration: 800, easing: "ease-in-out", once: false });
   }, []);
 
-  // Refresh AOS on category change
   useEffect(() => {
     setTimeout(() => {
       AOS.refresh();
-    }, 100); // Slight delay ensures DOM update
+    }, 100);
   }, [selectedCategory]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      setLoading(true);
+      const { data, error } = await supabase.from("products").select("*");
+      if (!error) {
+        setProducts(data);
+
+        const uniqueCategories = [
+          "All Products",
+          ...Array.from(new Set(data.map((p) => p.category).filter(Boolean))),
+        ];
+        setCategories(uniqueCategories);
+        setLoading(false);
+      } else {
+        console.error("Failed to fetch products:", error.message);
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
+  }, []);
 
   const categoryImages = {
     "All Products": "/all-product.svg",
@@ -34,37 +53,39 @@ export default function Categories({ onCategorySelect }) {
     Spices: "/spices.svg",
   };
 
-  const categoryCounts = Object.keys(categoryImages).reduce((acc, category) => {
-    acc[category] = productsData.filter(
-      (product) => category === "All Products" || product.category === category
-    ).length;
-    return acc;
-  }, {});
+  const categoryCounts = useMemo(() => {
+    return categories.reduce((acc, category) => {
+      acc[category] =
+        category === "All Products"
+          ? products.length
+          : products.filter((p) => p.category === category).length;
+      return acc;
+    }, {});
+  }, [products, categories]);
 
-const filteredProducts = productsData
-  .filter((product) =>
-    selectedCategory === "All Products" || product.category === selectedCategory
-  )
-  .map((product) => ({
-    ...product,
-    rating: Math.random() > 0.5 ? 4.5 : 4, // 👈 PROBLEM
-  }));
-
+  const filteredProducts = useMemo(() => {
+    return products
+      .filter(
+        (product) =>
+          selectedCategory === "All Products" ||
+          product.category === selectedCategory
+      )
+      .map((product) => ({
+        ...product,
+        rating: product.rating || 4.5,
+      }));
+  }, [products, selectedCategory]);
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
     if (onCategorySelect && category !== "All Products") {
       onCategorySelect(category);
     }
-
-    // Optional second refresh
-    setTimeout(() => {
-      AOS.refresh();
-    }, 100);
+    setTimeout(() => AOS.refresh(), 100);
   };
 
   return (
-    <div className="relative top-20 w-[90%] left-[5%]">
+    <div className="relative mt-[100px] w-[90%] left-[5%]">
       {/* Header */}
       <div className="text-center" data-aos="fade-down">
         <div className="flex items-center justify-center w-full gap-3">
@@ -91,7 +112,11 @@ const filteredProducts = productsData
           <div className="p-4 shadow-md bg-stone-50 rounded-xl">
             <br />
             <div className="flex items-center mb-4">
-              <img src="/catagory.svg" alt="Category Icon" className="w-10 h-10" />
+              <img
+                src="/catagory.svg"
+                alt="Category Icon"
+                className="w-10 h-10"
+              />
               <span className="ml-3 text-xl font-semibold text-gray-800">
                 Select Category
               </span>
@@ -102,7 +127,7 @@ const filteredProducts = productsData
                 id="categorySelect"
                 value={selectedCategory}
                 onChange={(e) => handleCategoryClick(e.target.value)}
-                className="w-full  h-[45px] appearance-none bg-white p-3 rounded-lg border border-gray-300 shadow-inner text-gray-800 transition duration-200 text-center text-xl font-semibold"
+                className="w-full appearance-none bg-white p-3 rounded-lg border border-gray-300 shadow-inner text-gray-800 transition duration-200 text-center text-xl font-semibold"
               >
                 {Object.keys(categoryImages).map((cat) => (
                   <option key={cat} value={cat}>
@@ -125,7 +150,11 @@ const filteredProducts = productsData
           data-aos="fade-right"
         >
           <div className="flex items-center">
-            <img src="/catagory.svg" alt="Category Icon" className="h-10 sm:h-12 lg:h-14" />
+            <img
+              src="/catagory.svg"
+              alt="Category Icon"
+              className="h-10 sm:h-12 lg:h-14"
+            />
             <span className="ml-4 text-lg font-semibold sm:text-xl lg:text-2xl">
               Categories
             </span>
@@ -142,7 +171,11 @@ const filteredProducts = productsData
                 data-aos="fade-right"
                 data-aos-delay={index * 50}
               >
-                <img src={categoryImages[cat]} alt={cat} className="h-10 sm:h-12 lg:h-14 catImg" />
+                <img
+                  src={categoryImages[cat]}
+                  alt={cat}
+                  className="h-10 sm:h-12 lg:h-14 catImg"
+                />
                 <div>
                   <p className="text-sm font-semibold text-gray-800 sm:text-base lg:text-lg">
                     {cat}{" "}
@@ -186,52 +219,72 @@ const filteredProducts = productsData
         </aside>
 
         {/* Product Grid */}
-        <section
-          className="w-full lg:w-[75%] grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 p-2 catagory-section h-full lg:h-[980px] overflow-scroll"
-        >
-          {filteredProducts &&
-            filteredProducts.map((product, index) => {
-              const fullStars = Math.floor(product.rating);
-              const hasHalfStar = product.rating % 1 >= 0.5;
-              const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
-
-              return (
+        <section className="w-full lg:w-[75%] grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 p-2 catagory-section h-full lg:h-[980px] overflow-scroll">
+          {loading
+            ? Array.from({ length: 6 }).map((_, i) => (
                 <div
-                  key={product.id}
-                  className="bg-white rounded-2xl h-[450px] card cursor-pointer relative flex flex-col justify-between hover:shadow-lg transition-shadow duration-300"
-                  onClick={() => router.push(`/Product/${product.id}`)}
+                  key={i}
+                  className="animate-pulse bg-white rounded-2xl h-[450px] p-4 flex flex-col justify-between shadow-sm"
                 >
-                  <img
-                    src={product.image}
-                    alt={product.title}
-                    className="object-contain w-full h-48 rounded-xl"
-                  />
-                  <div className="flex items-center gap-1 mt-4">
-                    {[...Array(fullStars)].map((_, i) => (
-                      <FaStar key={`full-${i}`} className="text-yellow-500" />
-                    ))}
-                    {hasHalfStar && <FaStarHalfAlt className="text-yellow-500" />}
-                    {[...Array(emptyStars)].map((_, i) => (
-                      <FaRegStar key={`empty-${i}`} className="text-gray-300" />
-                    ))}
-                    <span className="text-[#6B7280] text-lg font-semibold">
-                      {product.reviews}
-                    </span>
-                  </div>
-                  <h3 className="mt-4 text-2xl font-bold text-gray-800">
-                    {product.title}
-                  </h3>
-                  <p className="mt-2 text-base font-semibold text-left text-gray-600 line-clamp-3">
-                    {product.description}
-                  </p>
-                  <div className="flex justify-start mt-4">
-                    <span className="text-xs font-semibold tracking-wide text-white bg-green-600 rounded-lg flex items-center justify-center shadow-sm h-[30px] w-[100px]">
-                      {product.category}
-                    </span>
-                  </div>
+                  <div className="h-48 bg-gray-200 rounded-xl mb-4"></div>
+                  <div className="h-5 bg-gray-200 rounded w-3/4 mb-2"></div>
+                  <div className="h-4 bg-gray-200 rounded w-1/2 mb-4"></div>
+                  <div className="h-4 bg-gray-200 rounded w-full mb-2"></div>
+                  <div className="h-4 bg-gray-200 rounded w-5/6 mb-2"></div>
+                  <div className="h-8 bg-gray-300 rounded-lg w-[100px] mt-auto"></div>
                 </div>
-              );
-            })}
+              ))
+            : filteredProducts &&
+              filteredProducts.map((product, index) => {
+                const fullStars = Math.floor(product.rating);
+                const hasHalfStar = product.rating % 1 >= 0.5;
+                const emptyStars = Math.max(
+                  0,
+                  5 - fullStars - (hasHalfStar ? 1 : 0)
+                );
+
+                return (
+                  <div
+                    key={product.id}
+                    className="bg-white rounded-2xl h-[450px] card cursor-pointer relative flex flex-col justify-between hover:shadow-lg transition-shadow duration-300"
+                    onClick={() => router.push(`/Product/${product.id}`)}
+                  >
+                    <img
+                      src={product.image}
+                      alt={product.title}
+                      className="object-contain w-full h-48 rounded-xl"
+                    />
+                    <div className="flex items-center gap-1 mt-4">
+                      {[...Array(fullStars)].map((_, i) => (
+                        <FaStar key={`full-${i}`} className="text-yellow-500" />
+                      ))}
+                      {hasHalfStar && (
+                        <FaStarHalfAlt className="text-yellow-500" />
+                      )}
+                      {[...Array(emptyStars)].map((_, i) => (
+                        <FaRegStar
+                          key={`empty-${i}`}
+                          className="text-gray-300"
+                        />
+                      ))}
+                      <span className="text-[#6B7280] text-lg font-semibold">
+                        {product.reviews}
+                      </span>
+                    </div>
+                    <h3 className="mt-4 text-2xl font-bold text-gray-800">
+                      {product.title}
+                    </h3>
+                    <p className="mt-2 text-base font-semibold text-left text-gray-600 line-clamp-3">
+                      {product.description}
+                    </p>
+                    <div className="flex justify-start mt-4">
+                      <span className="text-xs font-semibold tracking-wide text-white bg-green-600 rounded-lg flex items-center justify-center shadow-sm h-[30px] w-[100px]">
+                        {product.category}
+                      </span>
+                    </div>
+                  </div>
+                );
+              })}
         </section>
       </div>
     </div>

@@ -164,17 +164,21 @@ export default function HeroSection() {
         <div className="space-y-2 sm:space-y-3 md:space-y-4">
           <h1
             className={`text-[#111827] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[60px] font-bold transition-all duration-700 delay-[300ms] ${
-              animateText ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              animateText
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
             }`}
           >
-            Revolutionizing
+            Global
           </h1>
           <h1
             className={`text-[#2E7D32] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[60px] font-bold transition-all duration-700 delay-[600ms] ${
-              animateText ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              animateText
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
             }`}
           >
-            Agriculture
+            Agriculture Grains
           </h1>
         </div>
         <br />
@@ -183,9 +187,10 @@ export default function HeroSection() {
             animateText ? "opacity-100" : "opacity-0"
           }`}
         >
-          Agrolla delivers cutting-edge agricultural solutions that maximize
-          yield, minimize environmental impact, and transform farming
-          practices for a sustainable future.
+          Agrolla is proud to export premium-quality oilseeds, grains, and
+          pulses worldwide — bridging India’s rich farming heritage with global
+          demand through reliable sourcing, strict quality control, and
+          sustainable practices.
         </p>
         <br />
         <div
@@ -202,24 +207,23 @@ export default function HeroSection() {
         </div>
       </div>
 
-{/* ✅ Enhanced WhatsApp Floating Icon */}
-<a
-  href="https://wa.me/919999999999"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="fixed z-50 flex items-center space-x-3 bottom-6 right-6 group sm:space-x-2"
->
-  {/* Chat bubble text */}
-  <div className="hidden sm:flex items-center bg-white text-[#25D366] rounded-md shadow-md text-xl font-semibold  w-[150px] h-[40px]   justify-around">
-    Let’s Chat
-    <img
-      src="/whatsapp.svg"
-      alt="WhatsApp"
-      className="w-7 h-7 sm:w-6 sm:h-6"
-    />
-  </div>
-</a>
-
+      {/* ✅ Enhanced WhatsApp Floating Icon */}
+      <a
+        href="https://wa.me/919999999999"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed z-50 flex items-center space-x-3 bottom-6 right-6 group sm:space-x-2"
+      >
+        {/* Chat bubble text */}
+        <div className="hidden sm:flex items-center bg-white text-[#25D366] rounded-md shadow-md text-xl font-semibold  w-[150px] h-[40px]   justify-around">
+          Let’s Chat
+          <img
+            src="/whatsapp.svg"
+            alt="WhatsApp"
+            className="w-7 h-7 sm:w-6 sm:h-6"
+          />
+        </div>
+      </a>
     </div>
   );
 }

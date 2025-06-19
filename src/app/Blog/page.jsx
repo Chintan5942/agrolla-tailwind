@@ -23,11 +23,6 @@ export default function BlogPage() {
 
   return (
     <>
-      {/* ✅ Loading Bar */}
-      {loading && (
-        <div className="fixed top-0 left-0 w-full h-2 bg-green-500 animate-pulse z-50"></div>
-      )}
-
       <div className="flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 pt-28 pb-16 mt-10">
         {/* Page Title */}
         <div className="text-center mb-16 max-w-3xl">
@@ -40,12 +35,20 @@ export default function BlogPage() {
 
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl w-full mt-10">
-          {blogs.map(
-            (post) => (
-              console.log(post.id),
-              (
+          {loading
+            ? Array.from({ length: 4 }).map((_, i) => (
+                <div
+                  key={i}
+                  className="animate-pulse space-y-4 group rounded-lg overflow-hidden"
+                >
+                  <div className="bg-gray-200 h-48 w-full rounded-lg" />
+                  <div className="h-5 bg-gray-300 rounded w-3/4 mx-auto" />
+                  <div className="h-4 bg-gray-300 rounded w-5/6 mx-auto" />
+                  <div className="h-4 bg-gray-300 rounded w-2/3 mx-auto" />
+                </div>
+              ))
+            : blogs.map((post) => (
                 <article key={post.id} className="group">
-                  {/* Image */}
                   <div className="relative overflow-hidden rounded-lg mb-6 aspect-[4/3]">
                     <img
                       src={post.image}
@@ -54,16 +57,13 @@ export default function BlogPage() {
                     />
                   </div>
 
-                  {/* Content */}
                   <div className="space-y-4 text-center">
                     <h2 className="text-xl font-semibold text-gray-900 leading-tight group-hover:text-green-600 transition-colors">
                       {post.title}
                     </h2>
-
                     <p className="text-gray-600 text-sm leading-relaxed">
                       {post.summary}
                     </p>
-
                     <Link
                       href={`/Blog/${post.id}`}
                       className="inline-flex items-center text-gray-900 font-medium hover:text-green-600 transition-colors group/link"
@@ -75,9 +75,7 @@ export default function BlogPage() {
                     </Link>
                   </div>
                 </article>
-              )
-            )
-          )}
+              ))}
         </div>
       </div>
     </>
