@@ -56,13 +56,29 @@ export default function BlogPostPage() {
       </div>
     );
   }
+  if (loading) {
+    return (
+      <>
+        {/* Top Loading Bar */}
+        <div className="fixed top-0 left-0 w-full h-2 bg-green-500 animate-pulse z-50"></div>
 
+        {/* Skeleton Loader */}
+        <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-6 animate-pulse">
+          <div className="h-6 w-1/3 bg-gray-300 rounded"></div>
+          <div className="h-10 w-full bg-gray-300 rounded"></div>
+          <div className="h-4 w-1/2 bg-gray-200 rounded"></div>
+          <div className="h-48 w-full bg-gray-200 rounded-xl"></div>
+          <div className="space-y-4">
+            {Array.from({ length: 4 }).map((_, i) => (
+              <div key={i} className="h-5 bg-gray-200 rounded w-full"></div>
+            ))}
+          </div>
+        </main>
+      </>
+    );
+  }
   return (
     <>
-      {loading && (
-        <div className="fixed top-0 left-0 w-full h-2 bg-green-500 animate-pulse z-50"></div>
-      )}
-
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Back Button */}
         <div className="mb-8">
