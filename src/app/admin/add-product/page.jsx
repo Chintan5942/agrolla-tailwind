@@ -192,6 +192,19 @@ function AddProductContent() {
       [name]: name === "rating" || name === "reviews" ? Number(value) : value,
     }));
   };
+  const handleDeleteImage = (imageType, index) => {
+    // Create a copy of the array from formData to avoid mutating the state directly
+    const updatedImages = [...formData[imageType]];
+
+    // Remove the image from the array by index
+    updatedImages.splice(index, 1);
+
+    // Update only the specific image array
+    setFormData({
+      ...formData,
+      [imageType]: updatedImages, // Update the specific image array
+    });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -265,11 +278,11 @@ function AddProductContent() {
               <div className="h-6 w-px bg-gray-300"></div>
               <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">D</span>
+                  <span className="text-white font-bold text-sm">A</span>
                 </div>
                 <div>
                   <h1 className="text-xl font-bold text-gray-900">
-                    dadu Fresh
+                    Agrolla Impex
                   </h1>
                   <p className="text-xs text-gray-500">Admin Panel</p>
                 </div>
@@ -613,7 +626,7 @@ function AddProductContent() {
                       className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                       disabled={uploadingImages}
                     />
-                    {formData.images.length > 0 && (
+                    {formData?.images?.length > 0 && (
                       <div className="mt-2 grid grid-cols-2 gap-2">
                         {formData.images.map((url, index) => (
                           <img
@@ -642,12 +655,22 @@ function AddProductContent() {
                     {formData.moreImage.length > 0 && (
                       <div className="mt-2 grid grid-cols-2 gap-2">
                         {formData.moreImage.map((url, index) => (
-                          <img
-                            key={index}
-                            src={url}
-                            alt={`Additional ${index + 1}`}
-                            className="w-full h-20 object-cover rounded border"
-                          />
+                          <div key={index} className="relative">
+                            <img
+                              src={url}
+                              alt={`Product ${index + 1}`}
+                              className="w-full h-20 object-cover rounded border"
+                            />
+                            <button
+                              type="button"
+                              onClick={() =>
+                                handleDeleteImage("moreImage", index)
+                              }
+                              className="absolute top-2 right-2 bg-red-500 hover:bg-red-600 text-white p-1 rounded-full transition-colors"
+                            >
+                              <X size={16} />
+                            </button>
+                          </div>
                         ))}
                       </div>
                     )}

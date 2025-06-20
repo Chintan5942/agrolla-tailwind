@@ -20,14 +20,26 @@ export const uploadImageToStorage = async (file, bucket = "product-images") => {
       console.error("Error uploading image:", error);
       return null; // Return null in case of an error
     }
+
+    console.log("File uploaded successfully:", data); // Log upload data
+
     // Get the public URL for the uploaded image
     const { publicURL, error: urlError } = supabase.storage
       .from(bucket)
       .getPublicUrl(fileName);
 
+    // Check if URL retrieval was successful
     if (urlError) {
       console.error("Error getting public URL:", urlError);
       return null; // Return null if we fail to get the URL
+    }
+
+    if (!publicURL) {
+      // If no URL is returned, manually construct the public URL
+      console.warn("Public URL not found, constructing manually");
+      const baseURL =
+        "https://ogzazhofpojecoabhosg.supabase.co/storage/v1/object/public";
+      return `${baseURL}/${bucket}/${fileName}`;
     }
 
     return publicURL; // Return the public URL of the uploaded image
@@ -38,6 +50,7 @@ export const uploadImageToStorage = async (file, bucket = "product-images") => {
 };
 
 // Function to upload multiple images
+// Function to upload multiple images
 export const uploadMultipleImages = async (
   files,
   bucket = "product-images"
@@ -47,7 +60,15 @@ export const uploadMultipleImages = async (
     return []; // Return an empty array if no files are provided
   }
 
-  const uploadPromises = files.map((file) => {
+  // Validate the files array, ensuring they are all valid File objects
+  const validFiles = files.filter((file) => file && file instanceof File);
+
+  if (validFiles.length === 0) {
+    console.error("No valid files to upload.");
+    return []; // Return empty array if no valid files are present
+  }
+
+  const uploadPromises = validFiles.map((file) => {
     if (file && file instanceof File) {
       return uploadImageToStorage(file, bucket); // Upload each file individually
     } else {
@@ -56,9 +77,21 @@ export const uploadMultipleImages = async (
     }
   });
 
-  // Wait for all uploads to finish and filter out any null results
-  const results = await Promise.all(uploadPromises);
-  return results.filter((url) => url !== null); // Return only valid URLs
+  try {
+    // Wait for all uploads to finish and filter out any null results
+    const results = await Promise.all(uploadPromises);
+
+    // Log any errors or null results
+    const validResults = results.filter((url) => url !== null);
+    if (validResults.length === 0) {
+      console.error("All image uploads failed.");
+    }
+
+    return validResults; // Return only valid URLs
+  } catch (error) {
+    console.error("Error uploading multiple images:", error);
+    return []; // Return an empty array if an error occurs
+  }
 };
 
 // Function to delete an image from Supabase Storage
