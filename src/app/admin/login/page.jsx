@@ -8,7 +8,7 @@ export default function GoogleLogin() {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
-        redirectTo: "https://www.agrollaimpex.com/auth/callback", // ✅ Set this in your Supabase dashboard too
+        redirectTo: `${process.env.NEXT_PUBLIC_REDIRECT_URL}`, // ✅ Set this in your Supabase dashboard too
       },
     });
     if (error) console.error("Google login error:", error.message);

@@ -1,4 +1,5 @@
 "use client";
+import { supabase } from "@/lib/supabaseClient";
 import React, { useEffect, useState } from "react";
 
 const SelectedProduct = ({ product }) => {
@@ -43,25 +44,34 @@ const SelectedProduct = ({ product }) => {
   };
 
   // Parse highlights - handle both array and string formats
-  const parseHighlights = () => {
-    const highlights = currentProduct.highlights;
+  const [highlights, setHighlights] = useState([]);
+
+  useEffect(() => {
+    if (product) {
+      // Parse highlights from the product data
+      setHighlights(parseHighlights(product.highlights));
+    }
+  }, [product]); // Dependency is `product`, so this effect runs when the `product` changes
+
+  const parseHighlights = (highlights) => {
     if (!highlights) return [];
 
-    if (Array.isArray(highlights)) {
-      return highlights;
+    // If highlights is an array with a single string, handle this case
+    if (Array.isArray(highlights) && highlights.length === 1) {
+      highlights = highlights[0]; // Get the first (and only) element in the array
     }
 
     if (typeof highlights === "string") {
-      // Handle comma-separated string or quoted string format
-      return highlights
-        .split(",")
-        .map((item) => item.trim().replace(/^"|"$/g, ""))
-        .filter((item) => item.length > 0);
+      // Using regex to split by commas not inside quotes
+      const regex = /,(?=(?:[^"]*"[^"]*")*[^"]*$)/g;
+      const cleanHighlights = highlights
+        .split(regex) // Split based on commas not inside quotes
+        .map((item) => item.trim().replace(/^"|"$/g, "")); // Remove leading and trailing quotes
+      return cleanHighlights.filter((item) => item.length > 0); // Filter out empty strings
     }
 
     return [];
   };
-
   // Parse features - handle both array and string formats
   const parseFeatures = () => {
     const features = currentProduct.features;
@@ -81,7 +91,6 @@ const SelectedProduct = ({ product }) => {
     return [];
   };
 
-  const highlights = parseHighlights();
   const features = parseFeatures();
 
   const featureIcons = currentProduct.featureIcons || [
@@ -191,14 +200,16 @@ const SelectedProduct = ({ product }) => {
                 </h5>
                 <ul className="flex flex-col gap-4">
                   {highlights.length > 0 ? (
-                    highlights.map((item, index) => (
-                      <li key={index} className="flex items-start gap-4">
-                        <span className="text-green-500 text-xl">✓</span>
-                        <span className="font-semibold text-gray-700">
-                          {item}
-                        </span>
-                      </li>
-                    ))
+                    <ul>
+                      {highlights.map((item, index) => (
+                        <li key={index} className="flex items-start gap-4">
+                          <span className="text-green-500 text-xl">✓</span>
+                          <span className="font-semibold text-gray-700">
+                            {item}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
                   ) : (
                     <li className="font-semibold text-gray-500">
                       No highlights available.
@@ -394,23 +405,27 @@ const SelectedProduct = ({ product }) => {
             </h4>
             <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
               {currentProduct.applications ? (
-                currentProduct.applications.split(",").map((app, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center border-gray-200 rounded-2xl h-20 w-full border-2 p-4"
-                  >
-                    <div className="flex items-center w-full">
-                      <img
-                        src={applicationIcons[index % applicationIcons.length]}
-                        alt=""
-                        className="w-10 h-10 mr-3 rounded-full"
-                      />
-                      <span className="font-semibold text-gray-700">
-                        {app.trim()}
-                      </span>
+                currentProduct.applications
+                  .split(/,(?![^"]*"[^"]*$)/) // Split by commas that aren't inside quotes
+                  .map((app, index) => (
+                    <div
+                      key={index}
+                      className="flex items-center border-gray-200 rounded-2xl h-20 w-full border-2 p-4"
+                    >
+                      <div className="flex items-center w-full">
+                        <img
+                          src={
+                            applicationIcons[index % applicationIcons.length]
+                          }
+                          alt=""
+                          className="w-10 h-10 mr-3 rounded-full"
+                        />
+                        <span className="font-semibold text-gray-700">
+                          {app.trim()}
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                ))
+                  ))
               ) : (
                 <div className="col-span-3 p-4 text-center text-gray-500">
                   No applications information available.

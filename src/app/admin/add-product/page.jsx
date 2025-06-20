@@ -1,10 +1,9 @@
 "use client";
 
-import { Suspense, useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { supabase } from "@/lib/supabaseClient";
 import Link from "next/link";
-import Papa from "papaparse";
 
 import {
   ArrowLeft,
@@ -19,13 +18,22 @@ import {
   Calendar,
   Save,
 } from "lucide-react";
+import {
+  deleteImageFromStorage,
+  uploadImageToStorage,
+  uploadMultipleImages,
+} from "@/lib/imageupload";
+
 function AddProductContent() {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const [dragActive, setDragActive] = useState(false);
   const [imagePreview, setImagePreview] = useState(null);
+  const [uploadingImages, setUploadingImages] = useState(false);
   const searchParams = useSearchParams();
   const productId = searchParams.get("id");
+  const isEdit = !!productId;
+
   const [formData, setFormData] = useState({
     title: "",
     description: "",
@@ -49,6 +57,7 @@ function AddProductContent() {
   useEffect(() => {
     const fetchProduct = async () => {
       if (!productId) return;
+      setIsLoading(true);
       const { data, error } = await supabase
         .from("products")
         .select("*")
@@ -56,7 +65,7 @@ function AddProductContent() {
         .single();
 
       if (error) {
-        alert("Failed to load product");
+        alert("Failed to load product: " + error.message);
       } else {
         setFormData({
           title: data.title || "",
@@ -82,37 +91,83 @@ function AddProductContent() {
           setImagePreview(data.image);
         }
       }
+      setIsLoading(false);
     };
 
     fetchProduct();
   }, [productId]);
 
-  const fileToBase64 = (file) => {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.onload = () => resolve(reader.result);
-      reader.onerror = reject;
-      reader.readAsDataURL(file);
-    });
-  };
-
   const handleFileInput = async (e) => {
     const file = e.target.files[0];
     if (!file) return;
-    const base64 = await fileToBase64(file);
-    setFormData({ ...formData, image: base64 });
-    setImagePreview(URL.createObjectURL(file));
+
+    setUploadingImages(true);
+
+    try {
+      // Upload to Supabase Storage
+      const imageUrl = await uploadImageToStorage(file);
+
+      if (imageUrl) {
+        // If editing and there's an existing image, delete it
+        if (isEdit && formData.image) {
+          await deleteImageFromStorage(formData.image);
+        }
+
+        setFormData({ ...formData, image: imageUrl });
+        setImagePreview(imageUrl);
+      } else {
+        alert("Failed to upload image. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error uploading image:", error);
+      alert("Failed to upload image. Please try again.");
+    } finally {
+      setUploadingImages(false);
+    }
   };
 
-  const removeImage = () => {
+  const removeImage = async () => {
+    if (formData.image) {
+      // Delete from storage if it's a storage URL
+      if (formData.image.includes("supabase")) {
+        await deleteImageFromStorage(formData.image);
+      }
+    }
     setFormData({ ...formData, image: "" });
     setImagePreview(null);
   };
 
   const handleMultiImageChange = async (e, field) => {
     const files = Array.from(e.target.files);
-    const base64Images = await Promise.all(files.map(fileToBase64));
-    setFormData({ ...formData, [field]: base64Images });
+    if (files.length === 0) return;
+
+    setUploadingImages(true);
+
+    try {
+      // If editing, delete existing images for this field
+      if (isEdit && formData[field].length > 0) {
+        const deletePromises = formData[field].map((url) =>
+          url.includes("supabase")
+            ? deleteImageFromStorage(url)
+            : Promise.resolve()
+        );
+        await Promise.all(deletePromises);
+      }
+
+      // Upload new images
+      const imageUrls = await uploadMultipleImages(files);
+
+      if (imageUrls.length > 0) {
+        setFormData({ ...formData, [field]: imageUrls });
+      } else {
+        alert("Failed to upload some images. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error uploading images:", error);
+      alert("Failed to upload images. Please try again.");
+    } finally {
+      setUploadingImages(false);
+    }
   };
 
   const handleArrayChange = (field, index, value) => {
@@ -123,6 +178,11 @@ function AddProductContent() {
 
   const addArrayItem = (field) => {
     setFormData({ ...formData, [field]: [...formData[field], ""] });
+  };
+
+  const removeArrayItem = (field, index) => {
+    const updated = formData[field].filter((_, i) => i !== index);
+    setFormData({ ...formData, [field]: updated });
   };
 
   const handleChange = (e) => {
@@ -137,94 +197,60 @@ function AddProductContent() {
     e.preventDefault();
     setIsLoading(true);
 
-    const product = {
-      title: formData.title,
-      description: formData.description,
-      category: formData.category,
-      image: formData.image,
-      images: formData.images,
-      more_image: formData.moreImage,
-      rating: formData.rating,
-      reviews: formData.reviews,
-      highlights: formData.highlights,
-      features: formData.features,
-      applications: formData.applications,
-      about_product: formData.aboutProduct,
-      overview: formData.overview,
-      premium_quality: formData.premiumQuality,
-      specifications: formData.specifications,
-      packaging_shipping: formData.packagingShipping,
-      nutritional_info: formData.nutritionalInfo,
-    };
+    try {
+      const product = {
+        title: formData.title,
+        description: formData.description,
+        category: formData.category,
+        image: formData.image,
+        images: formData.images,
+        more_image: formData.moreImage,
+        rating: formData.rating,
+        reviews: formData.reviews,
+        highlights: formData.highlights,
+        features: formData.features,
+        applications: formData.applications,
+        about_product: formData.aboutProduct,
+        overview: formData.overview,
+        premium_quality: formData.premiumQuality,
+        specifications: formData.specifications,
+        packaging_shipping: formData.packagingShipping,
+        nutritional_info: formData.nutritionalInfo,
+      };
 
-    let error;
-    if (productId) {
-      console.log("Update product with ID:", productId);
-      ({ error } = await supabase
-        .from("products")
-        .update(product)
-        .eq("id", productId));
-    } else {
-      console.log("Add new product");
-      ({ error } = await supabase.from("products").insert([product]));
-    }
+      let error;
+      if (productId) {
+        ({ error } = await supabase
+          .from("products")
+          .update(product)
+          .eq("id", productId));
+      } else {
+        ({ error } = await supabase.from("products").insert([product]));
+      }
 
-    setIsLoading(false);
-    if (error) {
+      if (error) throw error;
+
+      alert(`Product ${productId ? "updated" : "added"} successfully!`);
+      router.push("/admin/dashboard");
+    } catch (error) {
       alert(
         `Failed to ${productId ? "update" : "add"} product: ` + error.message
       );
-    } else {
-      alert(`Product ${productId ? "updated" : "added"} successfully!`);
-      router.push("/admin/dashboard");
+    } finally {
+      setIsLoading(false);
     }
   };
+  if (isLoading && isEdit) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-500"></div>
+      </div>
+    );
+  }
 
-  // const handleCSVUpload = async (e) => {
-  //   const file = e.target.files[0];
-  //   if (!file) return;
-
-  //   Papa.parse(file, {
-  //     header: true,
-  //     skipEmptyLines: true,
-  //     complete: async function (results) {
-  //       const products = results.data.map((row) => ({
-  //         title: row.title || "",
-  //         description: row.description || "",
-  //         category: row.category || "",
-  //         image: row.image || "",
-  //         images: row.images ? JSON.parse(row.images) : [],
-  //         more_image: row.moreImage ? JSON.parse(row.moreImage) : [],
-  //         rating: row.rating ? Number(row.rating) : 0,
-  //         reviews: row.reviews ? Number(row.reviews) : 0,
-  //         highlights: row.highlights ? JSON.parse(row.highlights) : [],
-  //         features: row.features ? JSON.parse(row.features) : [],
-  //         applications: row.applications || "",
-  //         about_product: row.aboutProduct || "",
-  //         overview: row.overview || "",
-  //         premium_quality: row.premiumQuality || "",
-  //         specifications: row.specifications || "",
-  //         packaging_shipping: row.packagingShipping || "",
-  //         nutritional_info: row.nutritionalInfo || "",
-  //       }));
-
-  //       const { error } = await supabase.from("products").insert(products);
-
-  //       if (error) {
-  //         alert("Upload failed: " + error.message);
-  //       } else {
-  //         alert(`${products.length} products added successfully.`);
-  //         router.push("/admin/dashboard");
-  //       }
-  //     },
-  //     error: function (err) {
-  //       console.error("CSV parse error:", err);
-  //       alert("Failed to parse CSV.");
-  //     },
-  //   });
-  // };
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Header */}
       <header className="bg-white shadow-sm border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -239,16 +265,17 @@ function AddProductContent() {
               <div className="h-6 w-px bg-gray-300"></div>
               <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">A</span>
+                  <span className="text-white font-bold text-sm">D</span>
                 </div>
                 <div>
                   <h1 className="text-xl font-bold text-gray-900">
-                    Agrolla Impex
+                    dadu Fresh
                   </h1>
                   <p className="text-xs text-gray-500">Admin Panel</p>
                 </div>
               </div>
             </div>
+
             <div className="flex items-center space-x-3">
               <button
                 type="button"
@@ -262,34 +289,42 @@ function AddProductContent() {
         </div>
       </header>
 
+      {/* Main Content */}
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
           <div className="flex items-center space-x-3 mb-2">
             <Edit3 className="text-green-500" size={24} />
             <h1 className="text-3xl font-bold text-gray-900">
-              Add New Product
+              {isEdit ? "Edit Product" : "Add New Product"}
             </h1>
           </div>
           <p className="text-gray-600">
-            Fill in the details below to create a new product.
+            {isEdit
+              ? "Update your product details and settings"
+              : "Fill in the details below to create a new product"}
           </p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Main Content */}
             <div className="lg:col-span-2 space-y-6">
+              {/* Basic Info */}
               <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-                <h2 className="text-lg font-semibold text-gray-900 mb-4">
-                  Basic Info
-                </h2>
+                <div className="flex items-center space-x-3 mb-4">
+                  <Type className="text-gray-400" size={20} />
+                  <h2 className="text-lg font-semibold text-gray-900">
+                    Basic Information
+                  </h2>
+                </div>
                 <div className="space-y-4">
                   <input
                     type="text"
                     name="title"
-                    placeholder="Title"
+                    placeholder="Product Title"
                     value={formData.title}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-lg font-medium"
                     required
                   />
                   <input
@@ -298,48 +333,52 @@ function AddProductContent() {
                     placeholder="Category"
                     value={formData.category}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                     required
                   />
                   <textarea
                     name="description"
-                    placeholder="Description"
+                    placeholder="Product Description"
                     value={formData.description}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg"
-                    rows={3}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none"
+                    rows={4}
                     required
+                  />
+                </div>
+              </div>
+
+              {/* Product Details */}
+              <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                <div className="flex items-center space-x-3 mb-4">
+                  <FileText className="text-gray-400" size={20} />
+                  <h2 className="text-lg font-semibold text-gray-900">
+                    Product Details
+                  </h2>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <textarea
+                    name="aboutProduct"
+                    placeholder="About Product"
+                    value={formData.aboutProduct}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none"
+                    rows={3}
                   />
                   <textarea
                     name="applications"
                     placeholder="Applications"
                     value={formData.applications}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none"
                     rows={3}
                   />
-                  <textarea
-                    name="aboutProduct"
-                    placeholder="About Product"
-                    value={formData.aboutProduct}
-                    onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg"
-                    rows={3}
-                  />
-                </div>
-              </div>
-
-              <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-                <h2 className="text-lg font-semibold text-gray-900 mb-4">
-                  Details
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <textarea
                     name="overview"
                     placeholder="Overview"
                     value={formData.overview}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none"
                     rows={3}
                   />
                   <textarea
@@ -347,7 +386,7 @@ function AddProductContent() {
                     placeholder="Premium Quality"
                     value={formData.premiumQuality}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none"
                     rows={3}
                   />
                   <textarea
@@ -355,7 +394,7 @@ function AddProductContent() {
                     placeholder="Specifications"
                     value={formData.specifications}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none"
                     rows={3}
                   />
                   <textarea
@@ -363,176 +402,285 @@ function AddProductContent() {
                     placeholder="Packaging & Shipping"
                     value={formData.packagingShipping}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none"
                     rows={3}
                   />
                   <textarea
                     name="nutritionalInfo"
-                    placeholder="Nutritional Info"
+                    placeholder="Nutritional Information"
                     value={formData.nutritionalInfo}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none"
                     rows={3}
                   />
-                  <input
-                    type="number"
-                    name="rating"
-                    placeholder="Rating"
-                    value={formData.rating}
-                    onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg"
-                  />
-                  <input
-                    type="number"
-                    name="reviews"
-                    placeholder="Reviews"
-                    value={formData.reviews}
-                    onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg"
-                  />
+                  <div className="grid grid-cols-2 gap-4">
+                    <input
+                      type="number"
+                      name="rating"
+                      placeholder="Rating (1-5)"
+                      value={formData.rating}
+                      onChange={handleChange}
+                      min="1"
+                      max="5"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    />
+                    <input
+                      type="number"
+                      name="reviews"
+                      placeholder="Number of Reviews"
+                      value={formData.reviews}
+                      onChange={handleChange}
+                      min="0"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    />
+                  </div>
                 </div>
               </div>
 
+              {/* Highlights & Features */}
               <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-                <h2 className="text-lg font-semibold text-gray-900 mb-4">
-                  Highlights & Features
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="flex items-center space-x-3 mb-4">
+                  <AlignLeft className="text-gray-400" size={20} />
+                  <h2 className="text-lg font-semibold text-gray-900">
+                    Highlights & Features
+                  </h2>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* Highlights */}
                   <div>
-                    <label className="text-sm font-medium text-gray-700">
-                      Highlights
+                    <label className="block text-sm font-medium text-gray-700 mb-3">
+                      Product Highlights
                     </label>
-                    {formData.highlights.map((item, i) => (
-                      <input
-                        key={i}
-                        type="text"
-                        value={item}
-                        onChange={(e) =>
-                          handleArrayChange("highlights", i, e.target.value)
-                        }
-                        className="w-full border border-gray-300 rounded-lg px-3 py-2 mb-2"
-                      />
-                    ))}
-                    <button
-                      type="button"
-                      onClick={() => addArrayItem("highlights")}
-                      className="text-green-600 hover:text-green-700 text-sm font-medium"
-                    >
-                      + Add Highlight
-                    </button>
+                    <div className="space-y-2">
+                      {formData.highlights.map((item, i) => (
+                        <div key={i} className="flex items-center space-x-2">
+                          <input
+                            type="text"
+                            value={item}
+                            onChange={(e) =>
+                              handleArrayChange("highlights", i, e.target.value)
+                            }
+                            className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                            placeholder={`Highlight ${i + 1}`}
+                          />
+                          <button
+                            type="button"
+                            onClick={() => removeArrayItem("highlights", i)}
+                            className="p-2 text-red-500 hover:text-red-700 hover:bg-red-50 rounded-lg transition-colors"
+                          >
+                            <X size={16} />
+                          </button>
+                        </div>
+                      ))}
+                      <button
+                        type="button"
+                        onClick={() => addArrayItem("highlights")}
+                        className="w-full px-4 py-2 border-2 border-dashed border-gray-300 rounded-lg text-gray-600 hover:border-green-500 hover:text-green-600 transition-colors"
+                      >
+                        + Add Highlight
+                      </button>
+                    </div>
                   </div>
+
+                  {/* Features */}
                   <div>
-                    <label className="text-sm font-medium text-gray-700">
-                      Features
+                    <label className="block text-sm font-medium text-gray-700 mb-3">
+                      Product Features
                     </label>
-                    {formData.features.map((item, i) => (
-                      <input
-                        key={i}
-                        type="text"
-                        value={item}
-                        onChange={(e) =>
-                          handleArrayChange("features", i, e.target.value)
-                        }
-                        className="w-full border border-gray-300 rounded-lg px-3 py-2 mb-2"
-                      />
-                    ))}
-                    <button
-                      type="button"
-                      onClick={() => addArrayItem("features")}
-                      className="text-green-600 hover:text-green-700 text-sm font-medium"
-                    >
-                      + Add Feature
-                    </button>
+                    <div className="space-y-2">
+                      {formData.features.map((item, i) => (
+                        <div key={i} className="flex items-center space-x-2">
+                          <input
+                            type="text"
+                            value={item}
+                            onChange={(e) =>
+                              handleArrayChange("features", i, e.target.value)
+                            }
+                            className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                            placeholder={`Feature ${i + 1}`}
+                          />
+                          <button
+                            type="button"
+                            onClick={() => removeArrayItem("features", i)}
+                            className="p-2 text-red-500 hover:text-red-700 hover:bg-red-50 rounded-lg transition-colors"
+                          >
+                            <X size={16} />
+                          </button>
+                        </div>
+                      ))}
+                      <button
+                        type="button"
+                        onClick={() => addArrayItem("features")}
+                        className="w-full px-4 py-2 border-2 border-dashed border-gray-300 rounded-lg text-gray-600 hover:border-green-500 hover:text-green-600 transition-colors"
+                      >
+                        + Add Feature
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
+            {/* Sidebar */}
             <div className="space-y-6">
+              {/* Main Image */}
               <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-                <h2 className="text-lg font-semibold text-gray-900 mb-4">
-                  Main Image
-                </h2>
-                <input
-                  type="file"
-                  accept="image/*"
-                  onChange={handleFileInput}
-                  className="w-full"
-                />
-                {imagePreview && (
-                  <div className="mt-4 relative">
+                <div className="flex items-center space-x-3 mb-4">
+                  <ImageIcon className="text-gray-400" size={20} />
+                  <h2 className="text-lg font-semibold text-gray-900">
+                    Main Image
+                  </h2>
+                </div>
+
+                {imagePreview ? (
+                  <div className="relative">
                     <img
                       src={imagePreview}
-                      className="rounded-lg object-cover w-full"
+                      alt="Preview"
+                      className="w-full h-48 object-cover rounded-lg"
                     />
                     <button
-                      onClick={removeImage}
                       type="button"
-                      className="absolute top-2 right-2 bg-red-500 hover:bg-red-600 text-white rounded-full p-1"
+                      onClick={removeImage}
+                      className="absolute top-2 right-2 bg-red-500 hover:bg-red-600 text-white p-1 rounded-full transition-colors"
                     >
                       <X size={16} />
                     </button>
+                    <div className="mt-3">
+                      <label className="cursor-pointer">
+                        <input
+                          type="file"
+                          accept="image/*"
+                          onChange={handleFileInput}
+                          className="hidden"
+                          disabled={uploadingImages}
+                        />
+                        <span className="inline-flex items-center space-x-2 text-sm text-green-600 hover:text-green-700 font-medium">
+                          <Upload size={16} />
+                          <span>
+                            {uploadingImages ? "Uploading..." : "Change Image"}
+                          </span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-gray-400 transition-colors">
+                    <ImageIcon className="mx-auto h-12 w-12 text-gray-400 mb-4" />
+                    <div className="space-y-2">
+                      <p className="text-sm text-gray-600">
+                        Upload a product image
+                      </p>
+                      <label className="cursor-pointer">
+                        <input
+                          type="file"
+                          accept="image/*"
+                          onChange={handleFileInput}
+                          className="hidden"
+                          disabled={uploadingImages}
+                        />
+                        <span className="inline-flex items-center space-x-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+                          <Upload size={16} />
+                          <span>
+                            {uploadingImages ? "Uploading..." : "Choose File"}
+                          </span>
+                        </span>
+                      </label>
+                    </div>
+                    <p className="text-xs text-gray-500 mt-2">
+                      PNG, JPG, GIF up to 10MB
+                    </p>
                   </div>
                 )}
               </div>
 
+              {/* Gallery Images */}
               <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
                 <h2 className="text-lg font-semibold text-gray-900 mb-4">
                   Gallery Images
                 </h2>
-                <label className="block text-sm text-gray-700 mb-1">
-                  Product Images
-                </label>
-                <input
-                  type="file"
-                  multiple
-                  accept="image/*"
-                  onChange={(e) => handleMultiImageChange(e, "images")}
-                  className="w-full mb-4"
-                />
-                <label className="block text-sm text-gray-700 mb-1">
-                  More Images
-                </label>
-                <input
-                  type="file"
-                  multiple
-                  accept="image/*"
-                  onChange={(e) => handleMultiImageChange(e, "moreImage")}
-                  className="w-full"
-                />
-              </div>
-              {/* <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-                <h2 className="text-lg font-semibold text-gray-900 mb-4">
-                  Upload Products via CSV
-                </h2>
-                <input
-                  type="file"
-                  accept=".csv"
-                  onChange={handleCSVUpload}
-                  className="w-full"
-                />
-                <p className="text-sm text-gray-500 mt-2">
-                  Must be a CSV with field names like:{" "}
-                  <code>title, description, images</code> etc. Use JSON arrays
-                  for fields like <code>images</code>, <code>highlights</code>,
-                  etc.
-                </p>
-              </div> */}
 
-              <button
-                type="submit"
-                disabled={isLoading}
-                className="w-full bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-lg font-medium flex items-center justify-center"
-              >
-                {isLoading ? (
-                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
-                ) : (
-                  <>
-                    <Save size={18} />
-                    <span className="ml-2">Add Product</span>
-                  </>
+                <div className="space-y-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Product Images
+                    </label>
+                    <input
+                      type="file"
+                      multiple
+                      accept="image/*"
+                      onChange={(e) => handleMultiImageChange(e, "images")}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      disabled={uploadingImages}
+                    />
+                    {formData.images.length > 0 && (
+                      <div className="mt-2 grid grid-cols-2 gap-2">
+                        {formData.images.map((url, index) => (
+                          <img
+                            key={index}
+                            src={url}
+                            alt={`Product ${index + 1}`}
+                            className="w-full h-20 object-cover rounded border"
+                          />
+                        ))}
+                      </div>
+                    )}
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Additional Images
+                    </label>
+                    <input
+                      type="file"
+                      multiple
+                      accept="image/*"
+                      onChange={(e) => handleMultiImageChange(e, "moreImage")}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      disabled={uploadingImages}
+                    />
+                    {formData.moreImage.length > 0 && (
+                      <div className="mt-2 grid grid-cols-2 gap-2">
+                        {formData.moreImage.map((url, index) => (
+                          <img
+                            key={index}
+                            src={url}
+                            alt={`Additional ${index + 1}`}
+                            className="w-full h-20 object-cover rounded border"
+                          />
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                {uploadingImages && (
+                  <div className="mt-4 flex items-center justify-center">
+                    <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-green-500"></div>
+                    <span className="ml-2 text-sm text-gray-600">
+                      Uploading images...
+                    </span>
+                  </div>
                 )}
-              </button>
+              </div>
+
+              {/* Submit Button */}
+              <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                <button
+                  type="submit"
+                  disabled={isLoading || uploadingImages}
+                  className="w-full bg-green-500 hover:bg-green-600 disabled:bg-green-300 text-white px-4 py-3 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
+                >
+                  {isLoading ? (
+                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                  ) : (
+                    <>
+                      <Save size={18} />
+                      <span>{isEdit ? "Update Product" : "Add Product"}</span>
+                    </>
+                  )}
+                </button>
+              </div>
             </div>
           </div>
         </form>
@@ -540,6 +688,7 @@ function AddProductContent() {
     </div>
   );
 }
+
 export default function AddProduct() {
   return (
     <Suspense
