@@ -1,5 +1,4 @@
 "use client";
-import { supabase } from "@/lib/supabaseClient";
 import React, { useEffect, useState } from "react";
 
 const SelectedProduct = ({ product }) => {

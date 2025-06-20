@@ -20,7 +20,7 @@ export const uploadImageToStorage = async (file, bucket = "product-images") => {
       console.error("Error uploading image:", error);
       return null; // Return null in case of an error
     }
-
+    ß;
     // Get the public URL for the uploaded image
     const { publicURL, error: urlError } = supabase.storage
       .from(bucket)
