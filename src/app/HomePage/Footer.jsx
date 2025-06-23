@@ -11,8 +11,10 @@ export default function Footer() {
   }, []);
 
   return (
-    <>  
-    <br /><br /><br />
+    <>
+      <br />
+      <br />
+      <br />
       <footer
         className="bg-[url('/footer.png')] bg-cover bg-center bg-no-repeat overflow-hidden lg:h-[600px] flex justify-center items-center"
         data-aos="fade-up"
@@ -20,7 +22,7 @@ export default function Footer() {
         <div className="flex flex-col max-w-screen-2xl">
           {" "}
           <br />
-          <div className="grid w-full grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div className="grid w-full grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4">
             {/* Company Info */}
             <div
               className="flex flex-col items-center gap-6 text-center"

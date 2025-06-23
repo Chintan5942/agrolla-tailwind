@@ -16,7 +16,7 @@ export default function Section3() {
           <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 md:flex-row animate-fadeIn">
             {/* Text Content */}
             <div className="">
-              <div className="text-center text-white md:text-left lg:relative lg:left-5 md:relative md:left-5 w-[90%] relative left-[5%] animate-slideInLeft">
+              <div className="text-center text-white md:text-left lg:relative lg:left-5 md:relative md:left-5 w-[90%] relative left-[5%] animate-slideInLeft pt-4 md:pt-0">
                 <br />
                 <div className="flex justify-center lg:justify-start md:justify-start">
                   <div className="h-10 w-[260px] lg:w-[200px] md:w-[200px] sm:w-[200px] bg-white rounded-full flex items-center justify-center text-[16px] text-[#2e7d32] font-bold animate-bounce">

@@ -164,17 +164,21 @@ export default function HeroSection() {
         <div className="space-y-2 sm:space-y-3 md:space-y-4">
           <h1
             className={`text-[#111827] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[60px] font-bold transition-all duration-700 delay-[300ms] ${
-              animateText ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              animateText
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
             }`}
           >
-            Revolutionizing
+            Global
           </h1>
           <h1
             className={`text-[#2E7D32] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[60px] font-bold transition-all duration-700 delay-[600ms] ${
-              animateText ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              animateText
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
             }`}
           >
-            Agriculture
+            Agriculture Grains
           </h1>
         </div>
         <br />
@@ -183,9 +187,10 @@ export default function HeroSection() {
             animateText ? "opacity-100" : "opacity-0"
           }`}
         >
-          Agrolla delivers cutting-edge agricultural solutions that maximize
-          yield, minimize environmental impact, and transform farming
-          practices for a sustainable future.
+          Agrolla is proud to export premium-quality oilseeds, grains, and
+          pulses worldwide — bridging India’s rich farming heritage with global
+          demand through reliable sourcing, strict quality control, and
+          sustainable practices.
         </p>
         <br />
         <div
