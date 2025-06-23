@@ -4,6 +4,7 @@ import Footer from "../HomePage/Footer";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import UserDetail from "@/app/HomePage/UserDetail";
 
 export default function About() {
   useEffect(() => {
@@ -33,10 +34,10 @@ export default function About() {
               </p>{" "}
               <br />
               <div className="flex flex-row justify-start w-full gap-4">
-                <button className="h-[50px] w-[123px] bg-[#2E7D32] text-white text-[16px] font-semibold rounded-[8px]">
-                  Our Story
-                </button>
-                <button className="h-[50px] w-[123px] bg-white text-[#1f2937] text-[16px] font-semibold rounded-[8px]">
+                <button
+                  className="h-[50px] w-[123px] bg-white text-[#1f2937] text-[16px] font-semibold rounded-[8px] cursor-pointer"
+                  onClick={() => (window.location.href = "/Contact")}
+                >
                   Contact Us
                 </button>
               </div>
@@ -129,7 +130,7 @@ export default function About() {
                 </div>
               </div>
               <img
-                src="/aboutSection1.jpg"  
+                src="/aboutSection1.jpg"
                 alt=""
                 className="w-full max-w-[728px] h-[613px] rounded-[8px]"
                 data-aos="fade-left"
@@ -229,7 +230,7 @@ export default function About() {
                     deliver trust, excellence, and a commitment to quality in
                     every shipment."
                   </p>{" "}
-                  <br />  
+                  <br />
                 </div>
               </div>
             </div>
@@ -409,23 +410,22 @@ export default function About() {
           >
             <br />
             <br />
-            <div className="w-[90%] relative left-[5%]">
+            <div className="w-[90%] relative left-[5%] h-auto lg:h-[800px]">
               <div className="flex flex-col lg:flex-row mx-auto gap-8 lg:gap-10 max-w-[1536px] w-full lg:relative lg:left-[5%]">
                 {/* Contact Information */}
-                <div className="w-full gap-8 p-6 mx-auto bg-white shadow-lg x-w-lg w- rounded-xl lg:max-w-md lg:w-1/3 lg:mx-">
+                <div className="w-full gap-8 p-6 mx-auto bg-white shadow-lg rounded-xl lg:max-w-md lg:w-1/3">
                   <div
                     className="flex flex-col w-[90%] justify-between relative left-[5%]"
                     data-aos="fade-right"
                   >
                     <div className="flex flex-col gap-4">
-                      {" "}
                       <br />
                       <h3 className="text-xl font-semibold text-gray-900">
                         Contact Information
                       </h3>
                       <div className="flex flex-col gap-4">
                         {/* Location */}
-                        <div className="flex items-center gap-4">
+                        <div className="flex items-start gap-4">
                           <img
                             src="/location.svg"
                             alt="Location"
@@ -436,13 +436,14 @@ export default function About() {
                               Headquarters
                             </h4>
                             <p className="text-base font-medium text-gray-700">
-                              BM Square-1, Rajlaxmi Park, <br />
+                              BM Square-1, Rajlaxmi Park,
+                              <br />
                               Junagadh
                             </p>
                           </div>
                         </div>
                         {/* Phone */}
-                        <div className="flex items-center gap-4">
+                        <div className="flex items-start gap-4">
                           <img
                             src="/call.svg"
                             alt="Phone"
@@ -453,14 +454,16 @@ export default function About() {
                               Phone
                             </h4>
                             <p className="text-base font-medium text-gray-700">
-                              +91 79 2345 6789
+                              +917227021300
                               <br />
-                              +1 (800) 123-4567 (International)
+                              +917227021301
+                              <br />
+                              +917227021302
                             </p>
                           </div>
                         </div>
                         {/* Email */}
-                        <div className="flex items-center gap-4">
+                        <div className="flex items-start gap-4">
                           <img
                             src="/mail.svg"
                             alt="Email"
@@ -472,13 +475,11 @@ export default function About() {
                             </h4>
                             <p className="text-base font-medium text-gray-700">
                               info@agrollaimpex.com
-                              <br />
-                              exports@agrollaimpex.com
                             </p>
                           </div>
                         </div>
                         {/* Business Hours */}
-                        <div className="flex items-center gap-4">
+                        <div className="flex items-start gap-4">
                           <img
                             src="/clock.svg"
                             alt="Business Hours"
@@ -497,17 +498,20 @@ export default function About() {
                         </div>
                       </div>
                     </div>
-                    {/* Social Icons */} <br />
+                    {/* Social Icons */}
+                    <br />
                     <div className="flex flex-col gap-4">
                       <h4 className="text-base font-bold text-gray-900">
                         Connect With Us
                       </h4>
                       <div className="flex gap-4">
-                        <img
-                          src="/linkedin.svg"
-                          alt="LinkedIn"
-                          className="w-10 h-10"
-                        />
+                        <a href="https://www.linkedin.com/company/agrolla-impex/">
+                          <img
+                            src="/linkedin.svg"
+                            alt="LinkedIn"
+                            className="w-10 h-10"
+                          />
+                        </a>
                         <img
                           src="/twitter.svg"
                           alt="Twitter"
@@ -518,103 +522,30 @@ export default function About() {
                           alt="Facebook"
                           className="w-10 h-10"
                         />
-                        <img
-                          src="/instagram.svg"
-                          alt="Instagram"
-                          className="w-10 h-10"
-                        />
+                        <a href="https://www.instagram.com/agrolla_impex?igsh=dmhqc3RjM2hzands&utm_source=qr">
+                          <img
+                            src="/instagram.svg"
+                            alt="Instagram"
+                            className="w-10 h-10"
+                          />
+                        </a>
                       </div>
                       <br />
                     </div>
                   </div>
                 </div>
+
                 {/* Contact Form */}
                 <div className="w-full gap-6 bg-white shadow-lg rounded-xl">
                   <div
-                    className="flex flex-col  w-[95%] relative left-[2.5%]"
+                    className="flex flex-col w-[95%] relative left-[2.5%] max-h-[780px] overflow-y-auto"
                     data-aos="fade-left"
                   >
-                    {" "}
                     <br />
-                    <h3 className="mb-2 text-xl font-semibold text-gray-900">
-                      Send Us a Message
-                    </h3>
-                    <form className="flex flex-col w-full gap-6">
-                      <div className="grid grid-cols-1 gap-y-6 gap-x-12 md:grid-cols-2">
-                        <div className="flex flex-col gap-4">
-                          <label
-                            htmlFor="name"
-                            className="text-lg font-medium text-gray-700"
-                          >
-                            Your Name
-                          </label>
-                          <input
-                            type="text"
-                            id="name"
-                            className="block w-full rounded-md border border-gray-300 px-3 py-2 pl-6 pr-6 h-[42px]"
-                          />
-                        </div>
-                        <div className="flex flex-col gap-4">
-                          <label
-                            htmlFor="email"
-                            className="text-lg font-medium text-gray-700"
-                          >
-                            Email Address
-                          </label>
-                          <input
-                            type="email"
-                            id="email"
-                            className="block w-full rounded-md border border-gray-300 px-3 py-2 pl-6 pr-6 h-[42px] "
-                          />
-                        </div>
-                        <div className="flex flex-col gap-4">
-                          <label
-                            htmlFor="company"
-                            className="text-lg font-medium text-gray-700"
-                          >
-                            Company Name
-                          </label>
-                          <input
-                            type="text"
-                            id="company"
-                            className="block w-full rounded-md border border-gray-300 px-3 py-2 pl-6 pr-6 h-[42px]"
-                          />
-                        </div>
-                        <div className="flex flex-col gap-4">
-                          <label
-                            htmlFor="subject"
-                            className="text-lg font-medium text-gray-700"
-                          >
-                            Subject
-                          </label>
-                          <input
-                            type="text"
-                            id="subject"
-                            className="block w-full rounded-md border border-gray-300 px-3 py-2 pl-6 pr-6 h-[42px]"
-                          />
-                        </div>
-                      </div>
-                      <div className="flex flex-col gap-4">
-                        <label
-                          htmlFor="message"
-                          className="text-lg font-medium text-gray-700"
-                        >
-                          Your Message
-                        </label>
-                        <textarea
-                          id="message"
-                          rows={4}
-                          className="block w-full rounded-md border border-gray-300 px-3 py-2 pl-6 pr-6 min-h-[120px]"
-                        ></textarea>
-                      </div>
-                      <button
-                        type="submit"
-                        className="rounded-md bg-green-700 text-base font-semibold text-white hover:bg-green-800 h-[48px] w-full md:w-[200px] self-start transition-all duration-200"
-                      >
-                        Send Message
-                      </button>
-                      <br />
-                    </form>
+                    <h4 className="text-xl font-bold text-gray-900">
+                      Connect With Us
+                    </h4>
+                    <UserDetail />
                   </div>
                 </div>
               </div>
@@ -622,9 +553,10 @@ export default function About() {
             <br />
             <br />
           </div>
+
           {/* Section 6 */}
           <div
-            className="relative flex justify-center w-full overflow-hidden"
+            className="relative flex justify-center w-full overflow-hidden "
             data-aos="fade-up"
           >
             <div className="w-[1536px]">
@@ -646,14 +578,14 @@ export default function About() {
                 data-aos="zoom-in"
               >
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d-122.4194154846816!3d37.77492977975971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f0e2c5b1%3A0x4c8b8b6e8f8b8b8b!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sus!4v1681234567890!5m2!1sen!2sus"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.679080469446!2d70.5131841!3d21.6351962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39581d483da8702f%3A0x45a9b999ee560a5d!2sAgrolla%20Impex!5e0!3m2!1sen!2sin!4v1719151673420!5m2!1sen!2sin"
                   width="100%"
                   height="400"
                   style={{ border: 0 }}
                   allowFullScreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
+                />
               </div>
               <br />
               <br />
@@ -683,10 +615,17 @@ export default function About() {
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
-                <button className="rounded-md bg-green-700 text-base font-semibold text-white shadow-sm hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-green-700 focus:ring-offset-2 h-[50px] w-[208px]">
+                <button
+                  onClick={() => (window.location.href = "/Contact")}
+                  className="rounded-md bg-green-700 text-base font-semibold text-white shadow-sm hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-green-700 h-[50px] w-[208px]"
+                >
                   Contact Us Today
                 </button>
-                <button className="rounded-md bg-white  text-base font-semibold text-gray-900 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 h-[50px] w-[208px]">
+
+                <button
+                  onClick={() => (window.location.href = "/Contact")}
+                  className="rounded-md bg-white text-base font-semibold text-gray-900 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 h-[50px] w-[208px]"
+                >
                   Request a Quote
                 </button>
               </div>

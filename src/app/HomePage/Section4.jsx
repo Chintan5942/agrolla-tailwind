@@ -85,10 +85,7 @@ export default function Section4() {
 
           {/* Text + Counters */}
           <div className="lg:w-[680px] lg:h-[536px] w-full flex flex-col gap-2 sm:w-[700px] flex-wrap">
-            <div
-              className="w-[90%] relative left-[5%]"
-              data-aos="fade-left"
-            >
+            <div className="w-[90%] relative left-[5%]" data-aos="fade-left">
               <br />
               <div className="flex items-center justify-center">
                 <hr className="w-10 border border-[#2E7D32]" />
@@ -127,12 +124,13 @@ export default function Section4() {
                   </div>
                 ))}
               </div>
-                <br />
+              <br />
               {/* Button */}
               <div className="flex justify-center lg:justify-center">
                 <button
                   className="bg-green-700 h-[48px] w-[154px] hover:bg-green-700/80 text-xs sm:text-sm md:text-base text-white font-medium rounded"
                   data-aos="fade-up"
+                  onClick={() => (window.location.href = "/Contact")}
                 >
                   Contact Us
                 </button>

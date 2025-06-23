@@ -9,10 +9,10 @@ export default function Section3() {
       {/* Move background image and bg-fixed to the outermost div */}
       <div className="relative min-h-screen bg-[url('/section3-BG.png')] bg-no-repeat bg-cover bg-fixed">
         {/* Dark overlay */}
-        <div className="absolute inset-2 bg-black/75"></div>
+        <div className="absolute inset-2 bg-black/70"></div>
 
         {/* Main content without background image or bg-fixed */}
-        <div className="flex justify-center max-w-full ">
+        <div className="flex justify-center max-w-full">
           <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 md:flex-row animate-fadeIn">
             {/* Text Content */}
             <div className="">
@@ -40,21 +40,29 @@ export default function Section3() {
                 </p>
                 <br />
                 <div className="flex flex-col items-center gap-4 mt-8 lg:justify-start sm:flex-row sm:justify-center md:justify-start">
-                  <button className="h-[52px] w-[144px] bg-[#2e7d32] text-white rounded-md hover:bg-[#2e7d32d2] text-[16px] font-medium hover:cursor-pointer">
-                    Shop Now
+                  <button
+                    className="h-[52px] w-[144px] bg-[#2e7d32] text-white rounded-md hover:bg-[#2e7d32d2] text-[16px] font-medium hover:cursor-pointer"
+                    onClick={() => (window.location.href = "/Product")}
+                  >
+                    See Products
                   </button>
-                  <button className="h-[52px] w-[157px] border-2 border-[#2e7d32] text-[#2e7d32] rounded-md bg-transparent hover:bg-[#2e7d3221] text-[16px] font-medium">
+                  <button
+                    className="h-[52px] w-[157px] border-2 border-[#fff] text-[#fff] rounded-md bg-transparent hover:bg-[#2e7d3221] text-[16px] font-medium"
+                    onClick={() => (window.location.href = "/About")}
+                  >
                     Learn More
                   </button>
                 </div>
               </div>
             </div>
+
             {/* Image */}
             <div className="mt-10 md:mt-8 md:ml-[100px] animate-slideInRight">
+              <br />
               <img
-                src="/farmer.png"
+                src="/farmer.jpg"
                 alt="Farmer"
-                className="h-[300px] sm:h-[400px] md:h-[620px] w-auto rounded-3xl mx-auto"
+                className="w-[300px] h-[200px] sm:w-[400px] sm:h-[300px] md:w-[600px] md:h-[620px] rounded-3xl mx-auto object-cover"
               />
             </div>
           </div>

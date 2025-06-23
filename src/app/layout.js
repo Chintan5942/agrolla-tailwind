@@ -15,9 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Agrolla Impex – Premium Seeds Supplier in Gujarat | Saurashtra",
-  description:
-    "Agrolla Impex is a trusted seed production company based in Saurashtra, Gujarat. We supply high-quality seeds for agriculture across India.",
+  title: "Agrolla Impex ",
 };
 
 export default function RootLayout({ children }) {
@@ -25,7 +23,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {/* Google Translate Widget */}
-        <GoogleTranslate />
+        {/* <GoogleTranslate /> */}
 
         {/* Navbar always on top */}
         <Navbar />

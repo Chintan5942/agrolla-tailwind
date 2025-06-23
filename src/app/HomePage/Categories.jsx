@@ -178,9 +178,11 @@ const filteredProducts = productsData
               <p className="text-[#4B5563] text-sm lg:text-base mt-3 lg:mt-4">
                 Contact our customer support team anytime
               </p>
+                <a href="/Contact" >
               <p className="text-[#4CAF50] text-sm lg:text-base mt-2">
                 Contact Support →
               </p>
+                </a>
             </li>
           </ul>
         </aside>

@@ -1,9 +1,10 @@
 "use client";
 import { useEffect } from "react";
-import Footer from "@/app/HomePage/Footer";
+import UserDetail from "@/app/HomePage/UserDetail";
 import $ from "jquery";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
 
 export default function Page() {
   useEffect(() => {
@@ -51,113 +52,14 @@ export default function Page() {
       >
         {/* Contact Form */}
         <div
-          className="shadow-xl rounded-lg bg-white w-full max-w-[992px] lg:relative lg:top-20 lg:h-[859px] sm:h-[1000px]"
+          className="shadow-xl rounded-lg bg-white w-full max-w-[992px] lg:relative lg:top-18 lg:h-[869px] sm:h-[1000px]"
           data-aos="fade-right"
         >
           <div className="text-2xl font-semibold text-gray-900 w-[95%] left-[2.5%] relative">
             <div style={{ height: "24px" }}></div>
             <p className="text-lg">Send Us a Message</p>
             <div style={{ height: "24px" }}></div>
-            <form className="flex flex-col gap-5">
-              <div className="flex flex-col gap-5 md:flex-row">
-                <div className="flex flex-col flex-1 gap-2">
-                  <label className="text-lg text-[#374151] font-medium">
-                    First Name
-                  </label>
-                  <input
-                    type="text"
-                    name="firstName"
-                    className="w-full border border-gray-300 rounded-md"
-                    style={{ height: "48px", paddingLeft: "16px" }}
-                  />
-                </div>
-                <div className="flex flex-col flex-1 gap-2">
-                  <label className="text-lg text-[#374151] font-medium">
-                    Last Name
-                  </label>
-                  <input
-                    type="text"
-                    name="lastName"
-                    className="w-full border border-gray-300 rounded-md"
-                    style={{ height: "48px", paddingLeft: "16px" }}
-                  />
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-2">
-                <label className="text-lg text-[#374151] font-medium">
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  className="w-full border border-gray-300 rounded-md"
-                  style={{ height: "48px", paddingLeft: "16px" }}
-                />
-              </div>
-
-              <div className="flex flex-col gap-2">
-                <label className="text-lg text-[#374151] font-medium">
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  name="phone"
-                  className="w-full border border-gray-300 rounded-md"
-                  style={{ height: "48px", paddingLeft: "16px" }}
-                />
-              </div>
-
-              <div className="flex flex-col gap-2">
-                <label className="text-lg text-[#374151] font-medium">
-                  Subject
-                </label>
-                <select
-                  name="subject"
-                  className="w-full text-lg text-gray-700 border border-gray-300 rounded-md"
-                  style={{ height: "48px", paddingLeft: "16px" }}
-                >
-                  <option value="">Select a subject</option>
-                  <option value="subject1">Subject-1</option>
-                  <option value="subject2">Subject-2</option>
-                </select>
-              </div>
-
-              <div className="flex flex-col gap-2">
-                <label className="text-lg text-[#374151] font-medium">
-                  Message
-                </label>
-                <textarea
-                  name="message"
-                  className="w-full border border-gray-300 rounded-md"
-                  style={{ height: "144px", padding: "8px 16px" }}
-                ></textarea>
-              </div>
-
-              <div className="flex items-start gap-5">
-                <input
-                  type="checkbox"
-                  id="privacy"
-                  className="w-6 h-6 text-green-600"
-                />
-                <label
-                  htmlFor="privacy"
-                  className="text-lg font-medium text-gray-700"
-                >
-                  I agree to the processing of my personal data according to the
-                  privacy policy
-                </label>
-              </div>
-
-              <button
-                type="submit"
-                className="text-lg text-white bg-green-700 rounded-md hover:bg-green-800 w-50"
-                style={{ height: "48px", padding: "0 24px" }}
-              >
-                Send Message
-              </button>
-              <div style={{ height: "48px" }}></div>
-            </form>
+            <UserDetail/>
           </div>
         </div>
 
@@ -200,8 +102,9 @@ export default function Page() {
               <div>
                 <p className="font-semibold text-gray-900">Phone</p>
                 <p className="text-sm text-gray-700">
-                  Main: +1 (555) 123-4567 <br />
-                  Toll-free: 1-800-AGROLLA
+                  +917227021300 <br />
+                  +917227021301 <br />
+                  +917227021302
                 </p>
               </div>
             </div>
@@ -240,16 +143,20 @@ export default function Page() {
                 alt="Twitter"
                 style={{ width: "40px", height: "40px" }}
               />
-              <img
-                src="/linkedin.svg"
-                alt="LinkedIn"
-                style={{ width: "40px", height: "40px" }}
-              />
-              <img
-                src="/instagram.svg"
-                alt="Instagram"
-                style={{ width: "40px", height: "40px" }}
-              />
+              <a href="https://www.linkedin.com/company/agrolla-impex/">
+                <img
+                  src="/linkedin.svg"
+                  alt="LinkedIn"
+                  style={{ width: "40px", height: "40px" }}
+                />
+              </a>
+              <a href="https://www.instagram.com/agrolla_impex?igsh=dmhqc3RjM2hzands&utm_source=qr">
+                <img
+                  src="/instagram.svg"
+                  alt="Instagram"
+                  style={{ width: "40px", height: "40px" }}
+                />
+              </a>
             </div>
           </div>
         </div>

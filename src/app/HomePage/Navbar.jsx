@@ -78,7 +78,9 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:block" data-aos="fade-left">
-          <button className="h-[40px] w-[130px] bg-[#2E7D32] rounded-lg text-white text-base font-semibold">
+          <button className="h-[40px] w-[130px] bg-[#2E7D32] rounded-lg text-white text-base font-semibold"
+          onClick={() => (window.location.href = "/Contact")}
+          >
             Get Quote
           </button>
         </div>
@@ -135,7 +137,8 @@ export default function Navbar() {
             </a>
             <button
               className="h-[40px] w-[130px] bg-[#2E7D32] rounded-lg text-white font-semibold"
-              onClick={() => setIsOpen(false)}
+              onClick={() => setIsOpen(false)  
+              }
             >
               Get Quote
             </button>

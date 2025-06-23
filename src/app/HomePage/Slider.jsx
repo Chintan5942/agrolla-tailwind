@@ -35,21 +35,12 @@ export default function Slider() {
   const testimonials = [
     {
       text: `Implementing Agrolla's precision farming solutions has increased my crop yield by 40% while reducing water usage by 30%. Their team provided exceptional support throughout the entire process.`,
-      name: "Rajesh Kumar",
-      title: "Rice Farmer, Gujarat",
-      image: "/farmer1.jpg",
     },
     {
       text: `The smart irrigation system from Agrolla has revolutionized our water management. We've seen significant improvements in crop quality and substantial water savings. Highly recommended!`,
-      name: "Sunita Sharma",
-      title: "Vegetable Grower, Maharashtra",
-      image: "/farmer2.jpg",
     },
     {
       text: `Switching to Agrolla's organic farming solutions has been a game-changer for our farm. We've reduced chemical inputs while maintaining high yields, and our products now command premium prices in the market.`,
-      name: "Vikram Singh",
-      title: "Organic Farmer, Punjab",
-      image: "/farmer3.jpg",
     },
   ];
 
@@ -116,22 +107,6 @@ export default function Slider() {
                       <p className="text-sm text-gray-700 mb-6 flex-grow italic w-80 relative left-[25px]">
                         "{item.text}"
                       </p>
-                      <br />
-                      <div className="flex items-center gap-4 w-80 relative left-[25px]">
-                        <div className="w-12 h-12 bg-gray-200 rounded-full">
-                          <img
-                            src={item.image}
-                            alt={item.name}
-                            className="object-cover w-full h-full rounded-full"
-                          />
-                        </div>
-                        <div>
-                          <p className="text-sm font-semibold text-gray-900">
-                            {item.name}
-                          </p>
-                          <p className="text-xs text-gray-500">{item.title}</p>
-                        </div>
-                      </div>
                       <br />
                     </div>
                   </SwiperSlide>

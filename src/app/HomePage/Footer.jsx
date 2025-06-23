@@ -64,7 +64,7 @@ export default function Footer() {
                     href="mailto:info@agrolla.in"
                     className="text-gray-300 transition-colors hover:text-white"
                   >
-                    info@agrolla.in
+                    info@agrollaimpex.com
                   </a>
                 </div>
               </div>
@@ -183,11 +183,11 @@ export default function Footer() {
                     { platform: "x", url: "https://twitter.com/agrolla" },
                     {
                       platform: "instagram",
-                      url: "https://instagram.com/agrolla",
+                      url: "https://www.instagram.com/agrolla_impex?igsh=dmhqc3RjM2hzands&utm_source=qr",
                     },
                     {
                       platform: "linkedin",
-                      url: "https://linkedin.com/company/agrolla",
+                      url: "https://www.linkedin.com/company/agrolla-impex/",
                     },
                   ].map((social) => (
                     <a
