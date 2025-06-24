@@ -226,7 +226,7 @@ export default function Categories({ onCategorySelect }) {
             ? Array.from({ length: 6 }).map((_, i) => (
                 <div
                   key={i}
-                  className="animate-pulse bg-white rounded-2xl h-[450px] p-4 flex flex-col justify-between shadow-sm"
+                  className="animate-pulse bg-white rounded-2xl h-[450px] p-4 flex flex-col justify-between shadow-sm border border-gray-100"
                 >
                   <div className="h-48 bg-gray-200 rounded-xl mb-4"></div>
                   <div className="h-5 bg-gray-200 rounded w-3/4 mb-2"></div>
@@ -248,7 +248,7 @@ export default function Categories({ onCategorySelect }) {
                 return (
                   <div
                     key={product.id}
-                    className="bg-white rounded-2xl h-[450px] card cursor-pointer relative flex flex-col justify-between hover:shadow-lg transition-shadow duration-300"
+                    className="bg-white rounded-2xl h-[450px] card cursor-pointer relative flex flex-col justify-between hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-green-300 p-4"
                     onClick={() => router.push(`/Product/${product.id}`)}
                   >
                     <img

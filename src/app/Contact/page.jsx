@@ -5,7 +5,6 @@ import $ from "jquery";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-
 export default function Page() {
   useEffect(() => {
     // Initialize AOS
@@ -18,6 +17,13 @@ export default function Page() {
       const $item = $(this).closest(".accordion-item");
       const $content = $item.find(".accordion-content");
       const $chevron = $item.find(".chevron");
+
+      // Close all other accordions
+      $(".accordion-item").not($item).removeClass("active");
+      $(".accordion-content").not($content).slideUp(300);
+      $(".chevron").not($chevron).removeClass("transform rotate-180");
+
+      // Toggle current accordion
       $item.toggleClass("active");
       $content.slideToggle(300);
       $chevron.toggleClass("transform rotate-180");
@@ -59,14 +65,14 @@ export default function Page() {
             <div style={{ height: "24px" }}></div>
             <p className="text-lg">Send Us a Message</p>
             <div style={{ height: "24px" }}></div>
-            <UserDetail/>
+            <UserDetail />
           </div>
         </div>
 
         {/* Contact Info */}
         <div
           className="bg-white shadow-xl rounded-lg flex flex-col w-full max-w-[480px] lg:relative lg:top-20"
-          style={{ height: "509px"}}
+          style={{ height: "509px" }}
           data-aos="fade-left"
         >
           <div className="w-[90%] left-5 relative">
@@ -175,7 +181,7 @@ export default function Page() {
         <div style={{ height: "48px" }}></div>
         <div className="w-full max-w-[1504px]">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d-122.4194154846816!3d37.77492977975971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f0e2c5b1%3A0x4c8b8b6e8f8b8b8b!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sus!4v1681234567890!5m2!1sen!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.679080469446!2d70.5131841!3d21.6351962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39581d483da8702f%3A0x45a9b999ee560a5d!2sAgrolla%20Impex!5e0!3m2!1sen!2sin!4v1719151673420!5m2!1sen!2sin"
             width="99%"
             height="400"
             style={{ border: 0 }}
@@ -223,15 +229,15 @@ export default function Page() {
           ].map((faq, idx) => (
             <div
               key={idx}
-              className="border border-gray-300 max-w-2xl w-[95%] relative left-[2.5%] rounded-lg shadow-lg accordion-item"
+              className={`border border-gray-300 max-w-2xl w-[95%] relative left-[2.5%] rounded-lg shadow-lg accordion-item transition-all duration-300 hover:shadow-xl`}
               data-aos="fade-up"
               data-aos-delay={idx * 100}
             >
               <div style={{ height: "24px" }}></div>
-              <button className="accordion-title text-left text-lg font-semibold text-gray-800 w-[90%] left-6 relative hover:cursor-pointer flex justify-between items-center">
-                {faq.title}
+              <button className="accordion-title text-left text-lg font-semibold text-gray-800 w-[90%] left-6 relative hover:cursor-pointer flex justify-between items-center group">
+                <span className="pr-4">{faq.title}</span>
                 <svg
-                  className="w-5 h-5 text-gray-500 transition-transform duration-300 chevron"
+                  className="w-4 h-4 sm:w-5 sm:h-5 text-gray-500 transition-all duration-300 chevron group-hover:text-green-600 flex-shrink-0"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
                   fill="currentColor"
@@ -253,6 +259,38 @@ export default function Page() {
         </div>
         <div style={{ height: "72px" }}></div>
       </div>
+
+      {/* Custom Styles for FAQ Accordion */}
+      <style jsx>{`
+        .accordion-item.active {
+          border-color: #16a34a !important;
+          background-color: #f0fdf4 !important;
+        }
+
+        .accordion-item.active .accordion-title {
+          color: #16a34a !important;
+        }
+
+        .accordion-item.active .chevron {
+          color: #16a34a !important;
+          transform: rotate(180deg) !important;
+        }
+
+        .accordion-item:hover {
+          border-color: #16a34a;
+        }
+
+        .accordion-title:hover {
+          color: #16a34a !important;
+        }
+
+        @media (max-width: 640px) {
+          .chevron {
+            width: 16px !important;
+            height: 16px !important;
+          }
+        }
+      `}</style>
     </div>
   );
 }

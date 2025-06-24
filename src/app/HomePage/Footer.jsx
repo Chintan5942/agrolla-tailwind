@@ -16,55 +16,55 @@ export default function Footer() {
       <br />
       <br />
       <footer
-        className="bg-[url('/footer.png')] bg-cover bg-center bg-no-repeat overflow-hidden lg:h-[600px] flex justify-center items-center"
+        className="bg-[url('/footer.png')] bg-cover bg-center bg-no-repeat bg-fixed overflow-hidden min-h-[600px] flex justify-center items-center"
         data-aos="fade-up"
       >
-        <div className="flex flex-col max-w-screen-2xl">
-          {" "}
-          <br />
-          <div className="grid w-full grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4">
-            {/* Company Info */}
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          {/* Main Footer Content */}
+          <div className="grid grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-12">
+            
+            {/* Company Info - Takes half width on mobile, half on tablet, quarter on desktop */}
             <div
-              className="flex flex-col items-center gap-6 text-center"
+              className="flex flex-col items-center text-center md:items-start md:text-left xl:col-span-1 col-span-2 md:col-span-1"
               data-aos="fade-right"
             >
-              <Link href="/">
+              <Link href="/" className="mb-4">
                 <img
                   src="/footer-logo.png"
                   alt="Agrolla Logo"
-                  className="h-auto mx-auto w-36 sm:mx-0"
+                  className="h-auto w-28 lg:w-36"
                 />
               </Link>
-              <p className="leading-6 text-gray-300">
+              <p className="text-gray-300 leading-6 mb-4 max-w-sm text-sm">
                 Transforming agriculture through innovation and sustainable
                 solutions for a better tomorrow.
               </p>
 
-              <div className="flex flex-col gap-3">
-                <div className="flex items-start gap-3">
+              <div className="space-y-2 w-full max-w-sm">
+                <div className="flex items-start gap-2">
                   <img
                     src="/location.svg"
                     alt="Location"
-                    className="w-10 h-10 mt-1"
+                    className="w-4 h-4 mt-1 flex-shrink-0"
                   />
-                  <span className="text-gray-300">
+                  <span className="text-xs text-gray-300">
                     BM Square-1, Rajlaxmi Park, Junagadh
                   </span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <img src="/call.svg" alt="Phone" className="w-10 h-10" />
+                <div className="flex items-center gap-2">
+                  <img src="/call.svg" alt="Phone" className="w-4 h-4 flex-shrink-0" />
                   <a
                     href="tel:+919876543210"
-                    className="text-gray-300 transition-colors hover:text-white"
+                    className="text-xs text-gray-300 transition-colors hover:text-white"
                   >
                     +91 98765 43210
                   </a>
                 </div>
-                <div className="flex items-center gap-3">
-                  <img src="/mail.svg" alt="Email" className="w-10 h-10" />
+                <div className="flex items-center gap-2">
+                  <img src="/mail.svg" alt="Email" className="w-4 h-4 flex-shrink-0" />
                   <a
-                    href="mailto:info@agrolla.in"
-                    className="text-gray-300 transition-colors hover:text-white"
+                    href="mailto:info@agrollaimpex.com"
+                    className="text-xs text-gray-300 transition-colors hover:text-white"
                   >
                     info@agrollaimpex.com
                   </a>
@@ -72,15 +72,16 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Quick Links */}
+            {/* Quick Links - Takes half width on mobile */}
             <div
-              className="flex flex-col items-center gap-6 text-center"
+              className="flex flex-col items-center text-center md:items-start md:text-left"
               data-aos="fade-up"
+              data-aos-delay="100"
             >
-              <h3 className="text-xl font-bold text-gray-300 lg:text-2xl">
+              <h3 className="text-lg font-bold text-white mb-4">
                 Quick Links
               </h3>
-              <ul className="flex flex-col gap-3">
+              <ul className="space-y-2">
                 {[
                   { name: "Home", path: "/" },
                   { name: "About Us", path: "/About" },
@@ -88,95 +89,82 @@ export default function Footer() {
                   { name: "Products", path: "/Product" },
                   { name: "Contact", path: "/Contact" },
                 ].map((item) => (
-                  <li key={item.name} className="flex items-start gap-2 group">
-                    <span className="font-bold text-white transition-transform group-hover:translate-x-1">
-                      ›
-                    </span>
+                  <li key={item.name} className="group">
                     <Link
                       href={item.path}
-                      className="text-gray-300 transition-colors hover:text-white"
+                      className="flex items-center gap-2 text-gray-300 hover:text-white transition-all duration-300 group-hover:translate-x-1 text-sm"
                     >
-                      {item.name}
+                      <span className="text-green-500 font-bold text-xs">›</span>
+                      <span>{item.name}</span>
                     </Link>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* Our Services */}
+            {/* Our Services - Takes half width on mobile */}
             <div
-              className="flex flex-col items-center gap-6 text-center"
+              className="flex flex-col items-center text-center md:items-start md:text-left"
               data-aos="fade-up"
+              data-aos-delay="200"
             >
-              <h3 className="text-xl font-bold text-gray-300 lg:text-2xl">
+              <h3 className="text-lg font-bold text-white mb-4">
                 Our Services
               </h3>
-              <ul className="flex flex-col gap-3">
+              <ul className="space-y-2">
                 {[
-                  {
-                    name: "Precision Farming",
-                    path: "/services#precision-farming",
-                  },
-                  {
-                    name: "Irrigation Solutions",
-                    path: "/services#irrigation",
-                  },
-                  { name: "Organic Farming", path: "/services#organic" },
-                  {
-                    name: "Crop Protection",
-                    path: "/services#crop-protection",
-                  },
-                  {
-                    name: "Farm Management",
-                    path: "/services#farm-management",
-                  },
+                  "Precision Farming",
+                  "Irrigation Solutions", 
+                  "Organic Farming",
+                  "Crop Protection",
+                  "Farm Management",
                 ].map((service) => (
-                  <li
-                    key={service.name}
-                    className="flex items-start gap-2 group"
-                  >
-                    <span className="font-bold text-white">✔</span>
+                  <li key={service} className="group">
                     <Link
-                      href={service.path}
-                      className="text-gray-300 transition-colors hover:text-white"
+                      href="#"
+                      className="flex items-center gap-2 text-gray-300 hover:text-white transition-all duration-300 group-hover:translate-x-1 text-sm"
                     >
-                      {service.name}
+                      <span className="text-green-500 font-bold text-xs">✓</span>
+                      <span>{service}</span>
                     </Link>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* Working Hours & Social */}
+            {/* Working Hours & Social - Takes half width on mobile */}
             <div
-              className="flex flex-col items-center gap-8 text-center"
+              className="flex flex-col items-center text-center md:items-start md:text-left"
               data-aos="fade-left"
+              data-aos-delay="300"
             >
-              <div className="flex flex-col gap-6">
-                <h3 className="text-xl font-bold text-gray-300 lg:text-2xl">
+              {/* Working Hours */}
+              <div className="mb-6">
+                <h3 className="text-lg font-bold text-white mb-4">
                   Working Hours
                 </h3>
-                <ul className="flex flex-col gap-3 text-gray-300">
-                  <li className="flex justify-between gap-2">
-                    <span>Monday - Friday:</span>
+                <div className="space-y-1 text-xs text-gray-300">
+                  <div className="flex flex-col gap-1">
+                    <span className="font-medium">Mon - Fri:</span>
                     <span>9:00 AM - 6:00 PM</span>
-                  </li>
-                  <li className="flex justify-between gap-2">
-                    <span>Saturday:</span>
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <span className="font-medium">Saturday:</span>
                     <span>9:00 AM - 4:00 PM</span>
-                  </li>
-                  <li className="flex justify-between gap-2">
-                    <span>Sunday:</span>
-                    <span className="text-green-500">Closed</span>
-                  </li>
-                </ul>
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <span className="font-medium">Sunday:</span>
+                    <span className="text-green-500 font-medium">Closed</span>
+                  </div>
+                </div>
               </div>
 
-              <div className="flex flex-col gap-6">
-                <h3 className="text-xl font-bold text-gray-300 lg:text-2xl">
+              {/* Social Media */}
+              <div>
+                <h3 className="text-lg font-bold text-white mb-4">
                   Follow Us
                 </h3>
-                <div className="flex justify-center gap-4 sm:justify-start">
+                <div className="flex justify-center md:justify-start gap-3">
                   {[
                     {
                       platform: "facebook",
@@ -197,12 +185,12 @@ export default function Footer() {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-8 h-8 transition-transform hover:scale-105 hover:opacity-80"
+                      className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-green-600 hover:scale-110"
                     >
                       <img
                         src={`/${social.platform}.png`}
                         alt={social.platform}
-                        className="w-full h-full"
+                        className="w-5 h-5"
                       />
                     </a>
                   ))}
@@ -210,38 +198,35 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <br />
+
           {/* Bottom Footer Bar */}
-          <div className="w-full border-t border-gray-600" data-aos="fade-up">
-            <br />
-            <br />
-            <div className="flex flex-col items-center gap-4 text-sm text-gray-300 md:flex-row md:justify-between md:items-center">
-              <p className="text-center md:text-left">
+          <div className="border-t border-gray-600 mt-8 pt-6" data-aos="fade-up">
+            <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
+              <p className="text-xs text-gray-300 text-center md:text-left">
                 © 2025 Agrolla. All rights reserved.
               </p>
-              <div className="flex flex-wrap justify-center gap-4 md:justify-end">
+              <div className="flex flex-wrap justify-center md:justify-end gap-4">
                 <Link
                   href="/privacy-policy"
-                  className="transition-colors hover:text-white hover:underline"
+                  className="text-xs text-gray-300 hover:text-white transition-colors"
                 >
                   Privacy Policy
                 </Link>
                 <Link
                   href="/terms-of-service"
-                  className="transition-colors hover:text-white hover:underline"
+                  className="text-xs text-gray-300 hover:text-white transition-colors"
                 >
                   Terms of Service
                 </Link>
                 <Link
                   href="/sitemap"
-                  className="transition-colors hover:text-white hover:underline"
+                  className="text-xs text-gray-300 hover:text-white transition-colors"
                 >
                   Sitemap
                 </Link>
               </div>
             </div>
-          </div>{" "}
-          <br />
+          </div>
         </div>
       </footer>
     </>
