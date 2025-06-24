@@ -48,12 +48,10 @@ export default function Slider() {
     <>
       <br />
       <br />
-      <div className="bg-white max-w-[1920px] overflow-hidden px-4">
+      <div className="bg-white max-w-[1920px] overflow-hidden px-4 relative top-30">
         <div>
           <div className="text-center" data-aos="fade-down">
             <center>
-              <br />
-              <br />
               <h1 className="text-3xl font-semibold text-gray-900 md:text-4xl">
                 What Our <span className="text-green-700">Clients</span> Say
               </h1>
@@ -91,7 +89,7 @@ export default function Slider() {
                       data-aos="zoom-in-up"
                     >
                       <br />
-                      <div className="flex space-x-1 w-80 relative left-[25px]">
+                      <div className="flex space-x-1 w-[90%]  relative left-[5%]">
                         {[...Array(5)].map((_, i) => (
                           <svg
                             key={i}
@@ -104,7 +102,7 @@ export default function Slider() {
                         ))}
                       </div>
                       <br />
-                      <p className="text-sm text-gray-700 mb-6 flex-grow italic w-80 relative left-[25px]">
+                      <p className="text-sm text-gray-700 mb-6 flex-grow italic w-[90%]  relative left-[5%]">
                         "{item.text}"
                       </p>
                       <br />

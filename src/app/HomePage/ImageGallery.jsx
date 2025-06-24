@@ -3,7 +3,7 @@ export default function ImageGallery() {
   return (
     <>
       <div
-        className="w-full px-4 overflow-hidden sm:px-6 lg:px-8"
+        className="relative w-full px-4 overflow-hidden top-20 sm:px-6 lg:px-8"
         data-aos="fade-up"
       >
         {/* Title Section */}

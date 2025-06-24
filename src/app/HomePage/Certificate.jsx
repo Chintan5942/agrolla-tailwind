@@ -12,7 +12,7 @@ export default function Section5() {
   return (
     <>
       <br /><br />
-      <div className="w-full lg:relative lg:top-25 overflow-hidden h-[600px] " data-aos="fade-up">
+      <div className="w-full lg:relative lg:top-25 overflow-hidden lg:h-[500px]  sm:h-[800px]" data-aos="fade-up">
         <div className="flex flex-col items-center px-4 space-y-6">
           {/* Section Title */}
           <div className="flex items-center justify-center gap-2" data-aos="fade-down">
@@ -31,7 +31,7 @@ export default function Section5() {
             Our commitment to excellence is backed by international certifications and quality
             standards, ensuring the highest level of product quality and safety.
           </h5>
-          <br /><br />
+          <br />
           {/* Certification Images in Single Row */}
           <div className="flex flex-wrap w-full gap-6 justify-evenly">
             <img 

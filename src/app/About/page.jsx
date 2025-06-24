@@ -410,16 +410,15 @@ export default function About() {
           >
             <br />
             <br />
-            <div className="w-[90%] relative left-[5%] h-auto lg:h-[800px]">
-              <div className="flex flex-col lg:flex-row mx-auto gap-8 lg:gap-10 max-w-[1536px] w-full lg:relative lg:left-[5%]">
+            <div className="w-[100%]  h-auto lg:h-[800px] ">
+              <div className="flex flex-col lg:flex-row mx-auto gap-8 lg:gap-10 max-w-[1536px] w-full  lg:h-[780px]">
                 {/* Contact Information */}
-                <div className="w-full gap-8 p-6 mx-auto bg-white shadow-lg rounded-xl lg:max-w-md lg:w-1/3">
+                <div className="w-full gap-8 p-6 mx-auto bg-white shadow-lg rounded-xl lg:max-w-md lg:w-1/3 ">
                   <div
-                    className="flex flex-col w-[90%] justify-between relative left-[5%]"
+                    className="flex flex-col justify-between "
                     data-aos="fade-right"
                   >
                     <div className="flex flex-col gap-4">
-                      <br />
                       <h3 className="text-xl font-semibold text-gray-900">
                         Contact Information
                       </h3>
@@ -536,14 +535,15 @@ export default function About() {
                 </div>
 
                 {/* Contact Form */}
-                <div className="w-full gap-6 bg-white shadow-lg rounded-xl">
+                <div className="w-full gap-6 bg-white shadow-lg rounded-xl h-[780px]">
                   <div
                     className="flex flex-col w-[95%] relative left-[2.5%] max-h-[780px]"
                     data-aos="fade-left"
                   >
-                    <h4 className="text-xl font-bold text-gray-900">
-                      Connect With Us
-                    </h4>
+                    <br />
+                    <h3 className="text-xl font-semibold text-gray-900">
+                      Contact Information
+                    </h3>
                     <UserDetail />
                   </div>
                 </div>

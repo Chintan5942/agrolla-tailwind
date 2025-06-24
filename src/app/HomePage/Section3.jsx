@@ -62,7 +62,7 @@ export default function Section3() {
               <img
                 src="/farmer.jpg"
                 alt="Farmer"
-                className="w-[300px] h-[200px] sm:w-[400px] sm:h-[300px] md:w-[600px] md:h-[620px] rounded-3xl mx-auto object-cover"
+                className="w-[200px] h-[200px] sm:w-[400px] sm:h-[300px] md:w-[600px] md:h-[620px] rounded-3xl mx-auto object-cover"
               />
             </div>
           </div>
