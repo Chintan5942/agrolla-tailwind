@@ -66,7 +66,7 @@ export default function Page() {
         {/* Contact Info */}
         <div
           className="bg-white shadow-xl rounded-lg flex flex-col w-full max-w-[480px] lg:relative lg:top-20"
-          style={{ height: "509px" }}
+          style={{ height: "509px"}}
           data-aos="fade-left"
         >
           <div className="w-[90%] left-5 relative">

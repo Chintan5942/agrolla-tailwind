@@ -538,10 +538,9 @@ export default function About() {
                 {/* Contact Form */}
                 <div className="w-full gap-6 bg-white shadow-lg rounded-xl">
                   <div
-                    className="flex flex-col w-[95%] relative left-[2.5%] max-h-[780px] overflow-y-auto"
+                    className="flex flex-col w-[95%] relative left-[2.5%] max-h-[780px]"
                     data-aos="fade-left"
                   >
-                    <br />
                     <h4 className="text-xl font-bold text-gray-900">
                       Connect With Us
                     </h4>

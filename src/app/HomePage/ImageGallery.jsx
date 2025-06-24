@@ -76,16 +76,16 @@ export default function ImageGallery() {
               <img
                 src="/gal4.jpg"
                 alt=""
-                className="w-full    sm:h-[450px] md:h-[600px] object-contain sm:object-cover transition-transform duration-500 hover:scale-105 rounded-xl"
+                className="w-full sm:h-[450px] md:h-[600px] object-contain sm:object-cover transition-transform duration-500 hover:scale-105 rounded-xl"
               />
             </div>
           </div>
         </div>
         <br />
-        <hr className="my-12 border-2 border-gray-300 max-w-[1488px] mx-auto lg:relative lg:left-[216px]" />
+        <hr className="my-12 border-2 border-gray-300 max-w-[1488px] mx-auto" />
         <br />
         {/* Gallery 2 */}
-        <div className="flex justify-center items-center">
+        <div className="flex items-center justify-center">
           <div
             className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-[1488px]"
             data-aos="fade-up"
@@ -94,7 +94,7 @@ export default function ImageGallery() {
             {["gal5.jpg", "gal6.jpg", "gal7.jpg", "gal8.jpg"].map((img, i) => (
               <div
                 key={i}
-                className=" overflow-hidden rounded-xl"
+                className="overflow-hidden rounded-xl"
                 data-aos="flip-left"
                 data-aos-delay={i * 100}
               >

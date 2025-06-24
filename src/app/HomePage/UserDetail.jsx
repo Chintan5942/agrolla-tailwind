@@ -67,7 +67,13 @@ const ContactUs = () => {
 
       if (response.data.success) {
         alert("Message sent successfully!");
-        setFormData({ name: "", number: "", email: "", subject: "", message: "" });
+        setFormData({
+          name: "",
+          number: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
       } else {
         alert("Something went wrong. Try again!");
       }
@@ -79,11 +85,14 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="px-4 py-12 md:px-8 lg:px-16">
-      <div className="p-6 mx-auto bg-white sm:p-8">
+<div className="flex items-center justify-center">
+  <div className="w-full">
         <form className="space-y-5" onSubmit={handleSubmit}>
           <div>
-            <label htmlFor="name" className="block mb-1 text-lg font-medium text-gray-700">
+            <label
+              htmlFor="name"
+              className="block mb-1 text-lg font-medium text-gray-700"
+            >
               Your Name
             </label>
             <input
@@ -94,9 +103,11 @@ const ContactUs = () => {
               className="w-full h-12 px-4 text-xl border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400"
             />
           </div>
-<br />
           <div>
-            <label htmlFor="number" className="block mb-1 text-lg font-medium text-gray-700">
+            <label
+              htmlFor="number"
+              className="block mb-1 text-lg font-medium text-gray-700"
+            >
               Phone Number
             </label>
             <input
@@ -107,9 +118,11 @@ const ContactUs = () => {
               className="w-full h-12 px-4 text-xl border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400"
             />
           </div>
-<br />
           <div>
-            <label htmlFor="email" className="block mb-1 text-lg font-medium text-gray-700">
+            <label
+              htmlFor="email"
+              className="block mb-1 text-lg font-medium text-gray-700"
+            >
               Email Address
             </label>
             <input
@@ -120,9 +133,11 @@ const ContactUs = () => {
               className="w-full h-12 px-4 text-xl border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400"
             />
           </div>
-<br />
           <div>
-            <label htmlFor="subject" className="block mb-1 text-lg font-medium text-gray-700">
+            <label
+              htmlFor="subject"
+              className="block mb-1 text-lg font-medium text-gray-700"
+            >
               Subject
             </label>
             <input
@@ -133,9 +148,11 @@ const ContactUs = () => {
               className="w-full h-12 px-4 text-xl border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400"
             />
           </div>
-          <br />
           <div>
-            <label htmlFor="message" className="block mb-1 text-lg font-medium text-gray-700">
+            <label
+              htmlFor="message"
+              className="block mb-1 text-lg font-medium text-gray-700"
+            >
               Your Message
             </label>
             <textarea
@@ -146,7 +163,6 @@ const ContactUs = () => {
               className="w-full px-4 py-3 text-xl border border-gray-300 rounded-md resize-none focus:outline-none focus:ring-1 focus:ring-gray-400"
             ></textarea>
           </div>
-<br />
           <button
             type="submit"
             disabled={loading}
@@ -154,8 +170,8 @@ const ContactUs = () => {
           >
             {loading ? "Sending..." : "Send Message"}
           </button>
+          <br />
         </form>
-        <br />
       </div>
     </div>
   );
