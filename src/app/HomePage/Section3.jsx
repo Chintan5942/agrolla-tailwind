@@ -18,7 +18,7 @@ export default function Section3() {
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
               <div className="text-center text-white lg:text-left animate-slideInLeft pt-8 lg:pt-0 max-w-lg">
                 <br className="lg:hidden" />
-                
+
                 {/* 100% Organic Badge */}
                 <div className="flex justify-center lg:justify-start mb-6">
                   <div className="h-10 w-[200px] sm:w-[220px] bg-white rounded-full flex items-center justify-center text-[14px] sm:text-[16px] text-[#2e7d32] font-bold animate-bounce">
@@ -37,9 +37,9 @@ export default function Section3() {
 
                 {/* Description */}
                 <p className="text-[14px] sm:text-[16px] lg:text-[18px] text-gray-200 leading-[24px] sm:leading-[28px] mb-8 max-w-md mx-auto lg:mx-0">
-                  Discover nature's finest organic produce, carefully
-                  cultivated and harvested to bring the freshest, most
-                  nutritious food directly from our farms to your table.
+                  Discover nature's finest organic produce, carefully cultivated
+                  and harvested to bring the freshest, most nutritious food
+                  directly from our farms to your table.
                 </p>
 
                 {/* Buttons - Single Row */}
