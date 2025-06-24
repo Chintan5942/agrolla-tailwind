@@ -44,7 +44,7 @@ export default function ImageGallery() {
               data-aos="zoom-in-right"
             >
               <img
-                src="/gal1.jpg"
+                src="/gal4.jpg"
                 alt=""
                 className="w-full  sm:h-[450px] md:h-[600px] object-contain sm:object-cover transition-transform duration-500 hover:scale-105 rounded-xl"
               />
@@ -54,14 +54,14 @@ export default function ImageGallery() {
             <div className="flex flex-col w-full gap-12 lg:w-1/3">
               <div className="overflow-hidden rounded-xl" data-aos="zoom-in">
                 <img
-                  src="/gal2.jpg"
+                  src="/gal3.jpg"
                   alt=""
                   className="w-full  sm:h-[200px] md:h-[270px] object-contain sm:object-cover transition-transform duration-500 hover:scale-105 rounded-xl"
                 />
               </div>
               <div className="overflow-hidden rounded-xl" data-aos="zoom-in">
                 <img
-                  src="/gal3.jpg"
+                  src="/gal2.jpg"
                   alt=""
                   className="w-full  sm:h-[200px] md:h-[270px] object-contain sm:object-cover transition-transform duration-500 hover:scale-105 rounded-xl"
                 />
@@ -74,7 +74,7 @@ export default function ImageGallery() {
               data-aos="zoom-in-left"
             >
               <img
-                src="/gal4.jpg"
+                src="/gal1.jpg"
                 alt=""
                 className="w-full sm:h-[450px] md:h-[600px] object-contain sm:object-cover transition-transform duration-500 hover:scale-105 rounded-xl"
               />
@@ -91,7 +91,7 @@ export default function ImageGallery() {
             data-aos="fade-up"
             data-aos-delay="400"
           >
-            {["gal5.jpg", "gal6.jpg", "gal7.jpg", "gal8.jpg"].map((img, i) => (
+            {["gal6.jpg", "gal8.jpg", "gal5.jpg", "gal7.jpg"].map((img, i) => (
               <div
                 key={i}
                 className="overflow-hidden rounded-xl"
