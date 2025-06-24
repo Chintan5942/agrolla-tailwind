@@ -25,11 +25,22 @@ export default function BlogPage() {
     <>
       <div className="flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 pt-28 pb-16 mt-10">
         {/* Page Title */}
+        <div className="flex items-center justify-center w-full gap-3">
+          <hr className="w-10 border border-[#2E7D32]" />
+          <p className="text-xs sm:text-sm text-[#2E7D32] font-medium uppercase tracking-wider">
+            Explore Blog
+          </p>
+          <hr className="w-10 border border-[#2E7D32]" />
+        </div>
+        <br />
         <div className="text-center mb-16 max-w-3xl">
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">Blog</h1>
+          <h1 className="text-5xl font-bold text-gray-900 mb-4">
+            Explore valuable insights
+          </h1>
           <p className="text-lg text-gray-600">
-            Explore insights, tutorials, and stories from our team. Stay
-            informed and inspired with our latest blog posts.
+            tips, and stories from our team in the world of agriculture. Stay
+            updated on the latest trends, farming techniques, and innovations in
+            the industry through our blog posts.
           </p>
         </div>
 
