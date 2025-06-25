@@ -22,7 +22,6 @@ export default function Footer() {
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Main Footer Content */}
           <div className="grid grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-12">
-            
             {/* Company Info - Takes half width on mobile, half on tablet, quarter on desktop */}
             <div
               className="flex flex-col items-center text-center md:items-start md:text-left xl:col-span-1 col-span-2 md:col-span-1"
@@ -30,7 +29,7 @@ export default function Footer() {
             >
               <Link href="/" className="mb-4">
                 <img
-                  src="/footer-logo.png"
+                  src="/agrolla-logo.png"
                   alt="Agrolla Logo"
                   className="h-auto w-28 lg:w-36"
                 />
@@ -52,7 +51,11 @@ export default function Footer() {
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <img src="/call.svg" alt="Phone" className="w-4 h-4 flex-shrink-0" />
+                  <img
+                    src="/call.svg"
+                    alt="Phone"
+                    className="w-4 h-4 flex-shrink-0"
+                  />
                   <a
                     href="tel:+919876543210"
                     className="text-xs text-gray-300 transition-colors hover:text-white"
@@ -61,7 +64,11 @@ export default function Footer() {
                   </a>
                 </div>
                 <div className="flex items-center gap-2">
-                  <img src="/mail.svg" alt="Email" className="w-4 h-4 flex-shrink-0" />
+                  <img
+                    src="/mail.svg"
+                    alt="Email"
+                    className="w-4 h-4 flex-shrink-0"
+                  />
                   <a
                     href="mailto:info@agrollaimpex.com"
                     className="text-xs text-gray-300 transition-colors hover:text-white"
@@ -78,9 +85,7 @@ export default function Footer() {
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              <h3 className="text-lg font-bold text-white mb-4">
-                Quick Links
-              </h3>
+              <h3 className="text-lg font-bold text-white mb-4">Quick Links</h3>
               <ul className="space-y-2">
                 {[
                   { name: "Home", path: "/" },
@@ -94,7 +99,9 @@ export default function Footer() {
                       href={item.path}
                       className="flex items-center gap-2 text-gray-300 hover:text-white transition-all duration-300 group-hover:translate-x-1 text-sm"
                     >
-                      <span className="text-green-500 font-bold text-xs">›</span>
+                      <span className="text-green-500 font-bold text-xs">
+                        ›
+                      </span>
                       <span>{item.name}</span>
                     </Link>
                   </li>
@@ -114,7 +121,7 @@ export default function Footer() {
               <ul className="space-y-2">
                 {[
                   "Precision Farming",
-                  "Irrigation Solutions", 
+                  "Irrigation Solutions",
                   "Organic Farming",
                   "Crop Protection",
                   "Farm Management",
@@ -124,7 +131,9 @@ export default function Footer() {
                       href="#"
                       className="flex items-center gap-2 text-gray-300 hover:text-white transition-all duration-300 group-hover:translate-x-1 text-sm"
                     >
-                      <span className="text-green-500 font-bold text-xs">✓</span>
+                      <span className="text-green-500 font-bold text-xs">
+                        ✓
+                      </span>
                       <span>{service}</span>
                     </Link>
                   </li>
@@ -161,9 +170,7 @@ export default function Footer() {
 
               {/* Social Media */}
               <div>
-                <h3 className="text-lg font-bold text-white mb-4">
-                  Follow Us
-                </h3>
+                <h3 className="text-lg font-bold text-white mb-4">Follow Us</h3>
                 <div className="flex justify-center md:justify-start gap-3">
                   {[
                     {
@@ -200,7 +207,10 @@ export default function Footer() {
           </div>
 
           {/* Bottom Footer Bar */}
-          <div className="border-t border-gray-600 mt-8 pt-6" data-aos="fade-up">
+          <div
+            className="border-t border-gray-600 mt-8 pt-6"
+            data-aos="fade-up"
+          >
             <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
               <p className="text-xs text-gray-300 text-center md:text-left">
                 © 2025 Agrolla. All rights reserved.
