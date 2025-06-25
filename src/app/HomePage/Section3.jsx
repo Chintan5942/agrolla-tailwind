@@ -28,9 +28,9 @@ export default function Section3() {
                 </div>
 
                 {/* Main Heading */}
-                <h1 className="font-bold text-[28px] sm:text-[36px] lg:text-[48px] xl:text-[60px] text-[#2e7d32] leading-tight">
+                <h3 className="font-bold text-[24px] sm:text-[32px] lg:text-[44px] xl:text-[56px] text-[#2e7d32] leading-tight">
                   Fresh From Farm
-                </h1>
+                </h3>
                 <h2 className="font-bold text-[28px] sm:text-[36px] lg:text-[48px] xl:text-[60px] text-white leading-tight mb-4">
                   Healthy Produce For Every Home
                 </h2>
@@ -61,15 +61,15 @@ export default function Section3() {
             </div>
 
             {/* Image Section - Increased width with minimal side spacing */}
-            <div className="w-full lg:w-1/2 flex justify-center lg:justify-end mt-8 lg:mt-0 animate-slideInRight px-[2%] sm:px-[3%] lg:px-[5%]">
+            <div className="w-full lg:w-2/3 flex justify-center lg:justify-end mt-8 lg:mt-0 animate-slideInRight px-[2%] sm:px-[3%] lg:px-[5%]">
               <div className="relative w-full max-w-none">
                 <img
                   src="/farmer.jpg"
                   alt="Farmer"
-                  className="w-full h-[280px] sm:h-[350px] md:h-[420px] lg:h-[480px] xl:h-[580px] rounded-3xl object-cover shadow-2xl"
+                  className="w-full h-[280px] sm:h-[350px] md:h-[420px] lg:h-[480px] xl:h-[580px] rounded-3xl object-cover shadow-2xl mb-4 sm:mb-6 lg:mb-0"
                 />
                 {/* Optional: Add a subtle overlay for better text contrast if needed */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-3xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent rounded-3xl"></div>
               </div>
             </div>
           </div>

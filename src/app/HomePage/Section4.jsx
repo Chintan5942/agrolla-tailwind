@@ -76,18 +76,20 @@ export default function Section4() {
           data-aos="fade-up"
         >
           {/* Video Section */}
-          <video
-            src="/video/DJI_0071.mp4" // Path to your MP4 video file in the 'public' directory
-            alt="About Agrolla"
-            className="w-full lg:w-[720px] lg:h-[536px] lg:relative lg:top-5"
-            data-aos="zoom-in-right"
-            autoPlay
-            muted
-            loop
-            playsInline
-          >
-            Your browser does not support the video tag.
-          </video>
+          <div className="w-full lg:w-[720px] lg:h-[536px] rounded-lg overflow-hidden">
+            <video
+              src="/video/DJI_0071.mp4"
+              alt="About Agrolla"
+              className="w-full h-full object-cover"
+              data-aos="zoom-in-right"
+              autoPlay
+              muted
+              loop
+              playsInline
+            >
+              Your browser does not support the video tag.
+            </video>
+          </div>
 
           {/* Text + Counters Section */}
           <div className="lg:w-[680px] w-full flex flex-col gap-4 sm:w-[700px]">

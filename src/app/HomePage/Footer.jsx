@@ -21,10 +21,10 @@ export default function Footer() {
       >
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Main Footer Content */}
-          <div className="grid grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-12">
-            {/* Company Info - Takes half width on mobile, half on tablet, quarter on desktop */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-12">
+            {/* Company Info */}
             <div
-              className="flex flex-col items-center text-center md:items-start md:text-left xl:col-span-1 col-span-2 md:col-span-1"
+              className="flex flex-col items-center text-center sm:items-start sm:text-left"
               data-aos="fade-right"
             >
               <Link href="/" className="mb-4">
@@ -38,7 +38,6 @@ export default function Footer() {
                 Transforming agriculture through innovation and sustainable
                 solutions for a better tomorrow.
               </p>
-
               <div className="space-y-2 w-full max-w-sm">
                 <div className="flex items-start gap-2">
                   <img
@@ -78,9 +77,9 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Quick Links - Takes half width on mobile */}
+            {/* Quick Links */}
             <div
-              className="flex flex-col items-center text-center md:items-start md:text-left"
+              className="flex flex-col items-center text-center sm:items-start sm:text-left"
               data-aos="fade-up"
               data-aos-delay="100"
             >
@@ -110,9 +109,9 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Our Services - Takes half width on mobile */}
+            {/* Our Services */}
             <div
-              className="flex flex-col items-center text-center md:items-start md:text-left"
+              className="flex flex-col items-center text-center sm:items-start sm:text-left"
               data-aos="fade-up"
               data-aos-delay="200"
             >
@@ -142,9 +141,9 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Working Hours & Social - Takes half width on mobile */}
+            {/* Working Hours & Social */}
             <div
-              className="flex flex-col items-center text-center md:items-start md:text-left"
+              className="flex flex-col items-center text-center sm:items-start sm:text-left"
               data-aos="fade-left"
               data-aos-delay="300"
             >
@@ -171,10 +170,10 @@ export default function Footer() {
 
               {/* Social Media */}
               <div>
-                <h3 className="text-lg font-bold text-white mb-4 text-[14px]">
+                <h3 className="text-lg font-bold text-white mb-4 text-[14px] text-center sm:text-left">
                   Follow Us
                 </h3>
-                <div className="flex justify-center md:justify-start gap-3">
+                <div className="flex justify-center sm:justify-start gap-3 flex-wrap">
                   {[
                     {
                       platform: "facebook",
@@ -195,12 +194,12 @@ export default function Footer() {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-green-600 hover:scale-110"
+                      className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-green-600 hover:scale-110"
                     >
                       <img
                         src={`/${social.platform}.png`}
                         alt={social.platform}
-                        className="w-5 h-5"
+                        className="w-8 h-8"
                       />
                     </a>
                   ))}
