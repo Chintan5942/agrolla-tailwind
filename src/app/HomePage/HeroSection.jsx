@@ -198,37 +198,43 @@ export default function HeroSection() {
             animateText ? "opacity-100" : "opacity-0"
           }`}
         >
-          <button className="lg:h-[52px] lg:w-[200px] md:h-[40px] md:w-[200px] sm:h-[35px] sm:w-[160px]  h-[32px] w-[120px]  bg-[#2E7D32] text-white font-medium lg:text-[16px] md:text-[14px] sm:text-[14px] text-[12px] rounded-lg hover:cursor-pointer hover:bg-[#1b5e1fea]"
-          onClick={()=>(window.location.href = "/Product")}
+          <button
+            className="lg:h-[52px] lg:w-[200px] md:h-[40px] md:w-[200px] sm:h-[35px] sm:w-[160px]  h-[32px] w-[120px]  bg-[#2E7D32] text-white font-medium lg:text-[16px] md:text-[14px] sm:text-[14px] text-[12px] rounded-lg hover:cursor-pointer hover:bg-[#1b5e1fea]"
+            onClick={() => (window.location.href = "/Product")}
           >
             Explore Products
           </button>
-          <button className="lg:h-[52px]  lg:w-[193px] md:h-[40px] md:w-[180px] sm:h-[32px] sm:w-[160px] h-[32px] w-[120px] border border-[#2e7d32] text-[#2e7d32] bg-white lg:text-[16px] font-semibold sm:text-sm rounded-lg hover:cursor-pointer"
-          onClick={()=>(window.location.href = "/Contact")}
+          <button
+            className="lg:h-[52px]  lg:w-[193px] md:h-[40px] md:w-[180px] sm:h-[32px] sm:w-[160px] h-[32px] w-[120px] border border-[#2e7d32] text-[#2e7d32] bg-white lg:text-[16px] font-semibold sm:text-sm rounded-lg hover:cursor-pointer"
+            onClick={() => (window.location.href = "/Contact")}
           >
             Contact Us
           </button>
         </div>
       </div>
 
-{/* ✅ Enhanced WhatsApp Floating Icon */}
-<a
-  href="https://wa.me/917227021301"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="fixed z-50 flex items-center space-x-3 bottom-6 right-6 group sm:space-x-2"
->
-  {/* Chat bubble text */}
-  <div className="hidden sm:flex items-center bg-[#25D366] text-[#fff] rounded-full shadow-md text-lg font-semibold  w-[200px] h-[60px]   justify-evenly">
-    <img
-      src="/whatsapp.svg"
-      alt="WhatsApp"
-      className="w-12 h-12 sm:w-10 sm:h-10"
-    />
-   Chat With Us
-  </div>
-</a>
+      {/* ✅ Enhanced WhatsApp Floating Icon */}
+      <a
+        href="https://wa.me/917227021301"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed z-50 flex items-center space-x-3 bottom-6 right-6 sm:space-x-2 group"
+      >
+        {/* Chat bubble text */}
+        <div className="hidden sm:flex items-center bg-[#25D366] text-[#fff] rounded-full shadow-md text-lg font-semibold w-[200px] h-[60px] justify-evenly">
+          <img
+            src="/whatsapp.svg"
+            alt="WhatsApp"
+            className="w-12 h-12 sm:w-10 sm:h-10"
+          />
+          <span className="hidden sm:block">Chat With Us</span>
+        </div>
 
+        {/* For smaller screens, only show the icon (no text) */}
+        <div className="sm:hidden flex items-center justify-center bg-[#25D366] text-[#fff] rounded-full w-[50px] h-[50px] shadow-md">
+          <img src="/whatsapp.svg" alt="WhatsApp" className="w-8 h-8" />
+        </div>
+      </a>
     </div>
   );
 }
