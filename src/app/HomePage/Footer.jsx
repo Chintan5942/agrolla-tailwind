@@ -34,7 +34,7 @@ export default function Footer() {
                   className="h-auto w-28 lg:w-36"
                 />
               </Link>
-              <p className="text-gray-300 leading-6 mb-4 max-w-sm text-sm">
+              <p className="text-gray-300 leading-6 mb-4 max-w-sm text-[14px]">
                 Transforming agriculture through innovation and sustainable
                 solutions for a better tomorrow.
               </p>
@@ -46,7 +46,7 @@ export default function Footer() {
                     alt="Location"
                     className="w-4 h-4 mt-1 flex-shrink-0"
                   />
-                  <span className="text-xs text-gray-300">
+                  <span className="text-[14px] text-gray-300">
                     BM Square-1, Rajlaxmi Park, Junagadh
                   </span>
                 </div>
@@ -56,12 +56,11 @@ export default function Footer() {
                     alt="Phone"
                     className="w-4 h-4 flex-shrink-0"
                   />
-                  <a
-                    href="tel:+919876543210"
-                    className="text-xs text-gray-300 transition-colors hover:text-white"
-                  >
-                    +91 98765 43210
-                  </a>
+                  <div className="text-[14px] text-gray-300">
+                    <div>+91 7227021300</div>
+                    <div>+91 7227021301</div>
+                    <div>+91 7227021302</div>
+                  </div>
                 </div>
                 <div className="flex items-center gap-2">
                   <img
@@ -71,7 +70,7 @@ export default function Footer() {
                   />
                   <a
                     href="mailto:info@agrollaimpex.com"
-                    className="text-xs text-gray-300 transition-colors hover:text-white"
+                    className="text-[14px] text-gray-300 transition-colors hover:text-white"
                   >
                     info@agrollaimpex.com
                   </a>
@@ -97,9 +96,9 @@ export default function Footer() {
                   <li key={item.name} className="group">
                     <Link
                       href={item.path}
-                      className="flex items-center gap-2 text-gray-300 hover:text-white transition-all duration-300 group-hover:translate-x-1 text-sm"
+                      className="flex items-center gap-2 text-gray-300 hover:text-white transition-all duration-300 group-hover:translate-x-1 text-[14px]"
                     >
-                      <span className="text-green-500 font-bold text-xs">
+                      <span className="text-green-500 font-bold text-[14px]">
                         ›
                       </span>
                       <span>{item.name}</span>
@@ -129,9 +128,9 @@ export default function Footer() {
                   <li key={service} className="group">
                     <Link
                       href="#"
-                      className="flex items-center gap-2 text-gray-300 hover:text-white transition-all duration-300 group-hover:translate-x-1 text-sm"
+                      className="flex items-center gap-2 text-gray-300 hover:text-white transition-all duration-300 group-hover:translate-x-1 text-[14px]"
                     >
-                      <span className="text-green-500 font-bold text-xs">
+                      <span className="text-green-500 font-bold text-[14px]">
                         ✓
                       </span>
                       <span>{service}</span>
@@ -152,7 +151,7 @@ export default function Footer() {
                 <h3 className="text-lg font-bold text-white mb-4">
                   Working Hours
                 </h3>
-                <div className="space-y-1 text-xs text-gray-300">
+                <div className="space-y-1 text-[14px] text-gray-300">
                   <div className="flex flex-col gap-1">
                     <span className="font-medium">Mon - Fri:</span>
                     <span>9:00 AM - 6:00 PM</span>
@@ -212,25 +211,25 @@ export default function Footer() {
             data-aos="fade-up"
           >
             <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
-              <p className="text-xs text-gray-300 text-center md:text-left">
+              <p className="text-[14px] text-gray-300 text-center md:text-left">
                 © 2025 Agrolla. All rights reserved.
               </p>
               <div className="flex flex-wrap justify-center md:justify-end gap-4">
                 <Link
                   href="/privacy-policy"
-                  className="text-xs text-gray-300 hover:text-white transition-colors"
+                  className="text-[14px] text-gray-300 hover:text-white transition-colors"
                 >
                   Privacy Policy
                 </Link>
                 <Link
                   href="/terms-of-service"
-                  className="text-xs text-gray-300 hover:text-white transition-colors"
+                  className="text-[14px] text-gray-300 hover:text-white transition-colors"
                 >
                   Terms of Service
                 </Link>
                 <Link
                   href="/sitemap"
-                  className="text-xs text-gray-300 hover:text-white transition-colors"
+                  className="text-[14px] text-gray-300 hover:text-white transition-colors"
                 >
                   Sitemap
                 </Link>
