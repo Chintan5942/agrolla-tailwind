@@ -84,7 +84,9 @@ export default function Footer() {
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              <h3 className="text-lg font-bold text-white mb-4">Quick Links</h3>
+              <h3 className="text-lg font-bold text-white mb-4 text-[14px]">
+                Quick Links
+              </h3>
               <ul className="space-y-2">
                 {[
                   { name: "Home", path: "/" },
@@ -114,7 +116,7 @@ export default function Footer() {
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              <h3 className="text-lg font-bold text-white mb-4">
+              <h3 className="text-lg font-bold text-white mb-4 text-[14px]">
                 Our Services
               </h3>
               <ul className="space-y-2">
@@ -148,7 +150,7 @@ export default function Footer() {
             >
               {/* Working Hours */}
               <div className="mb-6">
-                <h3 className="text-lg font-bold text-white mb-4">
+                <h3 className="text-lg font-bold text-white mb-4 text-[14px]">
                   Working Hours
                 </h3>
                 <div className="space-y-1 text-[14px] text-gray-300">
@@ -169,7 +171,9 @@ export default function Footer() {
 
               {/* Social Media */}
               <div>
-                <h3 className="text-lg font-bold text-white mb-4">Follow Us</h3>
+                <h3 className="text-lg font-bold text-white mb-4 text-[14px]">
+                  Follow Us
+                </h3>
                 <div className="flex justify-center md:justify-start gap-3">
                   {[
                     {

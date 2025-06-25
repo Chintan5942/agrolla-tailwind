@@ -70,22 +70,28 @@ export default function Section4() {
       <br />
       <br />
       <br />
-      <div className="flex justify-center max-w-full ">
+      <div className="flex justify-center max-w-full px-4 overflow-x-hidden">
         <div
-          className="flex flex-col items-center justify-center overflow-hidden max-w-[1536px] lg:flex-row gap-x-2 sm:gap-x-8 md:gap-x-10"
+          className="flex flex-col lg:flex-row items-center justify-center gap-8 max-w-[1536px] sm:gap-x-8 md:gap-x-10"
           data-aos="fade-up"
         >
-          {/* Image Section */}
-          <img
-            src="/about-agrolla.png"
+          {/* Video Section */}
+          <video
+            src="/video/DJI_0071.mp4" // Path to your MP4 video file in the 'public' directory
             alt="About Agrolla"
-            className="lg:w-[720px] lg:h-[536px] lg:relative lg:top-5"
+            className="w-full lg:w-[720px] lg:h-[536px] lg:relative lg:top-5"
             data-aos="zoom-in-right"
-          />
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
+            Your browser does not support the video tag.
+          </video>
 
-          {/* Text + Counters */}
-          <div className="lg:w-[680px] lg:h-[536px] w-full flex flex-col gap-2 sm:w-[700px] flex-wrap">
-            <div className="w-[90%] relative left-[5%]" data-aos="fade-left">
+          {/* Text + Counters Section */}
+          <div className="lg:w-[680px] w-full flex flex-col gap-4 sm:w-[700px]">
+            <div className="w-full relative left-[5%]" data-aos="fade-left">
               <br />
               <div className="flex items-center justify-center">
                 <hr className="w-10 border border-[#2E7D32]" />
@@ -111,7 +117,7 @@ export default function Section4() {
                 {counterData.map((item, index) => (
                   <div
                     key={index}
-                    className="flex flex-col items-center w-1/2 md:w-1/4"
+                    className="flex flex-col items-center w-1/2 sm:w-1/3 md:w-1/4"
                     data-aos="flip-up"
                     data-aos-delay={index * 100}
                   >
@@ -125,14 +131,29 @@ export default function Section4() {
                 ))}
               </div>
               <br />
-              {/* Button */}
-              <div className="flex justify-center lg:justify-center">
+              {/* Buttons */}
+              <div className="flex justify-center gap-4 flex-wrap">
+                {/* Contact Us Button */}
                 <button
                   className="bg-green-700 h-[48px] w-[154px] hover:bg-green-700/80 text-xs sm:text-sm md:text-base text-white font-medium rounded"
                   data-aos="fade-up"
                   onClick={() => (window.location.href = "/Contact")}
                 >
                   Contact Us
+                </button>
+
+                {/* YouTube Button */}
+                <button
+                  className="bg-red-600 h-[48px] w-[154px] hover:bg-red-600/80 text-xs sm:text-sm md:text-base text-white font-medium rounded"
+                  data-aos="fade-up"
+                  onClick={() =>
+                    window.open(
+                      "https://youtu.be/g9Lzn_JhGDQ?si=fh9XeZ4nX-Jj9N54",
+                      "_blank"
+                    )
+                  }
+                >
+                  Watch on YouTube
                 </button>
               </div>
             </div>
