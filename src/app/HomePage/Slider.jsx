@@ -34,13 +34,19 @@ export default function Slider() {
 
   const testimonials = [
     {
-      text: `Implementing Agrolla's precision farming solutions has increased my crop yield by 40% while reducing water usage by 30%. Their team provided exceptional support throughout the entire process.`,
+      text: `Agrolla's hybrid seeds have significantly improved the growth and yield of our crops. We've seen a 35% increase in productivity, and the quality of the produce has been remarkable. Their seed quality is truly exceptional.`,
     },
     {
-      text: `The smart irrigation system from Agrolla has revolutionized our water management. We've seen significant improvements in crop quality and substantial water savings. Highly recommended!`,
+      text: `Switching to Agrolla’s drought-resistant seeds has been a game-changer. With minimal rainfall this season, we were still able to harvest a full crop thanks to the resilience of their seeds. Highly recommend their products for any farmer facing climate challenges.`,
     },
     {
-      text: `Switching to Agrolla's organic farming solutions has been a game-changer for our farm. We've reduced chemical inputs while maintaining high yields, and our products now command premium prices in the market.`,
+      text: `As a large-scale farmer, we’ve tried many seed suppliers, but none compare to Agrolla. Their seeds have consistently delivered high yields with improved disease resistance. We're looking forward to using their seeds for future seasons.`,
+    },
+    {
+      text: `The team at Agrolla helped us select the right seeds for our soil and weather conditions. Not only did we achieve a higher yield, but our products also command higher prices in the market. Their expert advice made all the difference.`,
+    },
+    {
+      text: `I have been using Agrolla’s organic seeds for over a year now, and I’m extremely satisfied. The yields are higher compared to traditional seeds, and my soil health has improved. Their sustainable farming practices really do work!`,
     },
   ];
 
@@ -57,7 +63,7 @@ export default function Slider() {
               </h1>
               <p className="text-sm font-medium leading-relaxed text-center text-gray-600 ">
                 Hear from farmers who have transformed their agricultural
-                practices with our solutions.
+                practices with our seed solutions.
               </p>
             </center>
           </div>
@@ -89,7 +95,7 @@ export default function Slider() {
                       data-aos="zoom-in-up"
                     >
                       <br />
-                      <div className="flex space-x-1 w-[90%]  relative left-[5%]">
+                      <div className="flex space-x-1 w-[90%] relative left-[5%]">
                         {[...Array(5)].map((_, i) => (
                           <svg
                             key={i}
@@ -102,7 +108,7 @@ export default function Slider() {
                         ))}
                       </div>
                       <br />
-                      <p className="text-sm text-gray-700 mb-6 flex-grow italic w-[90%]  relative left-[5%]">
+                      <p className="text-sm text-gray-700 mb-6 flex-grow italic w-[90%] relative left-[5%]">
                         "{item.text}"
                       </p>
                       <br />

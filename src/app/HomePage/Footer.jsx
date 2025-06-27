@@ -29,7 +29,7 @@ export default function Footer() {
             >
               <Link href="/" className="mb-4">
                 <img
-                  src="/agrolla-logo.png"
+                  src="/White.png"
                   alt="Agrolla Logo"
                   className="h-auto w-28 lg:w-36"
                 />
@@ -39,21 +39,35 @@ export default function Footer() {
                 solutions for a better tomorrow.
               </p>
               <div className="space-y-2 w-full max-w-sm">
+                {/* Office Address */}
                 <div className="flex items-start gap-2">
                   <img
                     src="/location.svg"
                     alt="Location"
-                    className="w-4 h-4 mt-1 flex-shrink-0"
+                    className="w-8 h-8 mt-1 flex-shrink-0"
                   />
                   <span className="text-[14px] text-gray-300">
-                    BM Square-1, Rajlaxmi Park, Junagadh
+                    Regd. Office : At Office No: 306 B.M. Square 1, RAJLAXMI
+                    PARK, JUNAGADH, GUJARAT362001, INDIA
                   </span>
                 </div>
+                <div className="flex items-start gap-2">
+                  <img
+                    src="/location.svg"
+                    alt="Location"
+                    className="w-8 h-8 mt-1 flex-shrink-0"
+                  />
+                  <span className="text-[14px] text-gray-300">
+                    Factory: AT-SURVEY NO.113/P1/P1/P2, RAJKOT-JUNAGADH HIGHWAY
+                    VILLAGE-BHIYAL, TA/DI: JUNGADH, GUJARAT-362310,INDIA
+                  </span>
+                </div>
+                {/* Phone Numbers */}
                 <div className="flex items-center gap-2">
                   <img
                     src="/call.svg"
                     alt="Phone"
-                    className="w-4 h-4 flex-shrink-0"
+                    className="w-8 h-8 flex-shrink-0"
                   />
                   <div className="text-[14px] text-gray-300">
                     <div>+91 7227021300</div>
@@ -61,11 +75,13 @@ export default function Footer() {
                     <div>+91 7227021302</div>
                   </div>
                 </div>
+
+                {/* Email Address */}
                 <div className="flex items-center gap-2">
                   <img
                     src="/mail.svg"
                     alt="Email"
-                    className="w-4 h-4 flex-shrink-0"
+                    className="w-8 h-8 flex-shrink-0"
                   />
                   <a
                     href="mailto:info@agrollaimpex.com"
@@ -120,11 +136,15 @@ export default function Footer() {
               </h3>
               <ul className="space-y-2">
                 {[
-                  "Precision Farming",
-                  "Irrigation Solutions",
-                  "Organic Farming",
-                  "Crop Protection",
-                  "Farm Management",
+                  "High-Quality Seed Production",
+
+                  "Seed Treatment Solutions",
+
+                  "Custom Seed Blends & Varieties",
+
+                  "Sustainable Farming Practices",
+
+                  "Crop Yield Enhancement",
                 ].map((service) => (
                   <li key={service} className="group">
                     <Link

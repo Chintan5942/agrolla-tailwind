@@ -256,7 +256,7 @@ export default function Categories({ onCategorySelect }) {
                       alt={product.title}
                       className="object-contain w-full h-48 rounded-xl"
                     />
-                    <div className="flex items-center gap-1 mt-4">
+                    {/* <div className="flex items-center gap-1 mt-4">
                       {[...Array(fullStars)].map((_, i) => (
                         <FaStar key={`full-${i}`} className="text-yellow-500" />
                       ))}
@@ -272,7 +272,7 @@ export default function Categories({ onCategorySelect }) {
                       <span className="text-[#6B7280] text-lg font-semibold">
                         {product.reviews}
                       </span>
-                    </div>
+                    </div> */}
                     <h3 className="mt-4 text-2xl font-bold text-gray-800">
                       {product.title}
                     </h3>
