@@ -1209,6 +1209,905 @@ High in fiber, protein, and antioxidants. Known for blood sugar and hormone regu
 `,
   },
   {
+    id: 24,
+    title: "Dry Onion (Powder/Flakes/Mince/Chopped/Granules)",
+    description:
+      "Dehydrated dry onion available in various forms: powder, flakes, mince, chopped, and granules. Ideal for long shelf-life and convenience.",
+    category: "Herbs & Spices",
+    image: "/product/Dry-Onion.png",
+    images: ["/product/Dry-Onion.png"],
+    moreImage: [
+      "/product/Dry-Onion.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 30,
+    reviews: 80,
+    highlights: [
+      "Long shelf-life",
+      "Convenient for quick cooking",
+      "Available in multiple forms",
+      "Non-GMO",
+      "Rich in flavor",
+    ],
+    features: [
+      "No preservatives or additives",
+      "Versatile for various dishes",
+      "Perfect for soups, stews, and sauces",
+      "Great for seasoning and marinades",
+      "Naturally gluten-free",
+    ],
+    applications:
+      "Ideal for cooking, seasoning, and as a quick addition to your dishes.",
+    aboutProduct:
+      "Dry onion is a convenient and long-lasting ingredient, available in various forms to suit different cooking needs.",
+    overview:
+      "Our dehydrated onions retain the natural flavor and aroma of fresh onions, offering a versatile option for chefs and home cooks.",
+    premiumQuality:
+      "Sourced from high-quality onions, ensuring top flavor and consistency.",
+    specifications: `
+• Available Forms: Powder, Flakes, Mince, Chopped, Granules
+• Moisture: 5% Max
+• Admixture: 1% Max
+• Foreign Material: 0.5% Max
+• Aflatoxin: < 20 ppb
+    `,
+    packagingShipping: `
+• Jute/PP Bags: 25kg or 50kg
+• Vacuum Packs: 25kg
+• 20’ FCL Capacity:
+   - Jute: 20 MT (50kg)
+   - Vacuum: 20 MT (25kg)
+    `,
+    nutritionalInfo: `
+Rich in essential vitamins, minerals, and antioxidants. Helps improve flavor without artificial additives.
+    `,
+  },
+  {
+    id: 25,
+    title: "Dry Garlic (Powder/Flakes/Mince/Chopped/Granules)",
+    description:
+      "Dehydrated garlic in powder, flakes, mince, chopped, and granule forms. Adds a rich garlic flavor to any dish.",
+    category: "Herbs & Spices",
+    image: "/product/Dry-Garlic.png",
+    images: ["/product/Dry-Garlic.png"],
+    moreImage: [
+      "/product/Dry-Garlic.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 34,
+    reviews: 90,
+    highlights: [
+      "Enhances flavor instantly",
+      "Available in multiple forms",
+      "Non-GMO",
+      "No preservatives",
+      "Rich in antioxidants",
+    ],
+    features: [
+      "Perfect for seasoning and marinades",
+      "Long shelf life",
+      "Versatile and convenient",
+      "No artificial additives",
+      "Naturally gluten-free",
+    ],
+    applications: "Ideal for cooking, baking, and making sauces.",
+    aboutProduct:
+      "Dry garlic is a convenient and potent way to infuse garlic flavor into your dishes.",
+    overview:
+      "Our dehydrated garlic is processed to maintain the natural richness and taste of fresh garlic.",
+    premiumQuality:
+      "Sourced from the finest garlic bulbs for optimal flavor and freshness.",
+    specifications: `
+• Available Forms: Powder, Flakes, Mince, Chopped, Granules
+• Moisture: 5% Max
+• Admixture: 1% Max
+• Foreign Material: 0.5% Max
+• Aflatoxin: < 20 ppb
+    `,
+    packagingShipping: `
+• Jute/PP Bags: 25kg or 50kg
+• Vacuum Packs: 25kg
+• 20’ FCL Capacity:
+   - Jute: 20 MT (50kg)
+   - Vacuum: 20 MT (25kg)
+    `,
+    nutritionalInfo: `
+Rich in antioxidants, essential vitamins, and minerals. Provides a strong and natural garlic flavor.
+    `,
+  },
+  {
+    id: 26,
+    title: "Clove",
+    description:
+      "Premium quality whole cloves with intense aromatic flavor. Used in cooking and for health benefits.",
+    category: "Herbs & Spices",
+    image: "/product/Clove.png",
+    images: ["/product/Clove.png"],
+    moreImage: [
+      "/product/Clove.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 25,
+    reviews: 55,
+    highlights: [
+      "Strong aromatic flavor",
+      "Rich in antioxidants",
+      "Non-GMO",
+      "Used in both cooking and medicine",
+      "Natural anti-inflammatory",
+    ],
+    features: [
+      "Whole cloves for maximum flavor",
+      "Ideal for spicing up stews and curries",
+      "Can be used for health remedies",
+      "Sustainably sourced",
+      "No preservatives",
+    ],
+    applications:
+      "Ideal for adding flavor to stews, meats, soups, and desserts.",
+    aboutProduct:
+      "Cloves are aromatic flower buds used in a variety of recipes, enhancing both flavor and health.",
+    overview:
+      "Our whole cloves are harvested and dried for maximum flavor retention and health benefits.",
+    premiumQuality:
+      "Sourced from the best plantations, ensuring high-quality and fresh cloves.",
+    specifications: `
+• Size: Whole Cloves
+• Moisture: 10% Max
+• Admixture: 1% Max
+• Foreign Material: 0.5% Max
+• Aflatoxin: < 20 ppb
+    `,
+    packagingShipping: `
+• Jute/PP Bags: 25kg or 50kg
+• Vacuum Packs: 25kg
+• 20’ FCL Capacity:
+   - Jute: 20 MT (50kg)
+   - Vacuum: 20 MT (25kg)
+    `,
+    nutritionalInfo: `
+Cloves are rich in antioxidants and minerals that contribute to better digestion and health.
+    `,
+  },
+  {
+    id: 27,
+    title: "Nutmeg Whole",
+    description:
+      "Premium quality whole nutmeg, adding a warm, aromatic flavor to sweet and savory dishes.",
+    category: "Herbs & Spices",
+    image: "/product/Nutmeg-Whole.png",
+    images: ["/product/Nutmeg-Whole.png"],
+    moreImage: [
+      "/product/Nutmeg-Whole.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 28,
+    reviews: 60,
+    highlights: [
+      "Warm, aromatic flavor",
+      "Ideal for baking and cooking",
+      "Non-GMO",
+      "Rich in antioxidants",
+      "Naturally gluten-free",
+    ],
+    features: [
+      "Grates easily for fresh flavor",
+      "Ideal for both sweet and savory dishes",
+      "No preservatives",
+      "Sustainably sourced",
+      "Rich in minerals like calcium and magnesium",
+    ],
+    applications: "Perfect for baking, desserts, soups, and curries.",
+    aboutProduct:
+      "Whole nutmeg offers a fresh, aromatic flavor that enhances a wide variety of dishes.",
+    overview:
+      "Our whole nutmeg is carefully sourced to ensure that you experience its full, aromatic flavor.",
+    premiumQuality:
+      "Sourced from the best nutmeg plantations, providing you with superior quality and flavor.",
+    specifications: `
+• Size: Whole Nutmeg
+• Moisture: 10% Max
+• Admixture: 1% Max
+• Foreign Material: 0.5% Max
+• Aflatoxin: < 20 ppb
+    `,
+    packagingShipping: `
+• Jute/PP Bags: 25kg or 50kg
+• Vacuum Packs: 25kg
+• 20’ FCL Capacity:
+   - Jute: 20 MT (50kg)
+   - Vacuum: 20 MT (25kg)
+    `,
+    nutritionalInfo: `
+Nutmeg is rich in antioxidants, vitamins, and minerals, offering both flavor and health benefits.
+    `,
+  },
+  {
+    id: 28,
+    title: "Cinnamon Sticks",
+    description:
+      "High-quality cinnamon sticks with a rich, sweet flavor. Perfect for infusing beverages or spicing up savory dishes.",
+    category: "Herbs & Spices",
+    image: "/product/Cinnamon-Sticks.png",
+    images: ["/product/Cinnamon-Sticks.png"],
+    moreImage: [
+      "/product/Cinnamon-Sticks.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 26,
+    reviews: 65,
+    highlights: [
+      "Sweet, warm flavor",
+      "Perfect for baking and cooking",
+      "Non-GMO",
+      "Rich in antioxidants",
+      "Naturally gluten-free",
+    ],
+    features: [
+      "Ideal for infusing drinks like tea and cider",
+      "Can be used in both sweet and savory dishes",
+      "No preservatives or additives",
+      "Sustainably sourced",
+      "High-quality Ceylon cinnamon",
+    ],
+    applications:
+      "Perfect for making chai tea, baking, or spicing up savory dishes.",
+    aboutProduct:
+      "Cinnamon sticks are perfect for infusing beverages or for grinding into powder for cooking.",
+    overview:
+      "Our cinnamon sticks provide an aromatic and sweet flavor that enhances a wide variety of recipes.",
+    premiumQuality:
+      "Sourced from the best Ceylon cinnamon, ensuring superior quality and flavor.",
+    specifications: `
+• Size: Whole Cinnamon Sticks
+• Moisture: 8% Max
+• Admixture: 1% Max
+• Foreign Material: 0.5% Max
+• Aflatoxin: < 20 ppb
+    `,
+    packagingShipping: `
+• Jute/PP Bags: 25kg or 50kg
+• Vacuum Packs: 25kg
+• 20’ FCL Capacity:
+   - Jute: 20 MT (50kg)
+   - Vacuum: 20 MT (25kg)
+    `,
+    nutritionalInfo: `
+Cinnamon is rich in antioxidants and offers anti-inflammatory benefits.
+    `,
+  },
+  {
+    id: 29,
+    title: "Mace",
+    description:
+      "Premium quality mace, offering a warm and aromatic flavor to enhance both sweet and savory dishes.",
+    category: "Herbs & Spices",
+    image: "/product/Mace.png",
+    images: ["/product/Mace.png"],
+    moreImage: [
+      "/product/Mace.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 27,
+    reviews: 70,
+    highlights: [
+      "Warm, aromatic flavor",
+      "Ideal for curries and desserts",
+      "Non-GMO",
+      "Rich in antioxidants",
+      "Naturally gluten-free",
+    ],
+    features: [
+      "Perfect for both savory and sweet dishes",
+      "No preservatives or additives",
+      "Sustainably sourced",
+      "Highly aromatic",
+      "No artificial colorants",
+    ],
+    applications: "Ideal for curries, desserts, and baking.",
+    aboutProduct:
+      "Mace is the outer covering of the nutmeg seed and provides a similar but subtler flavor.",
+    overview:
+      "Our mace is processed carefully to preserve its intense aromatic flavor for use in various dishes.",
+    premiumQuality:
+      "Sourced from the best mace producers for top quality and freshness.",
+    specifications: `
+• Size: Whole Mace
+• Moisture: 8% Max
+• Admixture: 1% Max
+• Foreign Material: 0.5% Max
+• Aflatoxin: < 20 ppb
+    `,
+    packagingShipping: `
+• Jute/PP Bags: 25kg or 50kg
+• Vacuum Packs: 25kg
+• 20’ FCL Capacity:
+   - Jute: 20 MT (50kg)
+   - Vacuum: 20 MT (25kg)
+    `,
+    nutritionalInfo: `
+Mace offers antioxidant properties and a warm flavor that enhances both sweet and savory dishes.
+    `,
+  },
+  {
+    id: 30,
+    title: "Bay Leaves",
+    description:
+      "Premium quality Bay leaves with a strong aromatic flavor. Used in a variety of dishes to enhance the taste.",
+    category: "Herbs & Spices",
+    image: "/product/Bay-Leaves.png",
+    images: ["/product/Bay-Leaves.png"],
+    moreImage: [
+      "/product/Bay-Leaves.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 22,
+    reviews: 50,
+    highlights: [
+      "Aromatic flavor",
+      "Used in various cuisines",
+      "Rich in antioxidants",
+      "Non-GMO",
+      "Naturally gluten-free",
+    ],
+    features: [
+      "Dried for optimal flavor retention",
+      "Ideal for soups, stews, and curries",
+      "Rich in essential oils",
+      "No preservatives added",
+      "Sustainably sourced",
+    ],
+    applications:
+      "Used in cooking to enhance the flavor of soups, stews, and sauces.",
+    aboutProduct:
+      "Bay leaves add a distinct flavor and aroma to dishes, making them a favorite in culinary traditions worldwide.",
+    overview:
+      "Our Bay leaves are handpicked, dried, and preserved to retain maximum aroma and taste.",
+    premiumQuality:
+      "Harvested from the finest sources, our Bay leaves guarantee superior flavor.",
+    specifications: `
+• Size: Whole leaves
+• Moisture: 8% Max
+• Admixture: 2% Max
+• Foreign Material: 0.5% Max
+• Aflatoxin: < 20 ppb
+    `,
+    packagingShipping: `
+• Jute/PP Bags: 25kg or 50kg
+• Vacuum Packs: 25kg
+• 20’ FCL Capacity:
+   - Jute: 20 MT (50kg)
+   - Vacuum: 20 MT (25kg)
+    `,
+    nutritionalInfo: `
+Bay leaves are rich in antioxidants and essential oils, offering flavor and health benefits.
+    `,
+  },
+  {
+    id: 31,
+    title: "Red Pepper (Ground/Crushed/Whole/Powder)",
+    description:
+      "Premium quality red pepper available in ground, crushed, whole, or powder form. Adds a spicy kick to any dish.",
+    category: "Herbs & Spices",
+    image: "/product/Red-Pepper.png",
+    images: ["/product/Red-Pepper.png"],
+    moreImage: [
+      "/product/Red-Pepper.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 28,
+    reviews: 65,
+    highlights: [
+      "Adds a spicy kick",
+      "Rich in antioxidants",
+      "Non-GMO",
+      "Naturally gluten-free",
+      "Versatile for various dishes",
+    ],
+    features: [
+      "Available in various forms: ground, crushed, whole, or powder",
+      "Rich in Vitamin C",
+      "Perfect for seasoning",
+      "Ideal for soups, curries, and marinades",
+      "No preservatives or additives",
+    ],
+    applications:
+      "Perfect for enhancing the flavor of soups, sauces, salads, and stir-fries.",
+    aboutProduct:
+      "Our red pepper is packed with flavor and provides a spicy kick that will elevate any dish.",
+    overview:
+      "We offer high-quality red pepper in different forms to suit your culinary needs.",
+    premiumQuality:
+      "Sourced from the best farms, our red pepper is dried, ground, or crushed to retain its full flavor.",
+    specifications: `
+• Size: Ground, Crushed, Whole, Powder
+• Moisture: 10% Max
+• Admixture: 1% Max
+• Foreign Material: 0.5% Max
+• Aflatoxin: < 20 ppb
+    `,
+    packagingShipping: `
+• Jute/PP Bags: 25kg or 50kg
+• Vacuum Packs: 25kg
+• 20’ FCL Capacity:
+   - Jute: 20 MT (50kg)
+   - Vacuum: 20 MT (25kg)
+    `,
+    nutritionalInfo: `
+Red pepper is rich in Vitamin C, antioxidants, and capsaicin, which provide various health benefits.
+    `,
+  },
+  {
+    id: 32,
+    title: "Chia Seeds",
+    description:
+      "Chia seeds are a powerhouse of nutrition, packed with fiber, protein, and Omega-3 fatty acids.",
+    category: "Seeds & Nuts",
+    image: "/product/Chia-Seeds.png",
+    images: ["/product/Chia-Seeds.png"],
+    moreImage: [
+      "/product/Chia-Seeds.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 33,
+    reviews: 75,
+    highlights: [
+      "Rich in Omega-3 fatty acids",
+      "High in fiber and protein",
+      "Great for smoothies and snacks",
+      "Non-GMO",
+      "Rich in antioxidants",
+    ],
+    features: [
+      "Perfect for adding to smoothies, yogurt, or baking",
+      "Rich in essential minerals like calcium and magnesium",
+      "Great source of plant-based protein",
+      "No added sugars or preservatives",
+      "High in antioxidants",
+    ],
+    applications:
+      "Ideal for sprinkling on cereals, mixing into smoothies, or adding to baked goods.",
+    aboutProduct:
+      "Chia seeds are a nutrient-packed superfood that enhances any meal or snack.",
+    overview:
+      "Our chia seeds are a rich source of fiber, Omega-3, and protein for a healthy diet.",
+    premiumQuality:
+      "Sourced from organic farms, ensuring the highest quality and freshness.",
+    specifications: `
+• Size: 500g, 1kg, 5kg
+• Moisture: 5% Max
+• Admixture: 1% Max
+• Foreign Material: 0.3% Max
+• Aflatoxin: < 20 ppb
+    `,
+    packagingShipping: `
+• Jute/PP Bags: 25kg or 50kg
+• Vacuum Packs: 25kg
+• 20’ FCL Capacity:
+   - Jute: 20 MT (50kg)
+   - Vacuum: 20 MT (25kg)
+    `,
+    nutritionalInfo: `
+Chia seeds are high in fiber, protein, and Omega-3 fatty acids, supporting overall health.
+    `,
+  },
+  {
+    id: 33,
+    title: "Green Peas",
+    description:
+      "Fresh green peas that are rich in nutrients, ideal for a variety of recipes from curries to soups and salads.",
+    category: "Vegetables",
+    image: "/product/Green-Peas.png",
+    images: ["/product/Green-Peas.png"],
+    moreImage: [
+      "/product/Green-Peas.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 20,
+    reviews: 50,
+    highlights: [
+      "Rich in protein and fiber",
+      "Great for cooking and salads",
+      "Non-GMO",
+      "Rich in vitamins and minerals",
+      "Supports digestion",
+    ],
+    features: [
+      "Fresh and tender peas",
+      "No preservatives or additives",
+      "Great for making curries and soups",
+      "Rich in vitamins A, C, and K",
+      "Naturally gluten-free",
+    ],
+    applications: "Perfect for curries, soups, and adding to salads and stews.",
+    aboutProduct:
+      "Green peas are highly nutritious, packed with essential vitamins and minerals, and perfect for a wide variety of dishes.",
+    overview:
+      "Our green peas are tender, fresh, and nutrient-rich, ideal for healthy meals.",
+    premiumQuality:
+      "Handpicked for their freshness and taste, ensuring the highest quality.",
+    specifications: `
+• Size: Small, Medium, Large
+• Moisture: 12% Max
+• Admixture: 1% Max
+• Foreign Material: 0.5% Max
+• Protein Content: 6% Min
+• Aflatoxin: < 20 ppb
+    `,
+    packagingShipping: `
+• Jute/PP Bags: 25kg or 50kg
+• Vacuum Packs: 25kg
+• 20’ FCL Capacity:
+   - Jute: 20 MT (50kg)
+   - Vacuum: 20 MT (25kg)
+    `,
+    nutritionalInfo: `
+Green peas are rich in protein, fiber, and vitamins, supporting digestion and overall health.
+    `,
+  },
+  {
+    id: 34,
+    title: "Soya Chunks",
+    description:
+      "Soya chunks are high-protein, plant-based meat alternatives, ideal for vegetarian and vegan dishes.",
+    category: "Pulses",
+    image: "/product/Soya-Chunks.png",
+    images: ["/product/Soya-Chunks.png"],
+    moreImage: [
+      "/product/Soya-Chunks.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 25,
+    reviews: 60,
+    highlights: [
+      "Rich in plant-based protein",
+      "Great meat substitute",
+      "Non-GMO",
+      "Ideal for curries and stir-fries",
+      "High in iron and calcium",
+    ],
+    features: [
+      "High protein content",
+      "Perfect for vegetarian and vegan meals",
+      "Easy to cook and absorb flavors",
+      "Packed with iron and calcium",
+      "No preservatives or additives",
+    ],
+    applications:
+      "Ideal for making meatless curries, stir-fries, and as a protein-packed addition to various dishes.",
+    aboutProduct:
+      "Soya chunks are a perfect protein source for vegetarians and vegans, providing a meat-like texture in dishes.",
+    overview:
+      "Our soya chunks are high in protein and perfect for adding texture and nutrition to plant-based meals.",
+    premiumQuality:
+      "Sourced from the finest soya beans to ensure top quality and freshness.",
+    specifications: `
+• Size: Small, Medium, Large
+• Moisture: 10% Max
+• Admixture: 1% Max
+• Foreign Material: 0.5% Max
+• Protein Content: 50% Min
+• Aflatoxin: < 20 ppb
+    `,
+    packagingShipping: `
+• Jute/PP Bags: 25kg or 50kg
+• Vacuum Packs: 25kg
+• 20’ FCL Capacity:
+   - Jute: 20 MT (50kg)
+   - Vacuum: 20 MT (25kg)
+    `,
+    nutritionalInfo: `
+Soya chunks are rich in plant-based protein, iron, and calcium, supporting overall health and muscle growth.
+    `,
+  },
+  {
+    id: 35,
+    title: "Makhana",
+    description:
+      "Premium quality Makhana (Fox Nuts) with a light, crunchy texture. Great for snacks or as an ingredient in various dishes.",
+    category: "Snacks",
+    image: "/product/Makhana.png",
+    images: ["/product/Makhana.png"],
+    moreImage: [
+      "/product/Makhana.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 25,
+    reviews: 60,
+    highlights: [
+      "Rich in protein and fiber",
+      "Great for snacking",
+      "Naturally gluten-free",
+      "Rich in antioxidants",
+      "Low in calories",
+    ],
+    features: [
+      "Sustainably sourced",
+      "High-quality seeds",
+      "Perfect for roasting and frying",
+      "No preservatives",
+      "Non-GMO",
+    ],
+    applications:
+      "Ideal for snacking, mixing in salads, or using as an ingredient in sweets.",
+    aboutProduct:
+      "Makhana, also known as Fox Nuts, are highly nutritious and a great healthy snack option.",
+    overview:
+      "Our Makhana offers a crunchy texture with a subtle flavor, perfect for any dish or snack.",
+    premiumQuality: "Handpicked and processed for optimal freshness and taste.",
+    specifications: `
+  • Size: 8mm, 10mm, 12mm
+  • Moisture: 8% Max
+  • Admixture: 1% Max
+  • Foreign Material: 0.3% Max
+  • Protein Content: 18% – 20%
+  • Aflatoxin: < 20 ppb
+      `,
+    packagingShipping: `
+  • Jute/PP Bags: 25kg or 50kg
+  • Vacuum Packs: 25kg
+  • 20’ FCL Capacity:
+     - Jute: 20 MT (50kg)
+     - Vacuum: 20 MT (25kg)
+      `,
+    nutritionalInfo: `
+  Rich in protein, fiber, and antioxidants, Makhana is great for overall health and well-being.
+      `,
+  },
+  {
+    id: 36,
+    title: "Fenugreek Leaves (Dry)",
+    description:
+      "Dried Fenugreek leaves are packed with flavor and health benefits, commonly used in Indian cuisine and herbal medicine.",
+    category: "Herbs & Spices",
+    image: "/product/Fenugreek-Leaves-Dry.png",
+    images: ["/product/Fenugreek-Leaves-Dry.png"],
+    moreImage: [
+      "/product/Fenugreek-Leaves-Dry.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 18,
+    reviews: 42,
+    highlights: [
+      "Rich in iron, calcium, and fiber",
+      "Popular in Indian cuisine",
+      "Helps in digestion",
+      "Good for lowering cholesterol",
+      "Non-GMO",
+    ],
+    features: [
+      "Naturally dried and handpicked",
+      "Ideal for cooking curries and gravies",
+      "Used in traditional herbal remedies",
+      "Rich in essential vitamins",
+      "Gluten-free",
+    ],
+    applications:
+      "Used in curries, gravies, herbal teas, and as a flavor enhancer.",
+    aboutProduct:
+      "Fenugreek leaves are dried to preserve their flavor and health benefits, commonly used in various cuisines.",
+    overview:
+      "Our Fenugreek leaves are dried naturally, offering the perfect balance of taste and nutrition.",
+    premiumQuality:
+      "Our dried Fenugreek leaves are handpicked and dried with care to preserve the aroma and health benefits.",
+    specifications: `
+  • Size: Whole leaves
+  • Moisture: 7% Max
+  • Admixture: 2% Max
+  • Foreign Material: 0.5% Max
+  • Iron Content: 3% Min
+  • Aflatoxin: < 20 ppb
+      `,
+    packagingShipping: `
+  • Jute/PP Bags: 25kg or 50kg
+  • Vacuum Packs: 25kg
+  • 20’ FCL Capacity:
+     - Jute: 20 MT (50kg)
+     - Vacuum: 20 MT (25kg)
+      `,
+    nutritionalInfo: `
+  Fenugreek leaves are rich in iron, calcium, and essential vitamins A and C.
+      `,
+  },
+  {
+    id: 37,
+    title: "Raisins",
+    description:
+      "Premium quality raisins with a natural sweetness and chewy texture. Ideal for snacking or adding to baked goods and salads.",
+    category: "Dried Fruits",
+    image: "/product/Raisins.png",
+    images: ["/product/Raisins.png"],
+    moreImage: [
+      "/product/Raisins.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 30,
+    reviews: 70,
+    highlights: [
+      "Naturally sweet",
+      "Rich in antioxidants",
+      "Great source of energy",
+      "High in fiber",
+      "Non-GMO",
+    ],
+    features: [
+      "Naturally dried",
+      "No added sugar",
+      "Rich in iron and potassium",
+      "Great for snacking and baking",
+      "Non-sulphured",
+    ],
+    applications:
+      "Perfect for snacking, baking, or adding to salads and desserts.",
+    aboutProduct:
+      "Raisins are naturally dried grapes, packed with flavor, nutrition, and energy.",
+    overview:
+      "Our raisins are naturally sweet and rich in antioxidants, perfect for your daily energy boost.",
+    premiumQuality:
+      "Handpicked and naturally dried for optimal flavor and texture.",
+    specifications: `
+  • Size: Small, Medium, Large
+  • Moisture: 15% Max
+  • Admixture: 1% Max
+  • Foreign Material: 0.3% Max
+  • Sugar Content: 60% Min
+  • Aflatoxin: < 20 ppb
+      `,
+    packagingShipping: `
+  • Jute/PP Bags: 25kg or 50kg
+  • Vacuum Packs: 25kg
+  • 20’ FCL Capacity:
+     - Jute: 20 MT (50kg)
+     - Vacuum: 20 MT (25kg)
+      `,
+    nutritionalInfo: `
+  Raisins are rich in fiber, iron, potassium, and antioxidants, supporting overall health and digestion.
+      `,
+  },
+  {
+    id: 38,
+    title: "Sorghum (Jowar)",
+    description:
+      "Sorghum (Jowar) is a nutritious gluten-free grain with a mild flavor, perfect for a variety of dishes like porridge, flour, and snacks.",
+    category: "Grains",
+    image: "/product/Sorghum-Jowar.png",
+    images: ["/product/Sorghum-Jowar.png"],
+    moreImage: [
+      "/product/Sorghum-Jowar.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 23,
+    reviews: 55,
+    highlights: [
+      "Gluten-free",
+      "High in fiber and protein",
+      "Ideal for porridge and flour",
+      "Rich in vitamins and minerals",
+      "Non-GMO",
+    ],
+    features: [
+      "Great for making flour and porridge",
+      "Rich in antioxidants",
+      "Naturally gluten-free",
+      "Packed with essential vitamins",
+      "Non-GMO",
+    ],
+    applications:
+      "Ideal for making flour, porridge, and adding to baked goods.",
+    aboutProduct:
+      "Sorghum (Jowar) is a highly nutritious grain that is rich in fiber and antioxidants.",
+    overview:
+      "Our Sorghum is 100% gluten-free and is an excellent source of energy and nutrition.",
+    premiumQuality:
+      "Handpicked and processed for premium quality and rich taste.",
+    specifications: `
+  • Size: 6mm, 8mm, 10mm
+  • Moisture: 10% Max
+  • Admixture: 2% Max
+  • Foreign Material: 0.5% Max
+  • Protein Content: 11% – 13%
+  • Aflatoxin: < 20 ppb
+      `,
+    packagingShipping: `
+  • Jute/PP Bags: 25kg or 50kg
+  • Vacuum Packs: 25kg
+  • 20’ FCL Capacity:
+     - Jute: 20 MT (50kg)
+     - Vacuum: 20 MT (25kg)
+      `,
+    nutritionalInfo: `
+  Sorghum is high in fiber, antioxidants, and essential vitamins, providing long-lasting energy.
+      `,
+  },
+  {
+    id: 39,
+    title: "Kidney Beans",
+    description:
+      "High-quality kidney beans rich in protein, fiber, and essential nutrients. Ideal for making curries, salads, and stews.",
+    category: "Pulses",
+    image: "/product/Kidney-Beans.png",
+    images: ["/product/Kidney-Beans.png"],
+    moreImage: [
+      "/product/Kidney-Beans.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 29,
+    reviews: 65,
+    highlights: [
+      "High in protein and fiber",
+      "Great for cooking and salads",
+      "Rich in iron and potassium",
+      "Non-GMO",
+      "Supports heart health",
+    ],
+    features: [
+      "Rich in protein and iron",
+      "Ideal for curries, stews, and salads",
+      "Packed with essential minerals",
+      "Helps regulate blood sugar",
+      "Naturally gluten-free",
+    ],
+    applications:
+      "Perfect for making curries, soups, salads, and as a protein-rich ingredient in various dishes.",
+    aboutProduct:
+      "Kidney beans are a high-protein, fiber-packed legume, perfect for a variety of dishes.",
+    overview:
+      "Our kidney beans are rich in essential nutrients like protein, fiber, and minerals.",
+    premiumQuality:
+      "Our kidney beans are handpicked to ensure the highest quality and freshness.",
+    specifications: `
+  • Size: Small, Medium, Large
+  • Moisture: 14% Max
+  • Admixture: 1% Max
+  • Foreign Material: 0.5% Max
+  • Protein Content: 23% Min
+  • Aflatoxin: < 20 ppb
+      `,
+    packagingShipping: `
+  • Jute/PP Bags: 25kg or 50kg
+  • Vacuum Packs: 25kg
+  • 20’ FCL Capacity:
+     - Jute: 20 MT (50kg)
+     - Vacuum: 20 MT (25kg)
+      `,
+    nutritionalInfo: `
+  Kidney beans are rich in protein, fiber, and essential nutrients like iron and potassium, supporting overall health.
+      `,
+  },
+
+  {
     id: 40,
     title: "Tur Dal",
     description:
