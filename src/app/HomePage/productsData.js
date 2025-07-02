@@ -831,6 +831,43 @@ Naturally gluten-free and rich in fiber, protein, and minerals like magnesium an
     premiumQuality:
       "Processed in-house with strict hygiene and quality checks. Packaged to preserve flavor and aroma for export and bulk use.",
     specifications: `
+  {
+    id: 16,
+    title: "Coriander Seeds - Eagle",
+    category: "Spices",
+    image: "/product/coriander-eagle.jpg",
+    images: ["/product/coriander-eagle.jpg"],
+    moreImage: [
+      "/product/coriander-eagle.jpg",
+      "/product/related.16.1.jpg",
+      "/product/related.16.2.jpg",
+      "/product/related.16.3.webp",
+    ],
+    rating: 19,
+    reviews: 22,
+    description: "Bold Eagle variety coriander seeds.",
+    highlights: [
+      "Bright golden-yellow color",
+      "Bold size seeds",
+      "High essential oil content",
+      "Aromatic and flavorful",
+      "Widely used in Indian cuisine",
+    ],
+    features: [
+      "Grown in prime coriander zones",
+      "Strong aroma & citrus flavor",
+      "Machine-cleaned and sorted",
+      "Available in bulk packaging",
+      "Ideal for spice blends and grinding",
+    ],
+    applications: "Used in curries, masalas, pickles, and spice mixes.",
+    aboutProduct:
+      "Eagle-grade coriander seeds are bold, golden-yellow, and packed with flavor. Sourced from top Indian regions, they are ideal for grinding and use in masalas and seasoning blends.",
+    overview:
+      "Coriander Eagle seeds are bold, aromatic, and packed with natural oils—perfect for food manufacturers and spice processors.",
+    premiumQuality:
+      "Processed in-house with strict hygiene and quality checks. Packaged to preserve flavor and aroma for export and bulk use.",
+    specifications: `
 • Product Name: Coriander Seeds
 • HSN Code: 09092110
 • Moisture: 9% Max
@@ -840,12 +877,52 @@ Naturally gluten-free and rich in fiber, protein, and minerals like magnesium an
 • Aroma & Oil Content: High
 `,
     packagingShipping: `
+    packagingShipping: `
 • Packaging: 25kg/50kg PP or Jute Bags (as per client request)
 • Export Markets: UAE, Indonesia, Vietnam, Europe, USA
 `,
     nutritionalInfo: `
+    nutritionalInfo: `
 Rich in antioxidants and essential oils. Helps digestion and adds aroma and flavor to food.
 `,
+  },
+  {
+    id: 17,
+    title: "Coriander Seeds - Scooter",
+    category: "Spices",
+    image: "/product/coriander-scooter.jpg",
+    images: ["/product/coriander-scooter.jpg"],
+    moreImage: [
+      "/product/coriander-scooter.jpg",
+      "/product/related.17.1.jpg",
+      "/product/related.17.2.webp",
+      "/product/related.17.3.webp",
+    ],
+    rating: 16,
+    reviews: 19,
+    description: "Scooter variety coriander, aromatic and strong.",
+    highlights: [
+      "Medium size grains",
+      "Mild greenish-yellow tone",
+      "Balanced essential oil content",
+      "Aromatic and fresh",
+      "Common in masala blends",
+    ],
+    features: [
+      "Natural drying process",
+      "Cleaned and graded",
+      "Mild yet rich aroma",
+      "Perfect for spice blends",
+      "Machine-processed and hygienic",
+    ],
+    applications: "Ideal for seasoning, spice powders, and oil extraction.",
+    aboutProduct:
+      "Scooter-grade coriander seeds offer balance between size and aroma, making them ideal for masala production and dry roasting applications.",
+    overview:
+      "Scooter coriander is a mid-grade spice with balanced flavor and consistent oil levels. Widely used in households and factories.",
+    premiumQuality:
+      "Sourced from top farms and cleaned using modern facilities to ensure purity and color consistency.",
+    specifications: `
   },
   {
     id: 17,
@@ -890,12 +967,52 @@ Rich in antioxidants and essential oils. Helps digestion and adds aroma and flav
 • Aroma: Moderate to High
 `,
     packagingShipping: `
+    packagingShipping: `
 • Packaging: 25kg/50kg PP or Jute Bags
 • Export Capacity: As per international demand
 `,
     nutritionalInfo: `
+    nutritionalInfo: `
 Contains dietary fiber, vitamin C, and essential oils with digestive and anti-inflammatory benefits.
 `,
+  },
+  {
+    id: 18,
+    title: "Coriander Seeds - Parrot",
+    category: "Spices",
+    image: "/product/coriander-parrot.jpg",
+    images: ["/product/coriander-parrot.jpg"],
+    moreImage: [
+      "/product/coriander-parrot.jpg",
+      "/product/related.18.1.jpg",
+      "/product/related.18.2.webp",
+      "/product/related.18.3.jpeg",
+    ],
+    rating: 17,
+    reviews: 21,
+    description: "Parrot variety coriander for grinding.",
+    highlights: [
+      "Smaller size grains",
+      "Distinct greenish tint",
+      "Strong and sharp aroma",
+      "Popular in domestic kitchens",
+      "Great for roasting and grinding",
+    ],
+    features: [
+      "Finely graded",
+      "Used in traditional spice blends",
+      "Compact and dense seeds",
+      "Custom packed",
+      "Flavor-preserving packaging",
+    ],
+    applications: "Used in garam masala, spice pastes, and curry powders.",
+    aboutProduct:
+      "Parrot coriander seeds are compact with a greenish hue and are known for their strong aroma. Perfect for grinding into spice powders.",
+    overview:
+      "An affordable yet powerful spice, Parrot-grade coriander is a favorite among home cooks and small-scale food units.",
+    premiumQuality:
+      "Processed with care in hygienic facilities. Cleaned and sorted for minimal foreign matter.",
+    specifications: `
   },
   {
     id: 18,
@@ -940,12 +1057,52 @@ Contains dietary fiber, vitamin C, and essential oils with digestive and anti-in
 • Aroma: High
 `,
     packagingShipping: `
+    packagingShipping: `
 • Packaging: 25kg or 50kg PP/Jute Bags
 • Global Distribution Available
 `,
     nutritionalInfo: `
+    nutritionalInfo: `
 Natural antioxidant, rich in flavor oils and vitamins. Supports digestion and blood sugar control.
 `,
+  },
+  {
+    id: 19,
+    title: "Coriander Seeds - Double Parrot",
+    category: "Spices",
+    image: "/product/coriander-parrot.jpg",
+    images: ["/product/coriander-parrot.jpg"],
+    moreImage: [
+      "/product/coriander-parrot.jpg",
+      "/product/related.18.1.jpg",
+      "/product/related.18.2.webp",
+      "/product/related.18.3.jpeg",
+    ],
+    rating: 18,
+    reviews: 20,
+    description: "Double Parrot variety coriander with premium aroma.",
+    highlights: [
+      "Finest grade seeds",
+      "Uniform size and color",
+      "Extra-high essential oil content",
+      "Bright greenish-yellow tone",
+      "Premium export quality",
+    ],
+    features: [
+      "Extra cleaned and polished",
+      "Ideal for premium spice products",
+      "High oil retention",
+      "Vacuum-sealed options",
+      "Sorted by optical sorting",
+    ],
+    applications: "Used in spice export, curry powders, flavoring extracts.",
+    aboutProduct:
+      "Double Parrot coriander seeds are premium-grade with superior oil content and color. Ideal for global spice markets and processors.",
+    overview:
+      "Preferred for its consistency, high aroma, and strong flavor presence in export blends and branded masalas.",
+    premiumQuality:
+      "Carefully selected, polished, and packed to meet stringent export and hygiene standards.",
+    specifications: `
   },
   {
     id: 19,
@@ -991,12 +1148,52 @@ Natural antioxidant, rich in flavor oils and vitamins. Supports digestion and bl
 • Purity: 99% Max
 `,
     packagingShipping: `
+    packagingShipping: `
 • Packaging: Export-grade 25kg/50kg PP/Jute Bags
 • Available in vacuum packaging
 `,
     nutritionalInfo: `
+    nutritionalInfo: `
 Superior essential oil content. Promotes digestive health and boosts flavor in foods.
 `,
+  },
+  {
+    id: 20,
+    title: "Coriander Seeds Fada (Eagle)",
+    category: "Spices",
+    image: "/product/coriander-fada.webp",
+    images: ["/product/coriander-fada.webp"],
+    moreImage: [
+      "/product/coriander-fada.webp",
+      "/product/related.20.1.jpg",
+      "/product/related.20.2.jpg",
+      "/product/related.20.3.webp",
+    ],
+    rating: 15,
+    reviews: 18,
+    description: "Fada cut Eagle coriander for quick use.",
+    highlights: [
+      "Split coriander seeds",
+      "Faster flavor infusion",
+      "Ideal for pickles and spice mixes",
+      "Same quality as Eagle whole",
+      "Shorter cooking time",
+    ],
+    features: [
+      "Made from Eagle-grade coriander",
+      "Cut for faster flavor release",
+      "Pre-sorted and cleaned",
+      "Vacuum-packed for freshness",
+      "Available in bulk",
+    ],
+    applications: "Used in pickles, chutneys, spice rubs, and curry pastes.",
+    aboutProduct:
+      "Fada coriander is derived by splitting Eagle seeds. It releases flavor quickly and is perfect for time-efficient cooking and food processing.",
+    overview:
+      "Offers convenience with no compromise in aroma or taste. A must-have in fast-paced kitchens.",
+    premiumQuality:
+      "Processed from whole Eagle seeds with no loss of oil content. Hygienically packed for freshness.",
+    specifications: `
   },
   {
     id: 20,
@@ -1041,12 +1238,53 @@ Superior essential oil content. Promotes digestive health and boosts flavor in f
 • Oil Content: High
 `,
     packagingShipping: `
+    packagingShipping: `
 • Packaging: 25kg PP/Jute Bags
 • Available as per bulk or retail demand
 `,
     nutritionalInfo: `
+    nutritionalInfo: `
 Same nutritional and oil value as whole coriander seeds. Adds depth and aroma efficiently.
 `,
+  },
+  {
+    id: 21,
+    title: "Cumin Seeds",
+    category: "Spices",
+    image: "/product/cumin-seed.png",
+    images: ["/product/cumin-seed.png"],
+    moreImage: [
+      "/product/cumin-seed.png",
+      "/product/related.21.1.webp",
+      "/product/related.21.2.webp",
+      "/product/related.21.3.jpg",
+    ],
+    rating: 18,
+    reviews: 20,
+    description: "Essential spice rich in aroma.",
+    highlights: [
+      "Warm earthy flavor",
+      "Used globally in cuisines",
+      "Promotes digestion",
+      "Essential in spice mixes",
+      "Natural source of antioxidants",
+    ],
+    features: [
+      "Machine cleaned (98%–99% purity)",
+      "Sun-dried and naturally processed",
+      "Available in various grades",
+      "Uniform grain size",
+      "Rich in essential oils",
+    ],
+    applications:
+      "Used in spice blends, curries, marinades, and herbal medicine.",
+    aboutProduct:
+      "Cumin seeds are valued for their distinctive flavor and aroma. A staple in Indian, Middle Eastern, and Mexican cuisine.",
+    overview:
+      "A key ingredient in garam masala and global spice mixes. Also used in Ayurvedic remedies.",
+    premiumQuality:
+      "Sorted and processed using hygienic methods for food-grade and herbal markets.",
+    specifications: `
   },
   {
     id: 21,
@@ -1093,12 +1331,54 @@ Same nutritional and oil value as whole coriander seeds. Adds depth and aroma ef
 • Form: Whole Seeds
 `,
     packagingShipping: `
+    packagingShipping: `
 • Packaging: 25/50 kg PP or Jute Bags
 • 20’ FCL Load: 13–14 MT | 40’ FCL: 25–26 MT
 `,
     nutritionalInfo: `
+    nutritionalInfo: `
 Improves digestion, rich in iron, and supports immune function.
 `,
+  },
+  {
+    id: 22,
+    title: "Fennel Seeds",
+    category: "Spices",
+    image: "/product/fennel.png",
+    images: ["/product/fennel.png"],
+    moreImage: [
+      "/product/fennel.png",
+      "/product/related.8.1.webp",
+      "/product/related.8.2.jpeg",
+      "/product/related.8.3.jpeg",
+    ],
+    rating: 17,
+    reviews: 16,
+    description:
+      "Sweet and aromatic fennel seeds used in cooking and digestion.",
+    highlights: [
+      "Sweet licorice-like taste",
+      "Aromatic and soothing",
+      "Natural digestive aid",
+      "Used in desserts and teas",
+      "Bright yellow-green color",
+    ],
+    features: [
+      "Rich in essential oils",
+      "3–5 mm seed size",
+      "Machine-cleaned (99%)",
+      "Used in herbal blends",
+      "Acts as natural mouth freshener",
+    ],
+    applications:
+      "Used in herbal teas, desserts, mouth fresheners, and curries.",
+    aboutProduct:
+      "Fennel seeds are aromatic and flavorful. Known for their digestion-boosting properties and sweet flavor, they are used widely in food and health applications.",
+    overview:
+      "Fennel seeds enhance both flavor and health. They’re refreshing, fragrant, and packed with antioxidants.",
+    premiumQuality:
+      "Sourced from top farms and cleaned with advanced optical sorting for purity and visual appeal.",
+    specifications: `
   },
   {
     id: 22,
@@ -1147,12 +1427,54 @@ Improves digestion, rich in iron, and supports immune function.
 • Foreign Matter: 0.5% Max
 `,
     packagingShipping: `
+    packagingShipping: `
 • Packaging: 25/50 kg PP or Jute Bags
 • 20’ FCL: 13–14 MT | 40’ FCL: 25–26 MT
 `,
     nutritionalInfo: `
+    nutritionalInfo: `
 Helps in digestion, relieves bloating, and provides antioxidant protection.
 `,
+  },
+  {
+    id: 23,
+    title: "Fenugreek Seeds",
+    category: "Spices",
+    image: "/product/fenugreek-seeds.webp",
+    images: ["/product/fenugreek-seeds.webp"],
+    moreImage: [
+      "/product/fenugreek-seeds.webp",
+      "/product/related.23.1.jpg",
+      "/product/related.23.2.jpg",
+      "/product/related.23.3.webp",
+    ],
+    rating: 16,
+    reviews: 14,
+    description:
+      "Bitter yet beneficial fenugreek seeds, great for seasoning and health.",
+    highlights: [
+      "Slightly bitter with maple aroma",
+      "Used in pickles and spice blends",
+      "Rich in iron and fiber",
+      "Supports blood sugar control",
+      "Also used in Ayurveda & cosmetics",
+    ],
+    features: [
+      "Golden-brown in color",
+      "Natural anti-inflammatory",
+      "Can be sprouted or ground",
+      "Machine-cleaned and sorted",
+      "Sustainably harvested",
+    ],
+    applications:
+      "Used in Indian curries, pickles, spice blends, hair oils, and cosmetics.",
+    aboutProduct:
+      "Fenugreek seeds are small golden seeds with strong flavor and therapeutic properties. A key ingredient in Indian spice racks and Ayurvedic formulations.",
+    overview:
+      "From cooking to skincare, fenugreek plays a powerful role with its nutrients and bioactive compounds.",
+    premiumQuality:
+      "Sorted to 99.9% purity with minimal foreign matter. Available in bulk and custom packaging.",
+    specifications: `
   },
   {
     id: 23,
@@ -1201,11 +1523,1197 @@ Helps in digestion, relieves bloating, and provides antioxidant protection.
 • Size: 3–5 mm
 `,
     packagingShipping: `
+    packagingShipping: `
 • Packaging: 50kg Bags or as per buyer requirements
 • 20’ FCL Capacity: 24 MT
 `,
     nutritionalInfo: `
+    nutritionalInfo: `
 High in fiber, protein, and antioxidants. Known for blood sugar and hormone regulation.
+`,
+  },
+  {
+    id: 24,
+    title: "Dry Onion (Powder/Flakes/Mince/Chopped/Granules)",
+    description:
+      "Dehydrated dry onion available in various forms: powder, flakes, mince, chopped, and granules. Ideal for long shelf-life and convenience.",
+    category: "Herbs & Spices",
+    image: "/product/Dry-Onion.png",
+    images: ["/product/Dry-Onion.png"],
+    moreImage: [
+      "/product/Dry-Onion.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 30,
+    reviews: 80,
+    highlights: [
+      "Long shelf-life",
+      "Convenient for quick cooking",
+      "Available in multiple forms",
+      "Non-GMO",
+      "Rich in flavor",
+    ],
+    features: [
+      "No preservatives or additives",
+      "Versatile for various dishes",
+      "Perfect for soups, stews, and sauces",
+      "Great for seasoning and marinades",
+      "Naturally gluten-free",
+    ],
+    applications:
+      "Ideal for cooking, seasoning, and as a quick addition to your dishes.",
+    aboutProduct:
+      "Dry onion is a convenient and long-lasting ingredient, available in various forms to suit different cooking needs.",
+    overview:
+      "Our dehydrated onions retain the natural flavor and aroma of fresh onions, offering a versatile option for chefs and home cooks.",
+    premiumQuality:
+      "Sourced from high-quality onions, ensuring top flavor and consistency.",
+    specifications: `
+• Available Forms: Powder, Flakes, Mince, Chopped, Granules
+• Moisture: 5% Max
+• Admixture: 1% Max
+• Foreign Material: 0.5% Max
+• Aflatoxin: < 20 ppb
+    `,
+    packagingShipping: `
+• Jute/PP Bags: 25kg or 50kg
+• Vacuum Packs: 25kg
+• 20’ FCL Capacity:
+   - Jute: 20 MT (50kg)
+   - Vacuum: 20 MT (25kg)
+    `,
+    nutritionalInfo: `
+Rich in essential vitamins, minerals, and antioxidants. Helps improve flavor without artificial additives.
+    `,
+  },
+  {
+    id: 25,
+    title: "Dry Garlic (Powder/Flakes/Mince/Chopped/Granules)",
+    description:
+      "Dehydrated garlic in powder, flakes, mince, chopped, and granule forms. Adds a rich garlic flavor to any dish.",
+    category: "Herbs & Spices",
+    image: "/product/Dry-Garlic.png",
+    images: ["/product/Dry-Garlic.png"],
+    moreImage: [
+      "/product/Dry-Garlic.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 34,
+    reviews: 90,
+    highlights: [
+      "Enhances flavor instantly",
+      "Available in multiple forms",
+      "Non-GMO",
+      "No preservatives",
+      "Rich in antioxidants",
+    ],
+    features: [
+      "Perfect for seasoning and marinades",
+      "Long shelf life",
+      "Versatile and convenient",
+      "No artificial additives",
+      "Naturally gluten-free",
+    ],
+    applications: "Ideal for cooking, baking, and making sauces.",
+    aboutProduct:
+      "Dry garlic is a convenient and potent way to infuse garlic flavor into your dishes.",
+    overview:
+      "Our dehydrated garlic is processed to maintain the natural richness and taste of fresh garlic.",
+    premiumQuality:
+      "Sourced from the finest garlic bulbs for optimal flavor and freshness.",
+    specifications: `
+• Available Forms: Powder, Flakes, Mince, Chopped, Granules
+• Moisture: 5% Max
+• Admixture: 1% Max
+• Foreign Material: 0.5% Max
+• Aflatoxin: < 20 ppb
+    `,
+    packagingShipping: `
+• Jute/PP Bags: 25kg or 50kg
+• Vacuum Packs: 25kg
+• 20’ FCL Capacity:
+   - Jute: 20 MT (50kg)
+   - Vacuum: 20 MT (25kg)
+    `,
+    nutritionalInfo: `
+Rich in antioxidants, essential vitamins, and minerals. Provides a strong and natural garlic flavor.
+    `,
+  },
+  {
+    id: 26,
+    title: "Clove",
+    description:
+      "Premium quality whole cloves with intense aromatic flavor. Used in cooking and for health benefits.",
+    category: "Herbs & Spices",
+    image: "/product/Clove.png",
+    images: ["/product/Clove.png"],
+    moreImage: [
+      "/product/Clove.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 25,
+    reviews: 55,
+    highlights: [
+      "Strong aromatic flavor",
+      "Rich in antioxidants",
+      "Non-GMO",
+      "Used in both cooking and medicine",
+      "Natural anti-inflammatory",
+    ],
+    features: [
+      "Whole cloves for maximum flavor",
+      "Ideal for spicing up stews and curries",
+      "Can be used for health remedies",
+      "Sustainably sourced",
+      "No preservatives",
+    ],
+    applications:
+      "Ideal for adding flavor to stews, meats, soups, and desserts.",
+    aboutProduct:
+      "Cloves are aromatic flower buds used in a variety of recipes, enhancing both flavor and health.",
+    overview:
+      "Our whole cloves are harvested and dried for maximum flavor retention and health benefits.",
+    premiumQuality:
+      "Sourced from the best plantations, ensuring high-quality and fresh cloves.",
+    specifications: `
+• Size: Whole Cloves
+• Moisture: 10% Max
+• Admixture: 1% Max
+• Foreign Material: 0.5% Max
+• Aflatoxin: < 20 ppb
+    `,
+    packagingShipping: `
+• Jute/PP Bags: 25kg or 50kg
+• Vacuum Packs: 25kg
+• 20’ FCL Capacity:
+   - Jute: 20 MT (50kg)
+   - Vacuum: 20 MT (25kg)
+    `,
+    nutritionalInfo: `
+Cloves are rich in antioxidants and minerals that contribute to better digestion and health.
+    `,
+  },
+  {
+    id: 27,
+    title: "Nutmeg Whole",
+    description:
+      "Premium quality whole nutmeg, adding a warm, aromatic flavor to sweet and savory dishes.",
+    category: "Herbs & Spices",
+    image: "/product/Nutmeg-Whole.png",
+    images: ["/product/Nutmeg-Whole.png"],
+    moreImage: [
+      "/product/Nutmeg-Whole.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 28,
+    reviews: 60,
+    highlights: [
+      "Warm, aromatic flavor",
+      "Ideal for baking and cooking",
+      "Non-GMO",
+      "Rich in antioxidants",
+      "Naturally gluten-free",
+    ],
+    features: [
+      "Grates easily for fresh flavor",
+      "Ideal for both sweet and savory dishes",
+      "No preservatives",
+      "Sustainably sourced",
+      "Rich in minerals like calcium and magnesium",
+    ],
+    applications: "Perfect for baking, desserts, soups, and curries.",
+    aboutProduct:
+      "Whole nutmeg offers a fresh, aromatic flavor that enhances a wide variety of dishes.",
+    overview:
+      "Our whole nutmeg is carefully sourced to ensure that you experience its full, aromatic flavor.",
+    premiumQuality:
+      "Sourced from the best nutmeg plantations, providing you with superior quality and flavor.",
+    specifications: `
+• Size: Whole Nutmeg
+• Moisture: 10% Max
+• Admixture: 1% Max
+• Foreign Material: 0.5% Max
+• Aflatoxin: < 20 ppb
+    `,
+    packagingShipping: `
+• Jute/PP Bags: 25kg or 50kg
+• Vacuum Packs: 25kg
+• 20’ FCL Capacity:
+   - Jute: 20 MT (50kg)
+   - Vacuum: 20 MT (25kg)
+    `,
+    nutritionalInfo: `
+Nutmeg is rich in antioxidants, vitamins, and minerals, offering both flavor and health benefits.
+    `,
+  },
+  {
+    id: 28,
+    title: "Cinnamon Sticks",
+    description:
+      "High-quality cinnamon sticks with a rich, sweet flavor. Perfect for infusing beverages or spicing up savory dishes.",
+    category: "Herbs & Spices",
+    image: "/product/Cinnamon-Sticks.png",
+    images: ["/product/Cinnamon-Sticks.png"],
+    moreImage: [
+      "/product/Cinnamon-Sticks.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 26,
+    reviews: 65,
+    highlights: [
+      "Sweet, warm flavor",
+      "Perfect for baking and cooking",
+      "Non-GMO",
+      "Rich in antioxidants",
+      "Naturally gluten-free",
+    ],
+    features: [
+      "Ideal for infusing drinks like tea and cider",
+      "Can be used in both sweet and savory dishes",
+      "No preservatives or additives",
+      "Sustainably sourced",
+      "High-quality Ceylon cinnamon",
+    ],
+    applications:
+      "Perfect for making chai tea, baking, or spicing up savory dishes.",
+    aboutProduct:
+      "Cinnamon sticks are perfect for infusing beverages or for grinding into powder for cooking.",
+    overview:
+      "Our cinnamon sticks provide an aromatic and sweet flavor that enhances a wide variety of recipes.",
+    premiumQuality:
+      "Sourced from the best Ceylon cinnamon, ensuring superior quality and flavor.",
+    specifications: `
+• Size: Whole Cinnamon Sticks
+• Moisture: 8% Max
+• Admixture: 1% Max
+• Foreign Material: 0.5% Max
+• Aflatoxin: < 20 ppb
+    `,
+    packagingShipping: `
+• Jute/PP Bags: 25kg or 50kg
+• Vacuum Packs: 25kg
+• 20’ FCL Capacity:
+   - Jute: 20 MT (50kg)
+   - Vacuum: 20 MT (25kg)
+    `,
+    nutritionalInfo: `
+Cinnamon is rich in antioxidants and offers anti-inflammatory benefits.
+    `,
+  },
+  {
+    id: 29,
+    title: "Mace",
+    description:
+      "Premium quality mace, offering a warm and aromatic flavor to enhance both sweet and savory dishes.",
+    category: "Herbs & Spices",
+    image: "/product/Mace.png",
+    images: ["/product/Mace.png"],
+    moreImage: [
+      "/product/Mace.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 27,
+    reviews: 70,
+    highlights: [
+      "Warm, aromatic flavor",
+      "Ideal for curries and desserts",
+      "Non-GMO",
+      "Rich in antioxidants",
+      "Naturally gluten-free",
+    ],
+    features: [
+      "Perfect for both savory and sweet dishes",
+      "No preservatives or additives",
+      "Sustainably sourced",
+      "Highly aromatic",
+      "No artificial colorants",
+    ],
+    applications: "Ideal for curries, desserts, and baking.",
+    aboutProduct:
+      "Mace is the outer covering of the nutmeg seed and provides a similar but subtler flavor.",
+    overview:
+      "Our mace is processed carefully to preserve its intense aromatic flavor for use in various dishes.",
+    premiumQuality:
+      "Sourced from the best mace producers for top quality and freshness.",
+    specifications: `
+• Size: Whole Mace
+• Moisture: 8% Max
+• Admixture: 1% Max
+• Foreign Material: 0.5% Max
+• Aflatoxin: < 20 ppb
+    `,
+    packagingShipping: `
+• Jute/PP Bags: 25kg or 50kg
+• Vacuum Packs: 25kg
+• 20’ FCL Capacity:
+   - Jute: 20 MT (50kg)
+   - Vacuum: 20 MT (25kg)
+    `,
+    nutritionalInfo: `
+Mace offers antioxidant properties and a warm flavor that enhances both sweet and savory dishes.
+    `,
+  },
+  {
+    id: 30,
+    title: "Bay Leaves",
+    description:
+      "Premium quality Bay leaves with a strong aromatic flavor. Used in a variety of dishes to enhance the taste.",
+    category: "Herbs & Spices",
+    image: "/product/Bay-Leaves.png",
+    images: ["/product/Bay-Leaves.png"],
+    moreImage: [
+      "/product/Bay-Leaves.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 22,
+    reviews: 50,
+    highlights: [
+      "Aromatic flavor",
+      "Used in various cuisines",
+      "Rich in antioxidants",
+      "Non-GMO",
+      "Naturally gluten-free",
+    ],
+    features: [
+      "Dried for optimal flavor retention",
+      "Ideal for soups, stews, and curries",
+      "Rich in essential oils",
+      "No preservatives added",
+      "Sustainably sourced",
+    ],
+    applications:
+      "Used in cooking to enhance the flavor of soups, stews, and sauces.",
+    aboutProduct:
+      "Bay leaves add a distinct flavor and aroma to dishes, making them a favorite in culinary traditions worldwide.",
+    overview:
+      "Our Bay leaves are handpicked, dried, and preserved to retain maximum aroma and taste.",
+    premiumQuality:
+      "Harvested from the finest sources, our Bay leaves guarantee superior flavor.",
+    specifications: `
+• Size: Whole leaves
+• Moisture: 8% Max
+• Admixture: 2% Max
+• Foreign Material: 0.5% Max
+• Aflatoxin: < 20 ppb
+    `,
+    packagingShipping: `
+• Jute/PP Bags: 25kg or 50kg
+• Vacuum Packs: 25kg
+• 20’ FCL Capacity:
+   - Jute: 20 MT (50kg)
+   - Vacuum: 20 MT (25kg)
+    `,
+    nutritionalInfo: `
+Bay leaves are rich in antioxidants and essential oils, offering flavor and health benefits.
+    `,
+  },
+  {
+    id: 31,
+    title: "Red Pepper (Ground/Crushed/Whole/Powder)",
+    description:
+      "Premium quality red pepper available in ground, crushed, whole, or powder form. Adds a spicy kick to any dish.",
+    category: "Herbs & Spices",
+    image: "/product/Red-Pepper.png",
+    images: ["/product/Red-Pepper.png"],
+    moreImage: [
+      "/product/Red-Pepper.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 28,
+    reviews: 65,
+    highlights: [
+      "Adds a spicy kick",
+      "Rich in antioxidants",
+      "Non-GMO",
+      "Naturally gluten-free",
+      "Versatile for various dishes",
+    ],
+    features: [
+      "Available in various forms: ground, crushed, whole, or powder",
+      "Rich in Vitamin C",
+      "Perfect for seasoning",
+      "Ideal for soups, curries, and marinades",
+      "No preservatives or additives",
+    ],
+    applications:
+      "Perfect for enhancing the flavor of soups, sauces, salads, and stir-fries.",
+    aboutProduct:
+      "Our red pepper is packed with flavor and provides a spicy kick that will elevate any dish.",
+    overview:
+      "We offer high-quality red pepper in different forms to suit your culinary needs.",
+    premiumQuality:
+      "Sourced from the best farms, our red pepper is dried, ground, or crushed to retain its full flavor.",
+    specifications: `
+• Size: Ground, Crushed, Whole, Powder
+• Moisture: 10% Max
+• Admixture: 1% Max
+• Foreign Material: 0.5% Max
+• Aflatoxin: < 20 ppb
+    `,
+    packagingShipping: `
+• Jute/PP Bags: 25kg or 50kg
+• Vacuum Packs: 25kg
+• 20’ FCL Capacity:
+   - Jute: 20 MT (50kg)
+   - Vacuum: 20 MT (25kg)
+    `,
+    nutritionalInfo: `
+Red pepper is rich in Vitamin C, antioxidants, and capsaicin, which provide various health benefits.
+    `,
+  },
+  {
+    id: 32,
+    title: "Chia Seeds",
+    description:
+      "Chia seeds are a powerhouse of nutrition, packed with fiber, protein, and Omega-3 fatty acids.",
+    category: "Seeds & Nuts",
+    image: "/product/Chia-Seeds.png",
+    images: ["/product/Chia-Seeds.png"],
+    moreImage: [
+      "/product/Chia-Seeds.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 33,
+    reviews: 75,
+    highlights: [
+      "Rich in Omega-3 fatty acids",
+      "High in fiber and protein",
+      "Great for smoothies and snacks",
+      "Non-GMO",
+      "Rich in antioxidants",
+    ],
+    features: [
+      "Perfect for adding to smoothies, yogurt, or baking",
+      "Rich in essential minerals like calcium and magnesium",
+      "Great source of plant-based protein",
+      "No added sugars or preservatives",
+      "High in antioxidants",
+    ],
+    applications:
+      "Ideal for sprinkling on cereals, mixing into smoothies, or adding to baked goods.",
+    aboutProduct:
+      "Chia seeds are a nutrient-packed superfood that enhances any meal or snack.",
+    overview:
+      "Our chia seeds are a rich source of fiber, Omega-3, and protein for a healthy diet.",
+    premiumQuality:
+      "Sourced from organic farms, ensuring the highest quality and freshness.",
+    specifications: `
+• Size: 500g, 1kg, 5kg
+• Moisture: 5% Max
+• Admixture: 1% Max
+• Foreign Material: 0.3% Max
+• Aflatoxin: < 20 ppb
+    `,
+    packagingShipping: `
+• Jute/PP Bags: 25kg or 50kg
+• Vacuum Packs: 25kg
+• 20’ FCL Capacity:
+   - Jute: 20 MT (50kg)
+   - Vacuum: 20 MT (25kg)
+    `,
+    nutritionalInfo: `
+Chia seeds are high in fiber, protein, and Omega-3 fatty acids, supporting overall health.
+    `,
+  },
+  {
+    id: 33,
+    title: "Green Peas",
+    description:
+      "Fresh green peas that are rich in nutrients, ideal for a variety of recipes from curries to soups and salads.",
+    category: "Vegetables",
+    image: "/product/Green-Peas.png",
+    images: ["/product/Green-Peas.png"],
+    moreImage: [
+      "/product/Green-Peas.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 20,
+    reviews: 50,
+    highlights: [
+      "Rich in protein and fiber",
+      "Great for cooking and salads",
+      "Non-GMO",
+      "Rich in vitamins and minerals",
+      "Supports digestion",
+    ],
+    features: [
+      "Fresh and tender peas",
+      "No preservatives or additives",
+      "Great for making curries and soups",
+      "Rich in vitamins A, C, and K",
+      "Naturally gluten-free",
+    ],
+    applications: "Perfect for curries, soups, and adding to salads and stews.",
+    aboutProduct:
+      "Green peas are highly nutritious, packed with essential vitamins and minerals, and perfect for a wide variety of dishes.",
+    overview:
+      "Our green peas are tender, fresh, and nutrient-rich, ideal for healthy meals.",
+    premiumQuality:
+      "Handpicked for their freshness and taste, ensuring the highest quality.",
+    specifications: `
+• Size: Small, Medium, Large
+• Moisture: 12% Max
+• Admixture: 1% Max
+• Foreign Material: 0.5% Max
+• Protein Content: 6% Min
+• Aflatoxin: < 20 ppb
+    `,
+    packagingShipping: `
+• Jute/PP Bags: 25kg or 50kg
+• Vacuum Packs: 25kg
+• 20’ FCL Capacity:
+   - Jute: 20 MT (50kg)
+   - Vacuum: 20 MT (25kg)
+    `,
+    nutritionalInfo: `
+Green peas are rich in protein, fiber, and vitamins, supporting digestion and overall health.
+    `,
+  },
+  {
+    id: 34,
+    title: "Soya Chunks",
+    description:
+      "Soya chunks are high-protein, plant-based meat alternatives, ideal for vegetarian and vegan dishes.",
+    category: "Pulses",
+    image: "/product/Soya-Chunks.png",
+    images: ["/product/Soya-Chunks.png"],
+    moreImage: [
+      "/product/Soya-Chunks.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 25,
+    reviews: 60,
+    highlights: [
+      "Rich in plant-based protein",
+      "Great meat substitute",
+      "Non-GMO",
+      "Ideal for curries and stir-fries",
+      "High in iron and calcium",
+    ],
+    features: [
+      "High protein content",
+      "Perfect for vegetarian and vegan meals",
+      "Easy to cook and absorb flavors",
+      "Packed with iron and calcium",
+      "No preservatives or additives",
+    ],
+    applications:
+      "Ideal for making meatless curries, stir-fries, and as a protein-packed addition to various dishes.",
+    aboutProduct:
+      "Soya chunks are a perfect protein source for vegetarians and vegans, providing a meat-like texture in dishes.",
+    overview:
+      "Our soya chunks are high in protein and perfect for adding texture and nutrition to plant-based meals.",
+    premiumQuality:
+      "Sourced from the finest soya beans to ensure top quality and freshness.",
+    specifications: `
+• Size: Small, Medium, Large
+• Moisture: 10% Max
+• Admixture: 1% Max
+• Foreign Material: 0.5% Max
+• Protein Content: 50% Min
+• Aflatoxin: < 20 ppb
+    `,
+    packagingShipping: `
+• Jute/PP Bags: 25kg or 50kg
+• Vacuum Packs: 25kg
+• 20’ FCL Capacity:
+   - Jute: 20 MT (50kg)
+   - Vacuum: 20 MT (25kg)
+    `,
+    nutritionalInfo: `
+Soya chunks are rich in plant-based protein, iron, and calcium, supporting overall health and muscle growth.
+    `,
+  },
+  {
+    id: 35,
+    title: "Makhana",
+    description:
+      "Premium quality Makhana (Fox Nuts) with a light, crunchy texture. Great for snacks or as an ingredient in various dishes.",
+    category: "Snacks",
+    image: "/product/Makhana.png",
+    images: ["/product/Makhana.png"],
+    moreImage: [
+      "/product/Makhana.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 25,
+    reviews: 60,
+    highlights: [
+      "Rich in protein and fiber",
+      "Great for snacking",
+      "Naturally gluten-free",
+      "Rich in antioxidants",
+      "Low in calories",
+    ],
+    features: [
+      "Sustainably sourced",
+      "High-quality seeds",
+      "Perfect for roasting and frying",
+      "No preservatives",
+      "Non-GMO",
+    ],
+    applications:
+      "Ideal for snacking, mixing in salads, or using as an ingredient in sweets.",
+    aboutProduct:
+      "Makhana, also known as Fox Nuts, are highly nutritious and a great healthy snack option.",
+    overview:
+      "Our Makhana offers a crunchy texture with a subtle flavor, perfect for any dish or snack.",
+    premiumQuality: "Handpicked and processed for optimal freshness and taste.",
+    specifications: `
+  • Size: 8mm, 10mm, 12mm
+  • Moisture: 8% Max
+  • Admixture: 1% Max
+  • Foreign Material: 0.3% Max
+  • Protein Content: 18% – 20%
+  • Aflatoxin: < 20 ppb
+      `,
+    packagingShipping: `
+  • Jute/PP Bags: 25kg or 50kg
+  • Vacuum Packs: 25kg
+  • 20’ FCL Capacity:
+     - Jute: 20 MT (50kg)
+     - Vacuum: 20 MT (25kg)
+      `,
+    nutritionalInfo: `
+  Rich in protein, fiber, and antioxidants, Makhana is great for overall health and well-being.
+      `,
+  },
+  {
+    id: 36,
+    title: "Fenugreek Leaves (Dry)",
+    description:
+      "Dried Fenugreek leaves are packed with flavor and health benefits, commonly used in Indian cuisine and herbal medicine.",
+    category: "Herbs & Spices",
+    image: "/product/Fenugreek-Leaves-Dry.png",
+    images: ["/product/Fenugreek-Leaves-Dry.png"],
+    moreImage: [
+      "/product/Fenugreek-Leaves-Dry.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 18,
+    reviews: 42,
+    highlights: [
+      "Rich in iron, calcium, and fiber",
+      "Popular in Indian cuisine",
+      "Helps in digestion",
+      "Good for lowering cholesterol",
+      "Non-GMO",
+    ],
+    features: [
+      "Naturally dried and handpicked",
+      "Ideal for cooking curries and gravies",
+      "Used in traditional herbal remedies",
+      "Rich in essential vitamins",
+      "Gluten-free",
+    ],
+    applications:
+      "Used in curries, gravies, herbal teas, and as a flavor enhancer.",
+    aboutProduct:
+      "Fenugreek leaves are dried to preserve their flavor and health benefits, commonly used in various cuisines.",
+    overview:
+      "Our Fenugreek leaves are dried naturally, offering the perfect balance of taste and nutrition.",
+    premiumQuality:
+      "Our dried Fenugreek leaves are handpicked and dried with care to preserve the aroma and health benefits.",
+    specifications: `
+  • Size: Whole leaves
+  • Moisture: 7% Max
+  • Admixture: 2% Max
+  • Foreign Material: 0.5% Max
+  • Iron Content: 3% Min
+  • Aflatoxin: < 20 ppb
+      `,
+    packagingShipping: `
+  • Jute/PP Bags: 25kg or 50kg
+  • Vacuum Packs: 25kg
+  • 20’ FCL Capacity:
+     - Jute: 20 MT (50kg)
+     - Vacuum: 20 MT (25kg)
+      `,
+    nutritionalInfo: `
+  Fenugreek leaves are rich in iron, calcium, and essential vitamins A and C.
+      `,
+  },
+  {
+    id: 37,
+    title: "Raisins",
+    description:
+      "Premium quality raisins with a natural sweetness and chewy texture. Ideal for snacking or adding to baked goods and salads.",
+    category: "Dried Fruits",
+    image: "/product/Raisins.png",
+    images: ["/product/Raisins.png"],
+    moreImage: [
+      "/product/Raisins.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 30,
+    reviews: 70,
+    highlights: [
+      "Naturally sweet",
+      "Rich in antioxidants",
+      "Great source of energy",
+      "High in fiber",
+      "Non-GMO",
+    ],
+    features: [
+      "Naturally dried",
+      "No added sugar",
+      "Rich in iron and potassium",
+      "Great for snacking and baking",
+      "Non-sulphured",
+    ],
+    applications:
+      "Perfect for snacking, baking, or adding to salads and desserts.",
+    aboutProduct:
+      "Raisins are naturally dried grapes, packed with flavor, nutrition, and energy.",
+    overview:
+      "Our raisins are naturally sweet and rich in antioxidants, perfect for your daily energy boost.",
+    premiumQuality:
+      "Handpicked and naturally dried for optimal flavor and texture.",
+    specifications: `
+  • Size: Small, Medium, Large
+  • Moisture: 15% Max
+  • Admixture: 1% Max
+  • Foreign Material: 0.3% Max
+  • Sugar Content: 60% Min
+  • Aflatoxin: < 20 ppb
+      `,
+    packagingShipping: `
+  • Jute/PP Bags: 25kg or 50kg
+  • Vacuum Packs: 25kg
+  • 20’ FCL Capacity:
+     - Jute: 20 MT (50kg)
+     - Vacuum: 20 MT (25kg)
+      `,
+    nutritionalInfo: `
+  Raisins are rich in fiber, iron, potassium, and antioxidants, supporting overall health and digestion.
+      `,
+  },
+  {
+    id: 38,
+    title: "Sorghum (Jowar)",
+    description:
+      "Sorghum (Jowar) is a nutritious gluten-free grain with a mild flavor, perfect for a variety of dishes like porridge, flour, and snacks.",
+    category: "Grains",
+    image: "/product/Sorghum-Jowar.png",
+    images: ["/product/Sorghum-Jowar.png"],
+    moreImage: [
+      "/product/Sorghum-Jowar.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 23,
+    reviews: 55,
+    highlights: [
+      "Gluten-free",
+      "High in fiber and protein",
+      "Ideal for porridge and flour",
+      "Rich in vitamins and minerals",
+      "Non-GMO",
+    ],
+    features: [
+      "Great for making flour and porridge",
+      "Rich in antioxidants",
+      "Naturally gluten-free",
+      "Packed with essential vitamins",
+      "Non-GMO",
+    ],
+    applications:
+      "Ideal for making flour, porridge, and adding to baked goods.",
+    aboutProduct:
+      "Sorghum (Jowar) is a highly nutritious grain that is rich in fiber and antioxidants.",
+    overview:
+      "Our Sorghum is 100% gluten-free and is an excellent source of energy and nutrition.",
+    premiumQuality:
+      "Handpicked and processed for premium quality and rich taste.",
+    specifications: `
+  • Size: 6mm, 8mm, 10mm
+  • Moisture: 10% Max
+  • Admixture: 2% Max
+  • Foreign Material: 0.5% Max
+  • Protein Content: 11% – 13%
+  • Aflatoxin: < 20 ppb
+      `,
+    packagingShipping: `
+  • Jute/PP Bags: 25kg or 50kg
+  • Vacuum Packs: 25kg
+  • 20’ FCL Capacity:
+     - Jute: 20 MT (50kg)
+     - Vacuum: 20 MT (25kg)
+      `,
+    nutritionalInfo: `
+  Sorghum is high in fiber, antioxidants, and essential vitamins, providing long-lasting energy.
+      `,
+  },
+  {
+    id: 39,
+    title: "Kidney Beans",
+    description:
+      "High-quality kidney beans rich in protein, fiber, and essential nutrients. Ideal for making curries, salads, and stews.",
+    category: "Pulses",
+    image: "/product/Kidney-Beans.png",
+    images: ["/product/Kidney-Beans.png"],
+    moreImage: [
+      "/product/Kidney-Beans.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 29,
+    reviews: 65,
+    highlights: [
+      "High in protein and fiber",
+      "Great for cooking and salads",
+      "Rich in iron and potassium",
+      "Non-GMO",
+      "Supports heart health",
+    ],
+    features: [
+      "Rich in protein and iron",
+      "Ideal for curries, stews, and salads",
+      "Packed with essential minerals",
+      "Helps regulate blood sugar",
+      "Naturally gluten-free",
+    ],
+    applications:
+      "Perfect for making curries, soups, salads, and as a protein-rich ingredient in various dishes.",
+    aboutProduct:
+      "Kidney beans are a high-protein, fiber-packed legume, perfect for a variety of dishes.",
+    overview:
+      "Our kidney beans are rich in essential nutrients like protein, fiber, and minerals.",
+    premiumQuality:
+      "Our kidney beans are handpicked to ensure the highest quality and freshness.",
+    specifications: `
+  • Size: Small, Medium, Large
+  • Moisture: 14% Max
+  • Admixture: 1% Max
+  • Foreign Material: 0.5% Max
+  • Protein Content: 23% Min
+  • Aflatoxin: < 20 ppb
+      `,
+    packagingShipping: `
+  • Jute/PP Bags: 25kg or 50kg
+  • Vacuum Packs: 25kg
+  • 20’ FCL Capacity:
+     - Jute: 20 MT (50kg)
+     - Vacuum: 20 MT (25kg)
+      `,
+    nutritionalInfo: `
+  Kidney beans are rich in protein, fiber, and essential nutrients like iron and potassium, supporting overall health.
+      `,
+  },
+
+  {
+    id: 40,
+    title: "Tur Dal",
+    description:
+      "High-quality Tur Dal with a rich taste and high protein content. Ideal for soups, dals, and other Indian dishes.",
+    category: "Pulses",
+    image: "/product/Tur-Dal.png",
+    images: ["/product/Tur-Dal.png"],
+    moreImage: [
+      "/product/Tur-Dal.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 20,
+    reviews: 45,
+    highlights: [
+      "Rich in protein and fiber",
+      "Perfect for making soups and dals",
+      "High nutritional value",
+      "Low in fat",
+      "Non-GMO",
+    ],
+    features: [
+      "Carefully sorted and cleaned",
+      "High-quality pulses",
+      "Rich in vitamins and minerals",
+      "Easy to cook",
+      "100% natural product",
+    ],
+    applications: "Ideal for soups, dals, curries, and stews.",
+    aboutProduct:
+      "Tur Dal is a high-protein pulse with a rich flavor, perfect for everyday cooking.",
+    overview:
+      "Our Tur Dal is cultivated with care to ensure high quality and rich taste.",
+    premiumQuality:
+      "Packed with protein and essential nutrients, Tur Dal is an excellent addition to your meals.",
+    specifications: `
+• Counts per Ounce: 30/40, 35/45, 40/50, 50/60
+• Moisture: 8% Max
+• Admixture: 2% Max
+• Foreign Material: 0.5% Max
+• Protein Content: 24% – 26%
+• Aflatoxin: < 20 ppb
+  `,
+    packagingShipping: `
+• Jute/PP Bags: 25kg or 50kg
+• Vacuum Packs: 25kg
+• 20’ FCL Capacity:
+ - Jute: 20 MT (50kg)
+ - Vacuum: 20 MT (25kg)
+  `,
+    nutritionalInfo: `
+Rich in protein, fiber, and essential vitamins like B1, B2, and folate.
+  `,
+  },
+  {
+    id: 41,
+    title: "Channa Dal",
+    description:
+      "Channa Dal, known for its rich flavor and texture, is a staple ingredient for dals, soups, and snacks.",
+    category: "Pulses",
+    image: "/product/Channa-Dal.png",
+    images: ["/product/Channa-Dal.png"],
+    moreImage: [
+      "/product/Channa-Dal.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 22,
+    reviews: 50,
+    highlights: [
+      "High in fiber and protein",
+      "Great for making Indian snacks and meals",
+      "Rich flavor and texture",
+      "Easy to digest",
+      "Non-GMO",
+    ],
+    features: [
+      "Sustainably sourced",
+      "Rich in minerals and vitamins",
+      "Perfect for both savory and sweet dishes",
+      "Handpicked for quality",
+      "Naturally gluten-free",
+    ],
+    applications:
+      "Ideal for making dals, soups, fritters, and other Indian snacks.",
+    aboutProduct:
+      "Channa Dal is an excellent source of protein and fiber, used in many traditional dishes.",
+    overview:
+      "Channa Dal is an essential ingredient in Indian cooking, offering great taste and health benefits.",
+    premiumQuality:
+      "Our Channa Dal is sourced and processed to ensure the highest quality and flavor.",
+    specifications: `
+• Counts per Ounce: 30/40, 35/45, 40/50, 50/60
+• Moisture: 9% Max
+• Admixture: 1% Max
+• Foreign Material: 0.3% Max
+• Protein Content: 22% – 24%
+• Aflatoxin: < 20 ppb
+  `,
+    packagingShipping: `
+• Jute/PP Bags: 25kg or 50kg
+• Vacuum Packs: 25kg
+• 20’ FCL Capacity:
+ - Jute: 20 MT (50kg)
+ - Vacuum: 20 MT (25kg)
+  `,
+    nutritionalInfo: `
+Channa Dal is rich in protein, fiber, and essential minerals like calcium and iron.
+  `,
+  },
+  {
+    id: 42,
+    title: "Urad Dal",
+    description:
+      "Urad Dal, a protein-rich lentil, is commonly used in dals and Indian desserts, known for its creamy texture.",
+    category: "Pulses",
+    image: "/product/Urad-Dal.png",
+    images: ["/product/Urad-Dal.png"],
+    moreImage: [
+      "/product/Urad-Dal.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 18,
+    reviews: 40,
+    highlights: [
+      "Rich in protein and fiber",
+      "Ideal for making dals and desserts",
+      "Helps in digestion",
+      "Non-GMO",
+      "Naturally gluten-free",
+    ],
+    features: [
+      "Easy to cook",
+      "Great for making creamy dals",
+      "Full of essential vitamins",
+      "Handpicked for premium quality",
+      "Perfect for vegetarian and vegan diets",
+    ],
+    applications:
+      "Perfect for making dals, chutneys, and desserts like dosa or idli.",
+    aboutProduct:
+      "Urad Dal is known for its rich texture, making it perfect for creamy dishes.",
+    overview:
+      "Our Urad Dal is packed with protein and ideal for a variety of delicious recipes.",
+    premiumQuality:
+      "The best quality Urad Dal for your daily needs, offering rich texture and great taste.",
+    specifications: `
+• Counts per Ounce: 30/40, 35/45, 40/50
+• Moisture: 7% Max
+• Admixture: 1.5% Max
+• Foreign Material: 0.3% Max
+• Protein Content: 25% – 27%
+• Aflatoxin: < 20 ppb
+  `,
+    packagingShipping: `
+• Jute/PP Bags: 25kg or 50kg
+• Vacuum Packs: 25kg
+• 20’ FCL Capacity:
+ - Jute: 19 MT (50kg)
+ - Vacuum: 19 MT (25kg)
+  `,
+    nutritionalInfo: `
+Urad Dal is high in protein, fiber, and contains essential nutrients like iron, potassium, and magnesium.
+  `,
+  },
+  {
+    id: 43,
+    title: "Masoor Dal",
+    description:
+      "Masoor Dal is a rich source of protein and fiber, ideal for a variety of Indian and global dishes.",
+    category: "Pulses",
+    image: "/product/Masoor-Dal.png",
+    images: ["/product/Masoor-Dal.png"],
+    moreImage: [
+      "/product/Masoor-Dal.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 20,
+    reviews: 42,
+    highlights: [
+      "Rich in protein and fiber",
+      "Good for making soups and dals",
+      "Easy to digest",
+      "Full of essential vitamins",
+      "Non-GMO",
+    ],
+    features: [
+      "Rich in iron and potassium",
+      "Ideal for vegan and vegetarian diets",
+      "Great for light and nutritious meals",
+      "Handpicked for quality",
+      "Packed with antioxidants",
+    ],
+    applications: "Best for making soups, dals, and salads.",
+    aboutProduct:
+      "Masoor Dal is easy to cook and provides a smooth texture, making it a popular choice for a variety of dishes.",
+    overview:
+      "Our Masoor Dal is perfect for those looking for a nutritious, quick-to-prepare meal.",
+    premiumQuality:
+      "Masoor Dal is packed with essential nutrients for a healthy and balanced diet.",
+    specifications: `
+• Counts per Ounce: 30/40, 35/45, 40/50
+• Moisture: 8% Max
+• Admixture: 2% Max
+• Foreign Material: 0.5% Max
+• Protein Content: 22% – 24%
+• Aflatoxin: < 20 ppb
+  `,
+    packagingShipping: `
+• Jute/PP Bags: 25kg or 50kg
+• Vacuum Packs: 25kg
+• 20’ FCL Capacity:
+ - Jute: 20 MT (50kg)
+ - Vacuum: 20 MT (25kg)
+  `,
+    nutritionalInfo: `
+Rich in protein, fiber, iron, and other essential vitamins.
+  `,
+  },
+  {
+    id: 44,
+    title: "Cashew",
+    description:
+      "Premium quality cashews with rich flavor and crunchy texture. Perfect for snacking, cooking, and baking.",
+    category: "Nuts",
+    image: "/product/Cashew.png",
+    images: ["/product/Cashew.png"],
+    moreImage: [
+      "/product/Cashew.png",
+      "/product/related.2.1.jpg",
+      "/product/related.1.3.jpeg",
+      "/product/related.2.3.jpg",
+    ],
+    rating: 22,
+    reviews: 50,
+    highlights: [
+      "Rich in healthy fats",
+      "Great for snacking and cooking",
+      "Contains antioxidants",
+      "Helps improve heart health",
+      "Non-GMO",
+    ],
+    features: [
+      "Handpicked for premium quality",
+      "Rich in vitamins and minerals",
+      "Ideal for baking and cooking",
+      "Supports heart health",
+      "Naturally gluten-free",
+    ],
+    applications:
+      "Perfect for snacking, baking, or adding to dishes for added crunch.",
+    aboutProduct:
+      "Cashews are a versatile snack that adds a delicious crunch to any dish.",
+    overview:
+      "Our premium cashews are packed with healthy fats and essential nutrients.",
+    premiumQuality:
+      "We offer only the highest quality cashews, handpicked and processed for the best flavor.",
+    specifications: `
+• Size: 180, 210, 240, 280, 320
+• Moisture: 5% Max
+• Admixture: 1% Max
+• Foreign Material: 0.5% Max
+• Oil Content: 47% – 50%
+• Aflatoxin: < 20 ppb
+  `,
+    packagingShipping: `
+• Jute/PP Bags: 25kg or 50kg
+• Vacuum Packs: 25kg
+• 20’ FCL Capacity:
+ - Jute: 20 MT (50kg)
+ - Vacuum: 20 MT (25kg)
+  `,
+    nutritionalInfo: `
+Cashews are rich in healthy fats, protein, and essential minerals like magnesium and zinc.
+  `,
+  },
 `,
   },
 ];

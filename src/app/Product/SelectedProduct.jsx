@@ -175,7 +175,7 @@ const SelectedProduct = ({ product }) => {
               <h4 className="text-3xl font-bold text-gray-900">
                 {currentProduct.title}
               </h4>
-              <div className="flex items-center gap-2">
+              {/* <div className="flex items-center gap-2">
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
                     <span key={i} className="text-yellow-400 text-xl">
@@ -186,7 +186,7 @@ const SelectedProduct = ({ product }) => {
                 <span className="font-semibold text-gray-500">
                   ({currentProduct.reviews || 0} reviews)
                 </span>
-              </div>
+              </div> */}
               <p className="font-semibold leading-7 text-gray-700">
                 {getProductField("aboutProduct", "about_product") ||
                   currentProduct.description ||
@@ -383,13 +383,15 @@ const SelectedProduct = ({ product }) => {
                   <div className="flex items-center gap-3">
                     <span className="text-green-500 text-xl">📞</span>
                     <span className="font-semibold text-gray-700">
-                      +1 (555) 123-4567
+                      <div>+91 7227021300</div>
+                      <div>+91 7227021301</div>
+                      <div>+91 7227021302</div>
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-green-500 text-xl">✉️</span>
                     <span className="font-semibold text-gray-700">
-                      info@company.com
+                      info@agrollaimpex.com
                     </span>
                   </div>
                 </div>

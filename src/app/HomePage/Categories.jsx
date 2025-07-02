@@ -211,11 +211,11 @@ export default function Categories({ onCategorySelect }) {
               <p className="text-[#4B5563] text-sm lg:text-base mt-3 lg:mt-4">
                 Contact our customer support team anytime
               </p>
-                <a href="/Contact" >
-              <p className="text-[#4CAF50] text-sm lg:text-base mt-2">
-                Contact Support →
-              </p>
-                </a>
+              <a href="/Contact">
+                <p className="text-[#4CAF50] text-sm lg:text-base mt-2">
+                  Contact Support →
+                </p>
+              </a>
             </li>
           </ul>
         </aside>
@@ -226,7 +226,7 @@ export default function Categories({ onCategorySelect }) {
             ? Array.from({ length: 6 }).map((_, i) => (
                 <div
                   key={i}
-                  className="animate-pulse bg-white rounded-2xl h-[450px] p-4 flex flex-col justify-between shadow-sm"
+                  className="animate-pulse bg-white rounded-2xl h-[450px] p-4 flex flex-col justify-between shadow-sm border border-gray-100"
                 >
                   <div className="h-48 bg-gray-200 rounded-xl mb-4"></div>
                   <div className="h-5 bg-gray-200 rounded w-3/4 mb-2"></div>
@@ -248,7 +248,7 @@ export default function Categories({ onCategorySelect }) {
                 return (
                   <div
                     key={product.id}
-                    className="bg-white rounded-2xl h-[450px] card cursor-pointer relative flex flex-col justify-between hover:shadow-lg transition-shadow duration-300"
+                    className="bg-white rounded-2xl h-[450px] card cursor-pointer relative flex flex-col justify-between hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-green-300 p-4"
                     onClick={() => router.push(`/Product/${product.id}`)}
                   >
                     <img
@@ -256,7 +256,7 @@ export default function Categories({ onCategorySelect }) {
                       alt={product.title}
                       className="object-contain w-full h-48 rounded-xl"
                     />
-                    <div className="flex items-center gap-1 mt-4">
+                    {/* <div className="flex items-center gap-1 mt-4">
                       {[...Array(fullStars)].map((_, i) => (
                         <FaStar key={`full-${i}`} className="text-yellow-500" />
                       ))}
@@ -272,7 +272,7 @@ export default function Categories({ onCategorySelect }) {
                       <span className="text-[#6B7280] text-lg font-semibold">
                         {product.reviews}
                       </span>
-                    </div>
+                    </div> */}
                     <h3 className="mt-4 text-2xl font-bold text-gray-800">
                       {product.title}
                     </h3>

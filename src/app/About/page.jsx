@@ -81,7 +81,8 @@ export default function About() {
                     preferred supplier across international markets.
                   </p>{" "}
                   <br />
-                  <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
+                  {/* Fixed Responsive Grid for Quality Items */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
                     {/* Quality Items */}
                     {[
                       {
@@ -107,20 +108,22 @@ export default function About() {
                     ].map((item, index) => (
                       <div
                         key={index}
-                        className="flex items-start gap-4"
+                        className="flex flex-col sm:flex-row items-start gap-4 p-4 bg-gray-50 rounded-lg"
                         data-aos="fade-up"
                         data-aos-delay={100 * index}
                       >
-                        <img
-                          src={item.icon}
-                          alt=""
-                          className="w-12 h-12 mt-1"
-                        />
-                        <div className="flex flex-col">
-                          <p className="text-[16px] font-semibold text-[#111827]">
+                        <div className="flex-shrink-0 w-full sm:w-auto flex justify-center sm:justify-start">
+                          <img
+                            src={item.icon}
+                            alt={item.title}
+                            className="w-12 h-12 object-contain"
+                          />
+                        </div>
+                        <div className="flex flex-col text-center sm:text-left w-full">
+                          <h3 className="text-[16px] font-semibold text-[#111827] mb-2">
                             {item.title}
-                          </p>
-                          <p className="text-[14px] font-semibold text-[#4b5563]">
+                          </h3>
+                          <p className="text-[14px] font-medium text-[#4b5563] leading-relaxed">
                             {item.desc}
                           </p>
                         </div>
@@ -129,20 +132,23 @@ export default function About() {
                   </div>
                 </div>
               </div>
-              <img
-                src="/aboutSection1.jpg"
-                alt=""
-                className="w-full max-w-[728px] h-[613px] rounded-[8px]"
-                data-aos="fade-left"
-              />
+              <div className="w-full max-w-[728px] flex justify-center">
+                <img
+                  src="/aboutSection1.jpg"
+                  alt="About Section"
+                  className="w-full h-[400px] sm:h-[500px] lg:h-[613px] rounded-[8px] object-cover"
+                  data-aos="fade-left"
+                />
+              </div>
             </div>
           </section>
+
           {/* Section 2 */}
           <section
             className="w-full bg-[#F9FAFB] flex justify-center items-center overflow-hidden"
             data-aos="fade-up"
           >
-            <div className="lg:h-[650px] flex items-center">
+            <div className="lg:h-[650px] flex items-center py-12">
               <div className="w-full  max-w-[1536px] flex flex-col lg:flex-row gap-8">
                 {/* Mission Card */}
                 <div
