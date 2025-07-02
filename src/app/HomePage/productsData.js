@@ -831,43 +831,6 @@ Naturally gluten-free and rich in fiber, protein, and minerals like magnesium an
     premiumQuality:
       "Processed in-house with strict hygiene and quality checks. Packaged to preserve flavor and aroma for export and bulk use.",
     specifications: `
-  {
-    id: 16,
-    title: "Coriander Seeds - Eagle",
-    category: "Spices",
-    image: "/product/coriander-eagle.jpg",
-    images: ["/product/coriander-eagle.jpg"],
-    moreImage: [
-      "/product/coriander-eagle.jpg",
-      "/product/related.16.1.jpg",
-      "/product/related.16.2.jpg",
-      "/product/related.16.3.webp",
-    ],
-    rating: 19,
-    reviews: 22,
-    description: "Bold Eagle variety coriander seeds.",
-    highlights: [
-      "Bright golden-yellow color",
-      "Bold size seeds",
-      "High essential oil content",
-      "Aromatic and flavorful",
-      "Widely used in Indian cuisine",
-    ],
-    features: [
-      "Grown in prime coriander zones",
-      "Strong aroma & citrus flavor",
-      "Machine-cleaned and sorted",
-      "Available in bulk packaging",
-      "Ideal for spice blends and grinding",
-    ],
-    applications: "Used in curries, masalas, pickles, and spice mixes.",
-    aboutProduct:
-      "Eagle-grade coriander seeds are bold, golden-yellow, and packed with flavor. Sourced from top Indian regions, they are ideal for grinding and use in masalas and seasoning blends.",
-    overview:
-      "Coriander Eagle seeds are bold, aromatic, and packed with natural oils—perfect for food manufacturers and spice processors.",
-    premiumQuality:
-      "Processed in-house with strict hygiene and quality checks. Packaged to preserve flavor and aroma for export and bulk use.",
-    specifications: `
 • Product Name: Coriander Seeds
 • HSN Code: 09092110
 • Moisture: 9% Max
@@ -877,52 +840,12 @@ Naturally gluten-free and rich in fiber, protein, and minerals like magnesium an
 • Aroma & Oil Content: High
 `,
     packagingShipping: `
-    packagingShipping: `
 • Packaging: 25kg/50kg PP or Jute Bags (as per client request)
 • Export Markets: UAE, Indonesia, Vietnam, Europe, USA
 `,
     nutritionalInfo: `
-    nutritionalInfo: `
 Rich in antioxidants and essential oils. Helps digestion and adds aroma and flavor to food.
 `,
-  },
-  {
-    id: 17,
-    title: "Coriander Seeds - Scooter",
-    category: "Spices",
-    image: "/product/coriander-scooter.jpg",
-    images: ["/product/coriander-scooter.jpg"],
-    moreImage: [
-      "/product/coriander-scooter.jpg",
-      "/product/related.17.1.jpg",
-      "/product/related.17.2.webp",
-      "/product/related.17.3.webp",
-    ],
-    rating: 16,
-    reviews: 19,
-    description: "Scooter variety coriander, aromatic and strong.",
-    highlights: [
-      "Medium size grains",
-      "Mild greenish-yellow tone",
-      "Balanced essential oil content",
-      "Aromatic and fresh",
-      "Common in masala blends",
-    ],
-    features: [
-      "Natural drying process",
-      "Cleaned and graded",
-      "Mild yet rich aroma",
-      "Perfect for spice blends",
-      "Machine-processed and hygienic",
-    ],
-    applications: "Ideal for seasoning, spice powders, and oil extraction.",
-    aboutProduct:
-      "Scooter-grade coriander seeds offer balance between size and aroma, making them ideal for masala production and dry roasting applications.",
-    overview:
-      "Scooter coriander is a mid-grade spice with balanced flavor and consistent oil levels. Widely used in households and factories.",
-    premiumQuality:
-      "Sourced from top farms and cleaned using modern facilities to ensure purity and color consistency.",
-    specifications: `
   },
   {
     id: 17,
@@ -967,52 +890,12 @@ Rich in antioxidants and essential oils. Helps digestion and adds aroma and flav
 • Aroma: Moderate to High
 `,
     packagingShipping: `
-    packagingShipping: `
 • Packaging: 25kg/50kg PP or Jute Bags
 • Export Capacity: As per international demand
 `,
     nutritionalInfo: `
-    nutritionalInfo: `
 Contains dietary fiber, vitamin C, and essential oils with digestive and anti-inflammatory benefits.
 `,
-  },
-  {
-    id: 18,
-    title: "Coriander Seeds - Parrot",
-    category: "Spices",
-    image: "/product/coriander-parrot.jpg",
-    images: ["/product/coriander-parrot.jpg"],
-    moreImage: [
-      "/product/coriander-parrot.jpg",
-      "/product/related.18.1.jpg",
-      "/product/related.18.2.webp",
-      "/product/related.18.3.jpeg",
-    ],
-    rating: 17,
-    reviews: 21,
-    description: "Parrot variety coriander for grinding.",
-    highlights: [
-      "Smaller size grains",
-      "Distinct greenish tint",
-      "Strong and sharp aroma",
-      "Popular in domestic kitchens",
-      "Great for roasting and grinding",
-    ],
-    features: [
-      "Finely graded",
-      "Used in traditional spice blends",
-      "Compact and dense seeds",
-      "Custom packed",
-      "Flavor-preserving packaging",
-    ],
-    applications: "Used in garam masala, spice pastes, and curry powders.",
-    aboutProduct:
-      "Parrot coriander seeds are compact with a greenish hue and are known for their strong aroma. Perfect for grinding into spice powders.",
-    overview:
-      "An affordable yet powerful spice, Parrot-grade coriander is a favorite among home cooks and small-scale food units.",
-    premiumQuality:
-      "Processed with care in hygienic facilities. Cleaned and sorted for minimal foreign matter.",
-    specifications: `
   },
   {
     id: 18,
@@ -1057,52 +940,12 @@ Contains dietary fiber, vitamin C, and essential oils with digestive and anti-in
 • Aroma: High
 `,
     packagingShipping: `
-    packagingShipping: `
 • Packaging: 25kg or 50kg PP/Jute Bags
 • Global Distribution Available
 `,
     nutritionalInfo: `
-    nutritionalInfo: `
 Natural antioxidant, rich in flavor oils and vitamins. Supports digestion and blood sugar control.
 `,
-  },
-  {
-    id: 19,
-    title: "Coriander Seeds - Double Parrot",
-    category: "Spices",
-    image: "/product/coriander-parrot.jpg",
-    images: ["/product/coriander-parrot.jpg"],
-    moreImage: [
-      "/product/coriander-parrot.jpg",
-      "/product/related.18.1.jpg",
-      "/product/related.18.2.webp",
-      "/product/related.18.3.jpeg",
-    ],
-    rating: 18,
-    reviews: 20,
-    description: "Double Parrot variety coriander with premium aroma.",
-    highlights: [
-      "Finest grade seeds",
-      "Uniform size and color",
-      "Extra-high essential oil content",
-      "Bright greenish-yellow tone",
-      "Premium export quality",
-    ],
-    features: [
-      "Extra cleaned and polished",
-      "Ideal for premium spice products",
-      "High oil retention",
-      "Vacuum-sealed options",
-      "Sorted by optical sorting",
-    ],
-    applications: "Used in spice export, curry powders, flavoring extracts.",
-    aboutProduct:
-      "Double Parrot coriander seeds are premium-grade with superior oil content and color. Ideal for global spice markets and processors.",
-    overview:
-      "Preferred for its consistency, high aroma, and strong flavor presence in export blends and branded masalas.",
-    premiumQuality:
-      "Carefully selected, polished, and packed to meet stringent export and hygiene standards.",
-    specifications: `
   },
   {
     id: 19,
@@ -1148,52 +991,12 @@ Natural antioxidant, rich in flavor oils and vitamins. Supports digestion and bl
 • Purity: 99% Max
 `,
     packagingShipping: `
-    packagingShipping: `
 • Packaging: Export-grade 25kg/50kg PP/Jute Bags
 • Available in vacuum packaging
 `,
     nutritionalInfo: `
-    nutritionalInfo: `
 Superior essential oil content. Promotes digestive health and boosts flavor in foods.
 `,
-  },
-  {
-    id: 20,
-    title: "Coriander Seeds Fada (Eagle)",
-    category: "Spices",
-    image: "/product/coriander-fada.webp",
-    images: ["/product/coriander-fada.webp"],
-    moreImage: [
-      "/product/coriander-fada.webp",
-      "/product/related.20.1.jpg",
-      "/product/related.20.2.jpg",
-      "/product/related.20.3.webp",
-    ],
-    rating: 15,
-    reviews: 18,
-    description: "Fada cut Eagle coriander for quick use.",
-    highlights: [
-      "Split coriander seeds",
-      "Faster flavor infusion",
-      "Ideal for pickles and spice mixes",
-      "Same quality as Eagle whole",
-      "Shorter cooking time",
-    ],
-    features: [
-      "Made from Eagle-grade coriander",
-      "Cut for faster flavor release",
-      "Pre-sorted and cleaned",
-      "Vacuum-packed for freshness",
-      "Available in bulk",
-    ],
-    applications: "Used in pickles, chutneys, spice rubs, and curry pastes.",
-    aboutProduct:
-      "Fada coriander is derived by splitting Eagle seeds. It releases flavor quickly and is perfect for time-efficient cooking and food processing.",
-    overview:
-      "Offers convenience with no compromise in aroma or taste. A must-have in fast-paced kitchens.",
-    premiumQuality:
-      "Processed from whole Eagle seeds with no loss of oil content. Hygienically packed for freshness.",
-    specifications: `
   },
   {
     id: 20,
@@ -1238,53 +1041,12 @@ Superior essential oil content. Promotes digestive health and boosts flavor in f
 • Oil Content: High
 `,
     packagingShipping: `
-    packagingShipping: `
 • Packaging: 25kg PP/Jute Bags
 • Available as per bulk or retail demand
 `,
     nutritionalInfo: `
-    nutritionalInfo: `
 Same nutritional and oil value as whole coriander seeds. Adds depth and aroma efficiently.
 `,
-  },
-  {
-    id: 21,
-    title: "Cumin Seeds",
-    category: "Spices",
-    image: "/product/cumin-seed.png",
-    images: ["/product/cumin-seed.png"],
-    moreImage: [
-      "/product/cumin-seed.png",
-      "/product/related.21.1.webp",
-      "/product/related.21.2.webp",
-      "/product/related.21.3.jpg",
-    ],
-    rating: 18,
-    reviews: 20,
-    description: "Essential spice rich in aroma.",
-    highlights: [
-      "Warm earthy flavor",
-      "Used globally in cuisines",
-      "Promotes digestion",
-      "Essential in spice mixes",
-      "Natural source of antioxidants",
-    ],
-    features: [
-      "Machine cleaned (98%–99% purity)",
-      "Sun-dried and naturally processed",
-      "Available in various grades",
-      "Uniform grain size",
-      "Rich in essential oils",
-    ],
-    applications:
-      "Used in spice blends, curries, marinades, and herbal medicine.",
-    aboutProduct:
-      "Cumin seeds are valued for their distinctive flavor and aroma. A staple in Indian, Middle Eastern, and Mexican cuisine.",
-    overview:
-      "A key ingredient in garam masala and global spice mixes. Also used in Ayurvedic remedies.",
-    premiumQuality:
-      "Sorted and processed using hygienic methods for food-grade and herbal markets.",
-    specifications: `
   },
   {
     id: 21,
@@ -1331,54 +1093,12 @@ Same nutritional and oil value as whole coriander seeds. Adds depth and aroma ef
 • Form: Whole Seeds
 `,
     packagingShipping: `
-    packagingShipping: `
 • Packaging: 25/50 kg PP or Jute Bags
 • 20’ FCL Load: 13–14 MT | 40’ FCL: 25–26 MT
 `,
     nutritionalInfo: `
-    nutritionalInfo: `
 Improves digestion, rich in iron, and supports immune function.
 `,
-  },
-  {
-    id: 22,
-    title: "Fennel Seeds",
-    category: "Spices",
-    image: "/product/fennel.png",
-    images: ["/product/fennel.png"],
-    moreImage: [
-      "/product/fennel.png",
-      "/product/related.8.1.webp",
-      "/product/related.8.2.jpeg",
-      "/product/related.8.3.jpeg",
-    ],
-    rating: 17,
-    reviews: 16,
-    description:
-      "Sweet and aromatic fennel seeds used in cooking and digestion.",
-    highlights: [
-      "Sweet licorice-like taste",
-      "Aromatic and soothing",
-      "Natural digestive aid",
-      "Used in desserts and teas",
-      "Bright yellow-green color",
-    ],
-    features: [
-      "Rich in essential oils",
-      "3–5 mm seed size",
-      "Machine-cleaned (99%)",
-      "Used in herbal blends",
-      "Acts as natural mouth freshener",
-    ],
-    applications:
-      "Used in herbal teas, desserts, mouth fresheners, and curries.",
-    aboutProduct:
-      "Fennel seeds are aromatic and flavorful. Known for their digestion-boosting properties and sweet flavor, they are used widely in food and health applications.",
-    overview:
-      "Fennel seeds enhance both flavor and health. They’re refreshing, fragrant, and packed with antioxidants.",
-    premiumQuality:
-      "Sourced from top farms and cleaned with advanced optical sorting for purity and visual appeal.",
-    specifications: `
   },
   {
     id: 22,
@@ -1427,54 +1147,12 @@ Improves digestion, rich in iron, and supports immune function.
 • Foreign Matter: 0.5% Max
 `,
     packagingShipping: `
-    packagingShipping: `
 • Packaging: 25/50 kg PP or Jute Bags
 • 20’ FCL: 13–14 MT | 40’ FCL: 25–26 MT
 `,
     nutritionalInfo: `
-    nutritionalInfo: `
 Helps in digestion, relieves bloating, and provides antioxidant protection.
 `,
-  },
-  {
-    id: 23,
-    title: "Fenugreek Seeds",
-    category: "Spices",
-    image: "/product/fenugreek-seeds.webp",
-    images: ["/product/fenugreek-seeds.webp"],
-    moreImage: [
-      "/product/fenugreek-seeds.webp",
-      "/product/related.23.1.jpg",
-      "/product/related.23.2.jpg",
-      "/product/related.23.3.webp",
-    ],
-    rating: 16,
-    reviews: 14,
-    description:
-      "Bitter yet beneficial fenugreek seeds, great for seasoning and health.",
-    highlights: [
-      "Slightly bitter with maple aroma",
-      "Used in pickles and spice blends",
-      "Rich in iron and fiber",
-      "Supports blood sugar control",
-      "Also used in Ayurveda & cosmetics",
-    ],
-    features: [
-      "Golden-brown in color",
-      "Natural anti-inflammatory",
-      "Can be sprouted or ground",
-      "Machine-cleaned and sorted",
-      "Sustainably harvested",
-    ],
-    applications:
-      "Used in Indian curries, pickles, spice blends, hair oils, and cosmetics.",
-    aboutProduct:
-      "Fenugreek seeds are small golden seeds with strong flavor and therapeutic properties. A key ingredient in Indian spice racks and Ayurvedic formulations.",
-    overview:
-      "From cooking to skincare, fenugreek plays a powerful role with its nutrients and bioactive compounds.",
-    premiumQuality:
-      "Sorted to 99.9% purity with minimal foreign matter. Available in bulk and custom packaging.",
-    specifications: `
   },
   {
     id: 23,
@@ -1523,11 +1201,9 @@ Helps in digestion, relieves bloating, and provides antioxidant protection.
 • Size: 3–5 mm
 `,
     packagingShipping: `
-    packagingShipping: `
 • Packaging: 50kg Bags or as per buyer requirements
 • 20’ FCL Capacity: 24 MT
 `,
-    nutritionalInfo: `
     nutritionalInfo: `
 High in fiber, protein, and antioxidants. Known for blood sugar and hormone regulation.
 `,
@@ -2713,8 +2389,6 @@ Rich in protein, fiber, iron, and other essential vitamins.
     nutritionalInfo: `
 Cashews are rich in healthy fats, protein, and essential minerals like magnesium and zinc.
   `,
-  },
-`,
   },
 ];
 
