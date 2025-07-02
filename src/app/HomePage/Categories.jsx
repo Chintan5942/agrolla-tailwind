@@ -47,10 +47,26 @@ export default function Categories({ onCategorySelect }) {
 
   const categoryImages = {
     "All Products": "/all-product.svg",
-    Oilseeds: "/oilseed.svg",
-    Pulses: "/pulses.svg",
+    "Oilseeds": "/oilseed.svg",
+    "Pulses": "/pulses.svg",
     "Other Grains": "/grain.svg",
-    Spices: "/spices.svg",
+    "Spices": "/spices.svg",
+    "Seeds & Nuts": "/oilseed.svg",
+    "Vegetables": "/pulses.svg",
+    "Snacks": "/grain.svg",
+    "Dried Fruit": "/spices.svg",
+  };
+
+  const categoryDescriptions = {
+    "All Products": "View all items",
+    "Oilseeds": "Premium quality seeds",
+    "Pulses": "Fresh & organic",
+    "Other Grains": "Whole & natural",
+    "Spices": "Pure & aromatic",
+    "Seeds & Nuts": "Nutritious & crunchy",
+    "Vegetables": "Fresh & healthy",
+    "Snacks": "Tasty & crispy",
+    "Dried Fruit": "Sweet & natural"
   };
 
   const categoryCounts = useMemo(() => {
@@ -127,7 +143,7 @@ export default function Categories({ onCategorySelect }) {
                 id="categorySelect"
                 value={selectedCategory}
                 onChange={(e) => handleCategoryClick(e.target.value)}
-                className="w-full appearance-none bg-white p-3 rounded-lg border border-gray-300 shadow-inner text-gray-800 transition duration-200 text-center text-xl font-semibold"
+                className="w-full p-3 text-xl font-semibold text-center text-gray-800 transition duration-200 bg-white border border-gray-300 rounded-lg shadow-inner appearance-none"
               >
                 {Object.keys(categoryImages).map((cat) => (
                   <option key={cat} value={cat}>
@@ -146,7 +162,7 @@ export default function Categories({ onCategorySelect }) {
 
         {/* Sidebar (Desktop) */}
         <aside
-          className="w-full lg:w-[25%] bg-stone-50 rounded-xl shadow-lg catagory-aside h-auto lg:h-[900px] catagory-section overflow-scroll"
+          className="w-full lg:w-[25%] bg-stone-50 rounded-xl shadow-lg catagory-aside h-auto lg:h-[930px] catagory-section overflow-scroll"
           data-aos="fade-right"
         >
           <div className="flex items-center">
@@ -184,15 +200,7 @@ export default function Categories({ onCategorySelect }) {
                     </span>
                   </p>
                   <p className="text-xs text-gray-600 sm:text-sm lg:text-base">
-                    {cat === "All Products"
-                      ? "View all items"
-                      : cat === "Oilseeds"
-                      ? "Premium quality seeds"
-                      : cat === "Pulses"
-                      ? "Fresh & organic"
-                      : cat === "Other Grains"
-                      ? "Whole & natural"
-                      : "Pure & aromatic"}
+                    {categoryDescriptions[cat]}
                   </p>
                 </div>
               </li>
@@ -221,18 +229,18 @@ export default function Categories({ onCategorySelect }) {
         </aside>
 
         {/* Product Grid */}
-        <section className="w-full lg:w-[75%] grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 p-2 catagory-section h-full lg:h-[980px] overflow-scroll">
+        <section className="w-full lg:w-[75%] grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 p-2 catagory-section h-full lg:h-[950px] overflow-scroll">
           {loading
             ? Array.from({ length: 6 }).map((_, i) => (
                 <div
                   key={i}
                   className="animate-pulse bg-white rounded-2xl h-[450px] p-4 flex flex-col justify-between shadow-sm border border-gray-100"
                 >
-                  <div className="h-48 bg-gray-200 rounded-xl mb-4"></div>
-                  <div className="h-5 bg-gray-200 rounded w-3/4 mb-2"></div>
-                  <div className="h-4 bg-gray-200 rounded w-1/2 mb-4"></div>
-                  <div className="h-4 bg-gray-200 rounded w-full mb-2"></div>
-                  <div className="h-4 bg-gray-200 rounded w-5/6 mb-2"></div>
+                  <div className="h-48 mb-4 bg-gray-200 rounded-xl"></div>
+                  <div className="w-3/4 h-5 mb-2 bg-gray-200 rounded"></div>
+                  <div className="w-1/2 h-4 mb-4 bg-gray-200 rounded"></div>
+                  <div className="w-full h-4 mb-2 bg-gray-200 rounded"></div>
+                  <div className="w-5/6 h-4 mb-2 bg-gray-200 rounded"></div>
                   <div className="h-8 bg-gray-300 rounded-lg w-[100px] mt-auto"></div>
                 </div>
               ))
@@ -256,23 +264,6 @@ export default function Categories({ onCategorySelect }) {
                       alt={product.title}
                       className="object-contain w-full h-48 rounded-xl"
                     />
-                    {/* <div className="flex items-center gap-1 mt-4">
-                      {[...Array(fullStars)].map((_, i) => (
-                        <FaStar key={`full-${i}`} className="text-yellow-500" />
-                      ))}
-                      {hasHalfStar && (
-                        <FaStarHalfAlt className="text-yellow-500" />
-                      )}
-                      {[...Array(emptyStars)].map((_, i) => (
-                        <FaRegStar
-                          key={`empty-${i}`}
-                          className="text-gray-300"
-                        />
-                      ))}
-                      <span className="text-[#6B7280] text-lg font-semibold">
-                        {product.reviews}
-                      </span>
-                    </div> */}
                     <h3 className="mt-4 text-2xl font-bold text-gray-800">
                       {product.title}
                     </h3>
