@@ -1,6 +1,66 @@
 "use-client";
 import "@/CSS/Section8.css";
+import { useState } from "react";
 export default function Section8() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    service: "",
+    message: "",
+    agreed: false,
+  });
+
+  const [status, setStatus] =
+    (useState < "idle") | "loading" | "success" | ("error" > "idle");
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("loading");
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "e71bffe4-22d8-48d3-90a2-bca8e5b58547",
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          service: formData.service,
+          message: formData.message,
+        }),
+      });
+
+      const result = await res.json();
+
+      if (result.success) {
+        setStatus("success");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          service: "",
+          message: "",
+          agreed: false,
+        });
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      setStatus("error");
+    }
+  };
   return (
     <>
       <div className="section8">
@@ -13,43 +73,79 @@ export default function Section8() {
         </h5>
         <div className="sec8-1">
           <div className="form">
-            <form action="">
-              {" "}
-              <br />
-              <label htmlFor="">Your Name</label> <br />
-              <input type="text" placeholder="Enter Your name" /> <br />
-              <br />
-              <label htmlFor="">Email Address</label> <br />
-              <input type="text" placeholder="Enter Your email" /> <br />
-              <br />
-              <label htmlFor="">Phone Number</label> <br />
-              <input type="text" placeholder="Enter Your phone number " />
-              <br />
-              <br />
-              <label htmlFor="">Service Interested In</label> <br />
-              <select name="" id="">
-                <option value="">Select a services</option>
-                <option value="">Service1</option>
-                <option value="">Service2</option>
-              </select>
-              <br />
-              <br />
-              <label htmlFor="">Your Message</label>
-              <textarea
-                name=""
-                id=""
-                placeholder="Enter your message"
-              ></textarea>
-              <br />
-              <br />
+            <form onSubmit={handleSubmit}>
+              <label>Your Name</label>
               <input
-                type="checkbox"
-                placeholder="Enter Your phone number "
-                id="cb1"
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Enter your name"
               />
-              <label htmlFor="">I agree to the terms and privacy policy</label>{" "}
-              <br />
-              <button className="send">Send Message</button>
+
+              <label>Email Address</label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Enter your email"
+              />
+
+              <label>Phone Number</label>
+              <input
+                type="text"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="Enter your phone number"
+              />
+
+              <label>Service Interested In</label>
+              <select
+                name="service"
+                value={formData.service}
+                onChange={handleChange}
+              >
+                <option value="">Select a service</option>
+                <option value="Service1">Service1</option>
+                <option value="Service2">Service2</option>
+              </select>
+
+              <label>Your Message</label>
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Enter your message"
+              />
+
+              <label>
+                <input
+                  type="checkbox"
+                  name="agreed"
+                  checked={formData.agreed}
+                  onChange={handleChange}
+                />
+                I agree to the terms and privacy policy
+              </label>
+
+              <button
+                type="submit"
+                className="send"
+                disabled={!formData.agreed || status === "loading"}
+              >
+                {status === "loading" ? "Sending..." : "Send Message"}
+              </button>
+
+              {status === "success" && (
+                <p className="text-green-600">Message sent successfully!</p>
+              )}
+              {status === "error" && (
+                <p className="text-red-600">
+                  Something went wrong. Please try again.
+                </p>
+              )}
             </form>
           </div>
           <div className="right">
