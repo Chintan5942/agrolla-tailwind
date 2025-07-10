@@ -59,6 +59,7 @@ export default function Navbar() {
           >
             Blog
           </a>
+
           <a
             href="/About"
             className={`hover:underline hover:underline-offset-[5px] hover:text-[#2E7D32] ${
@@ -66,6 +67,15 @@ export default function Navbar() {
             }`}
           >
             About Us
+          </a>
+          <a
+            href="/Agrolla Impex .pdf"
+            target="_blank"
+            className={`hover:underline hover:underline-offset-[5px] hover:text-[#2E7D32] ${
+              isActive("/Agrolla Impex .pdf") ? "text-[#2E7D32]" : ""
+            }`}
+          >
+            Brochure
           </a>
           <a
             href="/Contact"
@@ -78,8 +88,9 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:block" data-aos="fade-left">
-          <button className="h-[40px] w-[130px] bg-[#2E7D32] rounded-lg text-white text-base font-semibold"
-          onClick={() => (window.location.href = "/Contact")}
+          <button
+            className="h-[40px] w-[130px] bg-[#2E7D32] rounded-lg text-white text-base font-semibold"
+            onClick={() => (window.location.href = "/Contact")}
           >
             Get Quote
           </button>
@@ -121,12 +132,22 @@ export default function Navbar() {
             >
               Blog
             </a>
+
             <a
               href="/About"
               className={isActive("/About") ? "text-[#2E7D32]" : ""}
               onClick={() => setIsOpen(false)}
             >
               About Us
+            </a>
+            <a
+              href="/Agrolla Impex .pdf"
+              target="_blank"
+              className={`hover:underline hover:underline-offset-[5px] hover:text-[#2E7D32] ${
+                isActive("/Agrolla Impex .pdf") ? "text-[#2E7D32]" : ""
+              }`}
+            >
+              Brochure
             </a>
             <a
               href="/Contact"
@@ -137,8 +158,7 @@ export default function Navbar() {
             </a>
             <button
               className="h-[40px] w-[130px] bg-[#2E7D32] rounded-lg text-white font-semibold"
-              onClick={() => setIsOpen(false)  
-              }
+              onClick={() => setIsOpen(false)}
             >
               Get Quote
             </button>

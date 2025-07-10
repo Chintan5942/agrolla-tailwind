@@ -47,26 +47,26 @@ export default function Categories({ onCategorySelect }) {
 
   const categoryImages = {
     "All Products": "/all-product.svg",
-    "Oilseeds": "/oilseed.svg",
-    "Pulses": "/pulses.svg",
+    Oilseeds: "/oilseed.svg",
+    Pulses: "/pulses.svg",
     "Other Grains": "/grain.svg",
-    "Spices": "/spices.svg",
+    Spices: "/spices.svg",
     "Seeds & Nuts": "/oilseed.svg",
-    "Vegetables": "/pulses.svg",
-    "Snacks": "/grain.svg",
+    Vegetables: "/pulses.svg",
+    Snacks: "/grain.svg",
     "Dried Fruit": "/spices.svg",
   };
 
   const categoryDescriptions = {
     "All Products": "View all items",
-    "Oilseeds": "Premium quality seeds",
-    "Pulses": "Fresh & organic",
+    Oilseeds: "Premium quality seeds",
+    Pulses: "Fresh & organic",
     "Other Grains": "Whole & natural",
-    "Spices": "Pure & aromatic",
+    Spices: "Pure & aromatic",
     "Seeds & Nuts": "Nutritious & crunchy",
-    "Vegetables": "Fresh & healthy",
-    "Snacks": "Tasty & crispy",
-    "Dried Fruit": "Sweet & natural"
+    Vegetables: "Fresh & healthy",
+    Snacks: "Tasty & crispy",
+    "Dried Fruit": "Sweet & natural",
   };
 
   const categoryCounts = useMemo(() => {
@@ -261,11 +261,11 @@ export default function Categories({ onCategorySelect }) {
                   >
                     <img
                       src={product.image}
-                      alt={product.title}
+                      alt={product?.title.slice(0, 20)}
                       className="object-contain w-full h-48 rounded-xl"
                     />
                     <h3 className="mt-4 text-2xl font-bold text-gray-800">
-                      {product.title}
+                      {product.title.slice(0, 25)}
                     </h3>
                     <p className="mt-2 text-base font-semibold text-left text-gray-600 line-clamp-3">
                       {product.description}
