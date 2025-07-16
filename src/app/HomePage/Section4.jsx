@@ -67,10 +67,8 @@ export default function Section4() {
 
   return (
     <>
-      <br />
-      <br />
-      <br />
-      <div className="flex justify-center max-w-full px-4 overflow-x-hidden">
+   
+      <div className="flex justify-center max-w-full px-4 overflow-x-hidden mt-10">
         <div
           className="flex flex-col lg:flex-row items-center justify-center gap-8 max-w-[1536px] sm:gap-x-8 md:gap-x-10"
           data-aos="fade-up"
